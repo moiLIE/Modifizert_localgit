@@ -246,7 +246,7 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
             'Momentan nur eine Linie, alle Nebenlinien kann ich momentan noch nicht gescheit erkennen...
             'Dim peaksForNuclide As List(Of FHT59N3MCA_Peak) = _MyControlCenter.MCA_Peaks.GetPeakByNuclidEnergy(mcaNuclide.KeyLineEnergy)
             Dim peaksForNuclide As IEnumerable(Of FHT59N3MCA_Peak) = _MyControlCenter.MCA_Peaks.PeakList.Where(Function(d)
-                                                                                                                   Return CInt(nuclide.SpectrumAnalysis.KeyLineEnergy) = d.PeakEnergy
+                                                                                                                   Return CInt(nuclide.SpectrumAnalysis.KeyLineEnergy) = CInt(d.PeakEnergy)
                                                                                                                End Function)
 
             '0 falls kein Peak, wird von Template-Engine dann nicht genutzt...

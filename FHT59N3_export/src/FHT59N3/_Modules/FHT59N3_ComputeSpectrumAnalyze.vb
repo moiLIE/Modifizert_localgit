@@ -303,13 +303,15 @@ Class FHT59N3_ComputeSpectrumAnalyze
         'zum testen
         NuclideChannel(6) = CanberraDataAccessLib.ParamCodes.CAM_F_NLMDANET  'netto counts 
 
+        ' CAM_F_NLMDANETERR
+
         _MyControlCenter.MCA_Peaks.PeakList.Clear()
 
         Dim NumberOfPeaks As Integer = _SpectraFile.NumberOfRecords(CanberraDataAccessLib.ClassCodes.CAM_CLS_PEAK)
         For idx As Integer = 1 To NumberOfPeaks
             Dim ParamBuffer = _SpectraFile.ParamArray(NuclideChannel, idx)
             Dim NuclideNumber = CType(ParamBuffer(0), Integer) 'Irgendeine komische Nuklidnr
-            Dim PeakEnergy As Integer = CType(ParamBuffer(1), Integer) 'Energi der Linie
+            Dim PeakEnergy = CType(ParamBuffer(1), Double) 'Energie der Linie
             Dim PeakChannel As Integer = CType(ParamBuffer(2), Integer) 'Kanallage
             Dim PeakArea = CType(ParamBuffer(3), Double) 'Nettofläche
             Dim PeakFwhm = CType(ParamBuffer(4), Double) 'Fwhm
