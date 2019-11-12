@@ -1,0 +1,2288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_1" xml:space="preserve">
+    <value>FHT59N3T - Über</value>
+    <comment>7</comment>
+  </data>
+  <data name="_2" xml:space="preserve">
+    <value>Schließen</value>
+    <comment>7</comment>
+  </data>
+  <data name="_11" xml:space="preserve">
+    <value>FHT59N3T - Luftdurchsatzkalibrierung</value>
+    <comment>7</comment>
+  </data>
+  <data name="_12" xml:space="preserve">
+    <value>Abbrechen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_13" xml:space="preserve">
+    <value>OK</value>
+    <comment>2</comment>
+  </data>
+  <data name="_14" xml:space="preserve">
+    <value>Starte Messung</value>
+    <comment>2</comment>
+  </data>
+  <data name="_15" xml:space="preserve">
+    <value>Anzahl der Messungen (ca. 5s pro Wert)</value>
+    <comment>7</comment>
+  </data>
+  <data name="_16" xml:space="preserve">
+    <value>Wahrer Luftdurchsatz (Betriebs - m³/h)</value>
+    <comment>7</comment>
+  </data>
+  <data name="_17" xml:space="preserve">
+    <value>Blendenfaktor (errechnet)</value>
+    <comment>7</comment>
+  </data>
+  <data name="_20" xml:space="preserve">
+    <value>FHT59N3T - Auswertung</value>
+    <comment>2</comment>
+  </data>
+  <data name="_21" xml:space="preserve">
+    <value>Fortsetzen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_23" xml:space="preserve">
+    <value>Zertifikatsdatum [dd.mm.yy hh:mm]</value>
+    <comment>3</comment>
+  </data>
+  <data name="_29" xml:space="preserve">
+    <value>Die folgenden Nuklide haben unterschiedliche Aktivitäten bei verschiedenen Linien.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_30" xml:space="preserve">
+    <value>Zertifikatsdaten sichern</value>
+    <comment>2</comment>
+  </data>
+  <data name="_31" xml:space="preserve">
+    <value>FHT59N3T - Kalibrierung</value>
+    <comment>7</comment>
+  </data>
+  <data name="_32" xml:space="preserve">
+    <value>Bitte Datum/Uhrzeit überprüfen [dd.mm.yy hh:mm]</value>
+    <comment>7</comment>
+  </data>
+  <data name="_33" xml:space="preserve">
+    <value>Messzeit [min]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_34" xml:space="preserve">
+    <value>FHT59N3T - Kalibriermenü</value>
+    <comment>7</comment>
+  </data>
+  <data name="_35" xml:space="preserve">
+    <value>WKP</value>
+    <comment>7</comment>
+  </data>
+  <data name="_36" xml:space="preserve">
+    <value>Starte Kalibrierung</value>
+    <comment>7</comment>
+  </data>
+  <data name="_37" xml:space="preserve">
+    <value>Zurück</value>
+    <comment>2</comment>
+  </data>
+  <data name="_38" xml:space="preserve">
+    <value>Freie Messung</value>
+    <comment>7</comment>
+  </data>
+  <data name="_39" xml:space="preserve">
+    <value>Kalibriermessungen</value>
+    <comment>7</comment>
+  </data>
+  <data name="_40" xml:space="preserve">
+    <value>Messung stoppen</value>
+    <comment>7</comment>
+  </data>
+  <data name="_41" xml:space="preserve">
+    <value>Luftdurchsatz</value>
+    <comment>7</comment>
+  </data>
+  <data name="_42" xml:space="preserve">
+    <value>Kalibrierauswertungen</value>
+    <comment>7</comment>
+  </data>
+  <data name="_43" xml:space="preserve">
+    <value>Effizienz Nah</value>
+    <comment>7</comment>
+  </data>
+  <data name="_44" xml:space="preserve">
+    <value>Effizienz Fern</value>
+    <comment>7</comment>
+  </data>
+  <data name="_45" xml:space="preserve">
+    <value>Energie / Effizienz</value>
+    <comment>7</comment>
+  </data>
+  <data name="_46" xml:space="preserve">
+    <value>FHT59N3T - Kontrollmenü</value>
+    <comment>7</comment>
+  </data>
+  <data name="_47" xml:space="preserve">
+    <value>Filterschritt</value>
+    <comment>2</comment>
+  </data>
+  <data name="_49" xml:space="preserve">
+    <value>Pumpe</value>
+    <comment>2</comment>
+  </data>
+  <data name="_50" xml:space="preserve">
+    <value>Störausgang</value>
+    <comment>2</comment>
+  </data>
+  <data name="_51" xml:space="preserve">
+    <value>N2 Füllstand</value>
+    <comment>2</comment>
+  </data>
+  <data name="_52" xml:space="preserve">
+    <value>Monitorstatus zeigen</value>
+    <comment>7</comment>
+  </data>
+  <data name="_53" xml:space="preserve">
+    <value>geschlossen / arretiert</value>
+    <comment>2</comment>
+  </data>
+  <data name="_54" xml:space="preserve">
+    <value>pumpt</value>
+    <comment>2</comment>
+  </data>
+  <data name="_55" xml:space="preserve">
+    <value>Aus</value>
+    <comment>2</comment>
+  </data>
+  <data name="_56" xml:space="preserve">
+    <value>steht</value>
+    <comment>2</comment>
+  </data>
+  <data name="_57" xml:space="preserve">
+    <value>Alarmausgang</value>
+    <comment>2</comment>
+  </data>
+  <data name="_58" xml:space="preserve">
+    <value>Filterbandwechsel durchgeführt</value>
+    <comment>7</comment>
+  </data>
+  <data name="_59" xml:space="preserve">
+    <value>Hochspannung</value>
+    <comment>2</comment>
+  </data>
+  <data name="_60" xml:space="preserve">
+    <value>FHT59N3T - Dateimenü</value>
+    <comment>3</comment>
+  </data>
+  <data name="_61" xml:space="preserve">
+    <value>Analysiere Spektrum</value>
+    <comment>2</comment>
+  </data>
+  <data name="_62" xml:space="preserve">
+    <value>Spektrum anzeigen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_63" xml:space="preserve">
+    <value>Ergebnisdatei anzeigen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_64" xml:space="preserve">
+    <value>FHT59N3T - Hauptmenü</value>
+    <comment>2</comment>
+  </data>
+  <data name="_65" xml:space="preserve">
+    <value>Wartung</value>
+    <comment>2</comment>
+  </data>
+  <data name="_66" xml:space="preserve">
+    <value>Betrieb</value>
+    <comment>7</comment>
+  </data>
+  <data name="_67" xml:space="preserve">
+    <value>Über</value>
+    <comment>7</comment>
+  </data>
+  <data name="_68" xml:space="preserve">
+    <value>Datei</value>
+    <comment>7</comment>
+  </data>
+  <data name="_69" xml:space="preserve">
+    <value>FHT59N3T - Wartungsmenü</value>
+    <comment>7</comment>
+  </data>
+  <data name="_70" xml:space="preserve">
+    <value>System Konfiguration</value>
+    <comment>7</comment>
+  </data>
+  <data name="_71" xml:space="preserve">
+    <value>Steuerung</value>
+    <comment>7</comment>
+  </data>
+  <data name="_72" xml:space="preserve">
+    <value>Kalibrieren</value>
+    <comment>7</comment>
+  </data>
+  <data name="_73" xml:space="preserve">
+    <value>MCA Konfiguration</value>
+    <comment>7</comment>
+  </data>
+  <data name="_74" xml:space="preserve">
+    <value>Wartung An</value>
+    <comment>2</comment>
+  </data>
+  <data name="_75" xml:space="preserve">
+    <value>FHT59N3T - MCA Menü</value>
+    <comment>7</comment>
+  </data>
+  <data name="_76" xml:space="preserve">
+    <value>Verstärkung  / Stabilisierung</value>
+    <comment>7</comment>
+  </data>
+  <data name="_77" xml:space="preserve">
+    <value>FHT59N3T - MCA Parameter Hochspannung</value>
+    <comment>7</comment>
+  </data>
+  <data name="_80" xml:space="preserve">
+    <value>Inhibit Polarität</value>
+    <comment>7</comment>
+  </data>
+  <data name="_81" xml:space="preserve">
+    <value>Polarität</value>
+    <comment>7</comment>
+  </data>
+  <data name="_82" xml:space="preserve">
+    <value>Spannung</value>
+    <comment>7</comment>
+  </data>
+  <data name="_83" xml:space="preserve">
+    <value>Grenzwert</value>
+    <comment>7</comment>
+  </data>
+  <data name="_84" xml:space="preserve">
+    <value>Bereich</value>
+    <comment>7</comment>
+  </data>
+  <data name="_85" xml:space="preserve">
+    <value>Positiv</value>
+    <comment>7</comment>
+  </data>
+  <data name="_86" xml:space="preserve">
+    <value>Negativ</value>
+    <comment>7</comment>
+  </data>
+  <data name="_90" xml:space="preserve">
+    <value>Ja</value>
+    <comment>2</comment>
+  </data>
+  <data name="_91" xml:space="preserve">
+    <value>Nein</value>
+    <comment>2</comment>
+  </data>
+  <data name="_92" xml:space="preserve">
+    <value>FHT59N3T - Funktionsmenü</value>
+    <comment>7</comment>
+  </data>
+  <data name="_93" xml:space="preserve">
+    <value>Intensivmodus An</value>
+    <comment>7</comment>
+  </data>
+  <data name="_94" xml:space="preserve">
+    <value>Intensivmodus Aus</value>
+    <comment>7</comment>
+  </data>
+  <data name="_95" xml:space="preserve">
+    <value>Beenden</value>
+    <comment>7</comment>
+  </data>
+  <data name="_96" xml:space="preserve">
+    <value>FHT59N3T - Ergebnisdatei</value>
+    <comment>7</comment>
+  </data>
+  <data name="_97" xml:space="preserve">
+    <value>Drucken</value>
+    <comment>7</comment>
+  </data>
+  <data name="_98" xml:space="preserve">
+    <value>Schriftart</value>
+    <comment>7</comment>
+  </data>
+  <data name="_99" xml:space="preserve">
+    <value>Seiteneinstellungen</value>
+    <comment>7</comment>
+  </data>
+  <data name="_100" xml:space="preserve">
+    <value>Seitenansicht</value>
+    <comment>7</comment>
+  </data>
+  <data name="_101" xml:space="preserve">
+    <value>Informationen zeigen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_103" xml:space="preserve">
+    <value>Menü</value>
+    <comment>2</comment>
+  </data>
+  <data name="_105" xml:space="preserve">
+    <value>Aktuelles Spektrum</value>
+    <comment>2</comment>
+  </data>
+  <data name="_106" xml:space="preserve">
+    <value>Monitor Status</value>
+    <comment>7</comment>
+  </data>
+  <data name="_108" xml:space="preserve">
+    <value>Linkshänder</value>
+    <comment>2</comment>
+  </data>
+  <data name="_109" xml:space="preserve">
+    <value>  Mittel:</value>
+    <comment>7</comment>
+  </data>
+  <data name="_111" xml:space="preserve">
+    <value>  Aktuell:</value>
+    <comment>7</comment>
+  </data>
+  <data name="_112" xml:space="preserve">
+    <value>Luftdurchsatz [m³/h]</value>
+    <comment>7</comment>
+  </data>
+  <data name="_113" xml:space="preserve">
+    <value>Filterschritte:</value>
+    <comment>7</comment>
+  </data>
+  <data name="_115" xml:space="preserve">
+    <value>Parameter</value>
+    <comment>7</comment>
+  </data>
+  <data name="_118" xml:space="preserve">
+    <value>FHT59N3T - MCA Parameter Verstärkung Stabilisierung</value>
+    <comment>7</comment>
+  </data>
+  <data name="_119" xml:space="preserve">
+    <value>Übernehmen</value>
+    <comment>7</comment>
+  </data>
+  <data name="_120" xml:space="preserve">
+    <value>Verstärkung</value>
+    <comment>7</comment>
+  </data>
+  <data name="_123" xml:space="preserve">
+    <value>ULD</value>
+    <comment>2</comment>
+  </data>
+  <data name="_125" xml:space="preserve">
+    <value>LLD</value>
+    <comment>2</comment>
+  </data>
+  <data name="_128" xml:space="preserve">
+    <value>Fein</value>
+    <comment>7</comment>
+  </data>
+  <data name="_129" xml:space="preserve">
+    <value>Grob</value>
+    <comment>7</comment>
+  </data>
+  <data name="_130" xml:space="preserve">
+    <value>Eingangspolarität</value>
+    <comment>7</comment>
+  </data>
+  <data name="_131" xml:space="preserve">
+    <value>LLD Modus</value>
+    <comment>7</comment>
+  </data>
+  <data name="_133" xml:space="preserve">
+    <value>Zusätzliche Einstellungen</value>
+    <comment>7</comment>
+  </data>
+  <data name="_142" xml:space="preserve">
+    <value>BLR Modus</value>
+    <comment>7</comment>
+  </data>
+  <data name="_143" xml:space="preserve">
+    <value>Mess-
+modus</value>
+    <comment>7</comment>
+  </data>
+  <data name="_144" xml:space="preserve">
+    <value>Digitale Stabilisierung</value>
+    <comment>7</comment>
+  </data>
+  <data name="_145" xml:space="preserve">
+    <value>Modus</value>
+    <comment>7</comment>
+  </data>
+  <data name="_146" xml:space="preserve">
+    <value>Verhältnis-
+modus</value>
+    <comment>7</comment>
+  </data>
+  <data name="_147" xml:space="preserve">
+    <value>Teiler</value>
+    <comment>7</comment>
+  </data>
+  <data name="_150" xml:space="preserve">
+    <value>Verhältnis</value>
+    <comment>7</comment>
+  </data>
+  <data name="_153" xml:space="preserve">
+    <value>Abstand</value>
+    <comment>7</comment>
+  </data>
+  <data name="_156" xml:space="preserve">
+    <value>Fenster</value>
+    <comment>7</comment>
+  </data>
+  <data name="_158" xml:space="preserve">
+    <value>Zentroid</value>
+    <comment>7</comment>
+  </data>
+  <data name="_159" xml:space="preserve">
+    <value>Einstellungen setzen</value>
+    <comment>7</comment>
+  </data>
+  <data name="_160" xml:space="preserve">
+    <value>Zurücksetzen</value>
+    <comment>7</comment>
+  </data>
+  <data name="_161" xml:space="preserve">
+    <value>FHT59N3T - Meldungen</value>
+    <comment>7</comment>
+  </data>
+  <data name="_163" xml:space="preserve">
+    <value>Ändern</value>
+    <comment>7</comment>
+  </data>
+  <data name="_166" xml:space="preserve">
+    <value>Systemstatus</value>
+    <comment>2</comment>
+  </data>
+  <data name="_167" xml:space="preserve">
+    <value>Systemmeldungen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_168" xml:space="preserve">
+    <value>FHT59N3T - Parameter</value>
+    <comment>7</comment>
+  </data>
+  <data name="_169" xml:space="preserve">
+    <value>FHT59N3T - Status / Meldungen / Digitale Ausgänge</value>
+    <comment>2</comment>
+  </data>
+  <data name="_170" xml:space="preserve">
+    <value>Tagessummenspektrum</value>
+    <comment>3</comment>
+  </data>
+  <data name="_171" xml:space="preserve">
+    <value>Filterstandsspektrum</value>
+    <comment>3</comment>
+  </data>
+  <data name="_172" xml:space="preserve">
+    <value>; ELIVE=EREAL gesetzt</value>
+    <comment>2</comment>
+  </data>
+  <data name="_173" xml:space="preserve">
+    <value> Luftdurchsatz (&lt;&lt;) geändert in </value>
+    <comment>3</comment>
+  </data>
+  <data name="_174" xml:space="preserve">
+    <value>K40-HWB: </value>
+    <comment>2</comment>
+  </data>
+  <data name="_175" xml:space="preserve">
+    <value> keV  -ABW(NAH): </value>
+    <comment>2</comment>
+  </data>
+  <data name="_176" xml:space="preserve">
+    <value> keV  -INH/h: </value>
+    <comment>2</comment>
+  </data>
+  <data name="_177" xml:space="preserve">
+    <value>K40-HWB: </value>
+    <comment>2</comment>
+  </data>
+  <data name="_178" xml:space="preserve">
+    <value> keV  -INH/h: </value>
+    <comment>2</comment>
+  </data>
+  <data name="_179" xml:space="preserve">
+    <value>K40-Inhalt zu klein</value>
+    <comment>3</comment>
+  </data>
+  <data name="_180" xml:space="preserve">
+    <value>Fern.cnf nicht gefunden.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_181" xml:space="preserve">
+    <value>Keine Linien im Spektrum FERN.CNF gefunden.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_182" xml:space="preserve">
+    <value>\ECAL -- fernS.cnf missglückt.! Rkkod: </value>
+    <comment>2</comment>
+  </data>
+  <data name="_183" xml:space="preserve">
+    <value>\CALPLOT -- fernS.cnf missglückt.! Rkkod:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_184" xml:space="preserve">
+    <value>\MOVEDATA - fern.cnf nach nah.cnf missglückt.! Rkkod:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_185" xml:space="preserve">
+    <value>\MOVEDATA - fern.cnf nach DET:EBIN missglückt.! Rkkod:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_186" xml:space="preserve">
+    <value>\ENERG-REPORT -- fernS.rpt missglückt.! Rkkod:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_187" xml:space="preserve">
+    <value>Fern.cnf nicht gefunden.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_188" xml:space="preserve">
+    <value>Keine Linien im Spektrum FERNKOR.CNF gefunden.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_189" xml:space="preserve">
+    <value>(1407.95keV+-1.5keV)-Linie nicht gefunden. Bitte Kalibrierspektrum FERN.CNF ueberpruefen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_190" xml:space="preserve">
+    <value>\EFFCAL -- fernkorS.rpt missglückt.! Rkkod:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_191" xml:space="preserve">
+    <value>\EFF-CALPLOT -- fernkorS.cnf missglückt.! Rkkod:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_192" xml:space="preserve">
+    <value>\EFF-REPORT -- fernkor.rpt missglückt.! Rkkod:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_193" xml:space="preserve">
+    <value>Fern.cnf nicht gefunden.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_194" xml:space="preserve">
+    <value>Keine Linien im Spektrum FERNKOR.CNF gefunden.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_195" xml:space="preserve">
+    <value>(661.67keV+-1.5keV)-Linie nicht gefunden. Bitte Kalibrierspektrum FERN.CNF ueberpruefen.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_196" xml:space="preserve">
+    <value>Keine Linien im Spektrum FERNKOR.CNF gefunden.</value>
+    <comment>3</comment>
+  </data>
+  <data name="_197" xml:space="preserve">
+    <value>(661.67keV+-1.5keV)-Linie nicht gefunden. Bitte Kalibrierspektrum NAH.CNF ueberpruefen.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_198" xml:space="preserve">
+    <value>\EFFCAL an fernkor.cnf! Rkkod: </value>
+    <comment>2</comment>
+  </data>
+  <data name="_199" xml:space="preserve">
+    <value>\NAH-CALPLOT fernkor missglückt.! Rkkod:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_200" xml:space="preserve">
+    <value>\MOVEDATA - fernkor.cnf nach nah.cnf missglückt.! Rkkod:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_201" xml:space="preserve">
+    <value>\MOVEDATA - fernkor.cnf nach DET:EBIN missglückt.! Rkkod:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_202" xml:space="preserve">
+    <value>\EFFCOR-REPORT -- fernkor.rpt missglückt.! Rkkod:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_203" xml:space="preserve">
+    <value>(661.7keV+-2keV)-Linie nicht gefunden.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_204" xml:space="preserve">
+    <value>Bitte Kalibrierspektrum überprüfen.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_205" xml:space="preserve">
+    <value>Keine Linien in NAH.CNF gefunden.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_206" xml:space="preserve">
+    <value>(661.7keV+-2keV)-Linie in NAH.CNF nicht gefunden.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_207" xml:space="preserve">
+    <value>Die dem aktuellen Spektrum entnommene Effizienz</value>
+    <comment>2</comment>
+  </data>
+  <data name="_208" xml:space="preserve">
+    <value> bei 661.7 keV betraegt: </value>
+    <comment>2</comment>
+  </data>
+  <data name="_210" xml:space="preserve">
+    <value>deren Differenzbetrag: </value>
+    <comment>2</comment>
+  </data>
+  <data name="_211" xml:space="preserve">
+    <value>Wird der neue Wert akzeptiert?</value>
+    <comment>2</comment>
+  </data>
+  <data name="_212" xml:space="preserve">
+    <value>Nein</value>
+    <comment>2</comment>
+  </data>
+  <data name="_214" xml:space="preserve">
+    <value>Wiederstart:   </value>
+    <comment>2</comment>
+  </data>
+  <data name="_215" xml:space="preserve">
+    <value> not found.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_216" xml:space="preserve">
+    <value>Kalibierspektrum</value>
+    <comment>2</comment>
+  </data>
+  <data name="_217" xml:space="preserve">
+    <value>Wkp-Spektrum</value>
+    <comment>2</comment>
+  </data>
+  <data name="_218" xml:space="preserve">
+    <value>Keine Linien im Spektrum gefunden.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_219" xml:space="preserve">
+    <value>Übertragung der Kalibrierung {0} mittels MOVEDATA in den Detektor (DET:EBIN) missglückt. Fehlercode: {1}</value>
+    <comment>2</comment>
+  </data>
+  <data name="_220" xml:space="preserve">
+    <value>Neustart am </value>
+    <comment>2</comment>
+  </data>
+  <data name="_221" xml:space="preserve">
+    <value>Zertifikatsdatei </value>
+    <comment>2</comment>
+  </data>
+  <data name="_222" xml:space="preserve">
+    <value> existiert nicht.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_223" xml:space="preserve">
+    <value> enthält keine Daten.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_225" xml:space="preserve">
+    <value>Betriebs-m³</value>
+    <comment>2</comment>
+  </data>
+  <data name="_226" xml:space="preserve">
+    <value>Tagessummenspektrum;Messzeit (h): </value>
+    <comment>2</comment>
+  </data>
+  <data name="_227" xml:space="preserve">
+    <value>Mittlere Messzeit (h): </value>
+    <comment>2</comment>
+  </data>
+  <data name="_228" xml:space="preserve">
+    <value>;Luftdurchsatz (m3/h): </value>
+    <comment>2</comment>
+  </data>
+  <data name="_229" xml:space="preserve">
+    <value>Filterstandsspektrum;Messzeit (min): </value>
+    <comment>2</comment>
+  </data>
+  <data name="_230" xml:space="preserve">
+    <value>Auswertung des Spektrums </value>
+    <comment>2</comment>
+  </data>
+  <data name="_231" xml:space="preserve">
+    <value>Tagessummenspektrum;Bestaubungsstart: </value>
+    <comment>2</comment>
+  </data>
+  <data name="_232" xml:space="preserve">
+    <value>Filterstandsspektrum;Bestaubungsstart: </value>
+    <comment>2</comment>
+  </data>
+  <data name="_233" xml:space="preserve">
+    <value>Messzeit (h): </value>
+    <comment>2</comment>
+  </data>
+  <data name="_234" xml:space="preserve">
+    <value>Luftdurchsatz (m3/h): </value>
+    <comment>2</comment>
+  </data>
+  <data name="_235" xml:space="preserve">
+    <value>Messzeit (h): </value>
+    <comment>2</comment>
+  </data>
+  <data name="_236" xml:space="preserve">
+    <value>Mittlere Messzeit (h): </value>
+    <comment>2</comment>
+  </data>
+  <data name="_237" xml:space="preserve">
+    <value>Alarmprüfung (</value>
+    <comment>2</comment>
+  </data>
+  <data name="_238" xml:space="preserve">
+    <value>);Messzeit (min): </value>
+    <comment>2</comment>
+  </data>
+  <data name="_239" xml:space="preserve">
+    <value>Nuklid     AktivKonz.(Bq/m3)   Fehler(%)  NachwsGrenze(Bq/m3)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_240" xml:space="preserve">
+    <value>Monitor in Wartung</value>
+    <comment>2</comment>
+  </data>
+  <data name="_241" xml:space="preserve">
+    <value>Auswertung abgebrochen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_242" xml:space="preserve">
+    <value>K40-HWB zu groß.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_243" xml:space="preserve">
+    <value>- unused -</value>
+    <comment>2</comment>
+  </data>
+  <data name="_244" xml:space="preserve">
+    <value>Kommuniaktionsprobleme mit SPS</value>
+    <comment>2</comment>
+  </data>
+  <data name="_245" xml:space="preserve">
+    <value>Datum;Uhrzeit;Messzeit[s];Energie[keV],Effizienz[%]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_246" xml:space="preserve">
+    <value>offen / frei</value>
+    <comment>2</comment>
+  </data>
+  <data name="_247" xml:space="preserve">
+    <value>läuft</value>
+    <comment>2</comment>
+  </data>
+  <data name="_248" xml:space="preserve">
+    <value>An</value>
+    <comment>2</comment>
+  </data>
+  <data name="_249" xml:space="preserve">
+    <value>Wartung Aus</value>
+    <comment>2</comment>
+  </data>
+  <data name="_251" xml:space="preserve">
+    <value>Intensivbetrieb</value>
+    <comment>2</comment>
+  </data>
+  <data name="_252" xml:space="preserve">
+    <value>Messung</value>
+    <comment>2</comment>
+  </data>
+  <data name="_253" xml:space="preserve">
+    <value>Nächste Auswertung: </value>
+    <comment>2</comment>
+  </data>
+  <data name="_254" xml:space="preserve">
+    <value>Nächster Bandtransport: </value>
+    <comment>2</comment>
+  </data>
+  <data name="_255" xml:space="preserve">
+    <value>01 Stationsparameter</value>
+    <comment>2</comment>
+  </data>
+  <data name="_256" xml:space="preserve">
+    <value>Kunde</value>
+    <comment>2</comment>
+  </data>
+  <data name="_257" xml:space="preserve">
+    <value>Name des Kunden dem der Monitor gehört.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_258" xml:space="preserve">
+    <value>Stationsname</value>
+    <comment>2</comment>
+  </data>
+  <data name="_259" xml:space="preserve">
+    <value>Name der Station in welcher der Monitor steht</value>
+    <comment>2</comment>
+  </data>
+  <data name="_260" xml:space="preserve">
+    <value>Stationsnummer</value>
+    <comment>2</comment>
+  </data>
+  <data name="_261" xml:space="preserve">
+    <value>Nummer (ID) der Station in welcher der Monitor steht.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_262" xml:space="preserve">
+    <value>02 Messparameter</value>
+    <comment>2</comment>
+  </data>
+  <data name="_263" xml:space="preserve">
+    <value>Tagesneubeginn [h]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_264" xml:space="preserve">
+    <value>Stunde zu der das Tagessummenspektrum neu begonnen wird.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_265" xml:space="preserve">
+    <value>Filterstandzeit [h]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_266" xml:space="preserve">
+    <value>Zeit zwischen zwei Filterschritten.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_267" xml:space="preserve">
+    <value>Zeit zwischen zwei Messzeitpunkten.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_268" xml:space="preserve">
+    <value>Schrittlänge im Messbetrieb [mm]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_269" xml:space="preserve">
+    <value>Länge des Filterschrittes im Messbetrieb.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_270" xml:space="preserve">
+    <value>Filterschritte</value>
+    <comment>2</comment>
+  </data>
+  <data name="_271" xml:space="preserve">
+    <value>Anzahl der noch vorhandenen Filterschritte.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_272" xml:space="preserve">
+    <value>N2 Füllstandsgrenzwert</value>
+    <comment>2</comment>
+  </data>
+  <data name="_273" xml:space="preserve">
+    <value>Grenzwert zur Alarmierung des Stickstofffüllstandes. (=0 elektrische Kühlung)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_274" xml:space="preserve">
+    <value>Blendenfaktor</value>
+    <comment>2</comment>
+  </data>
+  <data name="_275" xml:space="preserve">
+    <value>Blendenfaktor für die Luftdurchsatzbestimmung.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_276" xml:space="preserve">
+    <value>Faktor 1950keV</value>
+    <comment>2</comment>
+  </data>
+  <data name="_277" xml:space="preserve">
+    <value>Faktor für die 1950keV Linie um die Effizienzkalibrierung zu stabilisieren.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_278" xml:space="preserve">
+    <value>03 SPS Parameter</value>
+    <comment>2</comment>
+  </data>
+  <data name="_279" xml:space="preserve">
+    <value>Serieller Anschluss</value>
+    <comment>2</comment>
+  </data>
+  <data name="_280" xml:space="preserve">
+    <value>Serieller Anschluss um mit der SPS zu kommunizieren.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_281" xml:space="preserve">
+    <value>04 Alarmparameter</value>
+    <comment>2</comment>
+  </data>
+  <data name="_282" xml:space="preserve">
+    <value>Alarmnuklide</value>
+    <comment>2</comment>
+  </data>
+  <data name="_283" xml:space="preserve">
+    <value>Liste der Nuklide und ihrer Grenzwerte für die Alarmierung in Bq/m³.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_284" xml:space="preserve">
+    <value>Eintrag hinzufügen...</value>
+    <comment>2</comment>
+  </data>
+  <data name="_285" xml:space="preserve">
+    <value>Eintrag löschen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_286" xml:space="preserve">
+    <value>Werte eingeben [Nuklid=Grenzwert]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_287" xml:space="preserve">
+    <value>Möchten Sie diesen Eintrag wirklich löschen?</value>
+    <comment>2</comment>
+  </data>
+  <data name="_288" xml:space="preserve">
+    <value>Löschen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_289" xml:space="preserve">
+    <value>UTC (Keine Zeitzone verfügbar)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_290" xml:space="preserve">
+    <value>Bitte geben Sie einen numerischen Wert für den wahren Luftdurchsatz ein.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_291" xml:space="preserve">
+    <value>Bitte geben Sie einen numerischen Wert für die Anzahl der Messungen ein.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_292" xml:space="preserve">
+    <value>Bitte KONTROLLIEREN Sie die Daten von EBIN.CTF.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_293" xml:space="preserve">
+    <value>Bitte KONTROLLIEREN Sie die Daten von CS137.CTF.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_294" xml:space="preserve">
+    <value>FHT59N3T - Kalibrierung in Geometrie FERN</value>
+    <comment>2</comment>
+  </data>
+  <data name="_295" xml:space="preserve">
+    <value>Bitte legen Sie den MISCHSTRAHLER in Geometrie FERN ein.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_296" xml:space="preserve">
+    <value>Starte Kalibrierung</value>
+    <comment>2</comment>
+  </data>
+  <data name="_297" xml:space="preserve">
+    <value>FHT59N3T - Kalibrierung in Geometrie NAH</value>
+    <comment>2</comment>
+  </data>
+  <data name="_298" xml:space="preserve">
+    <value>Bitte legen Sie den CS-137 Strahler in Geometrie NAH ein.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_299" xml:space="preserve">
+    <value>FHT59N3T - WKP</value>
+    <comment>2</comment>
+  </data>
+  <data name="_300" xml:space="preserve">
+    <value>Starte WKP</value>
+    <comment>2</comment>
+  </data>
+  <data name="_301" xml:space="preserve">
+    <value>FHT59N3T - Freie Messung</value>
+    <comment>2</comment>
+  </data>
+  <data name="_302" xml:space="preserve">
+    <value>Bitte geben Sie die Messzeit ein.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_303" xml:space="preserve">
+    <value>Bitte geben Sie einen numerischen Wert ein.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_304" xml:space="preserve">
+    <value>Spektren (*.cnf)|*.cnf</value>
+    <comment>2</comment>
+  </data>
+  <data name="_305" xml:space="preserve">
+    <value>Ergebnisse (*.dat)|*.dat</value>
+    <comment>2</comment>
+  </data>
+  <data name="_306" xml:space="preserve">
+    <value>Rechtshänder</value>
+    <comment>2</comment>
+  </data>
+  <data name="_307" xml:space="preserve">
+    <value>Ergebnisse zeigen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_308" xml:space="preserve">
+    <value>Möchten Sie diese Einstellungen speichern?</value>
+    <comment>2</comment>
+  </data>
+  <data name="_309" xml:space="preserve">
+    <value>Keine Meldungen vorhanden</value>
+    <comment>2</comment>
+  </data>
+  <data name="_311" xml:space="preserve">
+    <value>Site </value>
+    <comment>2</comment>
+  </data>
+  <data name="_312" xml:space="preserve">
+    <value>Eingabe:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_313" xml:space="preserve">
+    <value>Luftdurchsatz im Spektrum</value>
+    <comment>2</comment>
+  </data>
+  <data name="_314" xml:space="preserve">
+    <value>Anzahl addierter Spektren</value>
+    <comment>2</comment>
+  </data>
+  <data name="_315" xml:space="preserve">
+    <value>Startzeit</value>
+    <comment>2</comment>
+  </data>
+  <data name="_316" xml:space="preserve">
+    <value>Ende Zeit</value>
+    <comment>2</comment>
+  </data>
+  <data name="_317" xml:space="preserve">
+    <value>Druck am Filter [hPa]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_318" xml:space="preserve">
+    <value>Druck and der Blende [hPa]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_319" xml:space="preserve">
+    <value>Umgebungsdruck [hPa]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_320" xml:space="preserve">
+    <value>Aktueller Luftdurchsatz [m³/h]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_321" xml:space="preserve">
+    <value>Mittlerer Luftdurchsatz [m³/h]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_322" xml:space="preserve">
+    <value>N2 Füllstand [mV]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_323" xml:space="preserve">
+    <value>Temperatur [°C]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_324" xml:space="preserve">
+    <value>K40 zu klein oder nicht gefunden</value>
+    <comment>2</comment>
+  </data>
+  <data name="_325" xml:space="preserve">
+    <value>Luftdurchsatz kleiner als {0} m³/h</value>
+    <comment>Luftdurchsatz kleiner als 6 m³/h</comment>
+  </data>
+  <data name="_326" xml:space="preserve">
+    <value>Hochspannung aus</value>
+    <comment>2</comment>
+  </data>
+  <data name="_327" xml:space="preserve">
+    <value>Kein Bandtransport beobachtet.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_328" xml:space="preserve">
+    <value>Bypass offen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_329" xml:space="preserve">
+    <value>Auswertung abgebrochen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_330" xml:space="preserve">
+    <value>- unused -</value>
+    <comment>2</comment>
+  </data>
+  <data name="_331" xml:space="preserve">
+    <value>N2 Füllstand zu klein</value>
+    <comment>2</comment>
+  </data>
+  <data name="_332" xml:space="preserve">
+    <value>Filterwechsel erforderlich</value>
+    <comment>2</comment>
+  </data>
+  <data name="_333" xml:space="preserve">
+    <value>Temp./Druck prüfen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_334" xml:space="preserve">
+    <value>K40 zu groß</value>
+    <comment>2</comment>
+  </data>
+  <data name="_335" xml:space="preserve">
+    <value>Luftdurchsatz größer als {0} m³/h</value>
+    <comment>greater than 12 m³/h</comment>
+  </data>
+  <data name="_336" xml:space="preserve">
+    <value>Datentransferfehler</value>
+    <comment>2</comment>
+  </data>
+  <data name="_337" xml:space="preserve">
+    <value>Totzeit grösser als 20 %</value>
+    <comment>2</comment>
+  </data>
+  <data name="_338" xml:space="preserve">
+    <value>Summenstatus</value>
+    <comment>2</comment>
+  </data>
+  <data name="_339" xml:space="preserve">
+    <value>Über {0}</value>
+    <comment>2</comment>
+  </data>
+  <data name="_340" xml:space="preserve">
+    <value>Messprogramm gestartet.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_341" xml:space="preserve">
+    <value>Messprogramm beendet.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_342" xml:space="preserve">
+    <value>Kommunikationsprobleme mit der SPS!</value>
+    <comment>2</comment>
+  </data>
+  <data name="_343" xml:space="preserve">
+    <value>Hochspannung angeschaltet.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_344" xml:space="preserve">
+    <value>Hochspannung abgeschaltet.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_345" xml:space="preserve">
+    <value>Totzeit &gt; 20%.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_346" xml:space="preserve">
+    <value>Totzeit normal.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_347" xml:space="preserve">
+    <value>Bandtransport gefordert.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_348" xml:space="preserve">
+    <value>Band nicht transportiert, gerissen?</value>
+    <comment>2</comment>
+  </data>
+  <data name="_349" xml:space="preserve">
+    <value>Bandtransport beendet.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_350" xml:space="preserve">
+    <value>Filterband geht zu Ende.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_351" xml:space="preserve">
+    <value>Filterband gewechselt.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_352" xml:space="preserve">
+    <value>Alarmmodus angeschalten</value>
+    <comment>2</comment>
+  </data>
+  <data name="_353" xml:space="preserve">
+    <value>K40-1460.8-keV-Linie nicht gefunden.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_354" xml:space="preserve">
+    <value>Abweichung der K40-1461-keV-Linie ist zu groß.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_355" xml:space="preserve">
+    <value>K40-1460.8-keV-Linie zu klein (oder nicht gefunden).</value>
+    <comment>2</comment>
+  </data>
+  <data name="_356" xml:space="preserve">
+    <value>Identifizierung: Auswertung abgebrochen. Ohne Linien!!</value>
+    <comment>2</comment>
+  </data>
+  <data name="_357" xml:space="preserve">
+    <value>BI-214 gefunden, PB-214 nicht! Energie nachkalibrieren?</value>
+    <comment>2</comment>
+  </data>
+  <data name="_358" xml:space="preserve">
+    <value>Wartungsbeginn</value>
+    <comment>2</comment>
+  </data>
+  <data name="_359" xml:space="preserve">
+    <value>Wartungsende</value>
+    <comment>2</comment>
+  </data>
+  <data name="_360" xml:space="preserve">
+    <value>Fernwartung gefordert</value>
+    <comment>2</comment>
+  </data>
+  <data name="_361" xml:space="preserve">
+    <value>Band gerissen, Bypass offen</value>
+    <comment>4</comment>
+  </data>
+  <data name="_362" xml:space="preserve">
+    <value>Bypass geschlossen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_363" xml:space="preserve">
+    <value>Temp./Druck prüfen!</value>
+    <comment>2</comment>
+  </data>
+  <data name="_364" xml:space="preserve">
+    <value>Temp./Druck Ok</value>
+    <comment>2</comment>
+  </data>
+  <data name="_365" xml:space="preserve">
+    <value>Luftdurchsatz &lt; {0} m³/h!</value>
+    <comment>Luftdurchsatz kleiner als 6 m³/h</comment>
+  </data>
+  <data name="_366" xml:space="preserve">
+    <value>Luftdurchsatz &gt; {0} m³/h!</value>
+    <comment>Luftdurchsatz größer als 12 m³/h</comment>
+  </data>
+  <data name="_367" xml:space="preserve">
+    <value>Luftdurchsatz Ok!</value>
+    <comment>2</comment>
+  </data>
+  <data name="_368" xml:space="preserve">
+    <value>Wert für N2-Füllstand unplausibel (</value>
+    <comment>2</comment>
+  </data>
+  <data name="_369" xml:space="preserve">
+    <value>Stickstoff geht zu Ende.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_370" xml:space="preserve">
+    <value>Stickstoff nachgefüllt.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_371" xml:space="preserve">
+    <value>Schrittweite zu klein. Auf 60 mm gesetzt!!</value>
+    <comment>2</comment>
+  </data>
+  <data name="_372" xml:space="preserve">
+    <value>Möchten Sie das Programm wirklich beenden?</value>
+    <comment>2</comment>
+  </data>
+  <data name="_373" xml:space="preserve">
+    <value>Energie- und Effizienzkalibrierung erfolgreich!</value>
+    <comment>2</comment>
+  </data>
+  <data name="_374" xml:space="preserve">
+    <value>Identifizierung: Auswertung abgebrochen. Es wurden keine Spektren addiert!</value>
+    <comment>2</comment>
+  </data>
+  <data name="_375" xml:space="preserve">
+    <value>Möchten Sie das gemessene Spektrum speichern?</value>
+    <comment>2</comment>
+  </data>
+  <data name="_376" xml:space="preserve">
+    <value>Tagesneubeginn ausserhalb des zulässigen Bereiches. Auf 0 gesetzt!!</value>
+    <comment>2</comment>
+  </data>
+  <data name="_377" xml:space="preserve">
+    <value>Anzahl der Filterschritte ausserhalb des zulässigen Bereiches.. Auf 1 gesetzt!!</value>
+    <comment>2</comment>
+  </data>
+  <data name="_378" xml:space="preserve">
+    <value>N2 Grenzwert ausserhalb des zulässigen Bereiches. Auf 0 gesetzt!!</value>
+    <comment>2</comment>
+  </data>
+  <data name="_379" xml:space="preserve">
+    <value>Filterstandzeit ausserhalb des zulässigen Bereiches. Geändert in </value>
+    <comment>2</comment>
+  </data>
+  <data name="_380" xml:space="preserve">
+    <value>Messzeit ausserhalb des zulässigen Bereiches. Geändert in </value>
+    <comment>2</comment>
+  </data>
+  <data name="_381" xml:space="preserve">
+    <value>05 Diverse Parameter</value>
+    <comment>2</comment>
+  </data>
+  <data name="_382" xml:space="preserve">
+    <value>Sprache</value>
+    <comment>2</comment>
+  </data>
+  <data name="_383" xml:space="preserve">
+    <value>Sprache des Systems</value>
+    <comment>2</comment>
+  </data>
+  <data name="_384" xml:space="preserve">
+    <value>Deutsch (de)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_385" xml:space="preserve">
+    <value>Englisch (en)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_386" xml:space="preserve">
+    <value>Programm muss neu gestartet werden!</value>
+    <comment>2</comment>
+  </data>
+  <data name="_387" xml:space="preserve">
+    <value>Punktdarstellung</value>
+    <comment>2</comment>
+  </data>
+  <data name="_388" xml:space="preserve">
+    <value>Soll das Spektrum mit Punkten oder mit Linien dargestellt werden?</value>
+    <comment>2</comment>
+  </data>
+  <data name="_389" xml:space="preserve">
+    <value>FHT59N3T - ROI Menü</value>
+    <comment>2</comment>
+  </data>
+  <data name="_390" xml:space="preserve">
+    <value>ROI hinzufügen (Strg+H)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_391" xml:space="preserve">
+    <value>Lösche ROI (Strg+O)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_392" xml:space="preserve">
+    <value>Lösche Alle ROIs (Strg+A)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_393" xml:space="preserve">
+    <value>Lade ROIs (Strg+L)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_394" xml:space="preserve">
+    <value>Speichere ROIs (Strg+S)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_395" xml:space="preserve">
+    <value>Vorherige ROI (Strg+V)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_396" xml:space="preserve">
+    <value>Nächste ROI (Strg+N)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_397" xml:space="preserve">
+    <value>Digitale Ausgänge</value>
+    <comment>2</comment>
+  </data>
+  <data name="_398" xml:space="preserve">
+    <value>Monitorstatus zeigen</value>
+    <comment>3</comment>
+  </data>
+  <data name="_399" xml:space="preserve">
+    <value>FHT59N3T - Status / Meldungen / Digitale Ausgänge</value>
+    <comment>7</comment>
+  </data>
+  <data name="_400" xml:space="preserve">
+    <value>Alarm- ausgang</value>
+    <comment>2</comment>
+  </data>
+  <data name="_401" xml:space="preserve">
+    <value>Filter / Bypass</value>
+    <comment>2</comment>
+  </data>
+  <data name="_402" xml:space="preserve">
+    <value>Alarmausgang</value>
+    <comment>7</comment>
+  </data>
+  <data name="_403" xml:space="preserve">
+    <value>geschlos- sen / arretiert</value>
+    <comment>7</comment>
+  </data>
+  <data name="_404" xml:space="preserve">
+    <value>Alarmausgang An</value>
+    <comment>7</comment>
+  </data>
+  <data name="_405" xml:space="preserve">
+    <value>Alarmausgang Aus</value>
+    <comment>7</comment>
+  </data>
+  <data name="_406" xml:space="preserve">
+    <value>K40 Mindestfläche [Imp/h]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_407" xml:space="preserve">
+    <value>Mindestfläche des K40 Peaks.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_408" xml:space="preserve">
+    <value>K40 Volle Breite bei halbem Maximum [keV]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_409" xml:space="preserve">
+    <value>Die Breite des K40 Peaks bei halbem Maximum. .</value>
+    <comment>2</comment>
+  </data>
+  <data name="_410" xml:space="preserve">
+    <value>Betriebs-m³</value>
+    <comment>2</comment>
+  </data>
+  <data name="_411" xml:space="preserve">
+    <value>Wenn [true] wird der Luftdurchsatz in Betriebs-m³ gemessen/angezeigt.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_412" xml:space="preserve">
+    <value>ROI</value>
+    <comment>2</comment>
+  </data>
+  <data name="_413" xml:space="preserve">
+    <value>Quittiere Alarm</value>
+    <comment>7</comment>
+  </data>
+  <data name="_414" xml:space="preserve">
+    <value>Status (erweitert)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_415" xml:space="preserve">
+    <value>FHT59N3T - Filtermenü</value>
+    <comment>7</comment>
+  </data>
+  <data name="_416" xml:space="preserve">
+    <value>Restschritte setzen</value>
+    <comment>7</comment>
+  </data>
+  <data name="_417" xml:space="preserve">
+    <value>Filterband</value>
+    <comment>7</comment>
+  </data>
+  <data name="_418" xml:space="preserve">
+    <value>Label1</value>
+    <comment>3</comment>
+  </data>
+  <data name="_419" xml:space="preserve">
+    <value>Button1</value>
+    <comment>2</comment>
+  </data>
+  <data name="_420" xml:space="preserve">
+    <value>Filterschritt auslösen</value>
+    <comment>7</comment>
+  </data>
+  <data name="_421" xml:space="preserve">
+    <value>FHT59N3T - Restschritte</value>
+    <comment>7</comment>
+  </data>
+  <data name="_422" xml:space="preserve">
+    <value>Restliche Filterschritte</value>
+    <comment>7</comment>
+  </data>
+  <data name="_423" xml:space="preserve">
+    <value>Bereich</value>
+    <comment>7</comment>
+  </data>
+  <data name="_424" xml:space="preserve">
+    <value>Abbrechen</value>
+    <comment>7</comment>
+  </data>
+  <data name="_425" xml:space="preserve">
+    <value>Alarmmodus ein</value>
+    <comment>3</comment>
+  </data>
+  <data name="_426" xml:space="preserve">
+    <value>Alarmmodus aus</value>
+    <comment>3</comment>
+  </data>
+  <data name="_427" xml:space="preserve">
+    <value>Intensivmodus ein</value>
+    <comment>3</comment>
+  </data>
+  <data name="_428" xml:space="preserve">
+    <value>Intensivmodus aus.</value>
+    <comment>3</comment>
+  </data>
+  <data name="_450" xml:space="preserve">
+    <value>Band gerissen, Bypass offen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_451" xml:space="preserve">
+    <value>Sie haben keine Berechtigung um auf folgende Verzeichnisse zuzugreifen:</value>
+    <comment>3</comment>
+  </data>
+  <data name="_453" xml:space="preserve">
+    <value>Speichern</value>
+    <comment>3</comment>
+  </data>
+  <data name="_457" xml:space="preserve">
+    <value>OK</value>
+    <comment>2</comment>
+  </data>
+  <data name="_458" xml:space="preserve">
+    <value>Starte Messung</value>
+    <comment>2</comment>
+  </data>
+  <data name="_459" xml:space="preserve">
+    <value>Messzeit [min]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_460" xml:space="preserve">
+    <value>Zurück</value>
+    <comment>2</comment>
+  </data>
+  <data name="_461" xml:space="preserve">
+    <value>Alarmausgang</value>
+    <comment>2</comment>
+  </data>
+  <data name="_462" xml:space="preserve">
+    <value>Störausgang</value>
+    <comment>2</comment>
+  </data>
+  <data name="_463" xml:space="preserve">
+    <value>Filterschritt</value>
+    <comment>2</comment>
+  </data>
+  <data name="_464" xml:space="preserve">
+    <value>Hochspannung</value>
+    <comment>2</comment>
+  </data>
+  <data name="_465" xml:space="preserve">
+    <value>N2 Füllstand</value>
+    <comment>2</comment>
+  </data>
+  <data name="_466" xml:space="preserve">
+    <value>Pumpe</value>
+    <comment>2</comment>
+  </data>
+  <data name="_467" xml:space="preserve">
+    <value>Wartung</value>
+    <comment>2</comment>
+  </data>
+  <data name="_468" xml:space="preserve">
+    <value>Linkshänder</value>
+    <comment>2</comment>
+  </data>
+  <data name="_469" xml:space="preserve">
+    <value>Informationen zeigen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_470" xml:space="preserve">
+    <value>Status (erweitert)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_471" xml:space="preserve">
+    <value>Abbrechen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_472" xml:space="preserve">
+    <value>Nein</value>
+    <comment>2</comment>
+  </data>
+  <data name="_473" xml:space="preserve">
+    <value>Ja</value>
+    <comment>2</comment>
+  </data>
+  <data name="_474" xml:space="preserve">
+    <value>Systemstatus</value>
+    <comment>2</comment>
+  </data>
+  <data name="_475" xml:space="preserve">
+    <value>Systemmeldungen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_476" xml:space="preserve">
+    <value>Digitale Ausgänge</value>
+    <comment>2</comment>
+  </data>
+  <data name="_477" xml:space="preserve">
+    <value>Schließen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_478" xml:space="preserve">
+    <value>Starte Messung</value>
+    <comment>7</comment>
+  </data>
+  <data name="_479" xml:space="preserve">
+    <value>Zurück</value>
+    <comment>7</comment>
+  </data>
+  <data name="_480" xml:space="preserve">
+    <value>OK</value>
+    <comment>7</comment>
+  </data>
+  <data name="_481" xml:space="preserve">
+    <value>Hochspannung</value>
+    <comment>7</comment>
+  </data>
+  <data name="_482" xml:space="preserve">
+    <value>Linkshänder</value>
+    <comment>7</comment>
+  </data>
+  <data name="_483" xml:space="preserve">
+    <value>Filterschritt</value>
+    <comment>7</comment>
+  </data>
+  <data name="_484" xml:space="preserve">
+    <value>Pumpe</value>
+    <comment>7</comment>
+  </data>
+  <data name="_485" xml:space="preserve">
+    <value>Störausgang</value>
+    <comment>7</comment>
+  </data>
+  <data name="_486" xml:space="preserve">
+    <value>N2 Füllstand</value>
+    <comment>7</comment>
+  </data>
+  <data name="_487" xml:space="preserve">
+    <value>Starte Messung</value>
+    <comment>7</comment>
+  </data>
+  <data name="_488" xml:space="preserve">
+    <value>Zurück</value>
+    <comment>7</comment>
+  </data>
+  <data name="_489" xml:space="preserve">
+    <value>OK</value>
+    <comment>7</comment>
+  </data>
+  <data name="_490" xml:space="preserve">
+    <value>Hochspannung</value>
+    <comment>7</comment>
+  </data>
+  <data name="_491" xml:space="preserve">
+    <value>Linkshänder</value>
+    <comment>7</comment>
+  </data>
+  <data name="_492" xml:space="preserve">
+    <value>Filterschritt</value>
+    <comment>7</comment>
+  </data>
+  <data name="_493" xml:space="preserve">
+    <value>Pumpe</value>
+    <comment>7</comment>
+  </data>
+  <data name="_494" xml:space="preserve">
+    <value>Störausgang</value>
+    <comment>7</comment>
+  </data>
+  <data name="_495" xml:space="preserve">
+    <value>N2 Füllstand</value>
+    <comment>7</comment>
+  </data>
+  <data name="_496" xml:space="preserve">
+    <value>Fortsetzen</value>
+    <comment>7</comment>
+  </data>
+  <data name="_497" xml:space="preserve">
+    <value>Abbrechen</value>
+    <comment>7</comment>
+  </data>
+  <data name="_498" xml:space="preserve">
+    <value>FHT59N3T - Auswertung</value>
+    <comment>7</comment>
+  </data>
+  <data name="_499" xml:space="preserve">
+    <value>Zertifikatsdatum [dd.mm.yy hh:mm]</value>
+    <comment>7</comment>
+  </data>
+  <data name="_500" xml:space="preserve">
+    <value>Die folgenden Nuklide haben unterschiedliche Aktivitäten bei verschiedenen Linien.</value>
+    <comment>7</comment>
+  </data>
+  <data name="_501" xml:space="preserve">
+    <value>Zertifikatsdaten ändern</value>
+    <comment>2</comment>
+  </data>
+  <data name="_502" xml:space="preserve">
+    <value>K40-1460.8-keV-Linie nachkalibriert.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_503" xml:space="preserve">
+    <value>Energie wurde nachkalibriert.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_504" xml:space="preserve">
+    <value>Checksummefehler von der SPS erhalten.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_505" xml:space="preserve">
+    <value>Der erlaubte Wertebereich für den minimalen Luftdurchsatz muss zwischen 1 und 20 (m³/h) liegen.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_506" xml:space="preserve">
+    <value>Der erlaubte Wertebereich für den maximalen Luftdurchsatz muss zwischen 5 und 25 (m³/h) liegen.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_507" xml:space="preserve">
+    <value>Grenzwert für minimalen Luftdurchsatz [m³/h]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_508" xml:space="preserve">
+    <value>Der erlaubte Wertebereich für den minimalen Luftdurchsatz ist zwischen 1 und 20 (m³/h)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_509" xml:space="preserve">
+    <value>Grenzwert für maximalen Luftdurchsatz [m³/h]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_510" xml:space="preserve">
+    <value>Der erlaubte Wertebereich für den maximalen Luftdurchsatz ist zwischen 5 und 25 (m³/h)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_511" xml:space="preserve">
+    <value>Der E-Cooler ist abgeschaltet</value>
+    <comment>2</comment>
+  </data>
+  <data name="_512" xml:space="preserve">
+    <value>Speicherzyklus der Detektortemperatur [min]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_513" xml:space="preserve">
+    <value>Speicherzyklus der Detektortemperatur in Minuten</value>
+    <comment>2</comment>
+  </data>
+  <data name="_514" xml:space="preserve">
+    <value>Automatische Abschaltung des E-Coolers</value>
+    <comment>2</comment>
+  </data>
+  <data name="_515" xml:space="preserve">
+    <value>Automatische Abschaltung des E-Coolers, E-Cooler ist vorhanden</value>
+    <comment>2</comment>
+  </data>
+  <data name="_516" xml:space="preserve">
+    <value>Der Wertebereiche für Speicherzyklus der Detektortemperatur muss zwischen 1 und 60 Minuten liegen</value>
+    <comment>2</comment>
+  </data>
+  <data name="_517" xml:space="preserve">
+    <value>Überwachung der Detektortemperatur</value>
+    <comment>2</comment>
+  </data>
+  <data name="_518" xml:space="preserve">
+    <value>Überwachung der Detektortemperatur eingeschaltet (anstelle von der N2-Messung (N2-Kühlng)), Anzeige vom Diagramm möglich</value>
+    <comment>2</comment>
+  </data>
+  <data name="_519" xml:space="preserve">
+    <value>Die e-Cooler Notabschaltung kann nur aktiviert werden, wenn die Detektortemperatur aufgenommen wird</value>
+    <comment>2</comment>
+  </data>
+  <data name="_520" xml:space="preserve">
+    <value>Detektor-Temper.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_521" xml:space="preserve">
+    <value>Aufzeichnung Detektortemperatur</value>
+    <comment>2</comment>
+  </data>
+  <data name="_522" xml:space="preserve">
+    <value>Aufzeichnung Detektortemperatur funktioniert</value>
+    <comment>2</comment>
+  </data>
+  <data name="_523" xml:space="preserve">
+    <value>Aufzeichnung Detektortemperatur fehlerhaft</value>
+    <comment>2</comment>
+  </data>
+  <data name="_524" xml:space="preserve">
+    <value>Abschaltschwelle für 'Kristall zu warm'</value>
+    <comment>2</comment>
+  </data>
+  <data name="_525" xml:space="preserve">
+    <value>Abschaltschwelle für 'Kristall zu warm' in °C</value>
+    <comment>2</comment>
+  </data>
+  <data name="_526" xml:space="preserve">
+    <value>Falscher Wert für Abschaltschwelle 'Kristall zu warm'</value>
+    <comment>2</comment>
+  </data>
+  <data name="_527" xml:space="preserve">
+    <value>Wiedereinschaltschwelle des E-Cooler</value>
+    <comment>2</comment>
+  </data>
+  <data name="_528" xml:space="preserve">
+    <value>Wiedereinschaltschwelle des E-Cooler in °C</value>
+    <comment>2</comment>
+  </data>
+  <data name="_529" xml:space="preserve">
+    <value>Falscher Wert für Temperaturschwelle 'Kristall ist erwärmt'</value>
+    <comment>2</comment>
+  </data>
+  <data name="_530" xml:space="preserve">
+    <value>Möchten Sie den E-Cooler wirklich ausschalten?</value>
+    <comment>2</comment>
+  </data>
+  <data name="_531" xml:space="preserve">
+    <value>Möchten Sie den E-Cooler wirklich einschalten?</value>
+    <comment>2</comment>
+  </data>
+  <data name="_532" xml:space="preserve">
+    <value>Der E-Cooler kann zur Zeit nicht eingeschaltet werden.
+
+Um eine Beschädigung des Detectors zu verhindern, muss dieser zuerst auf Normaltemperatur ({0}°C) erwärmt werden. Die Detektortemperatur beträgt zur Zeit {1}°C.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_533" xml:space="preserve">
+    <value>kühlt nicht</value>
+    <comment>2</comment>
+  </data>
+  <data name="_534" xml:space="preserve">
+    <value>eingeschaltet</value>
+    <comment>2</comment>
+  </data>
+  <data name="_535" xml:space="preserve">
+    <value>Der E-Cooler kühlt</value>
+    <comment>2</comment>
+  </data>
+  <data name="_536" xml:space="preserve">
+    <value>Ein E-Cooler ist nicht verfügbar</value>
+    <comment>2</comment>
+  </data>
+  <data name="_537" xml:space="preserve">
+    <value>MCA Hochspannung soll eingeschaltet bleiben</value>
+    <comment>2</comment>
+  </data>
+  <data name="_538" xml:space="preserve">
+    <value>E-Cooler soll eingeschaltet bleiben</value>
+    <comment>2</comment>
+  </data>
+  <data name="_539" xml:space="preserve">
+    <value>Abschaltung der Hochspannung beim Beenden</value>
+    <comment>2</comment>
+  </data>
+  <data name="_540" xml:space="preserve">
+    <value>Abschaltung der Hochspannung (MCA) beim Beenden der Monitor-Anwendung</value>
+    <comment>2</comment>
+  </data>
+  <data name="_541" xml:space="preserve">
+    <value>Schrittlänge im Alarm-/Intensivbetrieb [mm]</value>
+    <comment>2</comment>
+  </data>
+  <data name="_542" xml:space="preserve">
+    <value>Länge des Filterschrittes im Intensivbetrieb.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_543" xml:space="preserve">
+    <value>Der Wert für die Netzwerk-Adresse (TCP/IP) ist ungültig</value>
+    <comment>2</comment>
+  </data>
+  <data name="_544" xml:space="preserve">
+    <value>Art der Datenkommunikation</value>
+    <comment>2</comment>
+  </data>
+  <data name="_545" xml:space="preserve">
+    <value>Art der Datenkommunikation um mit der SPS zu kommunizieren (seriell, Netzwerk, ...)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_546" xml:space="preserve">
+    <value>Netzwerk Adresse für TCP/IP</value>
+    <comment>2</comment>
+  </data>
+  <data name="_547" xml:space="preserve">
+    <value>Netzwerk Adresse für TCP/IP der SPS</value>
+    <comment>2</comment>
+  </data>
+  <data name="_548" xml:space="preserve">
+    <value>Remote-Port für TCP/IP</value>
+    <comment>2</comment>
+  </data>
+  <data name="_549" xml:space="preserve">
+    <value>Remote-Port für TCP/IP der SPS (1 ... 65535)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_550" xml:space="preserve">
+    <value>seriell (RS-232)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_551" xml:space="preserve">
+    <value>Netzwerk (TCP/IP)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_552" xml:space="preserve">
+    <value>Erste Aufzeichnung:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_553" xml:space="preserve">
+    <value>Letzte Aufzeichnung:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_554" xml:space="preserve">
+    <value>Messwert-Anzahl:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_555" xml:space="preserve">
+    <value>Min/Max Gesamt:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_556" xml:space="preserve">
+    <value>Aktuelle/Spitzenwerte:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_557" xml:space="preserve">
+    <value>Letzte gespeicherte Temperatur:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_558" xml:space="preserve">
+    <value>Minimaltemperatur während der letzten 8 Stunden:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_559" xml:space="preserve">
+    <value>Maximaltemperatur während der letzten 8 Stunden:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_560" xml:space="preserve">
+    <value>Zurück</value>
+    <comment>2</comment>
+  </data>
+  <data name="_561" xml:space="preserve">
+    <value>MCA Detektortemperatur</value>
+    <comment>2</comment>
+  </data>
+  <data name="_562" xml:space="preserve">
+    <value>Abschaltung des E-Coolers beim Beenden</value>
+    <comment>2</comment>
+  </data>
+  <data name="_563" xml:space="preserve">
+    <value>Abschaltung des E-Coolers (SPS) beim Beenden der Monitor-Anwendung</value>
+    <comment>2</comment>
+  </data>
+  <data name="_564" xml:space="preserve">
+    <value>Bitte legen Sie den MISCHSTRAHLER in Geometrie NAH ein.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_565" xml:space="preserve">
+    <value>Keine Linien im Spektrum NAH_MISCH.CNF. gefunden.</value>
+  </data>
+  <data name="_566" xml:space="preserve">
+    <value>\ECAL -- fernS.cnf missglückt.! Rkkod: </value>
+  </data>
+  <data name="_567" xml:space="preserve">
+    <value>\ECAL -- NAH_MISCH.CNF missglückt.! Rkkod:</value>
+  </data>
+  <data name="_568" xml:space="preserve">
+    <value>\MOVEDATA - NAH_MISCH.CNF nach nah.cnf missglückt.! Rkkod:</value>
+  </data>
+  <data name="_569" xml:space="preserve">
+    <value>\MOVEDATA - NAH_MISCH.CNF nach DET:EBIN missglückt.! Rkkod:</value>
+  </data>
+  <data name="_570" xml:space="preserve">
+    <value>\ENERG-REPORT -- NAH_MISCH.rpt missglückt.! Rkkod:</value>
+  </data>
+  <data name="_571" xml:space="preserve">
+    <value>NAH_MISCH.CNF nicht gefunden.</value>
+  </data>
+  <data name="_572" xml:space="preserve">
+    <value>\CALPLOT -- NAH_MISCH.CNF missglückt.! Rkkod:</value>
+  </data>
+  <data name="_573" xml:space="preserve">
+    <value>Keine Linien in NAHKOR.CNF gefunden!</value>
+  </data>
+  <data name="_574" xml:space="preserve">
+    <value>\EFFCAL -- NAHKORR.cnf missglückt.! Rkkod:</value>
+  </data>
+  <data name="_575" xml:space="preserve">
+    <value>\EFF-CALPLOT -- NAHKOR.NCF missglückt.! Rkkod:</value>
+  </data>
+  <data name="_576" xml:space="preserve">
+    <value>\EFF-REPORT -- NAHKOR.RPT missglückt.! Rkkod:</value>
+  </data>
+  <data name="_577" xml:space="preserve">
+    <value>Speichern der Detektortemperatur fehlgeschlagen.</value>
+  </data>
+  <data name="_578" xml:space="preserve">
+    <value>Bitte KONTROLLIEREN Sie die Daten von EBIN_NAH_MISCH.CTF.</value>
+  </data>
+  <data name="_579" xml:space="preserve">
+    <value>Messzeit ist zu klein</value>
+  </data>
+  <data name="_580" xml:space="preserve">
+    <value>06 Filter-Drucker Parameter</value>
+  </data>
+  <data name="_581" xml:space="preserve">
+    <value>Serieller Anschluss um mit dem Filter-Drucker zu kommunizieren.</value>
+  </data>
+  <data name="_582" xml:space="preserve">
+    <value>Abstand für Druckerkopf-Mittelpunkt</value>
+  </data>
+  <data name="_583" xml:space="preserve">
+    <value>Abstand zwischen Druckerkopf-Mittelpunkt (an „linker“ Umlenkrolle) und dem Mittelpunkt des „Bestaubungsrings“ in Millimeter</value>
+  </data>
+  <data name="_584" xml:space="preserve">
+    <value>Durchmesser des „Bestaubungsflecks“</value>
+  </data>
+  <data name="_585" xml:space="preserve">
+    <value>Durchmesser des „Bestaubungsflecks“ in Millimeter</value>
+  </data>
+  <data name="_586" xml:space="preserve">
+    <value>Filter-Drucker verwenden</value>
+  </data>
+  <data name="_587" xml:space="preserve">
+    <value>Filter Drucker verwenden (Zeitstempel auf Filterband)</value>
+  </data>
+  <data name="_588" xml:space="preserve">
+    <value>Der serielle Anschluß {0} ist für den Filter-Drucker nicht verfügbar!</value>
+  </data>
+  <data name="_589" xml:space="preserve">
+    <value>Seriennummer</value>
+  </data>
+  <data name="_590" xml:space="preserve">
+    <value>Die Seriennummer der Station in welcher der Monitor steht.</value>
+  </data>
+  <data name="_591" xml:space="preserve">
+    <value>USV-Betrieb</value>
+    <comment>2</comment>
+  </data>
+  <data name="_592" xml:space="preserve">
+    <value>Die USV-Überwachung ist fehlgeschlagen, USV-Zustand nicht verfügbar!</value>
+    <comment>2</comment>
+  </data>
+  <data name="_593" xml:space="preserve">
+    <value>Die USV-Überwachung wurde gestartet, USV-Zustand verfügbar</value>
+    <comment>2</comment>
+  </data>
+  <data name="_594" xml:space="preserve">
+    <value>Eintrag ändern</value>
+    <comment>2</comment>
+  </data>
+  <data name="_595" xml:space="preserve">
+    <value>Neuen Wert eingeben</value>
+    <comment>2</comment>
+  </data>
+  <data name="_596" xml:space="preserve">
+    <value>Luftdurchfluss Sollwert</value>
+    <comment>2</comment>
+  </data>
+  <data name="_597" xml:space="preserve">
+    <value>Luftdurchfluss Sollwert für die Pumpe von 0..25 m³/h</value>
+    <comment>2</comment>
+  </data>
+  <data name="_598" xml:space="preserve">
+    <value>Erkannte Alarmnuklide:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_599" xml:space="preserve">
+    <value>Nuklidname:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_600" xml:space="preserve">
+    <value>Schwellenwert:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_601" xml:space="preserve">
+    <value>SPS ist wieder online.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_602" xml:space="preserve">
+    <value>Name darf nicht leer sein.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_603" xml:space="preserve">
+    <value>Schwellenwert darf nicht leer sein.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_604" xml:space="preserve">
+    <value>Name "{0}" ist ungültig.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_605" xml:space="preserve">
+    <value>Alarmwert 1 ist ungültig.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_606" xml:space="preserve">
+    <value>Durchschnittliche Temperatur:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_607" xml:space="preserve">
+    <value>Weitere Informationen:</value>
+    <comment>2</comment>
+  </data>
+  <data name="_608" xml:space="preserve">
+    <value>Alarmwert 2 ist ungültig.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_609" xml:space="preserve">
+    <value>Alarmwert 2 ist kleiner als Alarmwert 1.</value>
+    <comment>2</comment>
+  </data>
+  <data name="_610" xml:space="preserve">
+    <value>Der Minimalwert muss kleiner sein als der Maximalwert</value>
+    <comment>2</comment>
+  </data>
+  <data name="_611" xml:space="preserve">
+    <value>USV-Betrieb beendet</value>
+    <comment>2</comment>
+  </data>
+  <data name="_612" xml:space="preserve">
+    <value>System wird heruntergefahren (schwache USV-Batterie)</value>
+    <comment>2</comment>
+  </data>
+  <data name="_613" xml:space="preserve">
+    <value>Spektrumauswertung abgebrochen - K40-Linie konnte nicht gefunden oder nachkalibriert werden</value>
+  </data>
+  <data name="_614" xml:space="preserve">
+    <value>ECooler-Zustandsmerker:</value>
+  </data>
+  <data name="_615" xml:space="preserve">
+    <value>Notabschaltung des E-Coolers durchgeführt ({0:0.0}°C &lt; {1:0.0}°C)</value>
+  </data>
+  <data name="_616" xml:space="preserve">
+    <value>E-Cooler nach Detektorerwärmung freigegeben ({0:0.0}°C &gt; {1:0.0}°C)</value>
+  </data>
+  <data name="_617" xml:space="preserve">
+    <value>E-Cooler hat minimale Betriebstemperatur erreicht ({0:0.0}°C &lt; {1:0.0}°C)</value>
+  </data>
+  <data name="_618" xml:space="preserve">
+    <value>Temporär die Meldungsliste leeren (bis zum nächsten Programmstart)?</value>
+  </data>
+  <data name="_619" xml:space="preserve">
+    <value>USV-Betrieb! Herunterfahren in {0} Min.</value>
+  </data>
+  <data name="_1209" xml:space="preserve">
+    <value>die NAH.cnf entnommene: </value>
+    <comment>2</comment>
+  </data>
+  <data name="_1210" xml:space="preserve">
+    <value>die NAH_MISCH.cnf entnommene: </value>
+    <comment>2</comment>
+  </data>
+  <data name="_630" xml:space="preserve">
+    <value>FHT59N3T - Messung des Hintergrundspektrums</value>
+  </data>
+  <data name="_631" xml:space="preserve">
+    <value>Das Hintergrundspektrum wurde gespeichert (als BACKGND.cnf)</value>
+  </data>
+  <data name="_632" xml:space="preserve">
+    <value>Bitte geben Sie die Messzeit für das aufgenommene Hintergrundspektrum ein.</value>
+  </data>
+  <data name="_640" xml:space="preserve">
+    <value>8 Stunden</value>
+  </data>
+  <data name="_641" xml:space="preserve">
+    <value>24 Stunden</value>
+  </data>
+  <data name="_642" xml:space="preserve">
+    <value>Eine Woche</value>
+  </data>
+  <data name="_643" xml:space="preserve">
+    <value>Vier Wochen</value>
+  </data>
+  <data name="_644" xml:space="preserve">
+    <value>Alle Daten</value>
+  </data>
+  <data name="_650" xml:space="preserve">
+    <value>ECooler</value>
+  </data>
+  <data name="_651" xml:space="preserve">
+    <value>Spektrum nicht zu Tagesspektrum addiert wg. fatalem Status:</value>
+  </data>
+  <data name="_652" xml:space="preserve">
+    <value>Ein oder mehrere Alarmwerte sind nicht richtig eingegeben (oder falscher Größenordnung). Bitte überprüfen Sie die Eingabe.</value>
+  </data>
+  <data name="_653" xml:space="preserve">
+    <value>In der Liste sind ein oder mehrere Einträge doppelt vorhanden. Dies ist nicht erlaubt, bitte editieren Sie die Eingaben.</value>
+  </data>
+  <data name="_654" xml:space="preserve">
+    <value>Exportiere Informationen der Nuklidbibliothek in Datei '{0}'</value>
+  </data>
+  <data name="_655" xml:space="preserve">
+    <value>Fehler beim Exportieren aufgrund von: '{0}'</value>
+  </data>
+  <data name="_660" xml:space="preserve">
+    <value>Externe Temperatur [°C]</value>
+  </data>
+</root>

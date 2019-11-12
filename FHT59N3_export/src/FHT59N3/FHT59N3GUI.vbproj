@@ -1,0 +1,800 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1834AFD3-CA1B-41B3-A551-AB8D8DCED8C7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>FHT59N3.My.MyApplication</StartupObject>
+    <RootNamespace>FHT59N3</RootNamespace>
+    <AssemblyName>FHT59N3</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ApplicationIcon>FHT59N3.ico</ApplicationIcon>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExterneOpenSource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=676f602718c5126c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ClassLibraries\00_Releases\ExterneOpenSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThermoControls, Version=1.0.1.0, Culture=neutral, PublicKeyToken=a1d56a13f405bb2e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ClassLibraries\00_Releases\ThermoControls.dll</HintPath>
+    </Reference>
+    <Reference Include="ThermoInterfaces, Version=1.0.4.0, Culture=neutral, PublicKeyToken=d1559ae22ecb7f6f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ClassLibraries\00_Releases\ThermoInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ThermoLogging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=053a2da76d7953d8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ClassLibraries\00_Releases\ThermoLogging.dll</HintPath>
+    </Reference>
+    <Reference Include="ThermoProtocols, Version=1.0.8.0, Culture=neutral, PublicKeyToken=aca6747aa7a5aa1e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ClassLibraries\00_Releases\ThermoProtocols.dll</HintPath>
+    </Reference>
+    <Reference Include="ThermoUtilities, Version=1.0.6.0, Culture=neutral, PublicKeyToken=3b5667b94109b3b9, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ClassLibraries\00_Releases\ThermoUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="VirtualKeyBoard, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ClassLibraries\00_Releases\VirtualKeyBoard.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MlString.vb" />
+    <Compile Include="MultiLang.de.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MultiLang.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLang.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MultiLang.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLang.en.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MultiLang.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmNuclideLibrary.Designer.vb">
+      <DependentUpon>frmNuclideLibrary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmNuclideLibrary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmDetectorTemperature.Designer.vb">
+      <DependentUpon>frmDetectorTemperature.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmDetectorTemperature.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmEditAlarmNuclides.Designer.vb">
+      <DependentUpon>frmEditAlarmNuclides.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmEditAlarmNuclides.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmExtendedMsgBox.Designer.vb">
+      <DependentUpon>frmExtendedMsgBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmExtendedMsgBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmMsgBox.designer.vb">
+      <DependentUpon>frmMsgBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmMsgBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmResultFile.designer.vb">
+      <DependentUpon>frmResultFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmResultFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmAbout.designer.vb">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmMeasScreen.designer.vb">
+      <DependentUpon>frmMeasScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmMeasScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmMessages.designer.vb">
+      <DependentUpon>frmMessages.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmMessages.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmParameter.designer.vb">
+      <DependentUpon>frmParameter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmParameter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmStates.designer.vb">
+      <DependentUpon>frmStates.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmStates.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmControlMenu.designer.vb">
+      <DependentUpon>frmControlMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmControlMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmOperationMenu.designer.vb">
+      <DependentUpon>frmOperationMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmOperationMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmMaintenanceMenu.designer.vb">
+      <DependentUpon>frmMaintenanceMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmMaintenanceMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmCalibrationMenu.designer.vb">
+      <DependentUpon>frmCalibrationMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmCalibrationMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmAirFlow.designer.vb">
+      <DependentUpon>frmAirFlow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmAirFlow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmServiceScreen.designer.vb">
+      <DependentUpon>frmServiceScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmServiceScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmMCAParameter_HV.designer.vb">
+      <DependentUpon>frmMCAParameter_HV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmMCAParameter_HV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmMCAParameter_GainStabiAdd.designer.vb">
+      <DependentUpon>frmMCAParameter_GainStabiAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmMCAParameter_GainStabiAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmMCAMenu.designer.vb">
+      <DependentUpon>frmMCAMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmMCAMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmFileMenu.designer.vb">
+      <DependentUpon>frmFileMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmFileMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmCalibrationMeasControl.designer.vb">
+      <DependentUpon>frmCalibrationMeasControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmCalibrationMeasControl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmCalibrationAnalyzeControl.designer.vb">
+      <DependentUpon>frmCalibrationAnalyzeControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmCalibrationAnalyzeControl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmSplashScreen.Designer.vb">
+      <DependentUpon>frmSplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmSplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmROIMenu.designer.vb">
+      <DependentUpon>frmROIMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmROIMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmFilterMenu.designer.vb">
+      <DependentUpon>frmFilterMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmFilterMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\frmFiltersteps.designer.vb">
+      <DependentUpon>frmFiltersteps.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmFiltersteps.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Formulare\UserControlStatusSideBar.Designer.vb">
+      <DependentUpon>UserControlStatusSideBar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\UserControlStatusSideBar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Klassen\ComportList.vb" />
+    <Compile Include="_Klassen\CsvExport.vb" />
+    <Compile Include="_Klassen\FHT59N3_EcoolerController.vb" />
+    <Compile Include="_Klassen\FHT59N3_SystemParams.vb" />
+    <Compile Include="_Klassen\FHT59N3_TimeZoneCodes.vb" />
+    <Compile Include="_Klassen\LanguageList.vb" />
+    <Compile Include="_Klassen\ThermoStringListEditor.vb" />
+    <Compile Include="_Klassen\TypeOfCommunication.vb" />
+    <Compile Include="_Modules\FHT59N3_ComputeCalibrationMix.vb" />
+    <Compile Include="_Modules\FHT59N3_ComputeCalibrationFarNear.vb" />
+    <Compile Include="_Modules\FHT59N3_ComputeCalibrationRCC.vb" />
+    <Compile Include="_Modules\FHT59N3_ComputeSpectrumAnalyze.vb" />
+    <Compile Include="_Modules\FHT59N3_DataFunctions.vb" />
+    <Compile Include="_Modules\FHT59N3_ControlFunctions.vb" />
+    <Compile Include="_Modules\FHT59N3_GUIProperties.vb" />
+    <Compile Include="_Modules\FHT59N3_HelperFunctions.vb" />
+    <Compile Include="_Modules\FHT59N3_ComputeRecalibrate.vb" />
+    <Compile Include="_Modules\FHT59N3_PersistSpectrumAnalyse_ANSIN4242.vb" />
+    <Compile Include="_Modules\FHT59N3_PersistSpectrumAnalyse_CSV.vb" />
+    <Compile Include="_Modules\FHT59N3_PersistSpectrumAnalyse_TXT.vb" />
+    <Compile Include="_Modules\FHT59N3_ShowFunctions.vb" />
+    <Compile Include="_Formulare\frmMain.designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Formulare\frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="_Modules\FHT59N3_SystemProperties.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MultiLang.de.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MultiLang.de.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiLang.en.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MultiLang.en.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiLang.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MultiLang.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmNuclideLibrary.de.resx">
+      <DependentUpon>frmNuclideLibrary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmNuclideLibrary.resx">
+      <DependentUpon>frmNuclideLibrary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmAbout.de.resx">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmAbout.en.resx">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmAirFlow.de.resx">
+      <DependentUpon>frmAirFlow.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmAirFlow.en.resx">
+      <DependentUpon>frmAirFlow.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmCalibrationAnalyzeControl.de.resx">
+      <DependentUpon>frmCalibrationAnalyzeControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmCalibrationAnalyzeControl.en.resx">
+      <DependentUpon>frmCalibrationAnalyzeControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmCalibrationMeasControl.de.resx">
+      <DependentUpon>frmCalibrationMeasControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmCalibrationMeasControl.en.resx">
+      <DependentUpon>frmCalibrationMeasControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmCalibrationMenu.de.resx">
+      <DependentUpon>frmCalibrationMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmCalibrationMenu.en.resx">
+      <DependentUpon>frmCalibrationMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmControlMenu.de.resx">
+      <DependentUpon>frmControlMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmControlMenu.en.resx">
+      <DependentUpon>frmControlMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmDetectorTemperature.de.resx">
+      <DependentUpon>frmDetectorTemperature.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmDetectorTemperature.en.resx">
+      <DependentUpon>frmDetectorTemperature.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmDetectorTemperature.resx">
+      <DependentUpon>frmDetectorTemperature.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmEditAlarmNuclides.de.resx">
+      <DependentUpon>frmEditAlarmNuclides.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmEditAlarmNuclides.resx">
+      <DependentUpon>frmEditAlarmNuclides.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmExtendedMsgBox.de.resx">
+      <DependentUpon>frmExtendedMsgBox.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmExtendedMsgBox.resx">
+      <DependentUpon>frmExtendedMsgBox.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmFileMenu.de.resx">
+      <DependentUpon>frmFileMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmFileMenu.en.resx">
+      <DependentUpon>frmFileMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMain.de.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMain.en.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMaintenanceMenu.de.resx">
+      <DependentUpon>frmMaintenanceMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMaintenanceMenu.en.resx">
+      <DependentUpon>frmMaintenanceMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMCAMenu.de.resx">
+      <DependentUpon>frmMCAMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMCAMenu.en.resx">
+      <DependentUpon>frmMCAMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMCAParameter_GainStabiAdd.de.resx">
+      <DependentUpon>frmMCAParameter_GainStabiAdd.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMCAParameter_GainStabiAdd.en.resx">
+      <DependentUpon>frmMCAParameter_GainStabiAdd.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMCAParameter_HV.de.resx">
+      <DependentUpon>frmMCAParameter_HV.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMCAParameter_HV.en.resx">
+      <DependentUpon>frmMCAParameter_HV.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMeasScreen.de.resx">
+      <DependentUpon>frmMeasScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMeasScreen.en.resx">
+      <DependentUpon>frmMeasScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMessages.de.resx">
+      <DependentUpon>frmMessages.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMessages.en.resx">
+      <DependentUpon>frmMessages.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMsgBox.de.resx">
+      <DependentUpon>frmMsgBox.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMsgBox.en.resx">
+      <DependentUpon>frmMsgBox.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMsgBox.resx">
+      <DependentUpon>frmMsgBox.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmOperationMenu.de.resx">
+      <DependentUpon>frmOperationMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmOperationMenu.en.resx">
+      <DependentUpon>frmOperationMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmParameter.de.resx">
+      <DependentUpon>frmParameter.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmParameter.en.resx">
+      <DependentUpon>frmParameter.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmResultFile.de.resx">
+      <DependentUpon>frmResultFile.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmResultFile.en.resx">
+      <DependentUpon>frmResultFile.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmResultFile.resx">
+      <DependentUpon>frmResultFile.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmAbout.resx">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMeasScreen.resx">
+      <DependentUpon>frmMeasScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMessages.resx">
+      <DependentUpon>frmMessages.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmParameter.resx">
+      <DependentUpon>frmParameter.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmServiceScreen.de.resx">
+      <DependentUpon>frmServiceScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmServiceScreen.en.resx">
+      <DependentUpon>frmServiceScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmSplashScreen.en.resx">
+      <DependentUpon>frmSplashScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmStates.de.resx">
+      <DependentUpon>frmStates.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmStates.en.resx">
+      <DependentUpon>frmStates.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmStates.resx">
+      <DependentUpon>frmStates.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmControlMenu.resx">
+      <DependentUpon>frmControlMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmOperationMenu.resx">
+      <DependentUpon>frmOperationMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMaintenanceMenu.resx">
+      <DependentUpon>frmMaintenanceMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmCalibrationMenu.resx">
+      <DependentUpon>frmCalibrationMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmAirFlow.resx">
+      <DependentUpon>frmAirFlow.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmServiceScreen.resx">
+      <DependentUpon>frmServiceScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMCAParameter_HV.resx">
+      <DependentUpon>frmMCAParameter_HV.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMCAParameter_GainStabiAdd.resx">
+      <DependentUpon>frmMCAParameter_GainStabiAdd.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmMCAMenu.resx">
+      <DependentUpon>frmMCAMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmFileMenu.resx">
+      <DependentUpon>frmFileMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmCalibrationMeasControl.resx">
+      <DependentUpon>frmCalibrationMeasControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmCalibrationAnalyzeControl.resx">
+      <DependentUpon>frmCalibrationAnalyzeControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmSplashScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmROIMenu.de.resx">
+      <DependentUpon>frmROIMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmROIMenu.en.resx">
+      <DependentUpon>frmROIMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmROIMenu.resx">
+      <DependentUpon>frmROIMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmFilterMenu.de.resx">
+      <DependentUpon>frmFilterMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmFilterMenu.en.resx">
+      <DependentUpon>frmFilterMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmFilterMenu.resx">
+      <DependentUpon>frmFilterMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmFiltersteps.de.resx">
+      <DependentUpon>frmFiltersteps.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmFiltersteps.en.resx">
+      <DependentUpon>frmFiltersteps.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\frmFiltersteps.resx">
+      <DependentUpon>frmFiltersteps.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\UserControlStatusSideBar.de.resx">
+      <DependentUpon>UserControlStatusSideBar.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Formulare\UserControlStatusSideBar.resx">
+      <DependentUpon>UserControlStatusSideBar.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="_Resources\TEMPLATE_SPECTRA_ANALYSIS_CSV.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxCanberraDataDisplayLib">
+      <Guid>{07D2E9B4-09C1-11D2-85D3-204C4F4F5020}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxCanberraDeviceAdjustLib">
+      <Guid>{A22D3860-6CDA-11D2-B236-00104B9E586E}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="CanberraDataAccessLib">
+      <Guid>{5531FC70-C3DF-11D1-9CF4-AA0004004105}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CanberraDataDisplayLib">
+      <Guid>{07D2E9B4-09C1-11D2-85D3-204C4F4F5020}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CanberraDeviceAccessLib">
+      <Guid>{592A6920-EA90-11D2-97BD-ECB1F3000000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CanberraDeviceAdjustLib">
+      <Guid>{A22D3860-6CDA-11D2-B236-00104B9E586E}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CanberraReporterLib">
+      <Guid>{5EC32861-BCAC-11D1-AB1E-0020AF302738}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CanberraSequenceAnalyzerLib">
+      <Guid>{D57C3B91-D2F9-11D1-84A6-00A0248C8E7B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FHT59N3.ico" />
+    <None Include="_Resources\ThermoScientificSoftware_Stacked.png" />
+    <None Include="_Resources\TEMPLATE_SPECTRA_ANALYSIS_ANSI4242.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Resources\cooling-icon2.bmp" />
+    <None Include="_Resources\cooling-icon1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FHT59N3Core\FHT59N3Core.vbproj">
+      <Project>{2887E434-E0BE-4EB0-A5BB-9B6ABF4CC928}</Project>
+      <Name>FHT59N3Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="MlRuntime\MLRuntime.vbproj">
+      <Project>{FD4896DC-8B61-4623-9C25-5F546FC2B0BD}</Project>
+      <Name>MLRuntime</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y $(SolutionDir)..\ClassLibraries\00_Releases\supercom.dll $(TargetDir)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

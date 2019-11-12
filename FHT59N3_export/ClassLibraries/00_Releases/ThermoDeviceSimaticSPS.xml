@@ -1,0 +1,442 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ThermoDeviceSimaticSPS
+</name>
+</assembly>
+<members>
+<member name="T:ThermoDeviceSimaticSPS.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:ThermoDeviceSimaticSPS.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:ThermoDeviceSimaticSPS.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="F:ThermoDeviceSimaticSPS.ThermoDeviceDataContainer_SimaticSPS_FHT59N3._CommandAsArray">
+ <summary>
+ 'mit Protocol
+ </summary>
+</member>
+<member name="F:ThermoDeviceSimaticSPS.ThermoDeviceDataContainer_SimaticSPS_FHT59N3._AnswerAsArray">
+ <summary>
+ ohne protocol
+ </summary>
+</member>
+<member name="P:ThermoDeviceSimaticSPS.ThermoDeviceDataContainer_SimaticSPS_FHT59N3.Command">
+ <summary>
+ zu versendendes Kommando
+ </summary>
+ <value></value>
+</member>
+<member name="P:ThermoDeviceSimaticSPS.ThermoDeviceDataContainer_SimaticSPS_FHT59N3.DigOut_PumpOnOff">
+ <summary>
+ Bit 0 (0000 0001) 0x01
+ </summary>
+ <value>
+ true = open
+ false = closed
+ </value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoDeviceSimaticSPS.ThermoDeviceDataContainer_SimaticSPS_FHT59N3.DigOut_AlarmRelaisOnOff">
+ <summary>
+ Bit 1 (0000 0010) 0x02
+ </summary>
+ <value>
+ true = open
+ false = closed
+ </value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoDeviceSimaticSPS.ThermoDeviceDataContainer_SimaticSPS_FHT59N3.DigOut_FilterRippedOnOff">
+ <summary>
+ Bit 2 (0000 0100) 0x04
+ </summary>
+ <value>
+ true = open
+ false = closed
+ </value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoDeviceSimaticSPS.ThermoDeviceDataContainer_SimaticSPS_FHT59N3.DigOut_ErrorOnOff">
+ <summary>
+ Bit 3 (0000 1000) 0x08
+ </summary>
+ <value>
+ true = open
+ false = closed
+ </value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoDeviceSimaticSPS.ThermoDeviceDataContainer_SimaticSPS_FHT59N3.DigOut_HeatingOnOff">
+ <summary>
+ Bit 4 (0001 0000) 0x10
+ </summary>
+ <value>
+ true = open
+ false = closed
+ </value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoDeviceSimaticSPS.ThermoDeviceDataContainer_SimaticSPS_FHT59N3.DigOut_MotorOnOff">
+ <summary>
+ Bit 5 (0010 0000) 0x20
+ </summary>
+ <value>
+ true = open
+ false = closed
+ </value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoDeviceSimaticSPS.ThermoDeviceDataContainer_SimaticSPS_FHT59N3.DigOut_BypassOnOff">
+ <summary>
+ Bit 7 (1000 0000) 0x80
+ </summary>
+ <value>
+ true = open
+ false = closed
+ </value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoDeviceSimaticSPS.ThermoDeviceDataContainer_SimaticSPS_FHT59N3.DigOut_DetectorHeadOnOff">
+ <summary>
+ Bit 8 (0000 0001 0000 0000) 0x0100
+ </summary>
+ <value>
+ true = open
+ false = closed
+ </value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoDeviceSimaticSPS.ThermoDeviceDataContainer_SimaticSPS_FHT59N3.DigOut_EcoolerOnOff">
+ <summary>
+ Activate/Deactivate the electrical line to E-cooler
+ Bit 6 (0100 0000) 0x40
+ </summary>
+ <value>true = cooling, false = not cooling</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoDeviceSimaticSPS.ThermoDeviceDataContainer_SimaticSPS_FHT59N3.DigOut_MaintenanceOnOff">
+ <summary>
+ Bit 9 (0000 0010 0000 0000) 0x0200
+ </summary>
+ <value>
+ true = open
+ false = closed
+ </value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:ThermoDeviceSimaticSPS.ThermoDevice_SimaticSPS_FHT59N3">
+ <summary>
+ Geräteklasse für das Gerät FH40G
+ </summary>
+ <remarks>
+ Hier ist die Gerätelogik hinterlegt (Codieren / Decodieren von Daten zu / vom Gerät im Sinne des Protokolls XChannel)
+ </remarks>
+</member>
+<member name="P:ThermoDeviceSimaticSPS.ThermoDevice_SimaticSPS_FHT59N3.DataFormat">
+ <summary>
+ In welchem Format nimmt das Gerät Daten an ("String", "Array")
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoDeviceSimaticSPS.ThermoDevice_SimaticSPS_FHT59N3.DataContainer">
+ <summary>
+ Eine Instanz der Daten_FHT681 Klasse.
+ </summary>
+ <value>
+ Daten_FH40G
+ </value>
+ <returns></returns>
+ <remarks>
+ In Felder dieser Instanz werden die decodierten Daten geschrieben
+ </remarks>
+</member>
+<member name="E:ThermoDeviceSimaticSPS.ThermoDevice_SimaticSPS_FHT59N3.ErrorEvent">
+ <summary>
+ Event das irgendetwas schiefgelaufen ist
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoDeviceSimaticSPS.ThermoDevice_SimaticSPS_FHT59N3.#ctor(ThermoInterfaces.ThermoProtocol_Interface)">
+ <summary>
+ Konstruktor
+ </summary>
+ <remarks>
+ This function is available for compatibitly reasons only.
+ In July 2013 a safe data transfer protocol with STX, BCC and ETX has been introduced.
+ It is requested to use this new protocol!
+ </remarks>
+</member>
+<member name="M:ThermoDeviceSimaticSPS.ThermoDevice_SimaticSPS_FHT59N3.CodeCommand(ThermoInterfaces.ThermoDataContainer_Interface,System.Object[])">
+ <summary>
+ Codiert den Befehl der an die SPS gesendet wird
+ </summary>
+ <param name="DataContainer"></param> 
+ <param name="Arguments">
+ Args(0) = CommandString As String
+ Args(1) = ParamArray Arguments() As Object (Parameter als String Übergeben, Alle zahlen werden schon
+ als string übergeben, auch die im E-Format!
+ </param> 
+ <returns>
+ true wenn ok
+ false wenn nicht ok
+ in .CommandAsString des Datencontainer den codierten Befehl als String
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoDeviceSimaticSPS.ThermoDevice_SimaticSPS_FHT59N3.DecodeData(ThermoInterfaces.ThermoDataContainer_Interface,System.Object[])">
+ <summary>
+ 
+ </summary>
+ <param name="DataContainer"></param>
+ <param name="Arguments"></param>
+ <returns>
+ 1 = Decode data successful
+ -1 = "?" = NACK received
+ -2 = error occured while decoding (e.g. not as many values returned than expected, type mismatch)
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoDeviceSimaticSPS.ThermoDevice_SimaticSPS_FHT59N3.BuildBCC(System.String)">
+ <summary>
+ Blockchecksumme bilden. Später in ThermoUtilities auslagern. Da Versionierung unbekannt wird vorerst mit 
+ duplikatem Code gearbeitet
+ </summary>
+ <param name="Input"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoDeviceSimaticSPS.ThermoProtocol_STX_TCP.TraceHandler">
+ <summary>
+ fürs debuggen
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoDeviceSimaticSPS.ThermoProtocol_STX_TCP.NewMessage">
+ <summary>
+ Debug Infos!
+ </summary>
+ <param name="Msg"></param>
+ <param name="debug"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoDeviceSimaticSPS.ThermoProtocol_STX_TCP.BuildBCCInteger(System.String)">
+ <summary>
+ Blockchecksumme bilden
+ </summary>
+ <param name="Input"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoDeviceSimaticSPS.ThermoProtocol_STX_TCP.IsReceiveReady(ThermoInterfaces.ThermoDataContainer_Interface,System.Object[])">
+ <summary>
+ Überprüfung ob die empfangenen Daten korrekt und vollständig im Sinne des Protokolls sind
+ </summary>
+ <param name="DataContainer"></param> 
+ <param name="Arguments">
+ Arg(0) = ReceiveBuffer As String
+ </param> 
+ <returns>
+  1 = wenn ok
+ -1 = wenn nicht ok
+ -2 = Checksum error
+ -3 = ETB received
+ -4 = NAK received
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoDeviceSimaticSPS.ThermoProtocol_STX_TCP.StripPreambelAndPostambel(System.String@)">
+ <summary>
+ Checks whether a preambel has to be stripped away from the reply answer. In STX-ETX format we do not expect line-feed 
+ as done for plain protocol
+ </summary>
+ <param name="ReceiveBuffer">the receive buffer from the SPS</param>
+ <returns>negative value in case of an error, zero or positive value on success or if no stripping was necessary</returns>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoDeviceSimaticSPS.ThermoProtocol_STX_TCP.BuildProtocolFrame(ThermoInterfaces.ThermoDataContainer_Interface,System.Object[])">
+ <summary>
+ Protokoll zusammennageln
+ </summary>
+<param name="DataContainer"></param> 
+ <param name="Arguments">
+ Args(0) = CommandString As String
+ Args(1) = Optional ByVal ArgBuffer As String = ""
+ </param> 
+ <remarks></remarks>
+</member>
+<member name="M:ThermoDeviceSimaticSPS.ThermoProtocol_STX_TCP.BuildProtocolFrame(ThermoInterfaces.ThermoDataContainer_Interface,System.String)">
+ <summary>
+ Protokoll um einen gegebenen String herumbauen
+ </summary>
+<param name="DataContainer"></param> 
+ <param name="Command">Befehl, vollständig zusammengebaut</param>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoDeviceSimaticSPS.ThermoProtocol_SimaticSPS_FHT59N3.TraceHandler">
+ <summary>
+ fürs debuggen
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoDeviceSimaticSPS.ThermoProtocol_SimaticSPS_FHT59N3.ErrorEvent">
+ <summary>
+ Event das irgendetwas schiefgelaufen ist
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoDeviceSimaticSPS.ThermoProtocol_SimaticSPS_FHT59N3.NewMessage">
+ <summary>
+ Debug Infos!
+ </summary>
+ <param name="Msg"></param>
+ <param name="debug"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoDeviceSimaticSPS.ThermoProtocol_SimaticSPS_FHT59N3.InitProtocolParameters">
+ <summary>
+ spezielle Kommandos zusammenbauen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoDeviceSimaticSPS.ThermoProtocol_SimaticSPS_FHT59N3.IsReceiveReady(ThermoInterfaces.ThermoDataContainer_Interface,System.Object[])">
+ <summary>
+ Überprüfung ob die Empfangenen Daten korrekt und vollständig im Sinne des Protokolls sind
+ </summary>
+ <param name="DataContainer"></param> 
+ <param name="Arguments">
+ Arg(0) = ReceiveBuffer As String
+ </param> 
+ <returns>
+ 1 = ok
+ -1 = not complete
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoDeviceSimaticSPS.ThermoProtocol_SimaticSPS_FHT59N3.StripPreambelAndPostambel(ThermoInterfaces.ThermoDataContainer_Interface,System.String)">
+ <summary>
+ Checks whether a preambel has to be stripped away from the reply answer. Furthermore the ending line-feed is removed
+ </summary>
+ <param name="DataContainer">data container which is updated in case we needed to strip preambel</param>
+ <param name="ReceiveBuffer">the receive buffer from the SPS</param>
+ <returns>negative value in case of an error, zero or positive value on success or if no stripping was necessary</returns>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoDeviceSimaticSPS.ThermoProtocol_SimaticSPS_FHT59N3.BuildProtocolFrame(ThermoInterfaces.ThermoDataContainer_Interface,System.Object[])">
+ <summary>
+ Protokoll zusammennageln
+ </summary>
+<param name="DataContainer"></param> 
+ <param name="Arguments">
+ Args(0) = CommandString As String
+ Args(1) = Optional ByVal ArgBuffer As String = ""
+ </param> 
+ <remarks></remarks>
+</member>
+<member name="P:ThermoDeviceSimaticSPS.ThermoProtocol_STX.TraceHandler">
+ <summary>
+ fürs debuggen
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoDeviceSimaticSPS.ThermoProtocol_STX.NewMessage">
+ <summary>
+ Debug Infos!
+ </summary>
+ <param name="Msg"></param>
+ <param name="debug"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoDeviceSimaticSPS.ThermoProtocol_STX.BuildBCCInteger(System.String)">
+ <summary>
+ Blockchecksumme bilden
+ </summary>
+ <param name="Input"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoDeviceSimaticSPS.ThermoProtocol_STX.ValidateSPSBlockCode(System.String@,System.Boolean)">
+ <summary>
+ Die Funktion prüft einen String daraufhin, ob er ein korrektes Format erfüllt.
+ </summary>
+ <returns>
+ 1, wenn ok, -1, wenn Checksumme falsch (BCC!)
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoDeviceSimaticSPS.ThermoProtocol_STX.IsReceiveReady(ThermoInterfaces.ThermoDataContainer_Interface,System.Object[])">
+ <summary>
+ Überprüfung ob die empfangenen Daten korrekt und vollständig im Sinne des Protokolls sind
+ </summary>
+ <param name="DataContainer"></param> 
+ <param name="Arguments">
+ Arg(0) = ReceiveBuffer As String
+ </param> 
+ <returns>
+  1 = wenn ok
+ -1 = wenn nicht ok
+ -2 = Checksum error
+ -3 = ETB received
+ -4 = NAK received
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoDeviceSimaticSPS.ThermoProtocol_STX.StripPreambelAndPostambel(System.String@)">
+ <summary>
+ Checks whether a preambel has to be stripped away from the reply answer. In STX-ETX format we do not expect line-feed 
+ as done for plain protocol
+ </summary>
+ <param name="ReceiveBuffer">the receive buffer from the SPS</param>
+ <returns>negative value in case of an error, zero or positive value on success or if no stripping was necessary</returns>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoDeviceSimaticSPS.ThermoProtocol_STX.BuildProtocolFrame(ThermoInterfaces.ThermoDataContainer_Interface,System.Object[])">
+ <summary>
+ Protokoll zusammennageln
+ </summary>
+<param name="DataContainer"></param> 
+ <param name="Arguments">
+ Args(0) = CommandString As String
+ Args(1) = Optional ByVal ArgBuffer As String = ""
+ </param> 
+ <remarks></remarks>
+</member>
+<member name="M:ThermoDeviceSimaticSPS.ThermoProtocol_STX.BuildProtocolFrame(ThermoInterfaces.ThermoDataContainer_Interface,System.String)">
+ <summary>
+ Protokoll um einen gegebenen String herumbauen
+ </summary>
+<param name="DataContainer"></param> 
+ <param name="Command">Befehl, vollständig zusammengebaut</param>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

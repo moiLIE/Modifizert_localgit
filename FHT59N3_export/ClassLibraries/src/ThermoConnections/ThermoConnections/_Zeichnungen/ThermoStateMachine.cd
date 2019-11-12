@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="ThermoUtilities.ThermoStateMachine" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>ThermoStateMachine.vb</FileName>
+      <HashCode>sAwCqckpA3AAiOMDAAAAFBADAZGACh8FBaIVERUoQJg=</HashCode>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_SocketList" />
+      <Field Name="_DataContainerList" />
+      <Field Name="_InterfaceListEth" />
+      <Field Name="_DataCollectorList" />
+    </ShowAsCollectionAssociation>
+    <Members>
+      <Field Name="_ActualCommandArray" Hidden="true" />
+      <Field Name="_ActualCommandString" Hidden="true" />
+      <Field Name="_AllDone" Hidden="true" />
+      <Field Name="_CommandCount" Hidden="true" />
+      <Field Name="_CommandCountSer" Hidden="true" />
+      <Field Name="_CommandInWork" Hidden="true" />
+      <Field Name="_CommandListArray" Hidden="true" />
+      <Field Name="_CommandListArrayEth" Hidden="true" />
+      <Field Name="_CommandListArrayEthUncoded" Hidden="true" />
+      <Field Name="_CommandListArrayUncoded" Hidden="true" />
+      <Field Name="_CommandListString" Hidden="true" />
+      <Field Name="_CommandListStringEth" Hidden="true" />
+      <Field Name="_CommandListStringEthUncoded" Hidden="true" />
+      <Field Name="_CommandListStringUncoded" Hidden="true" />
+      <Field Name="_ConnectedList" Hidden="true" />
+      <Field Name="_DataCollector" Hidden="true" />
+      <Field Name="_DataContainer" Hidden="true" />
+      <Field Name="_DataContainerAssembly" Hidden="true" />
+      <Field Name="_DataContainerName" Hidden="true" />
+      <Field Name="_DeviceListEth" Hidden="true" />
+      <Field Name="_Ethernet" Hidden="true" />
+      <Field Name="_Interface_To_RS232" Hidden="true" />
+      <Field Name="_MyIndex" Hidden="true" />
+      <Field Name="_MyInterval" Hidden="true" />
+      <Field Name="_MySignal" Hidden="true" />
+      <Field Name="_MySP" Hidden="true" />
+      <Field Name="_MyState" Hidden="true" />
+      <Field Name="_Next" Hidden="true" />
+      <Field Name="_NextCommand" Hidden="true" />
+      <Field Name="_OldSignal" Hidden="true" />
+      <Field Name="_Protocol" Hidden="true" />
+      <Field Name="_ProtocolAssembly" Hidden="true" />
+      <Field Name="_ProtocolName" Hidden="true" />
+      <Field Name="_Repeats" Hidden="true" />
+      <Field Name="_ReturnListArray" Hidden="true" />
+      <Field Name="_ReturnListArrayEth" Hidden="true" />
+      <Field Name="_ReturnListString" Hidden="true" />
+      <Field Name="_ReturnListStringEth" Hidden="true" />
+      <Field Name="_Running" Hidden="true" />
+      <Field Name="_SpecialCommandAr" Hidden="true" />
+      <Field Name="_SpecialCommandStr" Hidden="true" />
+      <Field Name="_SpecialCommandUncoded" Hidden="true" />
+      <Field Name="_SpecialIP" Hidden="true" />
+      <Field Name="_Thread1" Hidden="true" />
+      <Field Name="_Timeout" Hidden="true" />
+      <Method Name="AddDeviceEth" Hidden="true" />
+      <Event Name="AllWorkDone" Hidden="true" />
+      <Method Name="ChangeDeviceIP" Hidden="true" />
+      <Method Name="CloseConnection" Hidden="true" />
+      <Event Name="CommandDoneAr" Hidden="true" />
+      <Event Name="CommandDoneStr" Hidden="true" />
+      <Event Name="CommandsDoneAr" Hidden="true" />
+      <Event Name="CommandsDoneStr" Hidden="true" />
+      <Property Name="DataContainerSer" Hidden="true" />
+      <Method Name="DataReadyAr" Hidden="true" />
+      <Method Name="DataReadyArEth" Hidden="true" />
+      <Method Name="DataReadyStr" Hidden="true" />
+      <Method Name="DataReadyStrEth" Hidden="true" />
+      <Method Name="DeleteDeviceEth" Hidden="true" />
+      <Event Name="ErrorEvent" Hidden="true" />
+      <Method Name="ErrorHandler" Hidden="true" />
+      <Method Name="ErrorInSubClasses" Hidden="true" />
+      <Method Name="ErrorInSubClassesDataColl" Hidden="true" />
+      <Property Name="MachineSerialPort" Hidden="true" />
+      <Method Name="New" Hidden="true" />
+      <Field Name="NOEHTERNETMODE" Hidden="true" />
+      <Field Name="NOSERIALMODE" Hidden="true" />
+      <Method Name="OpenConnection" Hidden="true" />
+      <Method Name="PutNewList" Hidden="true" />
+      <Method Name="PutNewListEth" Hidden="true" />
+      <Method Name="SendAsyncCommandArEth" Hidden="true" />
+      <Method Name="SendAsyncCommandArSer" Hidden="true" />
+      <Method Name="SendAsyncCommandStrEth" Hidden="true" />
+      <Method Name="SendAsyncCommandStrSer" Hidden="true" />
+      <Method Name="SetSignal" Hidden="true" />
+      <Method Name="StartMachine" Hidden="true" />
+      <Method Name="StopMachine" Hidden="true" />
+      <Method Name="ThreadFunction" Hidden="true" />
+      <Method Name="ThreadFunctionEth" Hidden="true" />
+      <Field Name="WRONGIP" Hidden="true" />
+    </Members>
+    <AssociationLine Name="_SocketList" Type="System.Net.Sockets.Socket">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.07" Y="0.402" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_DataContainerList" Type="ThermoInterfaces.ThermoDataContainer_Interface" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.75" Y="0.945" />
+        <Point X="5.25" Y="0.945" />
+        <Point X="5.25" Y="3.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_InterfaceListEth" Type="ThermoIOControls.ThermoIOControl_Ethernet" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.75" Y="0.823" />
+        <Point X="6.688" Y="0.823" />
+        <Point X="6.688" Y="4.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_DataCollectorList" Type="ThermoUtilities.ThermoDataCollectorMulti">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.079" Y="0.362" />
+      </MemberNameLabel>
+    </AssociationLine>
+  </Class>
+  <Class Name="System.Net.Sockets.Socket" Collapsed="true">
+    <Position X="7.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ThermoUtilities.ThermoDataCollectorMulti">
+    <Position X="0.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <FileName>ThermoDataCollectorMulti.vb</FileName>
+      <HashCode>ACBAIAAAAFACgAAABEAgADEIAAAIAAgEAgAEBCAGCEQ=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_Interface" />
+    </ShowAsAssociation>
+    <Members>
+      <Field Name="_BUSY" Hidden="true" />
+      <Field Name="_Command" Hidden="true" />
+      <Field Name="_CommandLength" Hidden="true" />
+      <Field Name="_CommandString" Hidden="true" />
+      <Field Name="_ID" Hidden="true" />
+      <Field Name="_IDLE" Hidden="true" />
+      <Field Name="_ModeAr" Hidden="true" />
+      <Field Name="_ModeStr" Hidden="true" />
+      <Field Name="_MyState" Hidden="true" />
+      <Field Name="_ReceiveBuffer" Hidden="true" />
+      <Field Name="_RepeatCount" Hidden="true" />
+      <Field Name="_Repeats" Hidden="true" />
+      <Field Name="_SendFlag" Hidden="true" />
+      <Field Name="_TimeOut" Hidden="true" />
+      <Field Name="_TransferMode" Hidden="true" />
+      <Property Name="ActRepeats" Hidden="true" />
+      <Event Name="DataCollectorReadyAr" Hidden="true" />
+      <Event Name="DataCollectorReadyStr" Hidden="true" />
+      <Method Name="DataNotOK" Hidden="true" />
+      <Method Name="DataOKAr" Hidden="true" />
+      <Method Name="DataOKStr" Hidden="true" />
+      <Event Name="ErrorEvent" Hidden="true" />
+      <Method Name="New" Hidden="true" />
+      <Property Name="Repeats" Hidden="true" />
+      <Method Name="SendQuestion" Hidden="true" />
+    </Members>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ThermoIOControls.ThermoIOControl_Ethernet" Collapsed="true">
+    <Position X="4.75" Y="4.5" Width="2.25" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="MySocket" />
+    </ShowAsAssociation>
+    <Members>
+      <Property Name="ComMode" Hidden="true" />
+      <Event Name="DataReceivedEventAr" Hidden="true" />
+      <Event Name="DataReceivedEventStr" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="DoTransferAr" Hidden="true" />
+      <Method Name="DoTransferStr" Hidden="true" />
+      <Event Name="ErrorEvent" Hidden="true" />
+      <Method Name="ThermoIOControl_Ethernet" Hidden="true" />
+      <Property Name="ReceivedString" Hidden="true" />
+      <Event Name="TimeOutEvent" Hidden="true" />
+    </Members>
+    <AssociationLine Name="MySocket" Type="System.Net.Sockets.Socket" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.812" Y="4.5" />
+        <Point X="6.812" Y="3.689" />
+        <Point X="8" Y="3.689" />
+        <Point X="8" Y="2.759" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.081" Y="0.37" />
+      </MemberNameLabel>
+    </AssociationLine>
+  </Class>
+  <Interface Name="ThermoInterfaces.ThermoIOControls_Interface" Collapsed="true">
+    <Position X="1.5" Y="3.5" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ThermoInterfaces.ThermoDataContainer_Interface" Collapsed="true">
+    <Position X="4" Y="3.5" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+</ClassDiagram>

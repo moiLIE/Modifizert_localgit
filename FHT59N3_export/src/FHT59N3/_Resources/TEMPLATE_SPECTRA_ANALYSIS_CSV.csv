@@ -1,0 +1,65 @@
+﻿{{#if outputHeader}}
+	sep={{sep}}{{#newline}}
+	Type{{sep}}
+	StartTime{{sep}}
+	RealTime_s{{sep}}
+	LiveTime_s{{sep}}
+	EndTime{{sep}}
+
+	AirFlow_m3h{{sep}}
+	AirVolumeFiltered_m3{{sep}}
+
+	Sensor_DetectorTemp{{sep}}
+	Sensor_AfterFilter{{sep}}
+	Sensor_ExternalTemp{{sep}}
+	Sensor_Env_Pressure{{sep}}
+	Sensor_Filter_PressureLoss{{sep}}
+	Sensor_Bezel_PressureLoss{{sep}}
+
+	Systemstate{{sep}}
+
+	{{#each analysis_nuclids}}
+	{{nuclid_name}}_Act{{sep}}
+	{{nuclid_name}}_Conc{{sep}}
+	{{nuclid_name}}_Err{{sep}}
+	{{nuclid_name}}_Dtl{{sep}}
+	{{nuclid_name}}_CorrFac{{sep}}
+	{{/each}}
+
+	RefPeakFWHM_keV{{sep}}
+	RefPeakDeltaEnergy{{sep}}
+	RefPeakArea_PerHour{{sep}}
+
+	{{#newline}}
+{{/if}}
+	"{{file_type}}"{{sep}}
+	"{{start_measurement_time_utc_plain}}"{{sep}}
+	"{{realtime}}"{{sep}}
+	"{{livetime}}"{{sep}}
+	"{{end_measurement_time_utc_plain}}"{{sep}}
+
+	"{{air_flow_value}}"{{sep}}
+	"{{air_volume_filtered}}"{{sep}}
+
+	"{{sensor_temperature_detector}}"{{sep}}
+	"{{sensor_temperature_after_filter}}"{{sep}}
+	"{{sensor_temperature_external}}"{{sep}}
+	"{{sensor_pressure_environment}}"{{sep}}
+	"{{sensor_pressure_filter}}"{{sep}}
+	"{{sensor_pressure_bezel}}"{{sep}}
+	
+	"{{systemstate_enumeration}}"{{sep}}
+
+	{{#each analysis_nuclids}}
+	"{{nuclid_activity_plain}}"{{sep}}
+	"{{nuclid_activity_concentration_plain}}"{{sep}}
+	"{{nuclid_uncertainty_plain}}"{{sep}}
+	"{{nuclid_detection_limit_plain}}"{{sep}}
+	"{{nuclid_correction_factor}}"{{sep}}
+	{{/each}}
+
+	"{{k40_fwhm_peak}}"{{sep}}
+	"{{k40_fwhm_drift}}"{{sep}}
+	"{{k40_fwhm_areaPerHour_percent}}"{{sep}}
+
+	{{#newline}}

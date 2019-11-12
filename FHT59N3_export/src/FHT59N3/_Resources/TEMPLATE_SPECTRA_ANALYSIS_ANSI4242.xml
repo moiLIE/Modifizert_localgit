@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<N42InstrumentData 
+	xmlns="http://physics.nist.gov/Divisions/Div846/Gp4/ANSIN4242/2005/ANSIN4242" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:sara="http://www.technidata.com/ENVINET/SARA" xmlns:fht="http://www.thermofisher.com/DivisionSpectro/FHT59N3/ANSI4242/V1"
+	xmlns:n42_2012="http://physics.nist.gov/Divisions/Div846/Gp4/ANSIN4242/2011/ANSIN4242">
+	
+  <Measurement ID="{{measurement_id}}">
+		<InstrumentInformation>
+			<InstrumentType>Spectrometer</InstrumentType>
+			<Manufacturer></Manufacturer>
+			<InstrumentModel>FHT-59N3T</InstrumentModel>
+			<!-- the software revision of the monitor application is sufficient to describe the overall system configuration  -->
+			<InstrumentVersion>Software Rev. {{program_version}}</InstrumentVersion>
+			<!-- defines the serial number of the FHT59N3T unit -->
+			<InstrumentID>{{serial_id}}</InstrumentID>
+			
+			<!-- should always be Measure although the following four values are allowed: Measure, Calibrate, Test, Other -->
+			<InstrumentMode>{{type_instrument_mode}}</InstrumentMode>
+			
+			<!-- voerst werden bisherige Auswertungstypen übernommen obwohl BAG an kontinuierlicher Auswertung interessiert ist: 
+			    AlarmCheck, SpectrumOfMeasurementPeriod, SpectrumOfDustationPeriod, SpectrumOfTheDay 
+          (for testing we have type UserForcedAnalysis which is the case when user manually evaluates spectrum) -->
+			<fht:FileType>{{file_type}}</fht:FileType>
+			<!-- defines the measurement mode: e.g. Normal, Alarm, Intensive and Maintenance (although also informed as system state) -->
+			<fht:Mode>{{measurement_mode}}</fht:Mode>
+			
+			<!-- numerical summary of the system state -->
+			<fht:SystemStatus>{{systemstate_summary}}</fht:SystemStatus>
+			<!-- comma-separated enumeration of system states:
+  			     MaintenanceOn (0x1), 
+             K40NotDetected (0x2), 
+             AirFlowBelowLimit (0x4), 
+             McaHighVoltageOff (0x8), 
+             NoFilterStep (0x16), 
+             BypassOpen (0x32), 
+             AnalyzationCancelled (0x64), 
+             AirFlowAboveLimit (0x128), 
+             EcoolerOff (0x256), 
+             SpectrumDeadTimeBigger20Percent (0x512), 
+             InvalidDetectorTemperature (0x1024), 
+             FilterHasToBeChanged (0x2048), 
+             InvalidAirTempOrPressure (0x4096), 
+             K40ToBig (0x8192), 
+				    DataTransferErrorPlc (0x16384)
+        -->
+			<fht:SystemStatusDescription>{{systemstate_enumeration}}</fht:SystemStatusDescription>
+			
+			<!-- the name of the station as configured in the monitor application-->
+			<fht:StationName>{{station_name}}</fht:StationName>
+
+   
+
+    </InstrumentInformation>
+		
+		<Spectrum MeasurementType="PHA1" CalibrationIDs="en res eff">
+			<!-- format yyyy-MM-ddTHH-mm-00Z -->
+			<StartTime>{{start_measurement_time_utc}}</StartTime>
+			<RealTime>PT{{realtime}}S</RealTime>
+			<LiveTime>PT{{livetime}}S</LiveTime>
+			<!-- format yyyy-MM-ddTHH-mm-00Z -->			
+			<fht:EndTime>{{end_measurement_time_utc}}</fht:EndTime>
+
+			<!-- output only mean air flow, not actual air flow (as discussed) -->
+			<fht:Airflow Units="m3/h" Type="{{air_flow_type}}">{{air_flow_value}}</fht:Airflow>
+      <fht:AirVolumeFiltered Units="m3">{{air_volume_filtered}}</fht:AirVolumeFiltered>
+      
+			
+			<!-- the K40 FWHM shall not be evaluated if system state reports K40 detection error -->
+			<fht:RefPeakFWHM Units="keV">{{k40_fwhm_peak}}</fht:RefPeakFWHM>
+			<fht:RefPeakDeltaEnergy>{{k40_fwhm_drift}}</fht:RefPeakDeltaEnergy>
+			<!-- gives the K40 peak area per hour (absolute and in percent to the configured K40 minimum area) -->
+			<fht:RefPeakArea Units="Percent" AbsValue="{{k40_fwhm_areaPerHour_abs}}">{{k40_fwhm_areaPerHour_percent}}</fht:RefPeakArea>
+
+      <!--<fht:AirPressure>{{air_pressure_environment}}</fht:AirPressure>-->
+      <!--<fht:Temperature>{{air_temperature_after_filter}}</fht:Temperature>-->
+
+      <!-- contains various analog sensor values at the FHT59N3T device -->
+      <fht:TemperatureSensors detector="{{sensor_temperature_detector}}"
+                                  airflow="{{sensor_temperature_after_filter}}" extern="{{sensor_temperature_external}}" unit="°C" />
+      <fht:PressureSensors ambient="{{sensor_pressure_environment}}" pressureDiffFilter="{{sensor_pressure_filter}}" 
+                           pressureDiffBezel="{{sensor_pressure_bezel}}" unit="hPa" />
+
+      <ChannelData>{{channel_data}}</ChannelData>
+
+			<!-- ensemble name and other 'sara attributes' not output as processed by Envinet NMC -->
+			
+		</Spectrum>
+		
+		<AnalysisResults>
+			<NuclideAnalysis ActivityUnits="Bq" sara:ActivityRelation="m3" AlgorithmDescription="G2K" AlgorithmVersion="G2K 3.3" fht:CoverageValue="k=1.65">
+        <fht:MaxViolatedLevelGlobal>{{maxViolatedAlarmLevel_AllNuclides}}</fht:MaxViolatedLevelGlobal>
+        {{#each analysis_nuclids }}
+          {{#if showNuclid}}
+          <Nuclide>
+            	<Remark>{{nuclid_remark}}</Remark>
+            	<NuclideName>{{nuclid_name}}</NuclideName>
+					    <NuclideActivity>{{nuclid_activity_concentration}}</NuclideActivity>
+            
+              {{#if isPeak}}<fht:Peak Channel="{{peak_channel}}" Energy="{{peak_energy}}" FWHM="{{peak_fwhm}}" Area="{{peak_area}}"/>{{/if}}
+              <fht:NuclideDetectionLimit>{{nuclid_detection_limit}}</fht:NuclideDetectionLimit>
+              <fht:NuclideUncertainty>{{nuclid_uncertainty}}</fht:NuclideUncertainty>
+              
+              <!-- tag is only output if alarm defined for this nuclid. Configured limit is in the configuration file. The 2hour hysterese value is the current value the nuclid is compared to -->
+              {{#if isAlarmLimitDefined}}
+                <fht:NuclideAlarmLimit1 configured="{{alarm1_limit_configured}}">{{alarm1_limit_2hour_hysterese}}</fht:NuclideAlarmLimit1>
+                <fht:NuclideAlarmLimit2 configured="{{alarm2_limit_configured}}">{{alarm2_limit_2hour_hysterese}}</fht:NuclideAlarmLimit2>
+              {{/if}}
+              <fht:MaxViolatedLevel>{{maxViolatedAlarmLevel}}</fht:MaxViolatedLevel>
+          </Nuclide>
+          {{/if}}
+        {{/each}}
+        
+        <fht:NotAssignedPeaks>
+          {{#each not_assigned_peaks }}
+            <fht:Peak Channel="{{peak_channel}}" Energy="{{peak_energy}}" FWHM="{{peak_fwhm}}" Area="{{peak_area}}"/>
+          {{/each}}
+        </fht:NotAssignedPeaks>
+        
+        </NuclideAnalysis>
+		</AnalysisResults>
+		
+		
+	</Measurement>
+	
+	<!-- Energy calibration for this spectrum (yet unclear about availability of xy-values aka peak list) -->
+	<Calibration ID="en" Type="Energy" EnergyUnits="keV">			
+		<Equation Model="Polynomial" Form="E = Term0 + Term1*Ch + Term2*Ch^2">	
+			<Coefficients>{{energy_calibration_coefficients_spaced}}</Coefficients>
+		</Equation>
+	</Calibration>
+	
+	<!-- FWHN calibration (still fixed data from G2K, taken sample measurement)-->
+	<Calibration Type="FWHM" ID="res" EnergyUnits="keV">
+		<Equation Model="Polynomial" Form="FWHM = Term0 + Term1*E^1/2">	
+			<Coefficients>{{fwhm_calibration_coefficients_spaced}}</Coefficients>
+		</Equation>
+	</Calibration>
+
+	<!-- Efficiency calibration for this spectrum (assuming equation is not important) -->
+	<Calibration Type="AbsoluteEfficiency" ID="eff" EnergyUnits="keV" >
+		<ArrayXY X="Energy" Y="Efficiency">{{#each efficiency_calibration_xypoints}}
+			<PointXY>
+				<X>{{Item1}} 0</X>
+        <Y>{{Item2}} {{Item3}}</Y>
+			</PointXY>{{/each}}
+		</ArrayXY>
+	</Calibration>
+	
+	
+</N42InstrumentData>

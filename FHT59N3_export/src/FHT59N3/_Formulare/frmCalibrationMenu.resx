@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BtnRCC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnRCC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 25</value>
+  </data>
+  <data name="BtnRCC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 70</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BtnRCC.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="BtnRCC.Text" xml:space="preserve">
+    <value>RCC</value>
+  </data>
+  <data name="&gt;&gt;BtnRCC.Name" xml:space="preserve">
+    <value>BtnRCC</value>
+  </data>
+  <data name="&gt;&gt;BtnRCC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnRCC.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;BtnRCC.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="BTnMeasFar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BTnMeasFar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="BTnMeasFar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 70</value>
+  </data>
+  <data name="BTnMeasFar.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="BTnMeasFar.Text" xml:space="preserve">
+    <value>Start calibration</value>
+  </data>
+  <data name="&gt;&gt;BTnMeasFar.Name" xml:space="preserve">
+    <value>BTnMeasFar</value>
+  </data>
+  <data name="&gt;&gt;BTnMeasFar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BTnMeasFar.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;BTnMeasFar.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BtnReturn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="BtnReturn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnReturn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>402, 359</value>
+  </data>
+  <data name="BtnReturn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 40</value>
+  </data>
+  <data name="BtnReturn.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="BtnReturn.Text" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="&gt;&gt;BtnReturn.Name" xml:space="preserve">
+    <value>BtnReturn</value>
+  </data>
+  <data name="&gt;&gt;BtnReturn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnReturn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnReturn.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="BtnMeasFree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnMeasFree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 104</value>
+  </data>
+  <data name="BtnMeasFree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 70</value>
+  </data>
+  <data name="BtnMeasFree.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="BtnMeasFree.Text" xml:space="preserve">
+    <value>Free measurement</value>
+  </data>
+  <data name="&gt;&gt;BtnMeasFree.Name" xml:space="preserve">
+    <value>BtnMeasFree</value>
+  </data>
+  <data name="&gt;&gt;BtnMeasFree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnMeasFree.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;BtnMeasFree.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="BtnBackgroundMeas.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnBackgroundMeas.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BtnBackgroundMeas.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 101</value>
+  </data>
+  <data name="BtnBackgroundMeas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 70</value>
+  </data>
+  <data name="BtnBackgroundMeas.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="BtnBackgroundMeas.Text" xml:space="preserve">
+    <value>Background measurement</value>
+  </data>
+  <data name="&gt;&gt;BtnBackgroundMeas.Name" xml:space="preserve">
+    <value>BtnBackgroundMeas</value>
+  </data>
+  <data name="&gt;&gt;BtnBackgroundMeas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnBackgroundMeas.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;BtnBackgroundMeas.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BtnStop.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnStop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>274, 101</value>
+  </data>
+  <data name="BtnStop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 70</value>
+  </data>
+  <data name="BtnStop.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="BtnStop.Text" xml:space="preserve">
+    <value>Stop measurement</value>
+  </data>
+  <data name="&gt;&gt;BtnStop.Name" xml:space="preserve">
+    <value>BtnStop</value>
+  </data>
+  <data name="&gt;&gt;BtnStop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnStop.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;BtnStop.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BtnAirFlow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnAirFlow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>274, 25</value>
+  </data>
+  <data name="BtnAirFlow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 70</value>
+  </data>
+  <data name="BtnAirFlow.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="BtnAirFlow.Text" xml:space="preserve">
+    <value>Air flow</value>
+  </data>
+  <data name="&gt;&gt;BtnAirFlow.Name" xml:space="preserve">
+    <value>BtnAirFlow</value>
+  </data>
+  <data name="&gt;&gt;BtnAirFlow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnAirFlow.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;BtnAirFlow.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="GroupBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 180</value>
+  </data>
+  <data name="GroupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Calibration measurements</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.Name" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BtnEfficiencyNear.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnEfficiencyNear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>274, 25</value>
+  </data>
+  <data name="BtnEfficiencyNear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 70</value>
+  </data>
+  <data name="BtnEfficiencyNear.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="BtnEfficiencyNear.Text" xml:space="preserve">
+    <value>Efficiency near</value>
+  </data>
+  <data name="BtnEfficiencyNear.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;BtnEfficiencyNear.Name" xml:space="preserve">
+    <value>BtnEfficiencyNear</value>
+  </data>
+  <data name="&gt;&gt;BtnEfficiencyNear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnEfficiencyNear.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="&gt;&gt;BtnEfficiencyNear.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BtnEfficiencyFar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnEfficiencyFar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 25</value>
+  </data>
+  <data name="BtnEfficiencyFar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 70</value>
+  </data>
+  <data name="BtnEfficiencyFar.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="BtnEfficiencyFar.Text" xml:space="preserve">
+    <value>Efficiency far</value>
+  </data>
+  <data name="BtnEfficiencyFar.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;BtnEfficiencyFar.Name" xml:space="preserve">
+    <value>BtnEfficiencyFar</value>
+  </data>
+  <data name="&gt;&gt;BtnEfficiencyFar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnEfficiencyFar.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="&gt;&gt;BtnEfficiencyFar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BtnEnergyFar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnEnergyFar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="BtnEnergyFar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 70</value>
+  </data>
+  <data name="BtnEnergyFar.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="BtnEnergyFar.Text" xml:space="preserve">
+    <value>Energy / Efficiency</value>
+  </data>
+  <data name="&gt;&gt;BtnEnergyFar.Name" xml:space="preserve">
+    <value>BtnEnergyFar</value>
+  </data>
+  <data name="&gt;&gt;BtnEnergyFar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnEnergyFar.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="&gt;&gt;BtnEnergyFar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="GroupBox2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="GroupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 198</value>
+  </data>
+  <data name="GroupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 107</value>
+  </data>
+  <data name="GroupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="GroupBox2.Text" xml:space="preserve">
+    <value>Calibration analysis</value>
+  </data>
+  <data name="&gt;&gt;GroupBox2.Name" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="&gt;&gt;GroupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GroupBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>542, 411</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>FHT59N3T - Calibration menu</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmCalibrationMenu</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

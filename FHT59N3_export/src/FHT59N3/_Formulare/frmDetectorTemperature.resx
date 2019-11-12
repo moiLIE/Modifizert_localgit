@@ -1,0 +1,723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnClose.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="btnClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>903, 632</value>
+  </data>
+  <data name="btnClose.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="btnClose.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>128, 40</value>
+  </data>
+  <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 40</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnClose.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnClose.Text" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Name" xml:space="preserve">
+    <value>btnClose</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="TimerRefreshUi.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="lblPeriodMaxTemp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="lblPeriodMaxTemp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPeriodMaxTemp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>917, 31</value>
+  </data>
+  <data name="lblPeriodMaxTemp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblPeriodMaxTemp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 25</value>
+  </data>
+  <data name="lblPeriodMaxTemp.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblPeriodMaxTemp.Text" xml:space="preserve">
+    <value>°C</value>
+  </data>
+  <data name="&gt;&gt;lblPeriodMaxTemp.Name" xml:space="preserve">
+    <value>lblPeriodMaxTemp</value>
+  </data>
+  <data name="&gt;&gt;lblPeriodMaxTemp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPeriodMaxTemp.Parent" xml:space="preserve">
+    <value>grpBoxCurrentValues</value>
+  </data>
+  <data name="&gt;&gt;lblPeriodMaxTemp.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblMaxTempText.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMaxTempText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>699, 31</value>
+  </data>
+  <data name="lblMaxTempText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblMaxTempText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 47</value>
+  </data>
+  <data name="lblMaxTempText.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblMaxTempText.Text" xml:space="preserve">
+    <value>Detected maximum temperature in last 8 hours:</value>
+  </data>
+  <data name="lblMaxTempText.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lblMaxTempText.Name" xml:space="preserve">
+    <value>lblMaxTempText</value>
+  </data>
+  <data name="&gt;&gt;lblMaxTempText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMaxTempText.Parent" xml:space="preserve">
+    <value>grpBoxCurrentValues</value>
+  </data>
+  <data name="&gt;&gt;lblMaxTempText.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblPeriodMinTemp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="lblPeriodMinTemp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPeriodMinTemp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>569, 31</value>
+  </data>
+  <data name="lblPeriodMinTemp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblPeriodMinTemp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 25</value>
+  </data>
+  <data name="lblPeriodMinTemp.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblPeriodMinTemp.Text" xml:space="preserve">
+    <value>°C</value>
+  </data>
+  <data name="&gt;&gt;lblPeriodMinTemp.Name" xml:space="preserve">
+    <value>lblPeriodMinTemp</value>
+  </data>
+  <data name="&gt;&gt;lblPeriodMinTemp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPeriodMinTemp.Parent" xml:space="preserve">
+    <value>grpBoxCurrentValues</value>
+  </data>
+  <data name="&gt;&gt;lblPeriodMinTemp.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblMinTempText.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMinTempText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>334, 31</value>
+  </data>
+  <data name="lblMinTempText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblMinTempText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 47</value>
+  </data>
+  <data name="lblMinTempText.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblMinTempText.Text" xml:space="preserve">
+    <value>Detected minimum temperature in last 8 hours:</value>
+  </data>
+  <data name="lblMinTempText.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lblMinTempText.Name" xml:space="preserve">
+    <value>lblMinTempText</value>
+  </data>
+  <data name="&gt;&gt;lblMinTempText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMinTempText.Parent" xml:space="preserve">
+    <value>grpBoxCurrentValues</value>
+  </data>
+  <data name="&gt;&gt;lblMinTempText.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblLastTemperature.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="lblLastTemperature.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblLastTemperature.Location" type="System.Drawing.Point, System.Drawing">
+    <value>230, 31</value>
+  </data>
+  <data name="lblLastTemperature.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblLastTemperature.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 25</value>
+  </data>
+  <data name="lblLastTemperature.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblLastTemperature.Text" xml:space="preserve">
+    <value>°C</value>
+  </data>
+  <data name="&gt;&gt;lblLastTemperature.Name" xml:space="preserve">
+    <value>lblLastTemperature</value>
+  </data>
+  <data name="&gt;&gt;lblLastTemperature.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblLastTemperature.Parent" xml:space="preserve">
+    <value>grpBoxCurrentValues</value>
+  </data>
+  <data name="&gt;&gt;lblLastTemperature.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblLastRetrievedTempText.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblLastRetrievedTempText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 31</value>
+  </data>
+  <data name="lblLastRetrievedTempText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblLastRetrievedTempText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 47</value>
+  </data>
+  <data name="lblLastRetrievedTempText.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblLastRetrievedTempText.Text" xml:space="preserve">
+    <value>Last retrieved temperature:</value>
+  </data>
+  <data name="lblLastRetrievedTempText.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lblLastRetrievedTempText.Name" xml:space="preserve">
+    <value>lblLastRetrievedTempText</value>
+  </data>
+  <data name="&gt;&gt;lblLastRetrievedTempText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblLastRetrievedTempText.Parent" xml:space="preserve">
+    <value>grpBoxCurrentValues</value>
+  </data>
+  <data name="&gt;&gt;lblLastRetrievedTempText.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="grpBoxCurrentValues.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 14</value>
+  </data>
+  <data name="grpBoxCurrentValues.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="grpBoxCurrentValues.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="grpBoxCurrentValues.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1018, 88</value>
+  </data>
+  <data name="grpBoxCurrentValues.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="grpBoxCurrentValues.Text" xml:space="preserve">
+    <value>Current/Peak Values</value>
+  </data>
+  <data name="&gt;&gt;grpBoxCurrentValues.Name" xml:space="preserve">
+    <value>grpBoxCurrentValues</value>
+  </data>
+  <data name="&gt;&gt;grpBoxCurrentValues.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpBoxCurrentValues.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grpBoxCurrentValues.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblMeasureEndText.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMeasureEndText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>320, 26</value>
+  </data>
+  <data name="lblMeasureEndText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblMeasureEndText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 25</value>
+  </data>
+  <data name="lblMeasureEndText.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="lblMeasureEndText.Text" xml:space="preserve">
+    <value>Measure end:</value>
+  </data>
+  <data name="lblMeasureEndText.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblMeasureEndText.Name" xml:space="preserve">
+    <value>lblMeasureEndText</value>
+  </data>
+  <data name="&gt;&gt;lblMeasureEndText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMeasureEndText.Parent" xml:space="preserve">
+    <value>grpBoxFurtherInformation</value>
+  </data>
+  <data name="&gt;&gt;lblMeasureEndText.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblAverageTemp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="lblAverageTemp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAverageTemp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>877, 26</value>
+  </data>
+  <data name="lblAverageTemp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblAverageTemp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 25</value>
+  </data>
+  <data name="lblAverageTemp.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="lblAverageTemp.Text" xml:space="preserve">
+    <value>---</value>
+  </data>
+  <data name="&gt;&gt;lblAverageTemp.Name" xml:space="preserve">
+    <value>lblAverageTemp</value>
+  </data>
+  <data name="&gt;&gt;lblAverageTemp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAverageTemp.Parent" xml:space="preserve">
+    <value>grpBoxFurtherInformation</value>
+  </data>
+  <data name="&gt;&gt;lblAverageTemp.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblMeasureStartText.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMeasureStartText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 26</value>
+  </data>
+  <data name="lblMeasureStartText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblMeasureStartText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 25</value>
+  </data>
+  <data name="lblMeasureStartText.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="lblMeasureStartText.Text" xml:space="preserve">
+    <value>Measure begin:</value>
+  </data>
+  <data name="lblMeasureStartText.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblMeasureStartText.Name" xml:space="preserve">
+    <value>lblMeasureStartText</value>
+  </data>
+  <data name="&gt;&gt;lblMeasureStartText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMeasureStartText.Parent" xml:space="preserve">
+    <value>grpBoxFurtherInformation</value>
+  </data>
+  <data name="&gt;&gt;lblMeasureStartText.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblAverageTempText.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAverageTempText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>643, 26</value>
+  </data>
+  <data name="lblAverageTempText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblAverageTempText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 25</value>
+  </data>
+  <data name="lblAverageTempText.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="lblAverageTempText.Text" xml:space="preserve">
+    <value>Average Temperature:</value>
+  </data>
+  <data name="lblAverageTempText.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblAverageTempText.Name" xml:space="preserve">
+    <value>lblAverageTempText</value>
+  </data>
+  <data name="&gt;&gt;lblAverageTempText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAverageTempText.Parent" xml:space="preserve">
+    <value>grpBoxFurtherInformation</value>
+  </data>
+  <data name="&gt;&gt;lblAverageTempText.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblMeasureStart.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="lblMeasureStart.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMeasureStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>182, 26</value>
+  </data>
+  <data name="lblMeasureStart.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblMeasureStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 25</value>
+  </data>
+  <data name="lblMeasureStart.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="lblMeasureStart.Text" xml:space="preserve">
+    <value>---</value>
+  </data>
+  <data name="&gt;&gt;lblMeasureStart.Name" xml:space="preserve">
+    <value>lblMeasureStart</value>
+  </data>
+  <data name="&gt;&gt;lblMeasureStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMeasureStart.Parent" xml:space="preserve">
+    <value>grpBoxFurtherInformation</value>
+  </data>
+  <data name="&gt;&gt;lblMeasureStart.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblMeasureStop.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="lblMeasureStop.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMeasureStop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>495, 26</value>
+  </data>
+  <data name="lblMeasureStop.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblMeasureStop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 25</value>
+  </data>
+  <data name="lblMeasureStop.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="lblMeasureStop.Text" xml:space="preserve">
+    <value>---</value>
+  </data>
+  <data name="&gt;&gt;lblMeasureStop.Name" xml:space="preserve">
+    <value>lblMeasureStop</value>
+  </data>
+  <data name="&gt;&gt;lblMeasureStop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMeasureStop.Parent" xml:space="preserve">
+    <value>grpBoxFurtherInformation</value>
+  </data>
+  <data name="&gt;&gt;lblMeasureStop.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="grpBoxFurtherInformation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="grpBoxFurtherInformation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 563</value>
+  </data>
+  <data name="grpBoxFurtherInformation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1018, 63</value>
+  </data>
+  <data name="grpBoxFurtherInformation.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="grpBoxFurtherInformation.Text" xml:space="preserve">
+    <value>Further information</value>
+  </data>
+  <data name="&gt;&gt;grpBoxFurtherInformation.Name" xml:space="preserve">
+    <value>grpBoxFurtherInformation</value>
+  </data>
+  <data name="&gt;&gt;grpBoxFurtherInformation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpBoxFurtherInformation.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grpBoxFurtherInformation.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="comboBoxShownRange.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 119</value>
+  </data>
+  <data name="comboBoxShownRange.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 28</value>
+  </data>
+  <data name="comboBoxShownRange.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;comboBoxShownRange.Name" xml:space="preserve">
+    <value>comboBoxShownRange</value>
+  </data>
+  <data name="&gt;&gt;comboBoxShownRange.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxShownRange.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBoxShownRange.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 120</value>
+  </data>
+  <data name="Label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 25</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Shown date range:</value>
+  </data>
+  <data name="Label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ChartLineTemperature.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 156</value>
+  </data>
+  <data name="ChartLineTemperature.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1014, 360</value>
+  </data>
+  <data name="ChartLineTemperature.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;ChartLineTemperature.Name" xml:space="preserve">
+    <value>ChartLineTemperature</value>
+  </data>
+  <data name="&gt;&gt;ChartLineTemperature.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;ChartLineTemperature.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ChartLineTemperature.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>51</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1050, 674</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Detector Temperature History</value>
+  </data>
+  <data name="&gt;&gt;TimerRefreshUi.Name" xml:space="preserve">
+    <value>TimerRefreshUi</value>
+  </data>
+  <data name="&gt;&gt;TimerRefreshUi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmDetectorTemperature</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

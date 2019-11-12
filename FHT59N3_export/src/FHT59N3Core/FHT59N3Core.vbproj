@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2887E434-E0BE-4EB0-A5BB-9B6ABF4CC928}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FHT59N3Core</RootNamespace>
+    <AssemblyName>FHT59N3Core</AssemblyName>
+    <MyType>Windows</MyType>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>FHT59N3Core.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>FHT59N3Core.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Canberra.DSA3K.DataTypes">
+      <HintPath>..\..\ClassLibraries\src\ExterneDLL\Canberra_DSA3K\Canberra.DSA3K.DataTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="Canberra.Lynx.Examples">
+      <HintPath>..\..\ClassLibraries\src\ExterneDLL\Canberra_Lynx\Canberra.Lynx.Examples.dll</HintPath>
+    </Reference>
+    <Reference Include="ClassLibrarySuperCom, Version=6.5.3877.17956, Culture=neutral, PublicKeyToken=8715df89c24ad5be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ClassLibraries\00_Releases\ClassLibrarySuperCom.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpSnmpLib.Full">
+      <HintPath>..\FHT59N3\SharpSnmp\SharpSnmpLib.Full.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpSnmpLib.Portable">
+      <HintPath>..\FHT59N3\SharpSnmp\SharpSnmpLib.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThermoActivexWrapper">
+      <HintPath>..\..\ClassLibraries\00_Releases\ThermoActivexWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="ThermoInterfaces">
+      <HintPath>..\..\ClassLibraries\00_Releases\ThermoInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ThermoLogging">
+      <HintPath>..\..\ClassLibraries\00_Releases\ThermoLogging.dll</HintPath>
+    </Reference>
+    <Reference Include="ThermoProtocols">
+      <HintPath>..\..\ClassLibraries\00_Releases\ThermoProtocols.dll</HintPath>
+    </Reference>
+    <Reference Include="ThermoUtilities, Version=1.0.6.0, Culture=neutral, PublicKeyToken=3b5667b94109b3b9, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ClassLibraries\00_Releases\ThermoUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="ThermoWebServices">
+      <HintPath>..\..\ClassLibraries\00_Releases\ThermoWebServices.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="_Klassen\FHT59N3_DetectorTemperatureRecorder.vb" />
+    <Compile Include="_Klassen\FHT59N3_DspecCommunication.vb" />
+    <Compile Include="_Klassen\FHT59N3_LynxCommunication.vb" />
+    <Compile Include="_Klassen\FHT59N3_ControlCenter.vb" />
+    <Compile Include="_Klassen\FHT59N3_LynxParams.vb" />
+    <Compile Include="_Klassen\FHT59N3_MDSCommunication.vb" />
+    <Compile Include="_Klassen\FHT59N3_N4242.vb" />
+    <Compile Include="_Klassen\FHT59N3_RemoteControl.vb" />
+    <Compile Include="_Klassen\FHT59N3_SnmpCommunication.vb" />
+    <Compile Include="_Klassen\FHT59N3_SPSCommunication.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="_Klassen\FHT59N3_SPSStatemachine.vb" />
+    <Compile Include="_Klassen\FHT59N3_Nuclides.vb" />
+    <Compile Include="_Klassen\FHT59N3_SystemStates.vb" />
+    <Compile Include="_Klassen\ChangableObject.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="CanberraDataDisplayLib">
+      <Guid>{07D2E9B4-09C1-11D2-85D3-204C4F4F5020}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CanberraDeviceAccessLib">
+      <Guid>{592A6920-EA90-11D2-97BD-ECB1F3000000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ClassLibraries\src\ThermoConnections\ThermoConnections\ThermoConnections.vbproj">
+      <Project>{84C51DD8-91E6-4C61-B9B0-03BB585329DA}</Project>
+      <Name>ThermoConnections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ClassLibraries\src\ThermoDeviceSimaticSPS\ThermoDeviceSimaticSPS\ThermoDeviceSimaticSPS.vbproj">
+      <Project>{BBD41545-B9D6-49CE-973E-83BB011207D3}</Project>
+      <Name>ThermoDeviceSimaticSPS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ClassLibraries\src\ThermoIOControls\ThermoIOControls\ThermoIOControls.vbproj">
+      <Project>{9D9B2486-C73D-40BE-8A4E-7C3B2506C744}</Project>
+      <Name>ThermoIOControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="_Formulare\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y $(SolutionDir)..\ClassLibraries\00_Releases\supercom.dll $(TargetDir)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

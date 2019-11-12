@@ -1,0 +1,152 @@
+Versionstext für das Programm FHT59N3
+
+Version 1.0.0, 19.08.2010, Thomas Kuschel
+-----------------------------------------
+- Initialversion
+- diese Version wurde an den DWD am 19.08.2010 ausgeliefert
+
+Version 1.0.1, 26.08.2010, Thomas Kuschel
+-----------------------------------------
+- Fernsteuerung eingebaut
+- Blendenfaktor wird auf 0,000 formatiert
+- Buttonfarben nicht vom WinXP Stil abhängig
+- wenn VirtualKeyboard=False, Fenster mit Ragmen anzeigen, damit die Windows-Startleiste sichtbar ist
+- in der Titelleiste wird angezeigt welches Spektrum gerade offen ist
+- im Einstellfenster für den Stabilizer: Ratio geht von 0,01 bis 100
+- Spektrendarstellung umschaltbar zwischen Punkten und Linien
+- Fernwartung über SPS einschaltbar und ausschaltbar
+
+Version 1.0.2, 01.09.2010, Thomas Kuschel
+-----------------------------------------
+- Befehl 8 (Alarmrelais ein) für die SPS in den Buchstaben I getauscht, nachdem die SPS scheinbar
+  willkürlich den Befehl 8 verstanden zu haben glaubte. Mit dem Buchstaben I tritt dieser Fehler nicht
+  mehr auf
+- Fehler im Tagessummenspektrum behoben. Hier wirden für die Parameter ELIVE und EREAL falsche Werte
+  addiert. Jetzt werden die aus dem Filterstandsspektrum gelesenen benutzt.
+
+Version 1.0.3, 24.09.2010, Thomas Kuschel
+-----------------------------------------
+- Fehler bei der Berechnung des Betriebs-m³ behoben (Temp. wurde nich in Kelvin umgerechnet)
+- Fehler bei der Luftdurchsatzkalibrierung behoben; Eingabewert war in Betriebs-m³ wurde aber wie Norm-m³ behandelt, dieser wird jetzt
+  in Norm-m³ umgerechnet, da die Druck-und Durchflussmessung nur Norm-m³ liefert
+- Menüverhalten wurde angepasst. Sobald in einem Menü eine wirkliche Funktion und nicht wieder ein Untermenü aufgerufen
+  wird, gehen alle offenen Menüfenster zu. Wenn keine wirkliche Funtkion ausgewählt wurde, kommt man über die
+  "Zurück" Buttons wieder ins vorherige Menü
+- Wenn das Flag "VirtualKeyborad" NICHT aktiv ist, hat das Hauptfenster einen normalen Rahmen und kann in der Größe
+  verändert, sowie maximiert und minimiert werden. Der "X" Schalter wurde deaktiviert.
+- es wurde ein Menü zu Bearbeitung von ROI´s eingeführt
+- nach der Alarmauswertung wird nicht mehr jedes mal das angezeigte Spektrum geschlossen und wieder geöffnet und
+  somit alle eingestellten Zoomwerte geändert, sondern es wird auch während der Prüfung weiter das Spektrum angezeigt.
+- Es wurde ein Quittierunsknopf für die Alarmhupe eingebaut.
+- Es wurde ein Flag (AlarmOutSwitchableWithoutMaintenance) eingebaut, welches aussagt ob der Alarmausgang auch ohne in die Wartung zu gehen schaltbar ist.
+  Diese Funktionalität wurde in das frmOperationMenu eingebaut.
+- Die Systemmeldungen werden jetzt korrekt sortiert. Jede neue wird an den Anfang der Liste gestellt.
+- In der Info_ddmm.dat Datei wird die Alarmprüfung nicht mit abgespeichert, da diese sonst zu groß und unübersichtlich würde.
+- Es wird zu jeder Auswertung auf das K40 geprüft. Auch zur Alarmprüfung. Es gibt eine Flag (WaitTimeBeforeK40Check) in der Konfigdatei,
+  welches benutzt wird um dies Prüfung evtl. erst nach einer bestimmten Zeit vorzunehmen. Sonst kann es sein das 
+  das K40 "noch nicht gefunden wurde".
+- im Intensivbetrieb wird jetzt auch der Alarmausgang eingeschalten.
+- Die Textbox für die Prüfungsprotokolle war editierbar. Korrigiert.
+
+Version 1.0.4, 21.10.2010, Thomas Kuschel
+-----------------------------------------
+- Alle Statusmeldungen, Störungen und Digitale Ein- und Ausgänge werde nun auch im Hauptbildschitm angezeigt wenn das Flag (_ShowSystemStateInMainDisplay) gesetzt ist.
+- Menüführung wurde umgebaut: Es gibt kein Hauptmenü mehr, sondern die darauf befindlichen Buttons sind jetzt am unteren Fensterrand gruppiert.
+- Als Parameter können nun auch K40 Werte und die Umschaltung von Betriebs auf Norm m³ im Programm geändert werden
+- Im Wartungsmenü wurde noch ein extra Menü für das Filterband eingefügt.
+- Zeit für die Auswertung der Tagessummenspektrums wird in der Messdatei auf "Now" gesetzt, diese war vorher die Uhrzeit des letzten addierten Spektrums
+- OBIGE PUNKTE: siehe Mail vom Herrn Naatz, DWD vom 27.09.2010
+- Luftdurchsatzberechnung hatte einen Fehler. Temperatur wurde in °C benutzt. Dies bringt den Fehler mit sich das bei einer negative Temperatur der aktuelle Luftdurchstaz nicht definiert ist,
+  wegen einer Wurzel aus einer negativen Zahl. Nun wird die Temperatur in Kelvin angegeben (°C + 273,15)
+- Meldung "Nächste Auswertung" war immer doppelt. Korrigiert.
+- Meldung "Temp./Druck prüfen" erschien auch beim Filterschritt. Geändert, da an dieser Stelle sinnlos.
+- Fehler bei der Bearbeitung der Zertifkatsdatein aus dem Programm heraus wurden behoben.
+- Die Drücke wurde übr die Remoteschnittstelle falsch weitergegeben. Es wurden die analogen Werte unverrechnet weitergegeben. Korrigiert.
+- Logfiles werden jetzt unter C:\FHT59N3\Data\LogFiles abgespeichert, und nciht mehr im Programmordner
+
+Version 1.0.5, 09.11.2010, Thomas Kuschel
+-----------------------------------------
+- Umstellung der Laufzeitunterstützung zur Sprachumschaltung auf InitializeComponents wegen Problemen mit der Grössenanpassung beim Wechsel
+  zwischen Deutsch und Englisch; nur so könne auch Layoutinformationen in Abhängigkeit der Sprache gespeichert werden (In .resx Dateien)
+- Multilanguage Addin so eingestellte das "Optionen für COdegenerierung" = "Load LOCAL resources implictly". Dann funktioniert die Layoutumschaltung
+  sprachabhängig auch zur Laufzeit.
+- Alarmprüfungen werden im eigenen Ordner "Results\Alarmchecks" gespeichert
+- ROI Bearbeitung über Hotkeys eingearbeitet (Strg+...)
+- die Meldung Druck./Temp prüfen kommt ab und zu. Ursache ist das ab und an der Analogwert von der SPS für den Druck am Filterband = 1 ist,
+  wobei aber alle anderen Werte plausibel sind. Das tritt meits genau ein mal auf, danach ist wieder für eine Weile alles ok. Hier wird nun
+  die Prüfung so gemacht, das 10 mal hintereinander ein Fehler auftreten muss um als solcher gemeldet zu werden.
+- Peakbeschriftung bei ausgewerteten (Offline angezeigten) Spektren eingebaut
+- NLWKN und Jordanien Sachen wurden eingebaut soweit nötig
+- Luftdurchsatz im Netlog passt nicht. Problem ist hier allerdings der Demomode. =>> NetViewActive = False in die ConfigDatei.
+- Auch wenn Warnmeldungen (>128 binär) anstanden wurde bisher das Spektrum nicht aufsummiert. Bereinigt!
+
+Version 1.0.6, 21.04.2011, Thomas Kuschel
+-----------------------------------------
+- Programm hat sich teilweise die Messzeiteinstellungen einer "Freien Messung" gemerkt. Dadurch wurde auch der normale Messbetrieb
+  beeinflußt. Bereinigt im Kern
+- Bei der manuellen Auswertung von Spektrendateien war ein Falg falsch gesetzt. Damit wurden alle Spektren als Tagessummenspektrum 
+  und nicht als Sonderauswertung behandelt.
+- Stationskennziffer wurde nicht in den Spektren gespeichert.
+- Nach dem manuellen öffnen eines Spektrums wurde dieses beim schließen nicht richtig freigegeben. Somit war es nicht mehr mit dem
+  Gamma Messung und Analyse Tool anzuschauen.
+- Auf Wunsch des DWD werden die Pfade zum ablegen der Dateien nun in die Konfigurationsdatei gespeichert. Beim einlesen werden diese
+  darauf überprüft ob Sie vorhanden sind und beschreibbar.
+- In der Kalibrierauswertung muss man nun einen Button betätigen um die Zertifikatsdaten zu ändern. Zusätzlich muss man diese mit "Speichern"
+  bestätigen.
+- Bei einem Filterbandriss wird der Bypass geöffnet. Dies sollte eigentlich in der SPS drin sein, wird aber nicht gemacht.
+
+Version 1.0.7, 16.06.2011, Thomas Kuschel
+-----------------------------------------
+- Der Lynx hat sich teilweise die Messzeiteinstellungen einer "Freien Messung" gemerkt. Dadurch wurde auch der normale Messbetrieb
+  beeinflußt. Dies lies sich nur durch neu starten der Messung und umschalten von countToRealTime nach countToLiveTime erreichen.
+  Beim nächsten Filterbandtransport wird wieder auf countToRealTime umgeschalten.
+
+Version 1.0.8, 19.08.2011, Thomas Kuschel
+-----------------------------------------
+- Falsche Ressourcendatei für das Fenster zum einstellen des Lynx. Dadurch war dieses Fenster nicht richtig sichtbar.
+
+Version 1.0.9, 28.03.2012, Thomas Kuschel
+-----------------------------------------
+- Auf Bitte von Herrn naatz wurde die Meldung "Anzahl der Filterschritte ausserhalb...." rausgeworfen. Wenn diese nicht bestätigt wurde kam es wohl zu Folgefehlern.
+
+Version 1.1.0, 25.07.2012, Thomas Kuschel
+-----------------------------------------
+- Nachkalibrierung anhand natürlicher Linien wurde wieder eingebaut. Ebenso die Nachkalibrierung des K-40 Peaks. DWD meint das die Peakstabilisierung nicht 100% ausreicht und öfters
+  die Meldung kommt "BI-214 nicht gefunden" bzw. "K-40 nicht gefunden". Das war früher besser. Beide Funktionen werden per Flag ein- und ausgeschalten.
+- Nach dem Umschalten von Wartung ind Messbetrieb, wird während des Intensivmodus der erste Zyklus zu lange gewartet. Hier wird für die Synchronisierung zwischen
+  Filterstandzeit/2 und 1.5*Filterstandzeit gewartet. Im Intensivbetrieb ist aber die Auswerteminute auch gleich dem Filterwechselzeitpunkt. Dies wird nun sofort beim errechnen des
+  neuen Filterwechselzeitpunktes berücksichtigt, nicht erst nach einem Zyklus.
+  
+Version 1.2.0, 29.07.2013, Hugo Schleicher
+-----------------------------------------
+- Die Kommunikation mit der SPS wird ab sofort mit einem sicheren Datenprotokoll (wie FHT671S) durchgeführt (<STX> Daten <BCC> <ETX>).
+  Das Messprogramm unterstützt das alte (unsichere) Protokoll nicht mehr. ==> Zusammen mit dem neuen Messprogramm muss immer auch das Programm
+  in der SPS aktualisiert werden.
+  
+Version 1.2.0 (final), 12.09.2013, Marcel Bender (ISO Software Systeme GmbH)
+------------------------------------------------  
+- Die Implementierung mit sicherem Datenprotokoll wurde fertiggestellt und als Version 1.2.0 ausgeliefert
+
+
+Version 1.2.1, 18.02.2014, Marcel Bender (ISO Software Systeme GmbH)
+------------------------------------------------
+- Der Eventlog-Eintrag für SPS-Checksummenfehler wurde wieder entfernt (konfigurierbar über Config-XML) da die hohe Kritikalität des Eintrags (rot) den Endkunden DWD stört.
+
+
+Version 2.0.0 - ISO Projects
+----------------------------
+
+
+Version 2.0.1, Januar bis Mai 2016 - ISO Projects
+-------------------------------------------------
+FHTNT-62: Fehlerbehebung: bei Nah-Misch-Kalibrierung werden die Efficiency-Daten nicht gespeichert
+FHTNT-63: Untersuchung für BAG: Wieso wird bei BAG-Anlage AM-241 nicht erkannt
+FHTNT-64: Bugfix für BAG: Sporadisch gibt es "überlappende" Filterflecke (mutmaßlich 2.Filterschritt ging nicht)
+FHTNT-65: Korrektur durchführen: Alarmnuklide nach Bearbeitung in Systemparameter mit Komma im FHT59N3_Config.xml
+
+
+Version 2.0.2, 15.08.2016 - ISO Projects
+-----------------------------------------
+Festlegung Hr. Silbermann: hartes Ausschalten nach 10-Minuten-Timeout
+Gibts auf jedem Windows 7 und höher, erfordert natürlich die entsprechende Benutzerberechtigung...
+

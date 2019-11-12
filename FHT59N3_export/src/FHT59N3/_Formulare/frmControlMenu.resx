@@ -1,0 +1,669 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Button7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="Button7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>381, 449</value>
+  </data>
+  <data name="Button7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 40</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Button7.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="Button7.Text" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="&gt;&gt;Button7.Name" xml:space="preserve">
+    <value>Button7</value>
+  </data>
+  <data name="&gt;&gt;Button7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Button7.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="BtnFilterstep.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnFilterstep.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="BtnFilterstep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 40</value>
+  </data>
+  <data name="BtnFilterstep.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="BtnFilterstep.Text" xml:space="preserve">
+    <value>Filterstep</value>
+  </data>
+  <data name="&gt;&gt;BtnFilterstep.Name" xml:space="preserve">
+    <value>BtnFilterstep</value>
+  </data>
+  <data name="&gt;&gt;BtnFilterstep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnFilterstep.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnFilterstep.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="BtnFilterBypass.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnFilterBypass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 58</value>
+  </data>
+  <data name="BtnFilterBypass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 40</value>
+  </data>
+  <data name="BtnFilterBypass.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="BtnFilterBypass.Text" xml:space="preserve">
+    <value>Filter / Bypass</value>
+  </data>
+  <data name="&gt;&gt;BtnFilterBypass.Name" xml:space="preserve">
+    <value>BtnFilterBypass</value>
+  </data>
+  <data name="&gt;&gt;BtnFilterBypass.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnFilterBypass.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnFilterBypass.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="BtnPump.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnPump.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 140</value>
+  </data>
+  <data name="BtnPump.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 40</value>
+  </data>
+  <data name="BtnPump.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="BtnPump.Text" xml:space="preserve">
+    <value>Pump</value>
+  </data>
+  <data name="&gt;&gt;BtnPump.Name" xml:space="preserve">
+    <value>BtnPump</value>
+  </data>
+  <data name="&gt;&gt;BtnPump.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnPump.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnPump.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="BtnErrorIndication.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnErrorIndication.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 186</value>
+  </data>
+  <data name="BtnErrorIndication.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 40</value>
+  </data>
+  <data name="BtnErrorIndication.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="BtnErrorIndication.Text" xml:space="preserve">
+    <value>Error indication</value>
+  </data>
+  <data name="&gt;&gt;BtnErrorIndication.Name" xml:space="preserve">
+    <value>BtnErrorIndication</value>
+  </data>
+  <data name="&gt;&gt;BtnErrorIndication.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnErrorIndication.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnErrorIndication.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="BtnN2Fill.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnN2Fill.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 278</value>
+  </data>
+  <data name="BtnN2Fill.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 40</value>
+  </data>
+  <data name="BtnN2Fill.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="BtnN2Fill.Text" xml:space="preserve">
+    <value>N2 Fill</value>
+  </data>
+  <data name="&gt;&gt;BtnN2Fill.Name" xml:space="preserve">
+    <value>BtnN2Fill</value>
+  </data>
+  <data name="&gt;&gt;BtnN2Fill.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnN2Fill.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnN2Fill.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="BtnAirFlow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnAirFlow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 449</value>
+  </data>
+  <data name="BtnAirFlow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 40</value>
+  </data>
+  <data name="BtnAirFlow.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="BtnAirFlow.Text" xml:space="preserve">
+    <value>Show Monitor State</value>
+  </data>
+  <data name="&gt;&gt;BtnAirFlow.Name" xml:space="preserve">
+    <value>BtnAirFlow</value>
+  </data>
+  <data name="&gt;&gt;BtnAirFlow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnAirFlow.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnAirFlow.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="LblFilterBypass.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15.75pt, style=Bold</value>
+  </data>
+  <data name="LblFilterBypass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 58</value>
+  </data>
+  <data name="LblFilterBypass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 75</value>
+  </data>
+  <data name="LblFilterBypass.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="LblFilterBypass.Text" xml:space="preserve">
+    <value>locked / closed</value>
+  </data>
+  <data name="LblFilterBypass.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;LblFilterBypass.Name" xml:space="preserve">
+    <value>LblFilterBypass</value>
+  </data>
+  <data name="&gt;&gt;LblFilterBypass.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LblFilterBypass.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LblFilterBypass.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="LblPump.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15.75pt, style=Bold</value>
+  </data>
+  <data name="LblPump.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 140</value>
+  </data>
+  <data name="LblPump.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 40</value>
+  </data>
+  <data name="LblPump.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="LblPump.Text" xml:space="preserve">
+    <value>pumping</value>
+  </data>
+  <data name="LblPump.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;LblPump.Name" xml:space="preserve">
+    <value>LblPump</value>
+  </data>
+  <data name="&gt;&gt;LblPump.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LblPump.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LblPump.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="LblErrorIndication.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15.75pt, style=Bold</value>
+  </data>
+  <data name="LblErrorIndication.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 186</value>
+  </data>
+  <data name="LblErrorIndication.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 40</value>
+  </data>
+  <data name="LblErrorIndication.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="LblErrorIndication.Text" xml:space="preserve">
+    <value>off</value>
+  </data>
+  <data name="LblErrorIndication.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;LblErrorIndication.Name" xml:space="preserve">
+    <value>LblErrorIndication</value>
+  </data>
+  <data name="&gt;&gt;LblErrorIndication.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LblErrorIndication.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LblErrorIndication.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="LblN2Fill.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15.75pt, style=Bold</value>
+  </data>
+  <data name="LblN2Fill.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 278</value>
+  </data>
+  <data name="LblN2Fill.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 40</value>
+  </data>
+  <data name="LblN2Fill.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="LblN2Fill.Text" xml:space="preserve">
+    <value>off</value>
+  </data>
+  <data name="LblN2Fill.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;LblN2Fill.Name" xml:space="preserve">
+    <value>LblN2Fill</value>
+  </data>
+  <data name="&gt;&gt;LblN2Fill.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LblN2Fill.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LblN2Fill.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="LblFilterstep.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15.75pt, style=Bold</value>
+  </data>
+  <data name="LblFilterstep.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 12</value>
+  </data>
+  <data name="LblFilterstep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 40</value>
+  </data>
+  <data name="LblFilterstep.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="LblFilterstep.Text" xml:space="preserve">
+    <value>stopped</value>
+  </data>
+  <data name="LblFilterstep.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;LblFilterstep.Name" xml:space="preserve">
+    <value>LblFilterstep</value>
+  </data>
+  <data name="&gt;&gt;LblFilterstep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LblFilterstep.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LblFilterstep.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="LblAlarmIndication.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15.75pt, style=Bold</value>
+  </data>
+  <data name="LblAlarmIndication.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 232</value>
+  </data>
+  <data name="LblAlarmIndication.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 40</value>
+  </data>
+  <data name="LblAlarmIndication.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="LblAlarmIndication.Text" xml:space="preserve">
+    <value>off</value>
+  </data>
+  <data name="LblAlarmIndication.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;LblAlarmIndication.Name" xml:space="preserve">
+    <value>LblAlarmIndication</value>
+  </data>
+  <data name="&gt;&gt;LblAlarmIndication.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LblAlarmIndication.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LblAlarmIndication.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="BtnAlarm.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnAlarm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 232</value>
+  </data>
+  <data name="BtnAlarm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 40</value>
+  </data>
+  <data name="BtnAlarm.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="BtnAlarm.Text" xml:space="preserve">
+    <value>Alarm indication</value>
+  </data>
+  <data name="&gt;&gt;BtnAlarm.Name" xml:space="preserve">
+    <value>BtnAlarm</value>
+  </data>
+  <data name="&gt;&gt;BtnAlarm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnAlarm.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnAlarm.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="BtnHV.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnHV.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 324</value>
+  </data>
+  <data name="BtnHV.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 40</value>
+  </data>
+  <data name="BtnHV.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="BtnHV.Text" xml:space="preserve">
+    <value>High Voltage</value>
+  </data>
+  <data name="&gt;&gt;BtnHV.Name" xml:space="preserve">
+    <value>BtnHV</value>
+  </data>
+  <data name="&gt;&gt;BtnHV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnHV.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnHV.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="LblHighVoltage.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15.75pt, style=Bold</value>
+  </data>
+  <data name="LblHighVoltage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 324</value>
+  </data>
+  <data name="LblHighVoltage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 40</value>
+  </data>
+  <data name="LblHighVoltage.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="LblHighVoltage.Text" xml:space="preserve">
+    <value>off</value>
+  </data>
+  <data name="LblHighVoltage.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;LblHighVoltage.Name" xml:space="preserve">
+    <value>LblHighVoltage</value>
+  </data>
+  <data name="&gt;&gt;LblHighVoltage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LblHighVoltage.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LblHighVoltage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="LblEcoolerState.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15.75pt, style=Bold</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LblEcoolerState.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LblEcoolerState.Location" type="System.Drawing.Point, System.Drawing">
+    <value>291, 370</value>
+  </data>
+  <data name="LblEcoolerState.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 40</value>
+  </data>
+  <data name="LblEcoolerState.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="LblEcoolerState.Text" xml:space="preserve">
+    <value>running</value>
+  </data>
+  <data name="LblEcoolerState.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;LblEcoolerState.Name" xml:space="preserve">
+    <value>LblEcoolerState</value>
+  </data>
+  <data name="&gt;&gt;LblEcoolerState.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LblEcoolerState.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LblEcoolerState.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BtnEcoolerCtl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnEcoolerCtl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BtnEcoolerCtl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 370</value>
+  </data>
+  <data name="BtnEcoolerCtl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 40</value>
+  </data>
+  <data name="BtnEcoolerCtl.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="BtnEcoolerCtl.Text" xml:space="preserve">
+    <value>E-Cooler</value>
+  </data>
+  <data name="&gt;&gt;BtnEcoolerCtl.Name" xml:space="preserve">
+    <value>BtnEcoolerCtl</value>
+  </data>
+  <data name="&gt;&gt;BtnEcoolerCtl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnEcoolerCtl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnEcoolerCtl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="TimerForEcoolerButton.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>530, 501</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>FHT59N3T - Control menu</value>
+  </data>
+  <data name="&gt;&gt;TimerForEcoolerButton.Name" xml:space="preserve">
+    <value>TimerForEcoolerButton</value>
+  </data>
+  <data name="&gt;&gt;TimerForEcoolerButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmControlMenu</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

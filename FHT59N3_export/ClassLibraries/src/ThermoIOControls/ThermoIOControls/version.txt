@@ -1,0 +1,12 @@
+Versionsbeschreibung für Klassenbibliothek ThermoIOControls
+
+
+Version (Datei) 2.0.3, 19.08.2010, H.Schleicher
+-------------------------------------------------
+- ReceiveBuffer (in ThermoIOControl_General.vb) wurde unendlich lang.
+  Wird jetzt bei beim Starten des ByteArray-Transfers (Funktion DoTransferAr) durch ReDim wieder auf 1024 gesetzt;
+  bisher wurde nur der Inhalt gelöscht, aber die Feldlänge nahm kontinuierlich zu.
+  Jetzt wird die Feldlänge nur erhöht, wenn 1024 nicht reicht.
+  
+  
+

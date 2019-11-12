@@ -1,0 +1,716 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ThermoIOControls
+</name>
+</assembly>
+<members>
+<member name="T:ThermoIOControls.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:ThermoIOControls.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:ThermoIOControls.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:ThermoIOControls.ThermoIOControl_Ethernet">
+ <summary>
+ 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_Ethernet.ReceivedString">
+ <summary>
+ Empfangspuffer für die Daten von der seriellen Schnittstelle (String)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_Ethernet.MySocket">
+ <summary>
+ Ethernet Schnittstelle
+ </summary>
+ <value></value>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_Ethernet.ComMode">
+ <summary>
+ Sende und Empfange ich Byte Array´s(1) oder String´s(2)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_Ethernet.Timeout">
+ <summary>
+ Timeout
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoIOControls.ThermoIOControl_Ethernet.DataReceivedEventAr">
+ <summary>
+ Event das Daten vom seriellen Port empfangen wurden (Byte Array)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoIOControls.ThermoIOControl_Ethernet.DataReceivedEventStr">
+ <summary>
+ Event das Daten vom seriellen Port empfangen wurden (String)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoIOControls.ThermoIOControl_Ethernet.TimeOutEvent">
+ <summary>
+ Timeout der Übertragung
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoIOControls.ThermoIOControl_Ethernet.ErrorEvent">
+ <summary>
+ Fehler
+ </summary>
+ <param name="ex">
+ Exception Klasse
+ </param>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoIOControls.ThermoIOControl_Ethernet.Disconnected">
+ <summary>
+ Verbindung unterbrochen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_Ethernet.ErrorHandler(System.Exception)">
+ <summary>
+ Fehlerbehandlung
+ </summary>
+ <param name="ex"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_Ethernet.TimTimeout_TimerEvent">
+ <summary>
+ Timeout überwachen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_Ethernet.StartWriteAr(System.Byte[])">
+ <summary>
+ Asynchron schreiben
+ </summary>
+ <param name="Data"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_Ethernet.StartWriteStr(System.String)">
+ <summary>
+ Asynchron schreiben
+ </summary>
+ <param name="Data"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_Ethernet.WriteCallback(System.IAsyncResult)">
+ <summary>
+ schreiben beendet
+ </summary>
+ <param name="ar"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_Ethernet.StartRead">
+ <summary>
+ asynchron lesen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_Ethernet.ReadCallback(System.IAsyncResult)">
+ <summary>
+ lesen beendet
+ </summary>
+ <param name="ar"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_Ethernet.#ctor(System.Net.Sockets.Socket,System.Int32,ThermoInterfaces.ThermoProtocol_Interface,ThermoInterfaces.ThermoDataContainer_Interface)">
+ <summary>
+ Konstruktor
+ </summary>
+ <param name="Eth">Handle für einen geöffneten! Socket</param>
+ <param name="Timeout">Timeout für die Abfragen</param>
+ <param name="Protocol">Gerätelogik die IsReceiveReady implementiert</param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_Ethernet.Dispose">
+ <summary>
+ alles zumachen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_Ethernet.DoTransferAr(System.Byte[],System.Int32,System.Int32)">
+ <summary>
+ Schnittstelle wird bereinigt, Transfer wird neu gestartet
+ </summary>
+ <param name="Command">Bytestream der den Befehl beinhaltet</param>
+ <param name="Length">Tatsächliche Länge des Befehls im Array</param> 
+ <param name="SendFlag">Soll der Befehl tatsächlich gesendet werden (0/1)</param> 
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_Ethernet.DoTransferStr(System.String,System.Int32,System.Int32)">
+ <summary>
+ Schnittstelle wird bereinigt, Transfer wird neu gestartet
+ </summary>
+ <param name="Command">String der den Befehl beinhaltet</param>
+ <param name="Length">Tatsächliche Länge des Befehls im Array</param> 
+ <param name="SendFlag">Soll der Befehl tatsächlich gesendet werden (0/1)</param> 
+ <remarks></remarks>
+</member>
+<member name="T:ThermoIOControls.ThermoIOControl_Ethernet_WithOutEvents">
+ <summary>
+ 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_Ethernet_WithOutEvents.ReceivedString">
+ <summary>
+ Empfangspuffer für die Daten von der seriellen Schnittstelle (String)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_Ethernet_WithOutEvents.MySocket">
+ <summary>
+ Ethernet Schnittstelle
+ </summary>
+ <value></value>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_Ethernet_WithOutEvents.ComMode">
+ <summary>
+ Sende und Empfange ich Byte Array´s(1) oder String´s(2)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_Ethernet_WithOutEvents.Timeout">
+ <summary>
+ Timeout
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_Ethernet_WithOutEvents.WriteAr(System.Byte[])">
+ <summary>
+ Synchron schreiben
+ </summary>
+ <param name="Data"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_Ethernet_WithOutEvents.WriteStr(System.String)">
+ <summary>
+ Synchron schreiben
+ </summary>
+ <param name="Data"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_Ethernet_WithOutEvents.#ctor(System.Net.Sockets.Socket,System.Int32,ThermoInterfaces.ThermoProtocol_Interface,ThermoInterfaces.ThermoDataContainer_Interface)">
+ <summary>
+ Konstruktor
+ </summary>
+ <param name="Eth">Handle für einen geöffneten! Socket</param>
+ <param name="Timeout">Timeout für die Abfragen</param>
+ <param name="Protocol">Gerätelogik die IsReceiveReady implementiert</param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_Ethernet_WithOutEvents.Dispose">
+ <summary>
+ alles zumachen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_Ethernet_WithOutEvents.DoTransferAr(System.Byte[],System.Int32,System.Int32,System.Boolean)">
+ <summary>
+ Schnittstelle wird bereinigt, Transfer wird neu gestartet
+ </summary>
+ <param name="Command">Bytestream der den Befehl beinhaltet</param>
+ <param name="Length">Tatsächliche Länge des Befehls im Array</param> 
+ <param name="SendFlag">Soll der Befehl tatsächlich gesendet werden (0/1)</param> 
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_Ethernet_WithOutEvents.DoTransferStr(System.String,System.Int32,System.Int32,System.Boolean)">
+ <summary>
+ Schnittstelle wird bereinigt, Transfer wird neu gestartet
+ </summary>
+ <param name="Command">String der den Befehl beinhaltet</param>
+ <param name="Length">Tatsächliche Länge des Befehls im Array</param> 
+ <param name="SendFlag">Soll der Befehl tatsächlich gesendet werden (0/1)</param> 
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_Ethernet_WithOutEvents.ReadData">
+ <summary>
+ Synchron lesen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_Ethernet_WithOutEvents.IsTimeOut">
+ <summary>
+ Timeout überwachen
+ </summary>
+ <returns>
+ 0 = no timeout
+ 1 = timeout
+ 2 = timeout but new data available
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="T:ThermoIOControls.ThermoIOControl_General">
+ <summary>
+ This class is a summary of the RS232 and the Ethernet classes and can handle a data transfer
+ with or without events
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_General.MySocket">
+ <summary>
+ Ethernet Schnittstelle
+ </summary>
+ <value></value>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_General.MyRS232">
+ <summary>
+ Serielle Schnittstelle Windows
+ </summary>
+ <value></value>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_General.MyRS232_SuperCom">
+ <summary>
+ Serielle Schnittstelle SuperCom
+ </summary>
+ <value></value>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_General.MyComMode">
+ <summary>
+ Sende und Empfange ich Byte Array´s(1) oder String´s(2)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_General.MyInterfaceMode">
+ <summary>
+ Kommuniziere ich über Ethernet oder RS232
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_General.MyTransferMode">
+ <summary>
+ Asynchroner Transfer (mit Events) oder Synchroner Transfer (Polling)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_General.Timeout">
+ <summary>
+ Timeout
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_General.DisconnectedFlag">
+ <summary>
+ Gerät ist nicht mehr verbunden
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoIOControls.ThermoIOControl_General.DataReceivedEventAr">
+ <summary>
+ Event das Daten vom seriellen Port empfangen wurden (Byte Array)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoIOControls.ThermoIOControl_General.DataReceivedEventStr">
+ <summary>
+ Event das Daten vom seriellen Port empfangen wurden (String)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoIOControls.ThermoIOControl_General.DataErrorEvent">
+ <summary>
+ Event dass Fehler beim Empfang von Daten aufgetreten (String und Array)
+ </summary>
+ <remarks>Bitte das ENUM ResultsOfDatatransfer verwenden</remarks>
+</member>
+<member name="E:ThermoIOControls.ThermoIOControl_General.Disconnected">
+ <summary>
+ Verbindung unterbrochen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_General.TimTimeout_TimerEvent">
+ <summary>
+ Timeout für Empfang von Daten der Schnittstelle überwachen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_General.StartWriteAr(System.Byte[])">
+ <summary>
+ Asynchron schreiben
+ </summary>
+ <param name="Data"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_General.StartWriteStr(System.String)">
+ <summary>
+ Asynchron schreiben
+ </summary>
+ <param name="Data"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_General.WriteCallback(System.IAsyncResult)">
+ <summary>
+ schreiben beendet
+ </summary>
+ <param name="ar"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_General.StartRead">
+ <summary>
+ asynchron lesen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_General.ReadCallback(System.IAsyncResult)">
+ <summary>
+ lesen beendet
+ </summary>
+ <param name="ar"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_General.WriteAr(System.Byte[])">
+ <summary>
+ Synchron schreiben
+ </summary>
+ <param name="Data"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_General.WriteStr(System.String)">
+ <summary>
+ Synchron schreiben
+ </summary>
+ <param name="Data"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_General.DataReceived(System.Object,System.IO.Ports.SerialDataReceivedEventArgs)">
+ <summary>
+ Event von der RS232 Schnittstelle
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_General.RS232ErrorReceived_Win(System.Object,System.IO.Ports.SerialErrorReceivedEventArgs)">
+ <summary>
+ Check for Errors, especially Parity Errors
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_General.RS232ErrorReceived_SuperCom(System.Object,System.Int32)">
+ <summary>
+ Check for Errors, especially Parity Errors
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_General.IsTimeOut">
+ <summary>
+ Timeout überwachen
+ </summary>
+ <returns>
+ 0 = no timeout
+ 1 = timeout
+ 2 = timeout but new data available
+ </returns>
+ <remarks>_TimeStamp wird als Zeitreferenz genommen</remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_General.#ctor(System.Net.Sockets.Socket,System.Int32,ThermoInterfaces.ThermoProtocol_Interface,ThermoInterfaces.ThermoDataContainer_Interface,System.Boolean)">
+ <summary>
+ Konstruktor TCP/IP
+ </summary>
+ <param name="Eth">Handle für einen geöffneten! Socket</param>
+ <param name="Timeout">Timeout für die Abfragen</param>
+ <param name="Protocol">Gerätelogik die IsReceiveReady implementiert</param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_General.#ctor(System.IO.Ports.SerialPort,System.Int32,ThermoInterfaces.ThermoProtocol_Interface,ThermoInterfaces.ThermoDataContainer_Interface,System.Boolean)">
+ <summary>
+ Konstruktor seriell via .NET
+ </summary>
+ <param name="SP">Handle für einen Seriellen Port (aus dem .NET Framework</param>
+ <param name="Timeout">Timeout für die Abfragen</param>
+ <param name="Protocol">Gerätelogik die IsReceiveReady implementiert</param> 
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_General.#ctor(ThermoIOControls.SerialPort,System.Int32,ThermoInterfaces.ThermoProtocol_Interface,ThermoInterfaces.ThermoDataContainer_Interface,System.Boolean)">
+ <summary>
+ Konstruktor für RS232 via ADONTEC
+ </summary>
+ <param name="SP">Handle für einen Seriellen Port (aus ThermoIOControls</param>
+ <param name="Timeout">Timeout für die Abfragen</param>
+ <param name="Protocol">Gerätelogik die IsReceiveReady implementiert</param> 
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_General.Dispose">
+ <summary>
+ alles zumachen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_General.DoTransferAr(System.Byte[],System.Int32,System.Int32,System.Boolean)">
+ <summary>
+ Schnittstelle wird bereinigt, Transfer wird neu gestartet
+ </summary>
+ <param name="Command">Bytestream der den Befehl beinhaltet</param>
+ <param name="Length">Tatsächliche Länge des Befehls im Array</param> 
+ <param name="SendFlag">Soll der Befehl tatsächlich gesendet werden (0/1)</param> 
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_General.DoTransferStr(System.String,System.Int32,System.Int32,System.Boolean)">
+ <summary>
+ Schnittstelle wird bereinigt, Transfer wird neu gestartet
+ </summary>
+ <param name="Command">String der den Befehl beinhaltet</param>
+ <param name="Length">Tatsächliche Länge des Befehls im Array</param> 
+ <param name="SendFlag">Soll der Befehl tatsächlich gesendet werden (0/1)</param> 
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_General.ReadDataSynchron(System.Object@)">
+ <summary>
+ Read the data synchron
+ </summary>
+ <returns>
+ >0 = Number of received Bytes
+ 0 = Busy
+ -1 = TimeOut
+ -2 = Checksum error
+ -3 = parity error
+ -4 = NAK received
+ -5 = special nak received
+ -10 = Exception error occured
+ </returns>
+ <remarks>please use the ENUM ResultsOfDatatransfer</remarks>
+</member>
+<member name="T:ThermoIOControls.ThermoIOControl_LPPCI">
+ <summary>
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_LPPCI.ReceiveBuffer">
+ <summary>
+ Empfangspuffer für die Daten von der seriellen Schnittstelle
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoIOControls.ThermoIOControl_LPPCI.DataReceivedEventAr">
+ <summary>
+ Event das Daten vom seriellen Port empfangen wurden (Byte Array)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoIOControls.ThermoIOControl_LPPCI.DataReceivedEventStr">
+ <summary>
+ Event das Daten vom seriellen Port empfangen wurden (String)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoIOControls.ThermoIOControl_LPPCI.TimeOutEvent">
+ <summary>
+ Timeout der Übertragung
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoIOControls.ThermoIOControl_LPPCI.ErrorEvent">
+ <summary>
+ Fehler
+ </summary>
+ <param name="ex">
+ Exception Klasse
+ </param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_LPPCI.#ctor(ThermoInterfaces.ThermoProtocol_Interface,ThermoInterfaces.ThermoDataContainer_Interface)">
+ <summary>
+ Konstruktor
+ </summary>
+ <param name="Protocol">Gerätelogik die IsReceiveReady implementiert</param> 
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_LPPCI.Dispose">
+ <summary>
+ alles zumachen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_LPPCI.DoTransferAr(System.Byte[],System.Int32,System.Int32)">
+ <summary>
+ Schnittstelle wird bereinigt, Transfer wird neu gestartet
+ </summary>
+ <param name="Command">Bytestream der den Befehl beinhaltet</param>
+ <param name="Length">Tatsächliche Länge des Befehls im Array</param> 
+ <param name="SendFlag">Soll der Befehl tatsächlich gesendet werden</param> 
+ <remarks></remarks>
+</member>
+<member name="T:ThermoIOControls.ThermoIOControl_RS232">
+ <summary>
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_RS232.ReceiveBuffer">
+ <summary>
+ Empfangspuffer für die Daten von der seriellen Schnittstelle
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_RS232.Timeout">
+ <summary>
+ Timeout
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_RS232.MyRS232">
+ <summary>
+ Serielle Schnittstelle
+ </summary>
+ <value></value>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoIOControls.ThermoIOControl_RS232.ComMode">
+ <summary>
+ Sende und Empfange ich Byte Array´s(1) oder String´s(2)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoIOControls.ThermoIOControl_RS232.DataReceivedEventAr">
+ <summary>
+ Event das Daten vom seriellen Port empfangen wurden (Byte Array)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoIOControls.ThermoIOControl_RS232.DataReceivedEventStr">
+ <summary>
+ Event das Daten vom seriellen Port empfangen wurden (String)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoIOControls.ThermoIOControl_RS232.TimeOutEvent">
+ <summary>
+ Timeout der Übertragung
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoIOControls.ThermoIOControl_RS232.ErrorEvent">
+ <summary>
+ Fehler
+ </summary>
+ <param name="ex">
+ Exception Klasse
+ </param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_RS232.TimTimeout_TimerEvent(System.Object,System.Timers.ElapsedEventArgs)">
+ <summary>
+ Timeout überwachen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_RS232.DataReceived(System.Object,System.IO.Ports.SerialDataReceivedEventArgs)">
+ <summary>
+ Event von der RS232 Schnittstelle
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_RS232.#ctor(System.IO.Ports.SerialPort,System.Int32,ThermoInterfaces.ThermoProtocol_Interface,ThermoInterfaces.ThermoDataContainer_Interface)">
+ <summary>
+ Konstruktor
+ </summary>
+ <param name="SP">Handle für einen Seriellen Port</param>
+ <param name="Timeout">Timeout für die Abfragen</param>
+ <param name="Protocol">Gerätelogik die IsReceiveReady implementiert</param> 
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_RS232.Dispose">
+ <summary>
+ alles zumachen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_RS232.DoTransferAr(System.Byte[],System.Int32,System.Int32)">
+ <summary>
+ Schnittstelle wird bereinigt, Transfer wird neu gestartet
+ </summary>
+ <param name="Command">Bytestream der den Befehl beinhaltet</param>
+ <param name="Length">Tatsächliche Länge des Befehls im Array</param> 
+ <param name="SendFlag">Soll der Befehl tatsächlich gesendet werden</param> 
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.ThermoIOControl_RS232.DoTransferStr(System.String,System.Int32,System.Int32)">
+ <summary>
+ Schnittstelle wird bereinigt, Transfer wird neu gestartet
+ </summary>
+ <param name="Command">String der den Befehl beinhaltet</param>
+ <param name="Length">Tatsächliche Länge des Befehls im Array</param> 
+ <param name="SendFlag">Soll der Befehl tatsächlich gesendet werden</param> 
+ <remarks></remarks>
+</member>
+<member name="T:ThermoIOControls.SerialPort">
+ <summary>
+ Serial Class based on the ADONTEC SuperCom API
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.SerialPort.#ctor(System.Boolean)">
+ <summary>
+ 
+ </summary>
+ <param name="AsnycTransfer"> = true, if transfer procedure is controlled by events </param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoIOControls.SerialPort.Read(System.Byte[]@,System.Int32,System.Int32)">
+ <summary>
+ 
+ </summary>
+ <param name="buffer"></param>
+ <param name="offset"></param>
+ <param name="count"></param>
+ <returns>Number of bytes read</returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BtnReturn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;BtnSaveROIs.Name" xml:space="preserve">
+    <value>BtnSaveROIs</value>
+  </data>
+  <data name="&gt;&gt;BtnDeleteROI.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="BtnDeleteAllROIs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 46</value>
+  </data>
+  <data name="BtnSaveROIs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 272</value>
+  </data>
+  <data name="&gt;&gt;BtnDeleteAllROIs.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="BtnDeleteROI.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnDeleteAllROIs.Text" xml:space="preserve">
+    <value>Delete All ROIs (Ctrl+A)</value>
+  </data>
+  <data name="&gt;&gt;BtnLoadROIs.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BtnPrevROI.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BtnReturn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 395</value>
+  </data>
+  <data name="&gt;&gt;BtnAddROI.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="BtnDeleteAllROIs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 220</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>314, 447</value>
+  </data>
+  <data name="&gt;&gt;BtnReturn.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="BtnNextROI.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;BtnLoadROIs.Name" xml:space="preserve">
+    <value>BtnLoadROIs</value>
+  </data>
+  <data name="BtnAddROI.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 116</value>
+  </data>
+  <data name="BtnDeleteROI.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 168</value>
+  </data>
+  <data name="&gt;&gt;BtnLoadROIs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BtnAddROI.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="BtnDeleteAllROIs.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="BtnAddROI.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;BtnSaveROIs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnSaveROIs.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnReturn.Text" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="&gt;&gt;BtnSaveROIs.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="BtnAddROI.Text" xml:space="preserve">
+    <value>Add ROI (Ctrl+H)</value>
+  </data>
+  <data name="&gt;&gt;BtnDeleteAllROIs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="BtnNextROI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 46</value>
+  </data>
+  <data name="&gt;&gt;BtnDeleteROI.Name" xml:space="preserve">
+    <value>BtnDeleteROI</value>
+  </data>
+  <data name="BtnPrevROI.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;BtnReturn.Name" xml:space="preserve">
+    <value>BtnReturn</value>
+  </data>
+  <data name="BtnNextROI.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnReturn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 40</value>
+  </data>
+  <data name="BtnLoadROIs.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;BtnPrevROI.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnPrevROI.Name" xml:space="preserve">
+    <value>BtnPrevROI</value>
+  </data>
+  <data name="BtnPrevROI.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 64</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmROIMenu</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>FHT59N3T - ROI menu</value>
+  </data>
+  <data name="&gt;&gt;BtnReturn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SaveFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnDeleteROI.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="BtnPrevROI.Text" xml:space="preserve">
+    <value>Previous ROI (Ctrl+V)</value>
+  </data>
+  <data name="&gt;&gt;BtnSaveROIs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="BtnSaveROIs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 46</value>
+  </data>
+  <data name="&gt;&gt;OpenFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnDeleteROI.Text" xml:space="preserve">
+    <value>Delete ROI (Ctrl+O)</value>
+  </data>
+  <data name="BtnSaveROIs.Text" xml:space="preserve">
+    <value>Save ROIs (Ctrl+S)</value>
+  </data>
+  <data name="BtnSaveROIs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;BtnLoadROIs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="BtnLoadROIs.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;BtnNextROI.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SaveFileDialog1.Name" xml:space="preserve">
+    <value>SaveFileDialog1</value>
+  </data>
+  <data name="BtnLoadROIs.Text" xml:space="preserve">
+    <value>Load ROIs (Ctrl+L)</value>
+  </data>
+  <data name="BtnNextROI.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="BtnNextROI.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 12</value>
+  </data>
+  <data name="BtnPrevROI.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="BtnReturn.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="BtnLoadROIs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 324</value>
+  </data>
+  <data name="BtnLoadROIs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 46</value>
+  </data>
+  <data name="&gt;&gt;BtnReturn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnNextROI.Text" xml:space="preserve">
+    <value>Next ROI (Ctrl+N)</value>
+  </data>
+  <data name="&gt;&gt;BtnNextROI.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;OpenFileDialog1.Name" xml:space="preserve">
+    <value>OpenFileDialog1</value>
+  </data>
+  <data name="BtnSaveROIs.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="BtnLoadROIs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;BtnPrevROI.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;BtnDeleteAllROIs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnDeleteROI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnAddROI.Name" xml:space="preserve">
+    <value>BtnAddROI</value>
+  </data>
+  <data name="BtnPrevROI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 46</value>
+  </data>
+  <data name="BtnDeleteAllROIs.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;BtnAddROI.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="BtnDeleteROI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 46</value>
+  </data>
+  <data name="BtnAddROI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 46</value>
+  </data>
+  <data name="&gt;&gt;BtnNextROI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnNextROI.Name" xml:space="preserve">
+    <value>BtnNextROI</value>
+  </data>
+  <data name="&gt;&gt;BtnDeleteAllROIs.Name" xml:space="preserve">
+    <value>BtnDeleteAllROIs</value>
+  </data>
+  <data name="&gt;&gt;BtnPrevROI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnAddROI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnDeleteROI.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="OpenFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="SaveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>149, 17</value>
+  </metadata>
+</root>
