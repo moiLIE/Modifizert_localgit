@@ -293,7 +293,7 @@ Class FHT59N3_ComputeSpectrumAnalyze
 
 
 
-        Dim NuclideChannel(10) As CanberraDataAccessLib.ParamCodes
+        Dim NuclideChannel(9) As CanberraDataAccessLib.ParamCodes
         NuclideChannel(0) = CanberraDataAccessLib.ParamCodes.CAM_L_NLNUCL   'Nuklidnr in Nukliddatei
         NuclideChannel(1) = CanberraDataAccessLib.ParamCodes.CAM_F_PSENERGY 'Energi der Linie
         NuclideChannel(2) = CanberraDataAccessLib.ParamCodes.CAM_F_PSCENTRD 'Kanallage
@@ -306,7 +306,7 @@ Class FHT59N3_ComputeSpectrumAnalyze
         NuclideChannel(7) = CanberraDataAccessLib.ParamCodes.CAM_F_PSDAREA   'Error on Area
         NuclideChannel(8) = CanberraDataAccessLib.ParamCodes.CAM_F_PSBACKGND 'Backgrond
         NuclideChannel(9) = CanberraDataAccessLib.ParamCodes.CAM_F_PSDBACK   'Error on Background
-        NuclideChannel(10) = CanberraDataAccessLib.ParamCodes.CAM_F_PSFIT    'Quality of the fit
+        'NuclideChannel(10) = CanberraDataAccessLib.ParamCodes.CAM_F_PSFIT    'Quality of the fit
 
 
         ' CAM_F_NLMDANETERR
@@ -326,7 +326,7 @@ Class FHT59N3_ComputeSpectrumAnalyze
             Dim PeakAreaErr = CType(ParamBuffer(7), Double)  'Error on Area
             Dim PeakBckg = CType(ParamBuffer(8), Double)  'Backgrond
             Dim PeakBckgErr = CType(ParamBuffer(9), Double)  'Error on Backgrond
-            Dim PeakRChiSq = CType(ParamBuffer(10), Double)  'Quality of the fit
+            'Dim PeakRChiSq = CType(ParamBuffer(10), Double)  'Quality of the fit
 
             Dim peak As FHT59N3MCA_Peak = New FHT59N3MCA_Peak()
             peak.PeakEnergy = PeakEnergy
@@ -340,7 +340,7 @@ Class FHT59N3_ComputeSpectrumAnalyze
             peak.PeakAreaErr = PeakAreaErr
             peak.PeakBckg = PeakBckg
             peak.PeakBckgErr = PeakBckgErr
-            peak.PeakRChiSq = PeakRChiSq
+            'peak.PeakRChiSq = PeakRChiSq
 
 
 

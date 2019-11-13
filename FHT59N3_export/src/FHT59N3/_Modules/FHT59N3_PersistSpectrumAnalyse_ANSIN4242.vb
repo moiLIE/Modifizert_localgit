@@ -262,7 +262,7 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
                 nuclidData.Add("peak_areaerr", GetDecimal(firstPeak.PeakAreaErr))
                 nuclidData.Add("peak_bckg", GetDecimalThreeDigit(firstPeak.PeakBckg))
                 nuclidData.Add("peak_bckgerr", GetDecimalThreeDigit(firstPeak.PeakBckgErr))
-                nuclidData.Add("peak_rchisq", GetDecimalThreeDigit(firstPeak.PeakRChiSq))
+                'nuclidData.Add("peak_rchisq", GetDecimalThreeDigit(firstPeak.PeakRChiSq))
 
                 'ist nur eine temporäre Liste, daher die bereits ausgegebenen Peaks rausnehmen, damit die "not assigned peaks" übrigbleiben
                 _MyControlCenter.MCA_Peaks.PeakList.Remove(firstPeak)
@@ -310,7 +310,7 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
             peakData.Add("peak_areaerr", GetDecimal(remainingPeak.PeakAreaErr))
             peakData.Add("peak_bckg", GetDecimalThreeDigit(remainingPeak.PeakBckg))
             peakData.Add("peak_bckgerr", GetDecimalThreeDigit(remainingPeak.PeakBckgErr))
-            peakData.Add("peak_rchisq", GetDecimalThreeDigit(remainingPeak.PeakRChiSq))
+            'peakData.Add("peak_rchisq", GetDecimalThreeDigit(remainingPeak.PeakRChiSq))
 
             notAssignedPeaks.Add(peakData)
         Next

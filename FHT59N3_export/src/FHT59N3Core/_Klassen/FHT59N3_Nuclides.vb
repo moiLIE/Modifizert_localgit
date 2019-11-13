@@ -350,7 +350,7 @@ Public Class FHT59N3MCA_Peak
 
     Public Property PeakBckgErr As Double
 
-    Public Property PeakRChiSq As Double
+    'Public Property PeakRChiSq As Double
 
     Public Property PeakFwhm As Double
 
