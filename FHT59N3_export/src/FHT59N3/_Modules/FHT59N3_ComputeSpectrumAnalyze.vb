@@ -326,7 +326,7 @@ Class FHT59N3_ComputeSpectrumAnalyze
             Dim PeakAreaErr = CType(ParamBuffer(7), Double)  'Error on Area
             Dim PeakBckg = CType(ParamBuffer(8), Double)  'Backgrond
             Dim PeakBckgErr = CType(ParamBuffer(9), Double)  'Error on Backgrond
-            Dim PeakRChiSq = CType(ParamBuffer(9), Double)  'Quality of the fit
+            Dim PeakRChiSq = CType(ParamBuffer(10), Double)  'Quality of the fit
 
             Dim peak As FHT59N3MCA_Peak = New FHT59N3MCA_Peak()
             peak.PeakEnergy = PeakEnergy
