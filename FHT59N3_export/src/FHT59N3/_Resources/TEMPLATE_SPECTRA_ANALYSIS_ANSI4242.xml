@@ -112,7 +112,7 @@
         
         <fht:NotAssignedPeaks>
           {{#each not_assigned_peaks }}
-            <fht:Peak Channel="{{peak_channel}}" Energy="{{peak_energy}}" FWHM="{{peak_fwhm}}"  Area="{{peak_area}}" AreaErr="{{peak_areaerr}}" Bckg="{{peak_bckg}}" BckgErr="{{peak_bckgerr}}" redChiSq="{{peak_rchisq}}"/>
+            <fht:Peak Channel="{{peak_channel}}" Energy="{{peak_energy}}" FWHM="{{peak_fwhm}}"  Area="{{peak_area}}" AreaErr="{{peak_areaerr}}" Bckg="{{peak_bckg}}" BckgErr="{{peak_bckgerr}}"/>
           {{/each}}
         </fht:NotAssignedPeaks>
         
