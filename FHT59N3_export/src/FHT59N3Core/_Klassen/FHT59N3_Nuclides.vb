@@ -344,6 +344,14 @@ Public Class FHT59N3MCA_Peak
 
     Public Property PeakArea As Double
 
+    Public Property PeakAreaErr As Double
+
+    Public Property PeakBckg As Double
+
+    Public Property PeakBckgErr As Double
+
+    Public Property PeakRChiSq As Double
+
     Public Property PeakFwhm As Double
 
     Public Property IsKeyLine As Boolean
