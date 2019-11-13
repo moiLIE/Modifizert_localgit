@@ -9,8 +9,8 @@ Imports System.Runtime.InteropServices
 ' Die Werte der Assemblyattribute überprüfen
 
 <Assembly: AssemblyTitle("ThermoIOControls")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("Thermo Electron (Erlangen) GmbH, Modified by BAG Swityerland")>
 <Assembly: AssemblyProduct("ThermoIOControls")> 
 <Assembly: AssemblyCopyright("Copyright ©  2007")> 
 <Assembly: AssemblyTrademark("")> 
