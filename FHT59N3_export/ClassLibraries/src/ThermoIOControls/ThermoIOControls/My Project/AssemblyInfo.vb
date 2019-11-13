@@ -10,7 +10,7 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("ThermoIOControls")> 
 <Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("Thermo Electron (Erlangen) GmbH, Modified by BAG Swityerland")>
+<Assembly: AssemblyCompany("Thermo Electron (Erlangen) GmbH, Modified by BAG Switzerland")>
 <Assembly: AssemblyProduct("ThermoIOControls")> 
 <Assembly: AssemblyCopyright("Copyright ©  2007")> 
 <Assembly: AssemblyTrademark("")> 

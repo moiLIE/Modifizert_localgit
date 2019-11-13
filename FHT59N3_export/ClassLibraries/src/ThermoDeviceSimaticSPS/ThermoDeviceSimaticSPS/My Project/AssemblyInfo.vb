@@ -10,7 +10,7 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("ThermoDeviceSimaticSPS")> 
 <Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("Thermo Electron (Erlangen) GmbH, Modified by BAG Swityerland")>
+<Assembly: AssemblyCompany("Thermo Electron (Erlangen) GmbH, Modified by BAG Switzerland")>
 <Assembly: AssemblyProduct("ThermoDeviceSimaticSPS")> 
 <Assembly: AssemblyCopyright("Copyright © Thermo Electron (Erlangen) GmbH 2013")> 
 <Assembly: AssemblyTrademark("")> 

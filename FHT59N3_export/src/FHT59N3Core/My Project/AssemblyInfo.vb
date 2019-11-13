@@ -10,7 +10,7 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("FHT59N3TCore")> 
 <Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("Thermo Electron (Erlangen) GmbH, Modified by BAG Swityerland")>
+<Assembly: AssemblyCompany("Thermo Electron (Erlangen) GmbH, Modified by BAG Switzerland")>
 <Assembly: AssemblyProduct("FHT59N3TCore")> 
 <Assembly: AssemblyCopyright("Copyright © 2013")> 
 <Assembly: AssemblyTrademark("")> 

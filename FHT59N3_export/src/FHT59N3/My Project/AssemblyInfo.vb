@@ -10,7 +10,7 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("FHT59N3T")> 
 <Assembly: AssemblyDescription("Nuclide specific gamma spektroskopy software.")>
-<Assembly: AssemblyCompany("Thermo Electron (Erlangen) GmbH, Modified by BAG Swityerland")>
+<Assembly: AssemblyCompany("Thermo Electron (Erlangen) GmbH, Modified by BAG Switzerland")>
 <Assembly: AssemblyProduct("FHT59N3T")> 
 <Assembly: AssemblyCopyright("Copyright © 2015-2019")> 
 <Assembly: AssemblyTrademark("")> 
