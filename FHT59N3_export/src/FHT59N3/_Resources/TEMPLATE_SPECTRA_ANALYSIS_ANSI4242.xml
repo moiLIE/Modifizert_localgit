@@ -8,7 +8,7 @@
 		<InstrumentInformation>
 			<InstrumentType>Spectrometer</InstrumentType>
 			<Manufacturer></Manufacturer>
-			<InstrumentModel>FHT-59N3T</InstrumentModel>
+			<InstrumentModel>FHT-59N3</InstrumentModel>
 			<!-- the software revision of the monitor application is sufficient to describe the overall system configuration  -->
 			<InstrumentVersion>Software Rev. {{program_version}}</InstrumentVersion>
 			<!-- defines the serial number of the FHT59N3T unit -->
