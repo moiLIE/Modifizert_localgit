@@ -96,7 +96,7 @@
             	<NuclideName>{{nuclid_name}}</NuclideName>
 					    <NuclideActivity>{{nuclid_activity_concentration}}</NuclideActivity>
             
-              {{#if isPeak}}<fht:Peak Channel="{{peak_channel}}" Energy="{{peak_energy}}" FWHM="{{peak_fwhm}}" Area="{{peak_area}}" AreaErr="{{peak_areaerr}}" Bckg="{{peak_bckg}}" BckgErr="{{peak_bckgerr}}" redChiSq="{{peak_rchisq}}"/>{{/if}}
+              {{#if isPeak}}<fht:Peak Channel="{{peak_channel}}" Energy="{{peak_energy}}" FWHM="{{peak_fwhm}}" Area="{{peak_area}}" AreaErr="{{peak_areaerr}}" Bckg="{{peak_bckg}}" BckgErr="{{peak_bckgerr}}"/>{{/if}}
               <fht:NuclideDetectionLimit>{{nuclid_detection_limit}}</fht:NuclideDetectionLimit>
               <fht:NuclideUncertainty>{{nuclid_uncertainty}}</fht:NuclideUncertainty>
               
