@@ -2285,4 +2285,31 @@ Um eine Beschädigung des Detectors zu verhindern, muss dieser zuerst auf Normal
   <data name="_660" xml:space="preserve">
     <value>Externe Temperatur [°C]</value>
   </data>
+  <data name="_661" xml:space="preserve">
+    <value>07 Detektor Parameter</value>
+  </data>
+  <data name="_662" xml:space="preserve">
+    <value>Verwende ein Canberra Detector</value>
+  </data>
+  <data name="_663" xml:space="preserve">
+    <value>Schaltet zwischen dem Gebrauch eines Canberra Detektors (1) und dem eines Ortec Detektors (0) um.</value>
+  </data>
+  <data name="_664" xml:space="preserve">
+    <value>Achtung, das Wechseln des Detektortyps geht möglicherweise mit zusätzlichen Änderungen am System einher. Bitte beachten Sie die entsprechende Anleitung.</value>
+  </data>
+  <data name="_665" xml:space="preserve">
+    <value>Canberra Cryo-Cool exe-Datei</value>
+  </data>
+  <data name="_666" xml:space="preserve">
+    <value>Pfad der Cryo-Cool Steuerungs Software.</value>
+  </data>
+  <data name="_667" xml:space="preserve">
+    <value>Wollen Sie überprüfen ob die Cryo-Cool Steuerung korrekt verlinkt ist?</value>
+  </data>
+  <data name="_668" xml:space="preserve">
+    <value>Canberra Temperatur-Logfile</value>
+  </data>
+  <data name="_669" xml:space="preserve">
+    <value>Pfad der Logdatei mit der aktuellen Detektortemperatur.</value>
+  </data>
 </root>

@@ -145,6 +145,9 @@ Module FHT59N3_GUIProperties
 
     Public MSG_SpectrumNotAddedToDaySpectrum = ml_string(651, "Spectrum was not added to day spectrum due to fatal status: ")
 
+    Public MSG_DetectorChange = ml_string(664, "Attention: Switching the detector model might require additional changes to the system. Please follow the corresponding manual carefully.")
+    Public MSG_TestCryoCool = ml_string(667, "Test whether the Cryo-Cool control is linked correctly?")
+
     Public Enum MessageStates
         GREEN = 0
         YELLOW = 1

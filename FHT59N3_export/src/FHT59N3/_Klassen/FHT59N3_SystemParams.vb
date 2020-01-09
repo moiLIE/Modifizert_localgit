@@ -68,6 +68,11 @@ Public Class FHT59N3_SystemParams
     Private _CrystalTooWarmTempThreshold As Integer = -150 'Abschaltschwelle im Bereich von -145 bis -155 °C 
     Private _CrystalWarmedUpTempThreshold As Integer = 15 'Schwellwert für Aufwärmphase im Bereich von 0°C bis 25 °C
 
+    'Detector Settings
+    Private _IsCanberraDetector As Boolean = True 'Trigger Detector change warning only on change of False to True
+    Private _CryoCoolExecutable As String = "Startup" 'Don't Trigger Verification Dialog on Startup
+
+
     'Typ der Kalibrierung, Entwerder wie gewohnt, mit Far(Mischstrahler) and Near(CS137) ), oder "nur Near" mit Mischstrahler
 
     'calculation is done in this SW or at the external SPS
@@ -593,9 +598,61 @@ Public Class FHT59N3_SystemParams
     ml_DisplayName(586, "Enable Paperroll Printer"), _
     ml_Description(587, "Enable Paperroll Printer (timestamp on paperroll)"), _
     [ReadOnly](False), _
-    Browsable(True), _
-    PropertyOrderAttribute(110004)> _
+    Browsable(True),
+    PropertyOrderAttribute(110004)>
     Public Property EnablePaperrollPrinter As Boolean = False
+
+    'Settings belonging to the Canberra Detector
+    <ml_Category(661, "07 Detector Parameters"),
+    ml_DisplayName(662, "Use Canberra Detector"),
+    ml_Description(663, "Enable usage of a Canberra Detector instead of the usual Ortec Detector."),
+    [ReadOnly](False),
+    Browsable(True),
+    PropertyOrderAttribute(120000)>
+    Public Property IsCanberraDetector() As Boolean
+        Get
+            Return _IsCanberraDetector
+        End Get
+        Set(ByVal value As Boolean)
+            If value And value <> _IsCanberraDetector Then '_IsCanberraDetector is initialized to False 
+                GUI_ShowMessageBox(MSG_DetectorChange, "OK", "", "", MYCOL_MESSAGE_CRITICAL, Color.Black)
+            End If
+            _IsCanberraDetector = value
+        End Set
+    End Property
+
+    <ml_Category(661, "07 Detector Parameters"),
+    ml_DisplayName(665, "Canberra Cryo Cool Executable"),
+    ml_Description(666, "Path pointing to the location of the CryoCool control software."),
+    [ReadOnly](False),
+    Browsable(True),
+    PropertyOrderAttribute(120001)>
+    Public Property CryoCoolExecutable() As String
+        Get
+            Return _CryoCoolExecutable
+        End Get
+        Set(ByVal value As String)
+            If value <> "" And _CryoCoolExecutable <> "Startup" Then ' _CryoCoolExecutable is initialized to "Startup"
+                Dim answer As MsgBoxResult = GUI_ShowMessageBox(MSG_TestCryoCool, ml_string(90, "Yes"), ml_string(91, "No"), "", MYCOL_THERMOGREEN, Color.White)
+                If answer = MsgBoxResult.Yes Then
+                    Try
+                        Process.Start(value)
+                    Catch e As Exception
+                        MsgBox(e.Message)
+                    End Try
+                End If
+            End If
+            _CryoCoolExecutable = value
+        End Set
+    End Property
+
+    <ml_Category(661, "07 Detector Parameters"),
+    ml_DisplayName(668, "Canberra Temperature logfile"),
+    ml_Description(669, "Path pointing to the location of the logfile containing the current detector temperature."),
+    [ReadOnly](False),
+    Browsable(True),
+    PropertyOrderAttribute(120002)>
+    Public Property iPATemperatureLog As String = "C:\FHT59N3\iPA_Temperature\TemperatureLog.txt"
 
 
     ''' <summary>

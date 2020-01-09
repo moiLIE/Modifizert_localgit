@@ -2203,6 +2203,33 @@ To prevent any damage of the detector, the detector must bei warmed up to the no
   <data name="_618" xml:space="preserve">
     <value>The message list will be flushed until next start of the application. Continue?</value>
   </data>
+  <data name="_661" xml:space="preserve">
+    <value>07 Detector Parameters</value>
+  </data>
+  <data name="_662" xml:space="preserve">
+    <value>Use Canberra Detector</value>
+  </data>
+  <data name="_663" xml:space="preserve">
+    <value>Enable usage of a Canberra Detector instead of the usual Ortec Detector.</value>
+  </data>
+  <data name="_664" xml:space="preserve">
+    <value>Attention: Switching the detector model might require additional changes to the system. Please follow the corresponding manual carefully.</value>
+  </data>
+  <data name="_665" xml:space="preserve">
+    <value>Canberra Cryo Cool Executable</value>
+  </data>
+  <data name="_666" xml:space="preserve">
+    <value>Path pointing to the location of the CryoCool control software.</value>
+  </data>
+  <data name="_667" xml:space="preserve">
+    <value>Test whether the Cryo-Cool control is linked correctly?</value>
+  </data>
+  <data name="_668" xml:space="preserve">
+    <value>Canberra Temperature logfile</value>
+  </data>
+  <data name="_669" xml:space="preserve">
+    <value>Path pointing to the location of the logfile containing the current detector temperature.</value>
+  </data>
   <data name="_1209" xml:space="preserve">
     <value>extracted from NAH.cnf: </value>
     <comment>2</comment>
