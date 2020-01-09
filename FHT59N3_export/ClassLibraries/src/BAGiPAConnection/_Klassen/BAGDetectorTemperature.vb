@@ -8,7 +8,7 @@
     Private Const _TemperatureFileLocaton As String = "C:\FHT59N3\iPA_Temperature\TemperatureLog.txt"
 
     '#TODO
-    Private Const _InvalidTemperature As Double = 0
+    Private Const _InvalidTemperature As Double = Double.MinValue
 
 
     Public ReadOnly Property iPA_ReadTemperature() As Double
@@ -25,15 +25,12 @@
                     'Time: firstRow(0)
                     'Temperature: firstRow(1)
                     JavaReadoutTime = DateTime.ParseExact(firstRow(0), "dd.MM.yyyy HH:mm:ss", Globalization.DateTimeFormatInfo.InvariantInfo)
-                    If Not Double.TryParse(firstRow(1), JavaReadoutTemperature) Then
-                        Return _InvalidTemperature
-                    End If
+                    JavaReadoutTemperature = Val(firstRow(1))
                 End Using
                 'Check if the value is sufficiently recent
                 If (DateTime.Now - JavaReadoutTime).TotalMinutes > _TimeOut Then
-                Return _InvalidTemperature
-            End If
-
+                    Return _InvalidTemperature
+                End If
                 Return JavaReadoutTemperature
             Catch ex As Exception
                 Return _InvalidTemperature
