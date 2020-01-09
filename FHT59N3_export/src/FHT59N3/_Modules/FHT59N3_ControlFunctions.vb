@@ -583,6 +583,7 @@ Public Module FHT59N3_ControlFunctions
 
                 _PressureFilter = _MyControlCenter.SPS_PressureFilter * 500 / 4095           'Druckabfall an Band; Messbereich 0-500mbar; 12BitWert 0-4095
                 _PressureBezel = _MyControlCenter.SPS_PressureBezel * 100 / 4095             'Druckabfall an Blende; Messbereich 0-100mbar; 12BitWert 0-4095
+                '# TODO:
                 _Temperature = _MyControlCenter.SPS_Temperature * 100 / 4095 + _TempZero     'Temperatur (-30°C bis +70°C)
 
                 'Neu seit V2.0.3 (Juni 2017)
@@ -630,6 +631,8 @@ Public Module FHT59N3_ControlFunctions
 
                 Dim PressureFilterLimitReached As Boolean = ((250 - _PressureFilter) * (_PressureFilter - 40) < 0)
                 Dim PressureBezelLimitReached As Boolean = ((_PressureBezel - PressureBezelDelta) * (100 - _PressureBezel) < 0)
+
+                '# TODO:
                 Dim TempLimitReached As Boolean = (_Temperature > (70 + _TempZero))
                 Dim NoFilterStep As Boolean = (Not _MyControlCenter.SPS_FilterstepStartedFlag And (Now.Subtract(_TimeFilterstepEnded).TotalSeconds > 30))
                 'doch nicht abklemmen in Wartungsmodus: Dim NoMaintenance As Boolean = Not _MyControlCenter.SYS_States.Maintenance
@@ -667,7 +670,7 @@ Public Module FHT59N3_ControlFunctions
                             'der Grenze toggelt.
 
                             'muss am Schluß noch als Bedingung rein: Wunsch Armin Silbermann: 
-							'_MyControlCenter.SYS_States.Maintenance Or
+                            '_MyControlCenter.SYS_States.Maintenance Or
                             If (_MyControlCenter.SYS_States._AirFlowLessThen1Cubic.ChangeTimestampOlderThan(_SuppressTimeAirflowTooLess)) Then
 
                                 _MyControlCenter.SYS_States.AirFlowLessThen1Cubic = True
@@ -696,30 +699,32 @@ Public Module FHT59N3_ControlFunctions
 
                         End If
                     End If
-                    End If
+                End If
 
 
 
 
-                    If _AirFlowActual > _MyFHT59N3Par.MaxAirFlowAlert Then  'momentanen Luftdurchsatz auf Maximum prüfen
+                If _AirFlowActual > _MyFHT59N3Par.MaxAirFlowAlert Then  'momentanen Luftdurchsatz auf Maximum prüfen
 
-                        'Nicht prüfen wenn im filterschritt oder im wartungsmodus (insbesondere wichtig bei Regelung des SINAMICS durch SPS Ahrens)
-                        If NoFilterStep Then
-                            If (Not _MyControlCenter.SYS_States.AirFlowGreaterThen12Cubic) Then
-                                _MyControlCenter.SYS_States.AirFlowGreaterThen12Cubic = True
-                                GUI_SetMessage(String.Format(MSG_AirFlowGreaterThan12Cubic, _MyFHT59N3Par.MaxAirFlowAlert), MessageStates.RED)
-                            End If
-                        End If
-                    Else   'momentaner Luftdurchsatz > WARNLUFT#
-                        If _MyControlCenter.SYS_States.AirFlowGreaterThen12Cubic Then
-                            _MyControlCenter.SYS_States.AirFlowGreaterThen12Cubic = False
-                            If (Not _MyControlCenter.SYS_States.AirFlowLessThen1Cubic) Then
-                                GUI_SetMessage(MSG_AirFlowOK, MessageStates.GREEN)
-                            End If
+                    'Nicht prüfen wenn im filterschritt oder im wartungsmodus (insbesondere wichtig bei Regelung des SINAMICS durch SPS Ahrens)
+                    If NoFilterStep Then
+                        If (Not _MyControlCenter.SYS_States.AirFlowGreaterThen12Cubic) Then
+                            _MyControlCenter.SYS_States.AirFlowGreaterThen12Cubic = True
+                            GUI_SetMessage(String.Format(MSG_AirFlowGreaterThan12Cubic, _MyFHT59N3Par.MaxAirFlowAlert), MessageStates.RED)
                         End If
                     End If
+                Else   'momentaner Luftdurchsatz > WARNLUFT#
+                    If _MyControlCenter.SYS_States.AirFlowGreaterThen12Cubic Then
+                        _MyControlCenter.SYS_States.AirFlowGreaterThen12Cubic = False
+                        If (Not _MyControlCenter.SYS_States.AirFlowLessThen1Cubic) Then
+                            GUI_SetMessage(MSG_AirFlowOK, MessageStates.GREEN)
+                        End If
+                    End If
+                End If
+                'For testing:
+            End If
 
-                    If Not _MyFHT59N3Par.EnableCapturingDetectorTemperature Then
+            If Not _MyFHT59N3Par.EnableCapturingDetectorTemperature Then
 
                         ' cooling is done with N2
                         If (_MyFHT59N3Par.N2FillThreshold > 0) And (_MyControlCenter.SPS_HeatingOnOff) And (_TS_N2Heating.TotalSeconds >= _N2HeatingTime) Then
@@ -747,9 +752,9 @@ Public Module FHT59N3_ControlFunctions
                         End If  'If-end N2_Fuell% > 0 And gStatus(35) > 0 And
 
                     Else
-                        ' cooling is done via e-cooler (see spec 1.0c chapter 4.3.1)
-                        ' get the temperature from the SPS buffer/logic (12 bit = 0 ... 4095)
-                        Dim spsTemperatureAsDigitalValue As Double = _MyControlCenter.SPS_DetectorTemperature
+                    ' cooling is done via e-cooler (see spec 1.0c chapter 4.3.1)
+                    ' get the temperature from the SPS buffer/logic (12 bit = 0 ... 4095)
+                    Dim spsTemperatureAsDigitalValue As Double = _MyControlCenter.SPS_DetectorTemperature
 
                         'nasty workaround: Nachdem die Temperaturaufzeichnung erst nach dem Timout geschrieben wird,
                         'wird in der ersten Periode nichts aufgezeichnet, somit ergibt es keine richtige Darstellung
@@ -764,17 +769,17 @@ Public Module FHT59N3_ControlFunctions
 
                         _DetectorTemperaturValue = ConvertDigitalValueToDetectorTemperature(spsTemperatureAsDigitalValue)
 
-                        ' The detector temperature recording needs also the information if spsTemperatureAsDigitalValue has min/max value (0x0000 or 0xffff)
-                        If spsTemperatureAsDigitalValue = 0 Or spsTemperatureAsDigitalValue = 4095 Then
-                            If Not _MyControlCenter.SYS_States.N2FillingGoingLow Then
-                                ' alarm appears
-                                _MyControlCenter.SYS_States.N2FillingGoingLow = True
-                                GUI_SetMessage(MSG_RecordingDetectorTemperaturIsDefect, MessageStates.YELLOW)
-                            End If
-                            ' for detector temperature recording, that temperature sensor is not online
-                            _DetectorTemperaturValue = Double.MinValue
-                        Else
-                            If _MyFHT59N3Par.EcoolerEnabled Then
+                ' The detector temperature recording needs also the information if spsTemperatureAsDigitalValue has min/max value (0x0000 or 0xffff)
+                If spsTemperatureAsDigitalValue = 0 Or spsTemperatureAsDigitalValue = 4095 Or spsTemperatureAsDigitalValue = Double.MinValue Then
+                        If Not _MyControlCenter.SYS_States.N2FillingGoingLow Then
+                            ' alarm appears
+                            _MyControlCenter.SYS_States.N2FillingGoingLow = True
+                            GUI_SetMessage(MSG_RecordingDetectorTemperaturIsDefect, MessageStates.YELLOW)
+                        End If
+                        ' for detector temperature recording, that temperature sensor is not online
+                        _DetectorTemperaturValue = Double.MinValue
+                    Else
+                        If _MyFHT59N3Par.EcoolerEnabled Then
                                 If _DetectorTemperaturValue < _MinimalPlausibleTemperature Or _DetectorTemperaturValue > _MaximalPlausibleTemperature Then
                                     If Not _MyControlCenter.SYS_States.N2FillingGoingLow Then
                                         ' alarm appears
@@ -791,18 +796,20 @@ Public Module FHT59N3_ControlFunctions
                             End If
                         End If
 
-                        ' The detector temperature recording must be informed that SPS communication failed
-                        If _MyControlCenter.SYS_States.DataTransferError Then
-                            _DetectorTemperaturValue = Double.MinValue
-                        End If
-                    End If
-
-            Else
                     ' The detector temperature recording must be informed that SPS communication failed
-                    If _MyControlCenter.SYS_States.DataTransferError Then
-                        _DetectorTemperaturValue = Double.MinValue
-                    End If
-            End If
+
+                    'Unnecessary for iPA readback:
+                    'If _MyControlCenter.SYS_States.DataTransferError Then
+                    '   _DetectorTemperaturValue = Double.MinValue
+                    'End If
+                End If
+            'For testing:
+            'Else
+            '    The detector temperature recording must be informed that SPS communication failed
+            'If _MyControlCenter.SYS_States.DataTransferError Then
+            '       _DetectorTemperaturValue = Double.MinValue
+            'End If
+            'End If
 
         Catch ex As Exception
             Trace.TraceError("MCA_CheckIfMeasurementDone crashed: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace) 'MLHIDE
@@ -810,7 +817,9 @@ Public Module FHT59N3_ControlFunctions
     End Sub
 
     Private Function ConvertDigitalValueToDetectorTemperature(ByVal digiValue As Double) As Double
-
+        'Unnecessary for iPA readback
+        Return digiValue
+        'Ortec detector:
         Dim temperature As Double = Double.MinValue
         Dim voltage As Double = Double.MinValue
         Dim samples As Double = 409
