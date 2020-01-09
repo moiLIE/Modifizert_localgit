@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{05FB4DD0-FB03-45F1-8343-2EAA3111F89B}"
 	ProjectSection(SolutionItems) = preProject
 		Version.txt = Version.txt
@@ -25,6 +27,8 @@ EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ThermoDeviceSimaticSPS", "..\ClassLibraries\src\ThermoDeviceSimaticSPS\ThermoDeviceSimaticSPS\ThermoDeviceSimaticSPS.vbproj", "{BBD41545-B9D6-49CE-973E-83BB011207D3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHT59N3UnitTest", "FHT59N3UnitTest\FHT59N3UnitTest.csproj", "{0B249804-2166-4E29-A562-FB9B377BC159}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BAGiPAConnection", "..\ClassLibraries\src\BAGiPAConnection\BAGiPAConnection.vbproj", "{5E630C25-8FAC-48E3-BCF5-AD549491632C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,8 +64,15 @@ Global
 		{0B249804-2166-4E29-A562-FB9B377BC159}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B249804-2166-4E29-A562-FB9B377BC159}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B249804-2166-4E29-A562-FB9B377BC159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E630C25-8FAC-48E3-BCF5-AD549491632C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E630C25-8FAC-48E3-BCF5-AD549491632C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E630C25-8FAC-48E3-BCF5-AD549491632C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E630C25-8FAC-48E3-BCF5-AD549491632C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {945AFCB9-7D0A-42B8-BFB8-6FDE60F5940D}
 	EndGlobalSection
 EndGlobal
