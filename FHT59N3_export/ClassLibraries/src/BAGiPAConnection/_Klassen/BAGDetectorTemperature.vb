@@ -11,14 +11,18 @@
     Private Const _InvalidTemperature As Double = Double.MinValue
 
 
-    Public ReadOnly Property iPA_ReadTemperature() As Double
+    Public ReadOnly Property iPA_ReadTemperature(ByVal path As String) As Double
         'returns the current Temperature or ?? if unable to read it.
         Get
             Try 'read in temperature
                 Dim JavaReadoutTime As DateTime
                 Dim JavaReadoutTemperature As Double
 
-                Using FileReader As New FileIO.TextFieldParser(_TemperatureFileLocaton)
+                If path = "" Then
+                    path = _TemperatureFileLocaton
+                End If
+
+                Using FileReader As New FileIO.TextFieldParser(path)
                     FileReader.TextFieldType = FileIO.FieldType.Delimited
                     FileReader.SetDelimiters(",")
                     Dim firstRow As String() = FileReader.ReadFields()

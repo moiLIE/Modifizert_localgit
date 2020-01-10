@@ -4881,6 +4881,15 @@ Friend Class MultiLang
     End Property
     
     '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die The Canberra Cryo Cooler has to be controlled in a seperate GUI. Do you want to open it? ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _670() As String
+        Get
+            Return ResourceManager.GetString("_670", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Sucht eine lokalisierte Zeichenfolge, die File ähnelt.
     '''</summary>
     Friend Shared ReadOnly Property _68() As String

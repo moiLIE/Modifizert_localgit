@@ -2312,4 +2312,7 @@ Um eine Beschädigung des Detectors zu verhindern, muss dieser zuerst auf Normal
   <data name="_669" xml:space="preserve">
     <value>Pfad der Logdatei mit der aktuellen Detektortemperatur.</value>
   </data>
+  <data name="_670" xml:space="preserve">
+    <value>Der Canberra  Cryo Cooler muss mit einem anderen Programm gesteuert werden. Möchten Sie es öffnen?</value>
+  </data>
 </root>

@@ -106,7 +106,7 @@ Public Class frmMaintenanceMenu
     End Sub
 
     Private Sub frmMaintenanceMenu_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        If _MyFHT59N3Par.EcoolerEnabled And _MyFHT59N3Par.EnableEmergencyStopDetect Then
+        If (_MyFHT59N3Par.EcoolerEnabled And _MyFHT59N3Par.EnableEmergencyStopDetect) Or _MyFHT59N3Par.IsCanberraDetector Then
             Me.BtnEcooler.Enabled = True
         Else
             Me.BtnEcooler.Enabled = False

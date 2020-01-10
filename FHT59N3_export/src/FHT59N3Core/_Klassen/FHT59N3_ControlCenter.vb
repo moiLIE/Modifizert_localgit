@@ -280,10 +280,15 @@ Public Class FHT59N3_ControlCenter
 
     Public ReadOnly Property SPS_DetectorTemperature() As Double
         Get
-            Return _iPA_Temperature_Connection.iPA_ReadTemperature
-            'If Not _ComSPS Is Nothing Then
-            '    Return _ComSPS.MySPSCommunication.DataContainer.AnaIn_DetectorTemperatur
-            'End If
+            If Not _ComSPS Is Nothing Then
+                Return _ComSPS.MySPSCommunication.DataContainer.AnaIn_DetectorTemperatur
+            End If
+        End Get
+    End Property
+
+    Public ReadOnly Property iPA_DetectorTemperature(ByVal path As String) As Double
+        Get
+            Return _iPA_Temperature_Connection.iPA_ReadTemperature(path)
         End Get
     End Property
 
@@ -519,7 +524,6 @@ Public Class FHT59N3_ControlCenter
         Catch ex As Exception
             Trace.TraceError("Error starting remote control webserver: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
         End Try
-
         'Den Reader der iPA_Temperature starten...
         _iPA_Temperature_Connection = New BAGiPAConnection.BAGDetectorTemperature()
     End Sub

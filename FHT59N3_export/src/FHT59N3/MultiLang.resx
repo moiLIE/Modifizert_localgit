@@ -1896,4 +1896,7 @@ To prevent any damage of the detector, the detector must bei warmed up to the no
   <data name="_669" xml:space="preserve">
     <value>Path pointing to the location of the logfile containing the current detector temperature.</value>
   </data>
+  <data name="_670" xml:space="preserve">
+    <value>The Canberra Cryo Cooler has to be controlled in a seperate GUI. Do you want to open it?</value>
+  </data>
 </root>

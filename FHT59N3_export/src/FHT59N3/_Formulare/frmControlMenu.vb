@@ -133,7 +133,7 @@ Public Class frmControlMenu
         resources.ApplyResources(Me.LblN2Fill, "LblN2Fill")
         resources.ApplyResources(Me.LblPump, "LblPump")
 
-        If _MyFHT59N3Par.EcoolerEnabled And _MyFHT59N3Par.EnableEmergencyStopDetect Then
+        If (_MyFHT59N3Par.EcoolerEnabled And _MyFHT59N3Par.EnableEmergencyStopDetect) Or _MyFHT59N3Par.IsCanberraDetector Then
             Me.BtnEcoolerCtl.Show()
             Me.BtnEcoolerCtl.Enabled = True
             Me.LblEcoolerState.Show()

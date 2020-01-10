@@ -583,7 +583,6 @@ Public Module FHT59N3_ControlFunctions
 
                 _PressureFilter = _MyControlCenter.SPS_PressureFilter * 500 / 4095           'Druckabfall an Band; Messbereich 0-500mbar; 12BitWert 0-4095
                 _PressureBezel = _MyControlCenter.SPS_PressureBezel * 100 / 4095             'Druckabfall an Blende; Messbereich 0-100mbar; 12BitWert 0-4095
-                '# TODO:
                 _Temperature = _MyControlCenter.SPS_Temperature * 100 / 4095 + _TempZero     'Temperatur (-30°C bis +70°C)
 
                 'Neu seit V2.0.3 (Juni 2017)
@@ -631,8 +630,6 @@ Public Module FHT59N3_ControlFunctions
 
                 Dim PressureFilterLimitReached As Boolean = ((250 - _PressureFilter) * (_PressureFilter - 40) < 0)
                 Dim PressureBezelLimitReached As Boolean = ((_PressureBezel - PressureBezelDelta) * (100 - _PressureBezel) < 0)
-
-                '# TODO:
                 Dim TempLimitReached As Boolean = (_Temperature > (70 + _TempZero))
                 Dim NoFilterStep As Boolean = (Not _MyControlCenter.SPS_FilterstepStartedFlag And (Now.Subtract(_TimeFilterstepEnded).TotalSeconds > 30))
                 'doch nicht abklemmen in Wartungsmodus: Dim NoMaintenance As Boolean = Not _MyControlCenter.SYS_States.Maintenance
@@ -721,37 +718,38 @@ Public Module FHT59N3_ControlFunctions
                         End If
                     End If
                 End If
-                'For testing:
-            End If
 
-            If Not _MyFHT59N3Par.EnableCapturingDetectorTemperature Then
 
-                        ' cooling is done with N2
-                        If (_MyFHT59N3Par.N2FillThreshold > 0) And (_MyControlCenter.SPS_HeatingOnOff) And (_TS_N2Heating.TotalSeconds >= _N2HeatingTime) Then
-                            _N2FillValue = _MyControlCenter.SPS_N2Voltage 'Rowert: Stickstofffüllstand
-                            'Heizung nach einer gewissen Zeit ausschalten
-                            _MyControlCenter.SPS_HeatingOff()
-                            If _N2FillValue < 1000 Then       'Wert plausibel?
-                                If _OldN2FillValue > 1000 Then
-                                    GUI_SetMessage(MSG_N2ValueUnpl & Format(_OldN2FillValue, "0") & ")!", MessageStates.YELLOW)
-                                End If
-                            ElseIf _N2FillValue > _MyFHT59N3Par.N2FillThreshold Then
-                                If Not _MyControlCenter.SYS_States.N2FillingGoingLow Then
-                                    _MyControlCenter.SYS_States.N2FillingGoingLow = True
-                                    GUI_SetMessage(MSG_N2NearEnd, MessageStates.YELLOW)
-                                End If
-                            Else
-                                If _MyControlCenter.SYS_States.N2FillingGoingLow Then
-                                    _MyControlCenter.SYS_States.N2FillingGoingLow = False
-                                    GUI_SetMessage(MSG_N2Refilled, MessageStates.GREEN)
-                                End If
+
+
+                If Not _MyFHT59N3Par.EnableCapturingDetectorTemperature Then
+
+                    ' cooling is done with N2
+                    If (_MyFHT59N3Par.N2FillThreshold > 0) And (_MyControlCenter.SPS_HeatingOnOff) And (_TS_N2Heating.TotalSeconds >= _N2HeatingTime) Then
+                        _N2FillValue = _MyControlCenter.SPS_N2Voltage 'Rowert: Stickstofffüllstand
+                        'Heizung nach einer gewissen Zeit ausschalten
+                        _MyControlCenter.SPS_HeatingOff()
+                        If _N2FillValue < 1000 Then       'Wert plausibel?
+                            If _OldN2FillValue > 1000 Then
+                                GUI_SetMessage(MSG_N2ValueUnpl & Format(_OldN2FillValue, "0") & ")!", MessageStates.YELLOW)
                             End If
-                            _OldN2FillValue = _N2FillValue 'Rowert: Stickstofffüllstand
+                        ElseIf _N2FillValue > _MyFHT59N3Par.N2FillThreshold Then
+                            If Not _MyControlCenter.SYS_States.N2FillingGoingLow Then
+                                _MyControlCenter.SYS_States.N2FillingGoingLow = True
+                                GUI_SetMessage(MSG_N2NearEnd, MessageStates.YELLOW)
+                            End If
                         Else
-                            _MyControlCenter.SYS_States.N2FillingGoingLow = False
-                        End If  'If-end N2_Fuell% > 0 And gStatus(35) > 0 And
-
+                            If _MyControlCenter.SYS_States.N2FillingGoingLow Then
+                                _MyControlCenter.SYS_States.N2FillingGoingLow = False
+                                GUI_SetMessage(MSG_N2Refilled, MessageStates.GREEN)
+                            End If
+                        End If
+                        _OldN2FillValue = _N2FillValue 'Rowert: Stickstofffüllstand
                     Else
+                        _MyControlCenter.SYS_States.N2FillingGoingLow = False
+                    End If  'If-end N2_Fuell% > 0 And gStatus(35) > 0 And
+
+                ElseIf Not _MyFHT59N3Par.IsCanberraDetector Then
                     ' cooling is done via e-cooler (see spec 1.0c chapter 4.3.1)
                     ' get the temperature from the SPS buffer/logic (12 bit = 0 ... 4095)
                     Dim spsTemperatureAsDigitalValue As Double = _MyControlCenter.SPS_DetectorTemperature
@@ -769,17 +767,17 @@ Public Module FHT59N3_ControlFunctions
 
                         _DetectorTemperaturValue = ConvertDigitalValueToDetectorTemperature(spsTemperatureAsDigitalValue)
 
-                ' The detector temperature recording needs also the information if spsTemperatureAsDigitalValue has min/max value (0x0000 or 0xffff)
-                If spsTemperatureAsDigitalValue = 0 Or spsTemperatureAsDigitalValue = 4095 Or spsTemperatureAsDigitalValue = Double.MinValue Then
-                        If Not _MyControlCenter.SYS_States.N2FillingGoingLow Then
-                            ' alarm appears
-                            _MyControlCenter.SYS_States.N2FillingGoingLow = True
-                            GUI_SetMessage(MSG_RecordingDetectorTemperaturIsDefect, MessageStates.YELLOW)
-                        End If
-                        ' for detector temperature recording, that temperature sensor is not online
-                        _DetectorTemperaturValue = Double.MinValue
-                    Else
-                        If _MyFHT59N3Par.EcoolerEnabled Then
+                        ' The detector temperature recording needs also the information if spsTemperatureAsDigitalValue has min/max value (0x0000 or 0xffff)
+                        If spsTemperatureAsDigitalValue = 0 Or spsTemperatureAsDigitalValue = 4095 Then
+                            If Not _MyControlCenter.SYS_States.N2FillingGoingLow Then
+                                ' alarm appears
+                                _MyControlCenter.SYS_States.N2FillingGoingLow = True
+                                GUI_SetMessage(MSG_RecordingDetectorTemperaturIsDefect, MessageStates.YELLOW)
+                            End If
+                            ' for detector temperature recording, that temperature sensor is not online
+                            _DetectorTemperaturValue = Double.MinValue
+                        Else
+                            If _MyFHT59N3Par.EcoolerEnabled Then
                                 If _DetectorTemperaturValue < _MinimalPlausibleTemperature Or _DetectorTemperaturValue > _MaximalPlausibleTemperature Then
                                     If Not _MyControlCenter.SYS_States.N2FillingGoingLow Then
                                         ' alarm appears
@@ -796,20 +794,59 @@ Public Module FHT59N3_ControlFunctions
                             End If
                         End If
 
-                    ' The detector temperature recording must be informed that SPS communication failed
+                        ' The detector temperature recording must be informed that SPS communication failed
+                        If _MyControlCenter.SYS_States.DataTransferError Then
+                            _DetectorTemperaturValue = Double.MinValue
+                        End If
+                    End If
 
-                    'Unnecessary for iPA readback:
-                    'If _MyControlCenter.SYS_States.DataTransferError Then
-                    '   _DetectorTemperaturValue = Double.MinValue
-                    'End If
+                Else
+                    ' The detector temperature recording must be informed that SPS communication failed
+                    If _MyControlCenter.SYS_States.DataTransferError Then
+                        _DetectorTemperaturValue = Double.MinValue
+                    End If
                 End If
-            'For testing:
-            'Else
-            '    The detector temperature recording must be informed that SPS communication failed
-            'If _MyControlCenter.SYS_States.DataTransferError Then
-            '       _DetectorTemperaturValue = Double.MinValue
-            'End If
-            'End If
+
+            'Read Temperature of the Canberra detector
+            If _MyFHT59N3Par.EnableCapturingDetectorTemperature And _MyFHT59N3Par.IsCanberraDetector Then
+
+                ' Read the temperature
+                _DetectorTemperaturValue = _MyControlCenter.iPA_DetectorTemperature(_MyFHT59N3Par.iPATemperatureLog)
+
+                ' The detector temperature recording needs also the information if the temperature readback failed
+                If _DetectorTemperaturValue = Double.MinValue Then
+                    If Not _MyControlCenter.SYS_States.N2FillingGoingLow Then
+                        ' alarm appears
+                        _MyControlCenter.SYS_States.N2FillingGoingLow = True
+                        GUI_SetMessage(MSG_RecordingDetectorTemperaturIsDefect, MessageStates.YELLOW)
+                    End If
+                Else
+                    If True Then '_MyFHT59N3Par.EcoolerEnabled Then
+                        If _DetectorTemperaturValue < _MinimalPlausibleTemperature Or _DetectorTemperaturValue > _MaximalPlausibleTemperature Then
+                            If Not _MyControlCenter.SYS_States.N2FillingGoingLow Then
+                                ' alarm appears
+                                _MyControlCenter.SYS_States.N2FillingGoingLow = True
+                                GUI_SetMessage(MSG_RecordingDetectorTemperaturIsDefect, MessageStates.YELLOW)
+                            End If
+                        Else
+                            If _MyControlCenter.SYS_States.N2FillingGoingLow Then
+                                ' alarm disappears
+                                _MyControlCenter.SYS_States.N2FillingGoingLow = False
+                                GUI_SetMessage(MSG_RecordingDetectorTemperaturIsRunning, MessageStates.GREEN)
+                            End If
+                        End If
+                    End If
+                End If
+
+
+                'nasty workaround: Nachdem die Temperaturaufzeichnung erst nach dem Timout geschrieben wird,
+                'wird in der ersten Periode nichts aufgezeichnet, somit ergibt es keine richtige Darstellung
+                'des aufzeichnungszeitraumes. Hierfür wird ein erster Initialwert beim lesen geschrieben
+                'um eine Ausgangsbasis für Temperaturerfassungszeitraum zu haben.
+                If _MyTemperatureRecorder.Temperatures.Count = 0 Then
+                    _MyTemperatureRecorder.StoreNewTempertaureEntry(_DetectorTemperaturValue)
+                End If
+            End If
 
         Catch ex As Exception
             Trace.TraceError("MCA_CheckIfMeasurementDone crashed: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace) 'MLHIDE

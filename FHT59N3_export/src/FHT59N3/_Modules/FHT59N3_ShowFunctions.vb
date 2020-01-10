@@ -753,57 +753,57 @@ Module FHT59N3_ShowFunctions
     Public Function GUI_SafetyChangeEcoolerState() As EcoolerGuiStates
         Dim questionResult1, questionResult2 As MsgBoxResult
 
-        '#TODO
-        questionResult1 = GUI_ShowMessageBox("The Canberra Detector has to be controlled in a seperate GUI. Open it?", ml_string(90, "Yes"), ml_string(91, "No"), "", MYCOL_THERMOGREEN, Color.White)
-        If questionResult1 = MsgBoxResult.Yes Then
-            Try
-                Process.Start("""C:\Program Files (x86)\CANBERRA\CP5 Control Panel\CP5.exe""")
-            Catch e As Exception
-                MsgBox(e.Message)
-            End Try
+        If _MyFHT59N3Par.IsCanberraDetector Then
+            questionResult1 = GUI_ShowMessageBox(ml_string(670, "The Canberra Cryo Cooler has to be controlled in a seperate GUI. Do you want to open it?"), ml_string(90, "Yes"), ml_string(91, "No"), "", MYCOL_THERMOGREEN, Color.White)
+            If questionResult1 = MsgBoxResult.Yes Then
+                Try
+                    Process.Start(_MyFHT59N3Par.CryoCoolExecutable) '("""C:\Program Files (x86)\CANBERRA\CP5 Control Panel\CP5.exe""")
+                Catch e As Exception
+                    MsgBox(e.Message)
+                End Try
+            End If
+        Else
+            If (_DetectorTemperaturValue = Double.MinValue) Then
+                'we don't know the temperature, let the ecooler untouched
+                Return EcoolerGuiStates.UNCHANGED
+            End If
 
+            If _MyControlCenter.SYS_States.EcoolerOff Then
+                'alarm shows that ecooler is off
+                questionResult1 = GUI_ShowMessageBox(MSG_WantToSwitchOnEcooler, ml_string(90, "Yes"), ml_string(91, "No"), "", MYCOL_THERMOGREEN, Color.White)
+
+                Dim status As FHT59N3_EmergencyStopCoolingStates = _MyControlCenter.SYS_States.EmergencyStopCoolingState
+
+                If questionResult1 = MsgBoxResult.Yes Then
+                    ' TODO: check detector temperature state machine (just reingelaufen in Inbetriebnahme 1.BAG-Gerät 30.Nov.15 in Bern)
+                    If (_DetectorTemperaturValue < _MyFHT59N3Par.CrystalTooWarmTempThreshold) Then
+                        ' Activate e-cooler via SPS
+                        _MyControlCenter.SPS_EcoolerOn()
+
+                        Return EcoolerGuiStates.ACTIVATED
+                        'es soll möglich sein den Mechanismus händisch zu überlisten indem der Status im Config.XML auf 'COOLING_PHASE_PREPARED' gesetzt wird!
+                    ElseIf (_DetectorTemperaturValue < _MyFHT59N3Par.CrystalWarmedUpTempThreshold And status <> FHT59N3_EmergencyStopCoolingStates.COOLING_PHASE_PREPARED) Then
+                        Dim helpString As String = String.Format(MSG_CannotActivateEcooler, _MyFHT59N3Par.CrystalWarmedUpTempThreshold, Convert.ToInt32(_DetectorTemperaturValue))
+                        questionResult2 = GUI_ShowMessageBox(helpString, "", "", ml_string(37, "Return"), MYCOL_WARNING, Color.Black)
+                        Return EcoolerGuiStates.UNCHANGED
+                    Else
+                        ' Activate e-cooler via SPS
+                        _MyControlCenter.SPS_EcoolerOn()
+
+                        Return EcoolerGuiStates.ACTIVATED
+                    End If
+                End If
+            Else
+                'no alarm, it means that ecooler is on
+                questionResult1 = GUI_ShowMessageBox(MSG_WantToSwitchOffEcooler, ml_string(90, "Yes"), ml_string(91, "No"), "", MYCOL_THERMOGREEN, Color.White)
+
+                If questionResult1 = MsgBoxResult.Yes Then
+                    ' Deactivate e-cooler via SPS
+                    _MyControlCenter.SPS_EcoolerOff()
+                    Return EcoolerGuiStates.DEACTIVATED
+                End If
+            End If
         End If
-
-        'If (_DetectorTemperaturValue = Double.MinValue) Then
-        '    'we don't know the temperature, let the ecooler untouched
-        '    Return EcoolerGuiStates.UNCHANGED
-        'End If
-
-        'If _MyControlCenter.SYS_States.EcoolerOff Then
-        '    'alarm shows that ecooler is off
-        '    questionResult1 = GUI_ShowMessageBox(MSG_WantToSwitchOnEcooler, ml_string(90, "Yes"), ml_string(91, "No"), "", MYCOL_THERMOGREEN, Color.White)
-
-        '    Dim status As FHT59N3_EmergencyStopCoolingStates = _MyControlCenter.SYS_States.EmergencyStopCoolingState
-
-        '    If questionResult1 = MsgBoxResult.Yes Then
-        '        ' TODO: check detector temperature state machine (just reingelaufen in Inbetriebnahme 1.BAG-Gerät 30.Nov.15 in Bern)
-        '        If (_DetectorTemperaturValue < _MyFHT59N3Par.CrystalTooWarmTempThreshold) Then
-        '            ' Activate e-cooler via SPS
-        '            _MyControlCenter.SPS_EcoolerOn()
-
-        '            Return EcoolerGuiStates.ACTIVATED
-        '            'es soll möglich sein den Mechanismus händisch zu überlisten indem der Status im Config.XML auf 'COOLING_PHASE_PREPARED' gesetzt wird!
-        '        ElseIf (_DetectorTemperaturValue < _MyFHT59N3Par.CrystalWarmedUpTempThreshold And status <> FHT59N3_EmergencyStopCoolingStates.COOLING_PHASE_PREPARED) Then
-        '            Dim helpString As String = String.Format(MSG_CannotActivateEcooler, _MyFHT59N3Par.CrystalWarmedUpTempThreshold, Convert.ToInt32(_DetectorTemperaturValue))
-        '            questionResult2 = GUI_ShowMessageBox(helpString, "", "", ml_string(37, "Return"), MYCOL_WARNING, Color.Black)
-        '            Return EcoolerGuiStates.UNCHANGED
-        '        Else
-        '            ' Activate e-cooler via SPS
-        '            _MyControlCenter.SPS_EcoolerOn()
-
-        '            Return EcoolerGuiStates.ACTIVATED
-        '        End If
-        '    End If
-        'Else
-        '    'no alarm, it means that ecooler is on
-        '    questionResult1 = GUI_ShowMessageBox(MSG_WantToSwitchOffEcooler, ml_string(90, "Yes"), ml_string(91, "No"), "", MYCOL_THERMOGREEN, Color.White)
-
-        '    If questionResult1 = MsgBoxResult.Yes Then
-        '        ' Deactivate e-cooler via SPS
-        '        _MyControlCenter.SPS_EcoolerOff()
-        '        Return EcoolerGuiStates.DEACTIVATED
-        '    End If
-        'End If
         Return EcoolerGuiStates.UNCHANGED
     End Function
 
