@@ -39,6 +39,8 @@ Public Module FHT59N3_ControlFunctions
 
     Private MediumCycle_LastCheck As DateTime = DateTime.Now
 
+    Private _Last_Canberra_Detector_Temperature_Readback As DateTime
+
     ''' <summary>
     ''' Der E-Cooler muss beim Hochlauf des Programms einmalig gesetzt werden.
     ''' Dies ist nötig da die SPS keine Remanenz für den Digitalout hat. Wird die Anlage stromlos geschaltet
@@ -810,41 +812,46 @@ Public Module FHT59N3_ControlFunctions
             'Read Temperature of the Canberra detector
             If _MyFHT59N3Par.EnableCapturingDetectorTemperature And _MyFHT59N3Par.IsCanberraDetector Then
 
-                ' Read the temperature
-                _DetectorTemperaturValue = _MyControlCenter.iPA_DetectorTemperature(_MyFHT59N3Par.iPATemperatureLog)
+                'Only Read the temperature once in a while:
+                If (DateTime.Now - _Last_Canberra_Detector_Temperature_Readback).TotalMinutes > _MyFHT59N3Par.CaptureCycleDetectorTemperature / 3 Then
+                    _Last_Canberra_Detector_Temperature_Readback = DateTime.Now
 
-                ' The detector temperature recording needs also the information if the temperature readback failed
-                If _DetectorTemperaturValue = Double.MinValue Then
-                    If Not _MyControlCenter.SYS_States.N2FillingGoingLow Then
-                        ' alarm appears
-                        _MyControlCenter.SYS_States.N2FillingGoingLow = True
-                        GUI_SetMessage(MSG_RecordingDetectorTemperaturIsDefect, MessageStates.YELLOW)
-                    End If
-                Else
-                    If True Then '_MyFHT59N3Par.EcoolerEnabled Then
-                        If _DetectorTemperaturValue < _MinimalPlausibleTemperature Or _DetectorTemperaturValue > _MaximalPlausibleTemperature Then
-                            If Not _MyControlCenter.SYS_States.N2FillingGoingLow Then
-                                ' alarm appears
-                                _MyControlCenter.SYS_States.N2FillingGoingLow = True
-                                GUI_SetMessage(MSG_RecordingDetectorTemperaturIsDefect, MessageStates.YELLOW)
-                            End If
-                        Else
-                            If _MyControlCenter.SYS_States.N2FillingGoingLow Then
-                                ' alarm disappears
-                                _MyControlCenter.SYS_States.N2FillingGoingLow = False
-                                GUI_SetMessage(MSG_RecordingDetectorTemperaturIsRunning, MessageStates.GREEN)
+                    ' Read the temperature
+                    _DetectorTemperaturValue = _MyControlCenter.iPA_DetectorTemperature(_MyFHT59N3Par.iPATemperatureLog)
+
+                    ' The detector temperature recording needs also the information if the temperature readback failed
+                    If _DetectorTemperaturValue = Double.MinValue Then
+                        If Not _MyControlCenter.SYS_States.N2FillingGoingLow Then
+                            ' alarm appears
+                            _MyControlCenter.SYS_States.N2FillingGoingLow = True
+                            GUI_SetMessage(MSG_RecordingDetectorTemperaturIsDefect, MessageStates.YELLOW)
+                        End If
+                    Else
+                        If True Then '_MyFHT59N3Par.EcoolerEnabled Then
+                            If _DetectorTemperaturValue < _MinimalPlausibleTemperature Or _DetectorTemperaturValue > _MaximalPlausibleTemperature Then
+                                If Not _MyControlCenter.SYS_States.N2FillingGoingLow Then
+                                    ' alarm appears
+                                    _MyControlCenter.SYS_States.N2FillingGoingLow = True
+                                    GUI_SetMessage(MSG_RecordingDetectorTemperaturIsDefect, MessageStates.YELLOW)
+                                End If
+                            Else
+                                If _MyControlCenter.SYS_States.N2FillingGoingLow Then
+                                    ' alarm disappears
+                                    _MyControlCenter.SYS_States.N2FillingGoingLow = False
+                                    GUI_SetMessage(MSG_RecordingDetectorTemperaturIsRunning, MessageStates.GREEN)
+                                End If
                             End If
                         End If
                     End If
-                End If
 
 
-                'nasty workaround: Nachdem die Temperaturaufzeichnung erst nach dem Timout geschrieben wird,
-                'wird in der ersten Periode nichts aufgezeichnet, somit ergibt es keine richtige Darstellung
-                'des aufzeichnungszeitraumes. Hierfür wird ein erster Initialwert beim lesen geschrieben
-                'um eine Ausgangsbasis für Temperaturerfassungszeitraum zu haben.
-                If _MyTemperatureRecorder.Temperatures.Count = 0 Then
-                    _MyTemperatureRecorder.StoreNewTempertaureEntry(_DetectorTemperaturValue)
+                    'nasty workaround: Nachdem die Temperaturaufzeichnung erst nach dem Timout geschrieben wird,
+                    'wird in der ersten Periode nichts aufgezeichnet, somit ergibt es keine richtige Darstellung
+                    'des aufzeichnungszeitraumes. Hierfür wird ein erster Initialwert beim lesen geschrieben
+                    'um eine Ausgangsbasis für Temperaturerfassungszeitraum zu haben.
+                    If _MyTemperatureRecorder.Temperatures.Count = 0 Then
+                        _MyTemperatureRecorder.StoreNewTempertaureEntry(_DetectorTemperaturValue)
+                    End If
                 End If
             End If
 
@@ -854,8 +861,10 @@ Public Module FHT59N3_ControlFunctions
     End Sub
 
     Private Function ConvertDigitalValueToDetectorTemperature(ByVal digiValue As Double) As Double
-        'Unnecessary for iPA readback
-        Return digiValue
+        If _MyFHT59N3Par.IsCanberraDetector Then
+            'Unnecessary for iPA readback
+            Return digiValue
+        End If
         'Ortec detector:
         Dim temperature As Double = Double.MinValue
         Dim voltage As Double = Double.MinValue

@@ -7,7 +7,6 @@
 
     Private Const _TemperatureFileLocaton As String = "C:\FHT59N3\iPA_Temperature\TemperatureLog.txt"
 
-    '#TODO
     Private Const _InvalidTemperature As Double = Double.MinValue
 
 
