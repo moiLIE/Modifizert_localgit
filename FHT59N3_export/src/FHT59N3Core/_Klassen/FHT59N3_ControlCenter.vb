@@ -524,7 +524,7 @@ Public Class FHT59N3_ControlCenter
         Catch ex As Exception
             Trace.TraceError("Error starting remote control webserver: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
         End Try
-        'Den Reader der iPA_Temperature starten...
+        'Den Reader der iPA_Temperatur starten...
         _iPA_Temperature_Connection = New BAGiPAConnection.BAGDetectorTemperature()
     End Sub
 
