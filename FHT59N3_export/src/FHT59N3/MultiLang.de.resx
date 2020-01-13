@@ -2315,4 +2315,16 @@ Um eine Beschädigung des Detectors zu verhindern, muss dieser zuerst auf Normal
   <data name="_670" xml:space="preserve">
     <value>Der Canberra  Cryo Cooler muss mit einem anderen Programm gesteuert werden. Möchten Sie es öffnen?</value>
   </data>
+  <data name="_671" xml:space="preserve">
+    <value>Serieller Anschluss des iPA</value>
+  </data>
+  <data name="_672" xml:space="preserve">
+    <value>Serieller Anschluss um mit dem Canberra iPA zu kommunizieren.</value>
+  </data>
+  <data name="_673" xml:space="preserve">
+    <value>iPA TemperatureLogger .jar Datei</value>
+  </data>
+  <data name="_674" xml:space="preserve">
+    <value>Pfad der iPA TemperatureLogger .jar Datei.</value>
+  </data>
 </root>

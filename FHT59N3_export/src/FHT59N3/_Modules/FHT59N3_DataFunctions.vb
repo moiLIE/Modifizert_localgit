@@ -216,6 +216,8 @@ Public Module FHT59N3_DataFunctions
 
                     'Detector
                     .WriteMySetting("Detector", "IsCanberra", _MyFHT59N3Par.IsCanberraDetector)
+                    .WriteMySetting("Detector", "iPAComPort", _MyFHT59N3Par.iPACom)
+                    .WriteMySetting("Detector", "iPATemperatureJAR", _MyFHT59N3Par.iPA_TemperatureJAR)
                     .WriteMySetting("Detector", "CanberraCryoCoolExe", _MyFHT59N3Par.CryoCoolExecutable)
                     .WriteMySetting("Detector", "CanberraTemperatureLog", _MyFHT59N3Par.iPATemperatureLog)
 
@@ -380,6 +382,8 @@ Public Module FHT59N3_DataFunctions
 
                     'Detector
                     _MyFHT59N3Par.IsCanberraDetector = CBool(.ReadMySetting("Detector", "IsCanberra", "False"))
+                    _MyFHT59N3Par.iPACom = .ReadMySetting("Detector", "iPAComPort", "COM5")
+                    _MyFHT59N3Par.iPA_TemperatureJAR = .ReadMySetting("Detector", "iPATemperatureJAR", "C:\FHT59N3\iPA_Temperature\ipATemperatureLogger.jar")
                     _MyFHT59N3Par.CryoCoolExecutable = .ReadMySetting("Detector", "CanberraCryoCoolExe", "")
                     _MyFHT59N3Par.iPATemperatureLog = .ReadMySetting("Detector", "CanberraTemperatureLog", "C:\FHT59N3\iPA_Temperature\TemperatureLog.txt")
 

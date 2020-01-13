@@ -286,9 +286,9 @@ Public Class FHT59N3_ControlCenter
         End Get
     End Property
 
-    Public ReadOnly Property iPA_DetectorTemperature(ByVal path As String) As Double
+    Public ReadOnly Property iPA_DetectorTemperature(ByVal jarpath As String, ByVal logpath As String, ByVal comPort As String) As Double
         Get
-            Return _iPA_Temperature_Connection.iPA_ReadTemperature(path)
+            Return _iPA_Temperature_Connection.iPA_ReadTemperature(jarpath, logpath, comPort)
         End Get
     End Property
 

@@ -1899,4 +1899,16 @@ To prevent any damage of the detector, the detector must bei warmed up to the no
   <data name="_670" xml:space="preserve">
     <value>The Canberra Cryo Cooler has to be controlled in a seperate GUI. Do you want to open it?</value>
   </data>
+  <data name="_671" xml:space="preserve">
+    <value>iPA Serial Port</value>
+  </data>
+  <data name="_672" xml:space="preserve">
+    <value>Serial Port to communicate with the Canberra iPA.</value>
+  </data>
+  <data name="_673" xml:space="preserve">
+    <value>iPA TemperatureLogger .jar file</value>
+  </data>
+  <data name="_674" xml:space="preserve">
+    <value>Path pointing to the location of the iPA TemperatureLogger .jar file.</value>
+  </data>
 </root>

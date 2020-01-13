@@ -4890,6 +4890,42 @@ Friend Class MultiLang
     End Property
     
     '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die iPA Serial Port ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _671() As String
+        Get
+            Return ResourceManager.GetString("_671", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Serial Port to communicate with the Canberra iPA. ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _672() As String
+        Get
+            Return ResourceManager.GetString("_672", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die iPA TemperatureLogger .jar file ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _673() As String
+        Get
+            Return ResourceManager.GetString("_673", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Path pointing to the location of the iPA TemperatureLogger .jar file. ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _674() As String
+        Get
+            Return ResourceManager.GetString("_674", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Sucht eine lokalisierte Zeichenfolge, die File ähnelt.
     '''</summary>
     Friend Shared ReadOnly Property _68() As String

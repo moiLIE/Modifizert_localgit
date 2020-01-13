@@ -622,11 +622,27 @@ Public Class FHT59N3_SystemParams
     End Property
 
     <ml_Category(661, "07 Detector Parameters"),
+    ml_DisplayName(671, "iPA Serial Port"),
+    ml_Description(672, "Serial Port to communicate with the Canberra iPA."),
+    [ReadOnly](False),
+    Browsable(True),
+    PropertyOrderAttribute(120001)>
+    Public Property iPACom As String = "COM5"
+
+    <ml_Category(661, "07 Detector Parameters"),
+    ml_DisplayName(673, "iPA TemperatureLogger .jar file"),
+    ml_Description(674, "Path pointing to the location of the iPA TemperatureLogger .jar file."),
+    [ReadOnly](False),
+    Browsable(True),
+    PropertyOrderAttribute(120002)>
+    Public Property iPA_TemperatureJAR As String = ""
+
+    <ml_Category(661, "07 Detector Parameters"),
     ml_DisplayName(665, "Canberra Cryo Cool Executable"),
     ml_Description(666, "Path pointing to the location of the CryoCool control software."),
     [ReadOnly](False),
     Browsable(True),
-    PropertyOrderAttribute(120001)>
+    PropertyOrderAttribute(120003)>
     Public Property CryoCoolExecutable() As String
         Get
             Return _CryoCoolExecutable
@@ -651,7 +667,7 @@ Public Class FHT59N3_SystemParams
     ml_Description(669, "Path pointing to the location of the logfile containing the current detector temperature."),
     [ReadOnly](False),
     Browsable(True),
-    PropertyOrderAttribute(120002)>
+    PropertyOrderAttribute(120004)>
     Public Property iPATemperatureLog As String = "C:\FHT59N3\iPA_Temperature\TemperatureLog.txt"
 
 
