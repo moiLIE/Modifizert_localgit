@@ -183,13 +183,19 @@ Module FHT59N3_ShowFunctions
                 frmStates.LblHighVoltage.Text = ml_string(55, "off")
                 frmStates.LblHighVoltage.BackColor = MYCOL_NotOK
             End If
-            If _MyControlCenter.SYS_States.EcoolerOff Then
-                frmControlMenu.LblEcoolerState.Text = ml_string(533, "not cooling")
-                frmControlMenu.LblEcoolerState.BackColor = MYCOL_NotOK
-            Else
-                frmControlMenu.LblEcoolerState.Text = ml_string(534, "running")
-                frmControlMenu.LblEcoolerState.BackColor = MYCOL_OK
+            If Not _MyFHT59N3Par.IsCanberraDetector Then
+                If _MyControlCenter.SYS_States.EcoolerOff Then
+                    frmControlMenu.LblEcoolerState.Text = ml_string(533, "not cooling")
+                    frmControlMenu.LblEcoolerState.BackColor = MYCOL_NotOK
+                Else
+                    frmControlMenu.LblEcoolerState.Text = ml_string(534, "running")
+                    frmControlMenu.LblEcoolerState.BackColor = MYCOL_OK
+                End If
+            Else 'Canberra
+                frmControlMenu.LblEcoolerState.Text = ml_string(675, "Canberra")
+                frmControlMenu.LblEcoolerState.BackColor = MYCOL_WARNING
             End If
+
 
         Catch ex As Exception
             Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
