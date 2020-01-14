@@ -6,15 +6,19 @@
     Private Const _TimeOut As Double = 10
     Private Const _ReadbackCycle As Integer = 2 'minutes
     Private Const _InvalidTemperature As Double = Double.MinValue
+    Private Const _JarFileName As String = "ipATemperatureLogger.jar"
+    Private Const _LogFileName As String = "TemperatureLog.txt"
+    Private Const _readbackFailedValue As String = "---"
+
 
     'Default Values:
-    Private Const _TemperatureFileLocaton As String = "C:\FHT59N3\iPA_Temperature\TemperatureLog.txt"
-    Private Const _JarFileLocation As String = "C:\FHT59N3\iPA_Temperature\ipATemperatureLogger.jar"
+    ' Private Const _TemperatureFileLocaton As String = "C:\FHT59N3\iPA_Temperature\TemperatureLog.txt"
+    Private Const _JarFileLocation As String = "C:\FHT59N3\iPA_Temperature\"
 
     Private _LastTemperature As Double
     Private _Last_Temperature_Readback As DateTime
 
-    Public ReadOnly Property iPA_ReadTemperature(ByVal jarFile As String, ByVal Logfile As String, ByVal ComPort As String) As Double
+    Public ReadOnly Property iPA_ReadTemperature(ByVal jarFileLocation As String, ByVal ComPort As String) As Double
         'returns the current Temperature or _InvalidTemperature if unable to read it.
         Get
             ''Readout the file once every _ReadbackCycle. 
@@ -25,16 +29,17 @@
                     Dim JavaReadoutTime As DateTime
                     Dim JavaReadoutTemperature As Double
 
-                    If jarFile = "" Then
-                        jarFile = _JarFileLocation
+                    If jarFileLocation = "" Then
+                        jarFileLocation = _JarFileLocation
                     End If
-
-                    If Logfile = "" Then
-                        Logfile = _TemperatureFileLocaton
-                    End If
+                    Dim Logfile As String = jarFileLocation + _LogFileName
 
                     'Trigger the Java Programm that interfaces with the iPA:
-                    Using JavaProcess As Process = Process.Start("java", " -jar " + jarFile + " " + Logfile + " " + ComPort)
+                    Using JavaProcess As Process = New Process()
+                        JavaProcess.StartInfo.FileName = "java"
+                        JavaProcess.StartInfo.Arguments = " -jar " + jarFileLocation + _JarFileName + " " + ComPort
+                        JavaProcess.StartInfo.CreateNoWindow = True
+                        JavaProcess.Start()
                         JavaProcess.WaitForExit(10000) 'Wait for maximal 10s
                         If Not JavaProcess.HasExited Then
                             'Kill it if it hang up.
@@ -52,7 +57,11 @@
                         'Time: firstRow(0)
                         'Temperature: firstRow(1)
                         JavaReadoutTime = DateTime.ParseExact(firstRow(0), "dd.MM.yyyy HH:mm:ss", Globalization.DateTimeFormatInfo.InvariantInfo)
-                        JavaReadoutTemperature = Val(firstRow(1))
+                        If firstRow(1).Trim() = _readBackFailedValue Then
+                            JavaReadoutTemperature = _InvalidTemperature
+                        Else
+                            JavaReadoutTemperature = Val(firstRow(1))
+                        End If
                     End Using
                     'Check if the value is sufficiently recent
                     If (DateTime.Now - JavaReadoutTime).TotalMinutes > _TimeOut Then

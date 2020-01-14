@@ -2322,9 +2322,9 @@ Um eine Beschädigung des Detectors zu verhindern, muss dieser zuerst auf Normal
     <value>Serieller Anschluss um mit dem Canberra iPA zu kommunizieren.</value>
   </data>
   <data name="_673" xml:space="preserve">
-    <value>iPA TemperatureLogger .jar Datei</value>
+    <value>Pfad zu ipATemperatureLogger.jar</value>
   </data>
   <data name="_674" xml:space="preserve">
-    <value>Pfad der iPA TemperatureLogger .jar Datei.</value>
+    <value>Pfad der 'ipATemperatureLogger.jar' Datei.</value>
   </data>
 </root>

@@ -4908,7 +4908,7 @@ Friend Class MultiLang
     End Property
     
     '''<summary>
-    '''  Sucht eine lokalisierte Zeichenfolge, die iPA TemperatureLogger .jar file ähnelt.
+    '''  Sucht eine lokalisierte Zeichenfolge, die Path to ipATemperatureLogger.jar ähnelt.
     '''</summary>
     Friend Shared ReadOnly Property _673() As String
         Get
@@ -4917,7 +4917,7 @@ Friend Class MultiLang
     End Property
     
     '''<summary>
-    '''  Sucht eine lokalisierte Zeichenfolge, die Path pointing to the location of the iPA TemperatureLogger .jar file. ähnelt.
+    '''  Sucht eine lokalisierte Zeichenfolge, die Path pointing to the location of the &apos;ipATemperatureLogger.jar&apos; file. ähnelt.
     '''</summary>
     Friend Shared ReadOnly Property _674() As String
         Get

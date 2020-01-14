@@ -1906,9 +1906,9 @@ To prevent any damage of the detector, the detector must bei warmed up to the no
     <value>Serial Port to communicate with the Canberra iPA.</value>
   </data>
   <data name="_673" xml:space="preserve">
-    <value>iPA TemperatureLogger .jar file</value>
+    <value>Path to ipATemperatureLogger.jar</value>
   </data>
   <data name="_674" xml:space="preserve">
-    <value>Path pointing to the location of the iPA TemperatureLogger .jar file.</value>
+    <value>Path pointing to the location of the 'ipATemperatureLogger.jar' file.</value>
   </data>
 </root>
