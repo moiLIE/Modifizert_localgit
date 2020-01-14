@@ -593,29 +593,33 @@ Module FHT59N3_ShowFunctions
                     frmMeasScreen.ListView3.Items.Add(ml_string(57, "Alarm indication") & ": " & ml_string(55, "off"), "GreenDot")
                 End If
 
-                If _MyFHT59N3Par.EcoolerEnabled Then
-                    If _MyControlCenter.SPS_EcoolerOnOff Then
-                        frmMeasScreen.ListView3.Items.Add(ml_string(650, "ECooler") & ": " & ml_string(248, "on"), "GreenDot")
+                If Not _MyFHT59N3Par.IsCanberraDetector Then
+                    If _MyFHT59N3Par.EcoolerEnabled Then
+                        If _MyControlCenter.SPS_EcoolerOnOff Then
+                            frmMeasScreen.ListView3.Items.Add(ml_string(650, "ECooler") & ": " & ml_string(248, "on"), "GreenDot")
+                        Else
+                            frmMeasScreen.ListView3.Items.Add(ml_string(650, "ECooler") & ": " & ml_string(55, "off"), "RedDot")
+                        End If
                     Else
-                        frmMeasScreen.ListView3.Items.Add(ml_string(650, "ECooler") & ": " & ml_string(55, "off"), "RedDot")
+                        If _MyControlCenter.SPS_HeatingOnOff Then
+                            frmMeasScreen.ListView3.Items.Add(ml_string(51, "N2 Fill") & ": " & ml_string(248, "on"), "RedDot")
+                        Else
+                            frmMeasScreen.ListView3.Items.Add(ml_string(51, "N2 Fill") & ": " & ml_string(55, "off"), "GreenDot")
+                        End If
                     End If
                 Else
-                    If _MyControlCenter.SPS_HeatingOnOff Then
-                        frmMeasScreen.ListView3.Items.Add(ml_string(51, "N2 Fill") & ": " & ml_string(248, "on"), "RedDot")
-                    Else
-                        frmMeasScreen.ListView3.Items.Add(ml_string(51, "N2 Fill") & ": " & ml_string(55, "off"), "GreenDot")
-                    End If
+                    frmMeasScreen.ListView3.Items.Add(ml_string(650, "ECooler") & ": " & ml_string(675, "Canberra"), "YellowDot")
                 End If
 
 
 
                 If _MyControlCenter.MCA_GetHVState Then
-                    frmMeasScreen.ListView3.Items.Add(ml_string(59, "High Voltage") & ": " & ml_string(248, "on"), "GreenDot")
-                Else
-                    frmMeasScreen.ListView3.Items.Add(ml_string(59, "High Voltage") & ": " & ml_string(55, "off"), "RedDot")
+                        frmMeasScreen.ListView3.Items.Add(ml_string(59, "High Voltage") & ": " & ml_string(248, "on"), "GreenDot")
+                    Else
+                        frmMeasScreen.ListView3.Items.Add(ml_string(59, "High Voltage") & ": " & ml_string(55, "off"), "RedDot")
+                    End If
+                    _DigInOutListFilled = True
                 End If
-                _DigInOutListFilled = True
-            End If
         Catch ex As Exception
             Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
         End Try
@@ -694,35 +698,40 @@ Module FHT59N3_ShowFunctions
 
             End If
 
-            If _MyFHT59N3Par.EcoolerEnabled Then
-                If _MyControlCenter.SPS_EcoolerOnOff Then
-                    If stateLv.Items(5).ImageKey <> "GreenDot" Then
-                        stateLv.Items(5).Text = (ml_string(650, "ECooler") & ": " & ml_string(248, "on"))
-                        stateLv.Items(5).ImageKey = "GreenDot"
+            If Not _MyFHT59N3Par.IsCanberraDetector Then
+                If _MyFHT59N3Par.EcoolerEnabled Then
+                    If _MyControlCenter.SPS_EcoolerOnOff Then
+                        If stateLv.Items(5).ImageKey <> "GreenDot" Then
+                            stateLv.Items(5).Text = (ml_string(650, "ECooler") & ": " & ml_string(248, "on"))
+                            stateLv.Items(5).ImageKey = "GreenDot"
+                        End If
+                    Else
+                        If stateLv.Items(5).ImageKey <> "RedDot" Then
+                            stateLv.Items(5).Text = (ml_string(650, "ECooler") & ": " & ml_string(55, "off"))
+                            stateLv.Items(5).ImageKey = "RedDot"
+                        End If
                     End If
                 Else
-                    If stateLv.Items(5).ImageKey <> "RedDot" Then
-                        stateLv.Items(5).Text = (ml_string(650, "ECooler") & ": " & ml_string(55, "off"))
-                        stateLv.Items(5).ImageKey = "RedDot"
+                    If _MyControlCenter.SPS_HeatingOnOff Then
+
+                        If stateLv.Items(5).ImageKey <> "RedDot" Then
+                            stateLv.Items(5).Text = (ml_string(51, "N2 Fill") & ": " & ml_string(248, "on"))
+                            stateLv.Items(5).ImageKey = "RedDot"
+                        End If
+                    Else
+
+                        If stateLv.Items(5).ImageKey <> "GreenDot" Then
+                            stateLv.Items(5).Text = (ml_string(51, "N2 Fill") & ": " & ml_string(55, "off"))
+                            stateLv.Items(5).ImageKey = "GreenDot"
+                        End If
                     End If
                 End If
             Else
-                If _MyControlCenter.SPS_HeatingOnOff Then
-
-                    If stateLv.Items(5).ImageKey <> "RedDot" Then
-                        stateLv.Items(5).Text = (ml_string(51, "N2 Fill") & ": " & ml_string(248, "on"))
-                        stateLv.Items(5).ImageKey = "RedDot"
-                    End If
-                Else
-
-                    If stateLv.Items(5).ImageKey <> "GreenDot" Then
-                        stateLv.Items(5).Text = (ml_string(51, "N2 Fill") & ": " & ml_string(55, "off"))
-                        stateLv.Items(5).ImageKey = "GreenDot"
-                    End If
-                End If
+                stateLv.Items(5).Text = (ml_string(650, "ECooler") & ": " & ml_string(675, "Canberra"))
+                stateLv.Items(5).ImageKey = "YellowDot"
             End If
 
-          
+
 
             If _MyControlCenter.MCA_GetHVState Then
 

@@ -1911,4 +1911,7 @@ To prevent any damage of the detector, the detector must bei warmed up to the no
   <data name="_674" xml:space="preserve">
     <value>Path pointing to the location of the 'ipATemperatureLogger.jar' file.</value>
   </data>
+  <data name="_675" xml:space="preserve">
+    <value>Canberra</value>
+  </data>
 </root>

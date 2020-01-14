@@ -2327,4 +2327,7 @@ Um eine Beschädigung des Detectors zu verhindern, muss dieser zuerst auf Normal
   <data name="_674" xml:space="preserve">
     <value>Pfad der 'ipATemperatureLogger.jar' Datei.</value>
   </data>
+  <data name="_675" xml:space="preserve">
+    <value>Canberra</value>
+  </data>
 </root>

@@ -29,41 +29,50 @@ Public Class frmMain
             If (Not _Start) And (Not _EndProgram) Then
                 Dim checkBoxResult1 As Boolean = _MyFHT59N3Par.KeepActiveHighVoltageOnExitGuiFlag
                 Dim checkBoxResult2 As Boolean = _MyFHT59N3Par.KeepActiveEcoolerOnExitGuiFlag
-                Dim dialogResult As MsgBoxResult = GUI_ShowExtendedMessageBox(MSG_WantToExit, ml_string(90, "Yes"), ml_string(91, "No"), "",
+                If Not _MyFHT59N3Par.IsCanberraDetector Then
+                    Dim dialogResult As MsgBoxResult = GUI_ShowExtendedMessageBox(MSG_WantToExit, ml_string(90, "Yes"), ml_string(91, "No"), "",
                                               ml_string(537, "Keep MCA high voltage turned on"), checkBoxResult1,
                                               ml_string(538, "Keep E-Cooler turned on"), checkBoxResult2,
                                               MYCOL_THERMOGREEN, Color.White)
+                Else
+                    Dim dialogResult As MsgBoxResult = GUI_ShowExtendedMessageBox(MSG_WantToExit, ml_string(90, "Yes"), ml_string(91, "No"), "",
+                          ml_string(537, "Keep MCA high voltage turned on"), checkBoxResult1,
+                          "", checkBoxResult2,
+                          MYCOL_THERMOGREEN, Color.White)
+                    checkBoxResult2 = True 'Don't touch ECooler
+                End If
+
                 If dialogResult = MsgBoxResult.No Then
                     e.Cancel = True
                     _MenuEntryExitClicked = False
                 Else
                     SYS_RemoveHotkeys()
-                    SYS_ReleaseFilterDrucker()
-                    SYS_StopSnmpCommunication()
-                    SYS_StopN4242Cleanup()
+                        SYS_ReleaseFilterDrucker()
+                        SYS_StopSnmpCommunication()
+                        SYS_StopN4242Cleanup()
 
-                    GUI_SetMessage(MSG_MEASPROGCLOSED, MessageStates.GREEN)
-                    _MyControlCenter.SYS_States.Maintenance = True
+                        GUI_SetMessage(MSG_MEASPROGCLOSED, MessageStates.GREEN)
+                        _MyControlCenter.SYS_States.Maintenance = True
 
-                    _MyFHT59N3Par.KeepActiveHighVoltageOnExitGuiFlag = checkBoxResult1
-                    _MyFHT59N3Par.KeepActiveEcoolerOnExitGuiFlag = checkBoxResult2
-                    SYS_WriteSettings() 'Einstellungen sichern
+                        _MyFHT59N3Par.KeepActiveHighVoltageOnExitGuiFlag = checkBoxResult1
+                        _MyFHT59N3Par.KeepActiveEcoolerOnExitGuiFlag = checkBoxResult2
+                        SYS_WriteSettings() 'Einstellungen sichern
 
-                    _MyControlCenter.MCA_StopMeasurement(False)
-                    If Not checkBoxResult1 Then
-                        _MyControlCenter.MCA_SetHVOff()
+                        _MyControlCenter.MCA_StopMeasurement(False)
+                        If Not checkBoxResult1 Then
+                            _MyControlCenter.MCA_SetHVOff()
+                        End If
+                        _MyControlCenter.SPS_AlarmOff()
+                        _MyControlCenter.SPS_ErrorOn()
+                        _MyControlCenter.MDS_StopNetlog()
+                        If Not checkBoxResult2 Then
+                            _MyControlCenter.SPS_EcoolerOff()
+                        End If
+                        _EndProgram = True
+                        e.Cancel = True 'ich muss noch auf das setzen der ausgänge warten
                     End If
-                    _MyControlCenter.SPS_AlarmOff()
-                    _MyControlCenter.SPS_ErrorOn()
-                    _MyControlCenter.MDS_StopNetlog()
-                    If Not checkBoxResult2 Then
-                        _MyControlCenter.SPS_EcoolerOff()
-                    End If
-                    _EndProgram = True
-                    e.Cancel = True 'ich muss noch auf das setzen der ausgänge warten
-                End If
-            ElseIf _EndProgram Then
-                Dim thisProcess As System.Diagnostics.Process = System.Diagnostics.Process.GetCurrentProcess
+                ElseIf _EndProgram Then
+                    Dim thisProcess As System.Diagnostics.Process = System.Diagnostics.Process.GetCurrentProcess
                 thisProcess.Kill()
             End If
         Catch ex As Exception

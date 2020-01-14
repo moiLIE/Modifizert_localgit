@@ -4926,6 +4926,15 @@ Friend Class MultiLang
     End Property
     
     '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Canberra ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _675() As String
+        Get
+            Return ResourceManager.GetString("_675", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Sucht eine lokalisierte Zeichenfolge, die File ähnelt.
     '''</summary>
     Friend Shared ReadOnly Property _68() As String
