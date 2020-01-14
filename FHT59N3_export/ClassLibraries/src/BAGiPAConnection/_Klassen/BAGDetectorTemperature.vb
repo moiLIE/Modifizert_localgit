@@ -38,6 +38,7 @@
                     Using JavaProcess As Process = New Process()
                         JavaProcess.StartInfo.FileName = "java"
                         JavaProcess.StartInfo.Arguments = " -jar " + jarFileLocation + _JarFileName + " " + ComPort
+                        JavaProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
                         JavaProcess.StartInfo.CreateNoWindow = True
                         JavaProcess.Start()
                         JavaProcess.WaitForExit(10000) 'Wait for maximal 10s
