@@ -854,8 +854,10 @@ Public Module FHT59N3_ControlFunctions
     End Sub
 
     Private Function ConvertDigitalValueToDetectorTemperature(ByVal digiValue As Double) As Double
-        'Unnecessary for iPA readback
-        Return digiValue
+        If _MyFHT59N3Par.IsCanberraDetector Then
+            'Unnecessary for iPA readback
+            Return digiValue
+        End If
         'Ortec detector:
         Dim temperature As Double = Double.MinValue
         Dim voltage As Double = Double.MinValue
