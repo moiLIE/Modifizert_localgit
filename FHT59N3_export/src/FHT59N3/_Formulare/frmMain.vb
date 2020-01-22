@@ -47,32 +47,38 @@ Public Class frmMain
                     _MenuEntryExitClicked = False
                 Else
                     SYS_RemoveHotkeys()
-                        SYS_ReleaseFilterDrucker()
-                        SYS_StopSnmpCommunication()
-                        SYS_StopN4242Cleanup()
+                    SYS_ReleaseFilterDrucker()
+                    SYS_StopSnmpCommunication()
+                    SYS_StopN4242Cleanup()
 
-                        GUI_SetMessage(MSG_MEASPROGCLOSED, MessageStates.GREEN)
-                        _MyControlCenter.SYS_States.Maintenance = True
+                    GUI_SetMessage(MSG_MEASPROGCLOSED, MessageStates.GREEN)
+                    _MyControlCenter.SYS_States.Maintenance = True
 
-                        _MyFHT59N3Par.KeepActiveHighVoltageOnExitGuiFlag = checkBoxResult1
-                        _MyFHT59N3Par.KeepActiveEcoolerOnExitGuiFlag = checkBoxResult2
-                        SYS_WriteSettings() 'Einstellungen sichern
+                    _MyFHT59N3Par.KeepActiveHighVoltageOnExitGuiFlag = checkBoxResult1
+                    _MyFHT59N3Par.KeepActiveEcoolerOnExitGuiFlag = checkBoxResult2
+                    SYS_WriteSettings() 'Einstellungen sichern
 
-                        _MyControlCenter.MCA_StopMeasurement(False)
-                        If Not checkBoxResult1 Then
-                            _MyControlCenter.MCA_SetHVOff()
-                        End If
-                        _MyControlCenter.SPS_AlarmOff()
-                        _MyControlCenter.SPS_ErrorOn()
-                        _MyControlCenter.MDS_StopNetlog()
-                        If Not checkBoxResult2 Then
-                            _MyControlCenter.SPS_EcoolerOff()
-                        End If
-                        _EndProgram = True
-                        e.Cancel = True 'ich muss noch auf das setzen der ausgänge warten
+                    _MyControlCenter.MCA_StopMeasurement(False)
+                    If Not checkBoxResult1 Then
+                        _MyControlCenter.MCA_SetHVOff()
                     End If
-                ElseIf _EndProgram Then
-                    Dim thisProcess As System.Diagnostics.Process = System.Diagnostics.Process.GetCurrentProcess
+                    _MyControlCenter.SPS_AlarmOff()
+                    _MyControlCenter.SPS_ErrorOn()
+                    _MyControlCenter.MDS_StopNetlog()
+                    If Not checkBoxResult2 Then
+                        _MyControlCenter.SPS_EcoolerOff()
+                    End If
+                    'Setzte die Entsprechende Flagge, damit sie ins Konfigurations-Binary geschrieben wird.
+                    If Not checkBoxResult1 Then
+                        _MyControlCenter.SYS_States.HVOff = True
+                    End If
+                    _EndProgram = True
+                    ''Schreibe den allenfalls geänderten Ecooler/HV state ins Konfigurations-Binary
+                    FHT59N3_ControlFunctions.SYS_SystemStateChangedHandler()
+                    e.Cancel = True 'ich muss noch auf das setzen der ausgänge warten
+                End If
+            ElseIf _EndProgram Then
+                Dim thisProcess As System.Diagnostics.Process = System.Diagnostics.Process.GetCurrentProcess
                 thisProcess.Kill()
             End If
         Catch ex As Exception
@@ -214,7 +220,7 @@ Public Class frmMain
         End Try
     End Sub
 
-  
+
 
     Private Sub BtnExpandMode_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnExpandMode.Click
         Try
@@ -247,7 +253,7 @@ Public Class frmMain
         End Try
     End Sub
 
- 
+
 
     Private Sub BtnDetectorTemperature_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnDetectorTemperature.Click
         GUI_FillBackColors()

@@ -431,7 +431,7 @@ Public Module FHT59N3_ControlFunctions
                     End If
                 End If
 
-                If _MyControlCenter.MCA_GetHVState And _MyControlCenter.SYS_States.HVOff Then
+                If _MyControlCenter.MCA_GetHVState And _MyControlCenter.SYS_States.HVOff And Not FHT59N3_SystemProperties._EndProgram Then
                     GUI_SetMessage(MSG_SPSHVON, MessageStates.GREEN)
                     _MyControlCenter.SYS_States.HVOff = False
                 ElseIf Not _MyControlCenter.MCA_GetHVState And Not _MyControlCenter.SYS_States.HVOff Then
@@ -1685,7 +1685,11 @@ Public Module FHT59N3_ControlFunctions
                 frmMain.Close()
             End If
 
-            _MyControlCenter.MCA_SetHVOn()
+
+            'Nur einlesen, falls die Hochspannung zuletzt an war.
+            If Not _MyControlCenter.SYS_States.HVOff Then
+                _MyControlCenter.MCA_SetHVOn()
+            End If
 
             If (_NetLogActive) Then
                 resultString = _MyControlCenter.MDS_StartOrRestartNetlog(_NetViewPath, _NetViewActive)
