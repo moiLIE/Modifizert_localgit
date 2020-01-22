@@ -50,15 +50,17 @@ Public Class frmMain
                     SYS_WriteSettings() 'Einstellungen sichern
 
                     _MyControlCenter.MCA_StopMeasurement(False)
+                    If Not checkBoxResult1 Then
+                        _MyControlCenter.MCA_SetHVOff()
+                    End If
                     _MyControlCenter.SPS_AlarmOff()
                     _MyControlCenter.SPS_ErrorOn()
                     _MyControlCenter.MDS_StopNetlog()
                     If Not checkBoxResult2 Then
                         _MyControlCenter.SPS_EcoolerOff()
                     End If
+                    'Setzte die Entsprechende Flagge, damit sie ins Konfigurations-Binary geschrieben wird.
                     If Not checkBoxResult1 Then
-                        _MyControlCenter.MCA_SetHVOff()
-                        'Setzte die Entsprechende Flagge, damit sie ins Konfigurations-Binary geschrieben wird.
                         _MyControlCenter.SYS_States.HVOff = True
                     End If
                     _EndProgram = True
