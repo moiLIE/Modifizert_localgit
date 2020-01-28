@@ -149,12 +149,11 @@ Public Class frmMCAParameter_GainStabiAdd
             HSB_GainULD.Value = CType(_LynxParCopy.ADC_ULD * CType(_LynxParCopy.ADCULDMinMax(2), Integer), Integer)
             Lbl_GainULD.Text = Format(_LynxParCopy.ADC_ULD, CType(_LynxParCopy.ADCULDMinMax(3), String))
 
-            HSB_DSCentroid.Minimum = CType(_LynxParCopy.STABCentroidMinMax(0), Integer)
+            Num_DSCentroid.Minimum = CType(_LynxParCopy.STABCentroidMinMax(0), Integer)
             Lbl_DSCentroidMin.Text = Format(_LynxParCopy.STABCentroidMinMax(0) / CType(_LynxParCopy.STABCentroidMinMax(2), Integer), CType(_LynxParCopy.STABCentroidMinMax(3), String)) & CType(_LynxParCopy.STABCentroidMinMax(4), String)
-            HSB_DSCentroid.Maximum = CType(_LynxParCopy.STABCentroidMinMax(1), Integer)
+            Num_DSCentroid.Maximum = CType(_LynxParCopy.STABCentroidMinMax(1), Integer)
             Lbl_DSCentroidMax.Text = Format(_LynxParCopy.STABCentroidMinMax(1) / CType(_LynxParCopy.STABCentroidMinMax(2), Integer), CType(_LynxParCopy.STABCentroidMinMax(3), String)) & CType(_LynxParCopy.STABCentroidMinMax(4), String)
-            HSB_DSCentroid.Value = CType(_LynxParCopy.STAB_Centroid * CType(_LynxParCopy.STABCentroidMinMax(2), Integer), Integer)
-            Lbl_DSCentroid.Text = Format(_LynxParCopy.STAB_Centroid, CType(_LynxParCopy.STABCentroidMinMax(3), String))
+            Num_DSCentroid.Value = CType(_LynxParCopy.STAB_Centroid * CType(_LynxParCopy.STABCentroidMinMax(2), Integer), Integer)
 
             HSB_DSWindow.Minimum = CType(_LynxParCopy.STABWindowMinMax(0), Integer)
             Lbl_DSWindowMin.Text = Format(_LynxParCopy.STABWindowMinMax(0) / CType(_LynxParCopy.STABWindowMinMax(2), Integer), CType(_LynxParCopy.STABWindowMinMax(3), String)) & CType(_LynxParCopy.STABWindowMinMax(4), String)
@@ -307,13 +306,7 @@ Public Class frmMCAParameter_GainStabiAdd
         End Try
     End Sub
 
-    Private Sub HSB_DSCentroid_Scroll(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ScrollEventArgs) Handles HSB_DSCentroid.Scroll
-        Try
-            Lbl_DSCentroid.Text = Format(HSB_DSCentroid.Value / CType(_LynxParCopy.STABCentroidMinMax(2), Integer), CType(_LynxParCopy.STABCentroidMinMax(3), String))
-        Catch ex As Exception
-            Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
-        End Try
-    End Sub
+
 
     Private Sub HSB_DSWindow_Scroll(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ScrollEventArgs) Handles HSB_DSWindow.Scroll
         Try
@@ -413,7 +406,7 @@ Public Class frmMCAParameter_GainStabiAdd
             _LynxParCopy.ADC_LLD = CType(HSB_GainLLD.Value / CType(_LynxParCopy.ADCLLDMinMax(2), Integer), Double)
             _LynxParCopy.ADC_ULD = CType(HSB_GainULD.Value / CType(_LynxParCopy.ADCULDMinMax(2), Integer), Double)
             _LynxParCopy.ADC_ConversionGain = _LynxParCopy.ConversionGainL(CBox_GainConversionGain.Text)
-            _LynxParCopy.STAB_Centroid = CType(HSB_DSCentroid.Value / CType(_LynxParCopy.STABCentroidMinMax(2), Integer), Double)
+            _LynxParCopy.STAB_Centroid = CType(Num_DSCentroid.Value / CType(_LynxParCopy.STABCentroidMinMax(2), Integer), Double)
             _LynxParCopy.STAB_Window = CType(HSB_DSWindow.Value / CType(_LynxParCopy.STABWindowMinMax(2), Integer), Double)
             _LynxParCopy.STAB_Spacing = CType(HSB_DSSpacing.Value / CType(_LynxParCopy.STABSpacingMinMax(2), Integer), Double)
             _LynxParCopy.STAB_Multiplier = _LynxParCopy.MultiplierL(CBox_DSDivider.Text)
@@ -455,7 +448,7 @@ Public Class frmMCAParameter_GainStabiAdd
                 _LynxParCopy.ADC_LLD = CType(HSB_GainLLD.Value / CType(_LynxParCopy.ADCLLDMinMax(2), Integer), Double)
                 _LynxParCopy.ADC_ULD = CType(HSB_GainULD.Value / CType(_LynxParCopy.ADCULDMinMax(2), Integer), Double)
                 _LynxParCopy.ADC_ConversionGain = _LynxParCopy.ConversionGainL(CBox_GainConversionGain.Text)
-                _LynxParCopy.STAB_Centroid = CType(HSB_DSCentroid.Value / CType(_LynxParCopy.STABCentroidMinMax(2), Integer), Double)
+                _LynxParCopy.STAB_Centroid = CType(Num_DSCentroid.Value / CType(_LynxParCopy.STABCentroidMinMax(2), Integer), Double)
                 _LynxParCopy.STAB_Window = CType(HSB_DSWindow.Value / CType(_LynxParCopy.STABWindowMinMax(2), Integer), Double)
                 _LynxParCopy.STAB_Spacing = CType(HSB_DSSpacing.Value / CType(_LynxParCopy.STABSpacingMinMax(2), Integer), Double)
                 _LynxParCopy.STAB_Multiplier = _LynxParCopy.MultiplierL(CBox_DSDivider.Text)

@@ -22,122 +22,112 @@ Partial Class frmMCAParameter_GainStabiAdd
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMCAParameter_GainStabiAdd))
-        Me.BtnAccept = New System.Windows.Forms.Button
-        Me.BtnClose = New System.Windows.Forms.Button
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.Lbl_GainULD = New System.Windows.Forms.Label
-        Me.Lbl_GainFineGain = New System.Windows.Forms.Label
-        Me.Lbl_GainLLD = New System.Windows.Forms.Label
-        Me.Lbl_GainULDMax = New System.Windows.Forms.Label
-        Me.Lbl_GainULDMin = New System.Windows.Forms.Label
-        Me.Label25 = New System.Windows.Forms.Label
-        Me.HSB_GainULD = New System.Windows.Forms.HScrollBar
-        Me.Lbl_GainLLDMax = New System.Windows.Forms.Label
-        Me.Lbl_GainLLDMin = New System.Windows.Forms.Label
-        Me.Label21 = New System.Windows.Forms.Label
-        Me.HSB_GainLLD = New System.Windows.Forms.HScrollBar
-        Me.Lbl_GainFineGainMax = New System.Windows.Forms.Label
-        Me.Lbl_GainFineGainMin = New System.Windows.Forms.Label
-        Me.Label17 = New System.Windows.Forms.Label
-        Me.HSB_GainFineGain = New System.Windows.Forms.HScrollBar
-        Me.Label12 = New System.Windows.Forms.Label
-        Me.CBox_GainCoarseGain = New System.Windows.Forms.ComboBox
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.Label13 = New System.Windows.Forms.Label
-        Me.CBox_GainInputPolarity = New System.Windows.Forms.ComboBox
-        Me.CBox_GainLLDMode = New System.Windows.Forms.ComboBox
-        Me.CBox_GainConversionGain = New System.Windows.Forms.ComboBox
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Lbl_ADSPoleZero = New System.Windows.Forms.Label
-        Me.Lbl_ADSShapingFlatTop = New System.Windows.Forms.Label
-        Me.Lbl_ADSShapingRiseTime = New System.Windows.Forms.Label
-        Me.Lbl_ADSPoleZeroMax = New System.Windows.Forms.Label
-        Me.Lbl_ADSPoleZeroMin = New System.Windows.Forms.Label
-        Me.Label28 = New System.Windows.Forms.Label
-        Me.HSB_ADSPoleZero = New System.Windows.Forms.HScrollBar
-        Me.Lbl_ADSShapingFlatTopMax = New System.Windows.Forms.Label
-        Me.Lbl_ADSShapingFlatTopMin = New System.Windows.Forms.Label
-        Me.Label31 = New System.Windows.Forms.Label
-        Me.HSB_ADSShapingFlatTop = New System.Windows.Forms.HScrollBar
-        Me.Lbl_ADSShapingRiseTimeMax = New System.Windows.Forms.Label
-        Me.Lbl_ADSShapingRiseTimeMin = New System.Windows.Forms.Label
-        Me.Label34 = New System.Windows.Forms.Label
-        Me.HSB_ADSShapingRiseTime = New System.Windows.Forms.HScrollBar
-        Me.Label18 = New System.Windows.Forms.Label
-        Me.CBox_ADSBLRMode = New System.Windows.Forms.ComboBox
-        Me.Label14 = New System.Windows.Forms.Label
-        Me.CBox_ADSAquisitionMode = New System.Windows.Forms.ComboBox
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox
-        Me.Lbl_DSRatio = New System.Windows.Forms.Label
-        Me.CBox_DSDivider = New System.Windows.Forms.ComboBox
-        Me.Lbl_DSSpacing = New System.Windows.Forms.Label
-        Me.Label48 = New System.Windows.Forms.Label
-        Me.Lbl_DSWindow = New System.Windows.Forms.Label
-        Me.Label49 = New System.Windows.Forms.Label
-        Me.Lbl_DSCentroid = New System.Windows.Forms.Label
-        Me.Label50 = New System.Windows.Forms.Label
-        Me.Label51 = New System.Windows.Forms.Label
-        Me.CBox_DSMode = New System.Windows.Forms.ComboBox
-        Me.CBox_DSRatioMode = New System.Windows.Forms.ComboBox
-        Me.CBox_DSRange = New System.Windows.Forms.ComboBox
-        Me.Lbl_DSRatioMax = New System.Windows.Forms.Label
-        Me.Lbl_DSRatioMin = New System.Windows.Forms.Label
-        Me.Label47 = New System.Windows.Forms.Label
-        Me.HSB_DSRatio = New System.Windows.Forms.HScrollBar
-        Me.Lbl_DSSpacingMax = New System.Windows.Forms.Label
-        Me.Lbl_DSSpacingMin = New System.Windows.Forms.Label
-        Me.Label38 = New System.Windows.Forms.Label
-        Me.HSB_DSSpacing = New System.Windows.Forms.HScrollBar
-        Me.Lbl_DSWindowMax = New System.Windows.Forms.Label
-        Me.Lbl_DSWindowMin = New System.Windows.Forms.Label
-        Me.Label41 = New System.Windows.Forms.Label
-        Me.HSB_DSWindow = New System.Windows.Forms.HScrollBar
-        Me.Lbl_DSCentroidMax = New System.Windows.Forms.Label
-        Me.Lbl_DSCentroidMin = New System.Windows.Forms.Label
-        Me.Label44 = New System.Windows.Forms.Label
-        Me.HSB_DSCentroid = New System.Windows.Forms.HScrollBar
-        Me.BtnSet = New System.Windows.Forms.Button
-        Me.BtnReset = New System.Windows.Forms.Button
-        Me.BtnExpandMode = New System.Windows.Forms.Button
+        Me.BtnAccept = New System.Windows.Forms.Button()
+        Me.BtnClose = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Lbl_GainULD = New System.Windows.Forms.Label()
+        Me.Lbl_GainFineGain = New System.Windows.Forms.Label()
+        Me.Lbl_GainLLD = New System.Windows.Forms.Label()
+        Me.Lbl_GainULDMax = New System.Windows.Forms.Label()
+        Me.Lbl_GainULDMin = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.HSB_GainULD = New System.Windows.Forms.HScrollBar()
+        Me.Lbl_GainLLDMax = New System.Windows.Forms.Label()
+        Me.Lbl_GainLLDMin = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.HSB_GainLLD = New System.Windows.Forms.HScrollBar()
+        Me.Lbl_GainFineGainMax = New System.Windows.Forms.Label()
+        Me.Lbl_GainFineGainMin = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.HSB_GainFineGain = New System.Windows.Forms.HScrollBar()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.CBox_GainCoarseGain = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.CBox_GainInputPolarity = New System.Windows.Forms.ComboBox()
+        Me.CBox_GainLLDMode = New System.Windows.Forms.ComboBox()
+        Me.CBox_GainConversionGain = New System.Windows.Forms.ComboBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Lbl_ADSPoleZero = New System.Windows.Forms.Label()
+        Me.Lbl_ADSShapingFlatTop = New System.Windows.Forms.Label()
+        Me.Lbl_ADSShapingRiseTime = New System.Windows.Forms.Label()
+        Me.Lbl_ADSPoleZeroMax = New System.Windows.Forms.Label()
+        Me.Lbl_ADSPoleZeroMin = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.HSB_ADSPoleZero = New System.Windows.Forms.HScrollBar()
+        Me.Lbl_ADSShapingFlatTopMax = New System.Windows.Forms.Label()
+        Me.Lbl_ADSShapingFlatTopMin = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.HSB_ADSShapingFlatTop = New System.Windows.Forms.HScrollBar()
+        Me.Lbl_ADSShapingRiseTimeMax = New System.Windows.Forms.Label()
+        Me.Lbl_ADSShapingRiseTimeMin = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.HSB_ADSShapingRiseTime = New System.Windows.Forms.HScrollBar()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.CBox_ADSBLRMode = New System.Windows.Forms.ComboBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.CBox_ADSAquisitionMode = New System.Windows.Forms.ComboBox()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Num_DSCentroid = New System.Windows.Forms.NumericUpDown()
+        Me.Lbl_DSRatio = New System.Windows.Forms.Label()
+        Me.CBox_DSDivider = New System.Windows.Forms.ComboBox()
+        Me.Lbl_DSSpacing = New System.Windows.Forms.Label()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.Lbl_DSWindow = New System.Windows.Forms.Label()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.Label51 = New System.Windows.Forms.Label()
+        Me.CBox_DSMode = New System.Windows.Forms.ComboBox()
+        Me.CBox_DSRatioMode = New System.Windows.Forms.ComboBox()
+        Me.CBox_DSRange = New System.Windows.Forms.ComboBox()
+        Me.Lbl_DSRatioMax = New System.Windows.Forms.Label()
+        Me.Lbl_DSRatioMin = New System.Windows.Forms.Label()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.HSB_DSRatio = New System.Windows.Forms.HScrollBar()
+        Me.Lbl_DSSpacingMax = New System.Windows.Forms.Label()
+        Me.Lbl_DSSpacingMin = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.HSB_DSSpacing = New System.Windows.Forms.HScrollBar()
+        Me.Lbl_DSWindowMax = New System.Windows.Forms.Label()
+        Me.Lbl_DSWindowMin = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.HSB_DSWindow = New System.Windows.Forms.HScrollBar()
+        Me.Lbl_DSCentroidMax = New System.Windows.Forms.Label()
+        Me.Lbl_DSCentroidMin = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.BtnSet = New System.Windows.Forms.Button()
+        Me.BtnReset = New System.Windows.Forms.Button()
+        Me.BtnExpandMode = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.SpectralDisplay = New AxCanberraDataDisplayLib.AxMvc
+        Me.SpectralDisplay = New AxCanberraDataDisplayLib.AxMvc()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        CType(Me.Num_DSCentroid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpectralDisplay, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnAccept
         '
-        Me.BtnAccept.AccessibleDescription = Nothing
-        Me.BtnAccept.AccessibleName = Nothing
-        resources.ApplyResources(Me.BtnAccept, "BtnAccept")
         Me.BtnAccept.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BtnAccept.BackgroundImage = Nothing
+        resources.ApplyResources(Me.BtnAccept, "BtnAccept")
         Me.BtnAccept.Name = "BtnAccept"
         Me.BtnAccept.UseVisualStyleBackColor = False
         '
         'BtnClose
         '
-        Me.BtnClose.AccessibleDescription = Nothing
-        Me.BtnClose.AccessibleName = Nothing
-        resources.ApplyResources(Me.BtnClose, "BtnClose")
         Me.BtnClose.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BtnClose.BackgroundImage = Nothing
+        resources.ApplyResources(Me.BtnClose, "BtnClose")
         Me.BtnClose.Name = "BtnClose"
         Me.BtnClose.UseVisualStyleBackColor = False
         '
         'GroupBox2
         '
-        Me.GroupBox2.AccessibleDescription = Nothing
-        Me.GroupBox2.AccessibleName = Nothing
-        resources.ApplyResources(Me.GroupBox2, "GroupBox2")
-        Me.GroupBox2.BackgroundImage = Nothing
         Me.GroupBox2.Controls.Add(Me.Lbl_GainULD)
         Me.GroupBox2.Controls.Add(Me.Lbl_GainFineGain)
         Me.GroupBox2.Controls.Add(Me.Lbl_GainLLD)
@@ -161,227 +151,148 @@ Partial Class frmMCAParameter_GainStabiAdd
         Me.GroupBox2.Controls.Add(Me.CBox_GainInputPolarity)
         Me.GroupBox2.Controls.Add(Me.CBox_GainLLDMode)
         Me.GroupBox2.Controls.Add(Me.CBox_GainConversionGain)
+        resources.ApplyResources(Me.GroupBox2, "GroupBox2")
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.TabStop = False
         '
         'Lbl_GainULD
         '
-        Me.Lbl_GainULD.AccessibleDescription = Nothing
-        Me.Lbl_GainULD.AccessibleName = Nothing
-        resources.ApplyResources(Me.Lbl_GainULD, "Lbl_GainULD")
         Me.Lbl_GainULD.BackColor = System.Drawing.Color.White
         Me.Lbl_GainULD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Lbl_GainULD.Font = Nothing
         Me.Lbl_GainULD.ForeColor = System.Drawing.Color.Black
+        resources.ApplyResources(Me.Lbl_GainULD, "Lbl_GainULD")
         Me.Lbl_GainULD.Name = "Lbl_GainULD"
         '
         'Lbl_GainFineGain
         '
-        Me.Lbl_GainFineGain.AccessibleDescription = Nothing
-        Me.Lbl_GainFineGain.AccessibleName = Nothing
-        resources.ApplyResources(Me.Lbl_GainFineGain, "Lbl_GainFineGain")
         Me.Lbl_GainFineGain.BackColor = System.Drawing.Color.White
         Me.Lbl_GainFineGain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Lbl_GainFineGain.Font = Nothing
         Me.Lbl_GainFineGain.ForeColor = System.Drawing.Color.Black
+        resources.ApplyResources(Me.Lbl_GainFineGain, "Lbl_GainFineGain")
         Me.Lbl_GainFineGain.Name = "Lbl_GainFineGain"
         '
         'Lbl_GainLLD
         '
-        Me.Lbl_GainLLD.AccessibleDescription = Nothing
-        Me.Lbl_GainLLD.AccessibleName = Nothing
-        resources.ApplyResources(Me.Lbl_GainLLD, "Lbl_GainLLD")
         Me.Lbl_GainLLD.BackColor = System.Drawing.Color.White
         Me.Lbl_GainLLD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Lbl_GainLLD.Font = Nothing
         Me.Lbl_GainLLD.ForeColor = System.Drawing.Color.Black
+        resources.ApplyResources(Me.Lbl_GainLLD, "Lbl_GainLLD")
         Me.Lbl_GainLLD.Name = "Lbl_GainLLD"
         '
         'Lbl_GainULDMax
         '
-        Me.Lbl_GainULDMax.AccessibleDescription = Nothing
-        Me.Lbl_GainULDMax.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_GainULDMax, "Lbl_GainULDMax")
-        Me.Lbl_GainULDMax.Font = Nothing
         Me.Lbl_GainULDMax.Name = "Lbl_GainULDMax"
         '
         'Lbl_GainULDMin
         '
-        Me.Lbl_GainULDMin.AccessibleDescription = Nothing
-        Me.Lbl_GainULDMin.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_GainULDMin, "Lbl_GainULDMin")
-        Me.Lbl_GainULDMin.Font = Nothing
         Me.Lbl_GainULDMin.Name = "Lbl_GainULDMin"
         '
         'Label25
         '
-        Me.Label25.AccessibleDescription = Nothing
-        Me.Label25.AccessibleName = Nothing
         resources.ApplyResources(Me.Label25, "Label25")
-        Me.Label25.Font = Nothing
         Me.Label25.Name = "Label25"
         '
         'HSB_GainULD
         '
-        Me.HSB_GainULD.AccessibleDescription = Nothing
-        Me.HSB_GainULD.AccessibleName = Nothing
         resources.ApplyResources(Me.HSB_GainULD, "HSB_GainULD")
-        Me.HSB_GainULD.BackgroundImage = Nothing
-        Me.HSB_GainULD.Font = Nothing
         Me.HSB_GainULD.LargeChange = 1
         Me.HSB_GainULD.Name = "HSB_GainULD"
         '
         'Lbl_GainLLDMax
         '
-        Me.Lbl_GainLLDMax.AccessibleDescription = Nothing
-        Me.Lbl_GainLLDMax.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_GainLLDMax, "Lbl_GainLLDMax")
-        Me.Lbl_GainLLDMax.Font = Nothing
         Me.Lbl_GainLLDMax.Name = "Lbl_GainLLDMax"
         '
         'Lbl_GainLLDMin
         '
-        Me.Lbl_GainLLDMin.AccessibleDescription = Nothing
-        Me.Lbl_GainLLDMin.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_GainLLDMin, "Lbl_GainLLDMin")
-        Me.Lbl_GainLLDMin.Font = Nothing
         Me.Lbl_GainLLDMin.Name = "Lbl_GainLLDMin"
         '
         'Label21
         '
-        Me.Label21.AccessibleDescription = Nothing
-        Me.Label21.AccessibleName = Nothing
         resources.ApplyResources(Me.Label21, "Label21")
-        Me.Label21.Font = Nothing
         Me.Label21.Name = "Label21"
         '
         'HSB_GainLLD
         '
-        Me.HSB_GainLLD.AccessibleDescription = Nothing
-        Me.HSB_GainLLD.AccessibleName = Nothing
         resources.ApplyResources(Me.HSB_GainLLD, "HSB_GainLLD")
-        Me.HSB_GainLLD.BackgroundImage = Nothing
-        Me.HSB_GainLLD.Font = Nothing
         Me.HSB_GainLLD.LargeChange = 1
         Me.HSB_GainLLD.Name = "HSB_GainLLD"
         '
         'Lbl_GainFineGainMax
         '
-        Me.Lbl_GainFineGainMax.AccessibleDescription = Nothing
-        Me.Lbl_GainFineGainMax.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_GainFineGainMax, "Lbl_GainFineGainMax")
-        Me.Lbl_GainFineGainMax.Font = Nothing
         Me.Lbl_GainFineGainMax.Name = "Lbl_GainFineGainMax"
         '
         'Lbl_GainFineGainMin
         '
-        Me.Lbl_GainFineGainMin.AccessibleDescription = Nothing
-        Me.Lbl_GainFineGainMin.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_GainFineGainMin, "Lbl_GainFineGainMin")
-        Me.Lbl_GainFineGainMin.Font = Nothing
         Me.Lbl_GainFineGainMin.Name = "Lbl_GainFineGainMin"
         '
         'Label17
         '
-        Me.Label17.AccessibleDescription = Nothing
-        Me.Label17.AccessibleName = Nothing
         resources.ApplyResources(Me.Label17, "Label17")
-        Me.Label17.Font = Nothing
         Me.Label17.Name = "Label17"
         '
         'HSB_GainFineGain
         '
-        Me.HSB_GainFineGain.AccessibleDescription = Nothing
-        Me.HSB_GainFineGain.AccessibleName = Nothing
         resources.ApplyResources(Me.HSB_GainFineGain, "HSB_GainFineGain")
-        Me.HSB_GainFineGain.BackgroundImage = Nothing
-        Me.HSB_GainFineGain.Font = Nothing
         Me.HSB_GainFineGain.LargeChange = 1
         Me.HSB_GainFineGain.Name = "HSB_GainFineGain"
         '
         'Label12
         '
-        Me.Label12.AccessibleDescription = Nothing
-        Me.Label12.AccessibleName = Nothing
         resources.ApplyResources(Me.Label12, "Label12")
-        Me.Label12.Font = Nothing
         Me.Label12.Name = "Label12"
         '
         'CBox_GainCoarseGain
         '
-        Me.CBox_GainCoarseGain.AccessibleDescription = Nothing
-        Me.CBox_GainCoarseGain.AccessibleName = Nothing
-        resources.ApplyResources(Me.CBox_GainCoarseGain, "CBox_GainCoarseGain")
-        Me.CBox_GainCoarseGain.BackgroundImage = Nothing
-        Me.CBox_GainCoarseGain.Font = Nothing
         Me.CBox_GainCoarseGain.FormattingEnabled = True
         Me.CBox_GainCoarseGain.Items.AddRange(New Object() {resources.GetString("CBox_GainCoarseGain.Items"), resources.GetString("CBox_GainCoarseGain.Items1"), resources.GetString("CBox_GainCoarseGain.Items2")})
+        resources.ApplyResources(Me.CBox_GainCoarseGain, "CBox_GainCoarseGain")
         Me.CBox_GainCoarseGain.Name = "CBox_GainCoarseGain"
         '
         'Label10
         '
-        Me.Label10.AccessibleDescription = Nothing
-        Me.Label10.AccessibleName = Nothing
         resources.ApplyResources(Me.Label10, "Label10")
-        Me.Label10.Font = Nothing
         Me.Label10.Name = "Label10"
         '
         'Label11
         '
-        Me.Label11.AccessibleDescription = Nothing
-        Me.Label11.AccessibleName = Nothing
         resources.ApplyResources(Me.Label11, "Label11")
-        Me.Label11.Font = Nothing
         Me.Label11.Name = "Label11"
         '
         'Label13
         '
-        Me.Label13.AccessibleDescription = Nothing
-        Me.Label13.AccessibleName = Nothing
         resources.ApplyResources(Me.Label13, "Label13")
-        Me.Label13.Font = Nothing
         Me.Label13.Name = "Label13"
         '
         'CBox_GainInputPolarity
         '
-        Me.CBox_GainInputPolarity.AccessibleDescription = Nothing
-        Me.CBox_GainInputPolarity.AccessibleName = Nothing
-        resources.ApplyResources(Me.CBox_GainInputPolarity, "CBox_GainInputPolarity")
-        Me.CBox_GainInputPolarity.BackgroundImage = Nothing
-        Me.CBox_GainInputPolarity.Font = Nothing
         Me.CBox_GainInputPolarity.FormattingEnabled = True
         Me.CBox_GainInputPolarity.Items.AddRange(New Object() {resources.GetString("CBox_GainInputPolarity.Items"), resources.GetString("CBox_GainInputPolarity.Items1")})
+        resources.ApplyResources(Me.CBox_GainInputPolarity, "CBox_GainInputPolarity")
         Me.CBox_GainInputPolarity.Name = "CBox_GainInputPolarity"
         '
         'CBox_GainLLDMode
         '
-        Me.CBox_GainLLDMode.AccessibleDescription = Nothing
-        Me.CBox_GainLLDMode.AccessibleName = Nothing
-        resources.ApplyResources(Me.CBox_GainLLDMode, "CBox_GainLLDMode")
-        Me.CBox_GainLLDMode.BackgroundImage = Nothing
-        Me.CBox_GainLLDMode.Font = Nothing
         Me.CBox_GainLLDMode.FormattingEnabled = True
         Me.CBox_GainLLDMode.Items.AddRange(New Object() {resources.GetString("CBox_GainLLDMode.Items"), resources.GetString("CBox_GainLLDMode.Items1")})
+        resources.ApplyResources(Me.CBox_GainLLDMode, "CBox_GainLLDMode")
         Me.CBox_GainLLDMode.Name = "CBox_GainLLDMode"
         '
         'CBox_GainConversionGain
         '
-        Me.CBox_GainConversionGain.AccessibleDescription = Nothing
-        Me.CBox_GainConversionGain.AccessibleName = Nothing
-        resources.ApplyResources(Me.CBox_GainConversionGain, "CBox_GainConversionGain")
-        Me.CBox_GainConversionGain.BackgroundImage = Nothing
-        Me.CBox_GainConversionGain.Font = Nothing
         Me.CBox_GainConversionGain.FormattingEnabled = True
         Me.CBox_GainConversionGain.Items.AddRange(New Object() {resources.GetString("CBox_GainConversionGain.Items"), resources.GetString("CBox_GainConversionGain.Items1"), resources.GetString("CBox_GainConversionGain.Items2")})
+        resources.ApplyResources(Me.CBox_GainConversionGain, "CBox_GainConversionGain")
         Me.CBox_GainConversionGain.Name = "CBox_GainConversionGain"
         '
         'GroupBox3
         '
-        Me.GroupBox3.AccessibleDescription = Nothing
-        Me.GroupBox3.AccessibleName = Nothing
-        resources.ApplyResources(Me.GroupBox3, "GroupBox3")
-        Me.GroupBox3.BackgroundImage = Nothing
         Me.GroupBox3.Controls.Add(Me.Label1)
         Me.GroupBox3.Controls.Add(Me.Button1)
         Me.GroupBox3.Controls.Add(Me.Lbl_ADSPoleZero)
@@ -403,210 +314,142 @@ Partial Class frmMCAParameter_GainStabiAdd
         Me.GroupBox3.Controls.Add(Me.CBox_ADSBLRMode)
         Me.GroupBox3.Controls.Add(Me.Label14)
         Me.GroupBox3.Controls.Add(Me.CBox_ADSAquisitionMode)
+        resources.ApplyResources(Me.GroupBox3, "GroupBox3")
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.TabStop = False
         '
         'Label1
         '
-        Me.Label1.AccessibleDescription = Nothing
-        Me.Label1.AccessibleName = Nothing
         resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.Font = Nothing
         Me.Label1.Name = "Label1"
         '
         'Button1
         '
-        Me.Button1.AccessibleDescription = Nothing
-        Me.Button1.AccessibleName = Nothing
         resources.ApplyResources(Me.Button1, "Button1")
-        Me.Button1.BackgroundImage = Nothing
-        Me.Button1.Font = Nothing
         Me.Button1.Name = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Lbl_ADSPoleZero
         '
-        Me.Lbl_ADSPoleZero.AccessibleDescription = Nothing
-        Me.Lbl_ADSPoleZero.AccessibleName = Nothing
-        resources.ApplyResources(Me.Lbl_ADSPoleZero, "Lbl_ADSPoleZero")
         Me.Lbl_ADSPoleZero.BackColor = System.Drawing.Color.White
         Me.Lbl_ADSPoleZero.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Lbl_ADSPoleZero.Font = Nothing
         Me.Lbl_ADSPoleZero.ForeColor = System.Drawing.Color.Black
+        resources.ApplyResources(Me.Lbl_ADSPoleZero, "Lbl_ADSPoleZero")
         Me.Lbl_ADSPoleZero.Name = "Lbl_ADSPoleZero"
         '
         'Lbl_ADSShapingFlatTop
         '
-        Me.Lbl_ADSShapingFlatTop.AccessibleDescription = Nothing
-        Me.Lbl_ADSShapingFlatTop.AccessibleName = Nothing
-        resources.ApplyResources(Me.Lbl_ADSShapingFlatTop, "Lbl_ADSShapingFlatTop")
         Me.Lbl_ADSShapingFlatTop.BackColor = System.Drawing.Color.White
         Me.Lbl_ADSShapingFlatTop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Lbl_ADSShapingFlatTop.Font = Nothing
         Me.Lbl_ADSShapingFlatTop.ForeColor = System.Drawing.Color.Black
+        resources.ApplyResources(Me.Lbl_ADSShapingFlatTop, "Lbl_ADSShapingFlatTop")
         Me.Lbl_ADSShapingFlatTop.Name = "Lbl_ADSShapingFlatTop"
         '
         'Lbl_ADSShapingRiseTime
         '
-        Me.Lbl_ADSShapingRiseTime.AccessibleDescription = Nothing
-        Me.Lbl_ADSShapingRiseTime.AccessibleName = Nothing
-        resources.ApplyResources(Me.Lbl_ADSShapingRiseTime, "Lbl_ADSShapingRiseTime")
         Me.Lbl_ADSShapingRiseTime.BackColor = System.Drawing.Color.White
         Me.Lbl_ADSShapingRiseTime.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Lbl_ADSShapingRiseTime.Font = Nothing
         Me.Lbl_ADSShapingRiseTime.ForeColor = System.Drawing.Color.Black
+        resources.ApplyResources(Me.Lbl_ADSShapingRiseTime, "Lbl_ADSShapingRiseTime")
         Me.Lbl_ADSShapingRiseTime.Name = "Lbl_ADSShapingRiseTime"
         '
         'Lbl_ADSPoleZeroMax
         '
-        Me.Lbl_ADSPoleZeroMax.AccessibleDescription = Nothing
-        Me.Lbl_ADSPoleZeroMax.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_ADSPoleZeroMax, "Lbl_ADSPoleZeroMax")
-        Me.Lbl_ADSPoleZeroMax.Font = Nothing
         Me.Lbl_ADSPoleZeroMax.Name = "Lbl_ADSPoleZeroMax"
         '
         'Lbl_ADSPoleZeroMin
         '
-        Me.Lbl_ADSPoleZeroMin.AccessibleDescription = Nothing
-        Me.Lbl_ADSPoleZeroMin.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_ADSPoleZeroMin, "Lbl_ADSPoleZeroMin")
-        Me.Lbl_ADSPoleZeroMin.Font = Nothing
         Me.Lbl_ADSPoleZeroMin.Name = "Lbl_ADSPoleZeroMin"
         '
         'Label28
         '
-        Me.Label28.AccessibleDescription = Nothing
-        Me.Label28.AccessibleName = Nothing
         resources.ApplyResources(Me.Label28, "Label28")
-        Me.Label28.Font = Nothing
         Me.Label28.Name = "Label28"
         '
         'HSB_ADSPoleZero
         '
-        Me.HSB_ADSPoleZero.AccessibleDescription = Nothing
-        Me.HSB_ADSPoleZero.AccessibleName = Nothing
         resources.ApplyResources(Me.HSB_ADSPoleZero, "HSB_ADSPoleZero")
-        Me.HSB_ADSPoleZero.BackgroundImage = Nothing
-        Me.HSB_ADSPoleZero.Font = Nothing
         Me.HSB_ADSPoleZero.LargeChange = 1
         Me.HSB_ADSPoleZero.Name = "HSB_ADSPoleZero"
         '
         'Lbl_ADSShapingFlatTopMax
         '
-        Me.Lbl_ADSShapingFlatTopMax.AccessibleDescription = Nothing
-        Me.Lbl_ADSShapingFlatTopMax.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_ADSShapingFlatTopMax, "Lbl_ADSShapingFlatTopMax")
-        Me.Lbl_ADSShapingFlatTopMax.Font = Nothing
         Me.Lbl_ADSShapingFlatTopMax.Name = "Lbl_ADSShapingFlatTopMax"
         '
         'Lbl_ADSShapingFlatTopMin
         '
-        Me.Lbl_ADSShapingFlatTopMin.AccessibleDescription = Nothing
-        Me.Lbl_ADSShapingFlatTopMin.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_ADSShapingFlatTopMin, "Lbl_ADSShapingFlatTopMin")
-        Me.Lbl_ADSShapingFlatTopMin.Font = Nothing
         Me.Lbl_ADSShapingFlatTopMin.Name = "Lbl_ADSShapingFlatTopMin"
         '
         'Label31
         '
-        Me.Label31.AccessibleDescription = Nothing
-        Me.Label31.AccessibleName = Nothing
         resources.ApplyResources(Me.Label31, "Label31")
-        Me.Label31.Font = Nothing
         Me.Label31.Name = "Label31"
         '
         'HSB_ADSShapingFlatTop
         '
-        Me.HSB_ADSShapingFlatTop.AccessibleDescription = Nothing
-        Me.HSB_ADSShapingFlatTop.AccessibleName = Nothing
         resources.ApplyResources(Me.HSB_ADSShapingFlatTop, "HSB_ADSShapingFlatTop")
-        Me.HSB_ADSShapingFlatTop.BackgroundImage = Nothing
-        Me.HSB_ADSShapingFlatTop.Font = Nothing
         Me.HSB_ADSShapingFlatTop.LargeChange = 1
         Me.HSB_ADSShapingFlatTop.Name = "HSB_ADSShapingFlatTop"
         '
         'Lbl_ADSShapingRiseTimeMax
         '
-        Me.Lbl_ADSShapingRiseTimeMax.AccessibleDescription = Nothing
-        Me.Lbl_ADSShapingRiseTimeMax.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_ADSShapingRiseTimeMax, "Lbl_ADSShapingRiseTimeMax")
-        Me.Lbl_ADSShapingRiseTimeMax.Font = Nothing
         Me.Lbl_ADSShapingRiseTimeMax.Name = "Lbl_ADSShapingRiseTimeMax"
         '
         'Lbl_ADSShapingRiseTimeMin
         '
-        Me.Lbl_ADSShapingRiseTimeMin.AccessibleDescription = Nothing
-        Me.Lbl_ADSShapingRiseTimeMin.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_ADSShapingRiseTimeMin, "Lbl_ADSShapingRiseTimeMin")
-        Me.Lbl_ADSShapingRiseTimeMin.Font = Nothing
         Me.Lbl_ADSShapingRiseTimeMin.Name = "Lbl_ADSShapingRiseTimeMin"
         '
         'Label34
         '
-        Me.Label34.AccessibleDescription = Nothing
-        Me.Label34.AccessibleName = Nothing
         resources.ApplyResources(Me.Label34, "Label34")
-        Me.Label34.Font = Nothing
         Me.Label34.Name = "Label34"
         '
         'HSB_ADSShapingRiseTime
         '
-        Me.HSB_ADSShapingRiseTime.AccessibleDescription = Nothing
-        Me.HSB_ADSShapingRiseTime.AccessibleName = Nothing
         resources.ApplyResources(Me.HSB_ADSShapingRiseTime, "HSB_ADSShapingRiseTime")
-        Me.HSB_ADSShapingRiseTime.BackgroundImage = Nothing
-        Me.HSB_ADSShapingRiseTime.Font = Nothing
         Me.HSB_ADSShapingRiseTime.LargeChange = 1
         Me.HSB_ADSShapingRiseTime.Name = "HSB_ADSShapingRiseTime"
         '
         'Label18
         '
-        Me.Label18.AccessibleDescription = Nothing
-        Me.Label18.AccessibleName = Nothing
         resources.ApplyResources(Me.Label18, "Label18")
         Me.Label18.Name = "Label18"
         '
         'CBox_ADSBLRMode
         '
-        Me.CBox_ADSBLRMode.AccessibleDescription = Nothing
-        Me.CBox_ADSBLRMode.AccessibleName = Nothing
         resources.ApplyResources(Me.CBox_ADSBLRMode, "CBox_ADSBLRMode")
-        Me.CBox_ADSBLRMode.BackgroundImage = Nothing
         Me.CBox_ADSBLRMode.FormattingEnabled = True
         Me.CBox_ADSBLRMode.Items.AddRange(New Object() {resources.GetString("CBox_ADSBLRMode.Items"), resources.GetString("CBox_ADSBLRMode.Items1"), resources.GetString("CBox_ADSBLRMode.Items2")})
         Me.CBox_ADSBLRMode.Name = "CBox_ADSBLRMode"
         '
         'Label14
         '
-        Me.Label14.AccessibleDescription = Nothing
-        Me.Label14.AccessibleName = Nothing
         resources.ApplyResources(Me.Label14, "Label14")
         Me.Label14.Name = "Label14"
         '
         'CBox_ADSAquisitionMode
         '
-        Me.CBox_ADSAquisitionMode.AccessibleDescription = Nothing
-        Me.CBox_ADSAquisitionMode.AccessibleName = Nothing
         resources.ApplyResources(Me.CBox_ADSAquisitionMode, "CBox_ADSAquisitionMode")
-        Me.CBox_ADSAquisitionMode.BackgroundImage = Nothing
         Me.CBox_ADSAquisitionMode.FormattingEnabled = True
         Me.CBox_ADSAquisitionMode.Items.AddRange(New Object() {resources.GetString("CBox_ADSAquisitionMode.Items"), resources.GetString("CBox_ADSAquisitionMode.Items1"), resources.GetString("CBox_ADSAquisitionMode.Items2")})
         Me.CBox_ADSAquisitionMode.Name = "CBox_ADSAquisitionMode"
         '
         'GroupBox4
         '
-        Me.GroupBox4.AccessibleDescription = Nothing
-        Me.GroupBox4.AccessibleName = Nothing
-        resources.ApplyResources(Me.GroupBox4, "GroupBox4")
-        Me.GroupBox4.BackgroundImage = Nothing
+        Me.GroupBox4.Controls.Add(Me.Num_DSCentroid)
         Me.GroupBox4.Controls.Add(Me.Lbl_DSRatio)
         Me.GroupBox4.Controls.Add(Me.CBox_DSDivider)
         Me.GroupBox4.Controls.Add(Me.Lbl_DSSpacing)
         Me.GroupBox4.Controls.Add(Me.Label48)
         Me.GroupBox4.Controls.Add(Me.Lbl_DSWindow)
         Me.GroupBox4.Controls.Add(Me.Label49)
-        Me.GroupBox4.Controls.Add(Me.Lbl_DSCentroid)
         Me.GroupBox4.Controls.Add(Me.Label50)
         Me.GroupBox4.Controls.Add(Me.Label51)
         Me.GroupBox4.Controls.Add(Me.CBox_DSMode)
@@ -627,294 +470,184 @@ Partial Class frmMCAParameter_GainStabiAdd
         Me.GroupBox4.Controls.Add(Me.Lbl_DSCentroidMax)
         Me.GroupBox4.Controls.Add(Me.Lbl_DSCentroidMin)
         Me.GroupBox4.Controls.Add(Me.Label44)
-        Me.GroupBox4.Controls.Add(Me.HSB_DSCentroid)
+        resources.ApplyResources(Me.GroupBox4, "GroupBox4")
         Me.GroupBox4.ForeColor = System.Drawing.Color.White
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.TabStop = False
         '
+        'Num_DSCentroid
+        '
+        resources.ApplyResources(Me.Num_DSCentroid, "Num_DSCentroid")
+        Me.Num_DSCentroid.Name = "Num_DSCentroid"
+        '
         'Lbl_DSRatio
         '
-        Me.Lbl_DSRatio.AccessibleDescription = Nothing
-        Me.Lbl_DSRatio.AccessibleName = Nothing
-        resources.ApplyResources(Me.Lbl_DSRatio, "Lbl_DSRatio")
         Me.Lbl_DSRatio.BackColor = System.Drawing.Color.White
         Me.Lbl_DSRatio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Lbl_DSRatio.Font = Nothing
         Me.Lbl_DSRatio.ForeColor = System.Drawing.Color.Black
+        resources.ApplyResources(Me.Lbl_DSRatio, "Lbl_DSRatio")
         Me.Lbl_DSRatio.Name = "Lbl_DSRatio"
         '
         'CBox_DSDivider
         '
-        Me.CBox_DSDivider.AccessibleDescription = Nothing
-        Me.CBox_DSDivider.AccessibleName = Nothing
-        resources.ApplyResources(Me.CBox_DSDivider, "CBox_DSDivider")
-        Me.CBox_DSDivider.BackgroundImage = Nothing
-        Me.CBox_DSDivider.Font = Nothing
         Me.CBox_DSDivider.FormattingEnabled = True
         Me.CBox_DSDivider.Items.AddRange(New Object() {resources.GetString("CBox_DSDivider.Items"), resources.GetString("CBox_DSDivider.Items1")})
+        resources.ApplyResources(Me.CBox_DSDivider, "CBox_DSDivider")
         Me.CBox_DSDivider.Name = "CBox_DSDivider"
         '
         'Lbl_DSSpacing
         '
-        Me.Lbl_DSSpacing.AccessibleDescription = Nothing
-        Me.Lbl_DSSpacing.AccessibleName = Nothing
-        resources.ApplyResources(Me.Lbl_DSSpacing, "Lbl_DSSpacing")
         Me.Lbl_DSSpacing.BackColor = System.Drawing.Color.White
         Me.Lbl_DSSpacing.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Lbl_DSSpacing.Font = Nothing
         Me.Lbl_DSSpacing.ForeColor = System.Drawing.Color.Black
+        resources.ApplyResources(Me.Lbl_DSSpacing, "Lbl_DSSpacing")
         Me.Lbl_DSSpacing.Name = "Lbl_DSSpacing"
         '
         'Label48
         '
-        Me.Label48.AccessibleDescription = Nothing
-        Me.Label48.AccessibleName = Nothing
         resources.ApplyResources(Me.Label48, "Label48")
-        Me.Label48.Font = Nothing
         Me.Label48.Name = "Label48"
         '
         'Lbl_DSWindow
         '
-        Me.Lbl_DSWindow.AccessibleDescription = Nothing
-        Me.Lbl_DSWindow.AccessibleName = Nothing
-        resources.ApplyResources(Me.Lbl_DSWindow, "Lbl_DSWindow")
         Me.Lbl_DSWindow.BackColor = System.Drawing.Color.White
         Me.Lbl_DSWindow.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Lbl_DSWindow.Font = Nothing
         Me.Lbl_DSWindow.ForeColor = System.Drawing.Color.Black
+        resources.ApplyResources(Me.Lbl_DSWindow, "Lbl_DSWindow")
         Me.Lbl_DSWindow.Name = "Lbl_DSWindow"
         '
         'Label49
         '
-        Me.Label49.AccessibleDescription = Nothing
-        Me.Label49.AccessibleName = Nothing
         resources.ApplyResources(Me.Label49, "Label49")
-        Me.Label49.Font = Nothing
         Me.Label49.Name = "Label49"
-        '
-        'Lbl_DSCentroid
-        '
-        Me.Lbl_DSCentroid.AccessibleDescription = Nothing
-        Me.Lbl_DSCentroid.AccessibleName = Nothing
-        resources.ApplyResources(Me.Lbl_DSCentroid, "Lbl_DSCentroid")
-        Me.Lbl_DSCentroid.BackColor = System.Drawing.Color.White
-        Me.Lbl_DSCentroid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Lbl_DSCentroid.Font = Nothing
-        Me.Lbl_DSCentroid.ForeColor = System.Drawing.Color.Black
-        Me.Lbl_DSCentroid.Name = "Lbl_DSCentroid"
         '
         'Label50
         '
-        Me.Label50.AccessibleDescription = Nothing
-        Me.Label50.AccessibleName = Nothing
         resources.ApplyResources(Me.Label50, "Label50")
-        Me.Label50.Font = Nothing
         Me.Label50.Name = "Label50"
         '
         'Label51
         '
-        Me.Label51.AccessibleDescription = Nothing
-        Me.Label51.AccessibleName = Nothing
         resources.ApplyResources(Me.Label51, "Label51")
-        Me.Label51.Font = Nothing
         Me.Label51.Name = "Label51"
         '
         'CBox_DSMode
         '
-        Me.CBox_DSMode.AccessibleDescription = Nothing
-        Me.CBox_DSMode.AccessibleName = Nothing
-        resources.ApplyResources(Me.CBox_DSMode, "CBox_DSMode")
-        Me.CBox_DSMode.BackgroundImage = Nothing
-        Me.CBox_DSMode.Font = Nothing
         Me.CBox_DSMode.FormattingEnabled = True
+        resources.ApplyResources(Me.CBox_DSMode, "CBox_DSMode")
         Me.CBox_DSMode.Name = "CBox_DSMode"
         '
         'CBox_DSRatioMode
         '
-        Me.CBox_DSRatioMode.AccessibleDescription = Nothing
-        Me.CBox_DSRatioMode.AccessibleName = Nothing
-        resources.ApplyResources(Me.CBox_DSRatioMode, "CBox_DSRatioMode")
-        Me.CBox_DSRatioMode.BackgroundImage = Nothing
-        Me.CBox_DSRatioMode.Font = Nothing
         Me.CBox_DSRatioMode.FormattingEnabled = True
         Me.CBox_DSRatioMode.Items.AddRange(New Object() {resources.GetString("CBox_DSRatioMode.Items"), resources.GetString("CBox_DSRatioMode.Items1")})
+        resources.ApplyResources(Me.CBox_DSRatioMode, "CBox_DSRatioMode")
         Me.CBox_DSRatioMode.Name = "CBox_DSRatioMode"
         '
         'CBox_DSRange
         '
-        Me.CBox_DSRange.AccessibleDescription = Nothing
-        Me.CBox_DSRange.AccessibleName = Nothing
-        resources.ApplyResources(Me.CBox_DSRange, "CBox_DSRange")
-        Me.CBox_DSRange.BackgroundImage = Nothing
-        Me.CBox_DSRange.Font = Nothing
         Me.CBox_DSRange.FormattingEnabled = True
         Me.CBox_DSRange.Items.AddRange(New Object() {resources.GetString("CBox_DSRange.Items"), resources.GetString("CBox_DSRange.Items1"), resources.GetString("CBox_DSRange.Items2")})
+        resources.ApplyResources(Me.CBox_DSRange, "CBox_DSRange")
         Me.CBox_DSRange.Name = "CBox_DSRange"
         '
         'Lbl_DSRatioMax
         '
-        Me.Lbl_DSRatioMax.AccessibleDescription = Nothing
-        Me.Lbl_DSRatioMax.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_DSRatioMax, "Lbl_DSRatioMax")
-        Me.Lbl_DSRatioMax.Font = Nothing
         Me.Lbl_DSRatioMax.Name = "Lbl_DSRatioMax"
         '
         'Lbl_DSRatioMin
         '
-        Me.Lbl_DSRatioMin.AccessibleDescription = Nothing
-        Me.Lbl_DSRatioMin.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_DSRatioMin, "Lbl_DSRatioMin")
-        Me.Lbl_DSRatioMin.Font = Nothing
         Me.Lbl_DSRatioMin.Name = "Lbl_DSRatioMin"
         '
         'Label47
         '
-        Me.Label47.AccessibleDescription = Nothing
-        Me.Label47.AccessibleName = Nothing
         resources.ApplyResources(Me.Label47, "Label47")
-        Me.Label47.Font = Nothing
         Me.Label47.Name = "Label47"
         '
         'HSB_DSRatio
         '
-        Me.HSB_DSRatio.AccessibleDescription = Nothing
-        Me.HSB_DSRatio.AccessibleName = Nothing
         resources.ApplyResources(Me.HSB_DSRatio, "HSB_DSRatio")
-        Me.HSB_DSRatio.BackgroundImage = Nothing
-        Me.HSB_DSRatio.Font = Nothing
         Me.HSB_DSRatio.LargeChange = 1
         Me.HSB_DSRatio.Name = "HSB_DSRatio"
         '
         'Lbl_DSSpacingMax
         '
-        Me.Lbl_DSSpacingMax.AccessibleDescription = Nothing
-        Me.Lbl_DSSpacingMax.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_DSSpacingMax, "Lbl_DSSpacingMax")
-        Me.Lbl_DSSpacingMax.Font = Nothing
         Me.Lbl_DSSpacingMax.Name = "Lbl_DSSpacingMax"
         '
         'Lbl_DSSpacingMin
         '
-        Me.Lbl_DSSpacingMin.AccessibleDescription = Nothing
-        Me.Lbl_DSSpacingMin.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_DSSpacingMin, "Lbl_DSSpacingMin")
-        Me.Lbl_DSSpacingMin.Font = Nothing
         Me.Lbl_DSSpacingMin.Name = "Lbl_DSSpacingMin"
         '
         'Label38
         '
-        Me.Label38.AccessibleDescription = Nothing
-        Me.Label38.AccessibleName = Nothing
         resources.ApplyResources(Me.Label38, "Label38")
-        Me.Label38.Font = Nothing
         Me.Label38.Name = "Label38"
         '
         'HSB_DSSpacing
         '
-        Me.HSB_DSSpacing.AccessibleDescription = Nothing
-        Me.HSB_DSSpacing.AccessibleName = Nothing
         resources.ApplyResources(Me.HSB_DSSpacing, "HSB_DSSpacing")
-        Me.HSB_DSSpacing.BackgroundImage = Nothing
-        Me.HSB_DSSpacing.Font = Nothing
         Me.HSB_DSSpacing.LargeChange = 1
         Me.HSB_DSSpacing.Name = "HSB_DSSpacing"
         '
         'Lbl_DSWindowMax
         '
-        Me.Lbl_DSWindowMax.AccessibleDescription = Nothing
-        Me.Lbl_DSWindowMax.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_DSWindowMax, "Lbl_DSWindowMax")
-        Me.Lbl_DSWindowMax.Font = Nothing
         Me.Lbl_DSWindowMax.Name = "Lbl_DSWindowMax"
         '
         'Lbl_DSWindowMin
         '
-        Me.Lbl_DSWindowMin.AccessibleDescription = Nothing
-        Me.Lbl_DSWindowMin.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_DSWindowMin, "Lbl_DSWindowMin")
-        Me.Lbl_DSWindowMin.Font = Nothing
         Me.Lbl_DSWindowMin.Name = "Lbl_DSWindowMin"
         '
         'Label41
         '
-        Me.Label41.AccessibleDescription = Nothing
-        Me.Label41.AccessibleName = Nothing
         resources.ApplyResources(Me.Label41, "Label41")
-        Me.Label41.Font = Nothing
         Me.Label41.Name = "Label41"
         '
         'HSB_DSWindow
         '
-        Me.HSB_DSWindow.AccessibleDescription = Nothing
-        Me.HSB_DSWindow.AccessibleName = Nothing
         resources.ApplyResources(Me.HSB_DSWindow, "HSB_DSWindow")
-        Me.HSB_DSWindow.BackgroundImage = Nothing
-        Me.HSB_DSWindow.Font = Nothing
         Me.HSB_DSWindow.LargeChange = 1
         Me.HSB_DSWindow.Name = "HSB_DSWindow"
         '
         'Lbl_DSCentroidMax
         '
-        Me.Lbl_DSCentroidMax.AccessibleDescription = Nothing
-        Me.Lbl_DSCentroidMax.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_DSCentroidMax, "Lbl_DSCentroidMax")
-        Me.Lbl_DSCentroidMax.Font = Nothing
         Me.Lbl_DSCentroidMax.Name = "Lbl_DSCentroidMax"
         '
         'Lbl_DSCentroidMin
         '
-        Me.Lbl_DSCentroidMin.AccessibleDescription = Nothing
-        Me.Lbl_DSCentroidMin.AccessibleName = Nothing
         resources.ApplyResources(Me.Lbl_DSCentroidMin, "Lbl_DSCentroidMin")
-        Me.Lbl_DSCentroidMin.Font = Nothing
         Me.Lbl_DSCentroidMin.Name = "Lbl_DSCentroidMin"
         '
         'Label44
         '
-        Me.Label44.AccessibleDescription = Nothing
-        Me.Label44.AccessibleName = Nothing
         resources.ApplyResources(Me.Label44, "Label44")
-        Me.Label44.Font = Nothing
         Me.Label44.Name = "Label44"
-        '
-        'HSB_DSCentroid
-        '
-        Me.HSB_DSCentroid.AccessibleDescription = Nothing
-        Me.HSB_DSCentroid.AccessibleName = Nothing
-        resources.ApplyResources(Me.HSB_DSCentroid, "HSB_DSCentroid")
-        Me.HSB_DSCentroid.BackgroundImage = Nothing
-        Me.HSB_DSCentroid.Font = Nothing
-        Me.HSB_DSCentroid.LargeChange = 1
-        Me.HSB_DSCentroid.Name = "HSB_DSCentroid"
         '
         'BtnSet
         '
-        Me.BtnSet.AccessibleDescription = Nothing
-        Me.BtnSet.AccessibleName = Nothing
-        resources.ApplyResources(Me.BtnSet, "BtnSet")
         Me.BtnSet.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BtnSet.BackgroundImage = Nothing
+        resources.ApplyResources(Me.BtnSet, "BtnSet")
         Me.BtnSet.Name = "BtnSet"
         Me.BtnSet.UseVisualStyleBackColor = False
         '
         'BtnReset
         '
-        Me.BtnReset.AccessibleDescription = Nothing
-        Me.BtnReset.AccessibleName = Nothing
-        resources.ApplyResources(Me.BtnReset, "BtnReset")
         Me.BtnReset.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BtnReset.BackgroundImage = Nothing
+        resources.ApplyResources(Me.BtnReset, "BtnReset")
         Me.BtnReset.Name = "BtnReset"
         Me.BtnReset.UseVisualStyleBackColor = False
         '
         'BtnExpandMode
         '
-        Me.BtnExpandMode.AccessibleDescription = Nothing
-        Me.BtnExpandMode.AccessibleName = Nothing
-        resources.ApplyResources(Me.BtnExpandMode, "BtnExpandMode")
         Me.BtnExpandMode.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.BtnExpandMode.BackgroundImage = Global.FHT59N3.My.Resources.Resources.Zoom
-        Me.BtnExpandMode.Font = Nothing
+        resources.ApplyResources(Me.BtnExpandMode, "BtnExpandMode")
         Me.BtnExpandMode.Name = "BtnExpandMode"
         Me.BtnExpandMode.UseVisualStyleBackColor = False
         '
@@ -924,21 +657,15 @@ Partial Class frmMCAParameter_GainStabiAdd
         '
         'SpectralDisplay
         '
-        Me.SpectralDisplay.AccessibleDescription = Nothing
-        Me.SpectralDisplay.AccessibleName = Nothing
         resources.ApplyResources(Me.SpectralDisplay, "SpectralDisplay")
-        Me.SpectralDisplay.Font = Nothing
         Me.SpectralDisplay.Name = "SpectralDisplay"
         Me.SpectralDisplay.OcxState = CType(resources.GetObject("SpectralDisplay.OcxState"), System.Windows.Forms.AxHost.State)
         '
         'frmMCAParameter_GainStabiAdd
         '
-        Me.AccessibleDescription = Nothing
-        Me.AccessibleName = Nothing
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.BackgroundImage = Nothing
         Me.ControlBox = False
         Me.Controls.Add(Me.BtnExpandMode)
         Me.Controls.Add(Me.SpectralDisplay)
@@ -949,9 +676,7 @@ Partial Class frmMCAParameter_GainStabiAdd
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.BtnAccept)
         Me.Controls.Add(Me.BtnClose)
-        Me.Font = Nothing
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
-        Me.Icon = Nothing
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmMCAParameter_GainStabiAdd"
@@ -961,6 +686,7 @@ Partial Class frmMCAParameter_GainStabiAdd
         Me.GroupBox3.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        CType(Me.Num_DSCentroid, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpectralDisplay, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -1021,7 +747,6 @@ Partial Class frmMCAParameter_GainStabiAdd
     Friend WithEvents Lbl_DSCentroidMax As System.Windows.Forms.Label
     Friend WithEvents Lbl_DSCentroidMin As System.Windows.Forms.Label
     Friend WithEvents Label44 As System.Windows.Forms.Label
-    Friend WithEvents HSB_DSCentroid As System.Windows.Forms.HScrollBar
     Friend WithEvents Label48 As System.Windows.Forms.Label
     Friend WithEvents Label49 As System.Windows.Forms.Label
     Friend WithEvents Label50 As System.Windows.Forms.Label
@@ -1039,7 +764,6 @@ Partial Class frmMCAParameter_GainStabiAdd
     Friend WithEvents Lbl_DSRatio As System.Windows.Forms.Label
     Friend WithEvents Lbl_DSSpacing As System.Windows.Forms.Label
     Friend WithEvents Lbl_DSWindow As System.Windows.Forms.Label
-    Friend WithEvents Lbl_DSCentroid As System.Windows.Forms.Label
     Friend WithEvents BtnSet As System.Windows.Forms.Button
     Friend WithEvents BtnReset As System.Windows.Forms.Button
     Friend WithEvents SpectralDisplay As AxCanberraDataDisplayLib.AxMvc
@@ -1047,4 +771,5 @@ Partial Class frmMCAParameter_GainStabiAdd
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents Num_DSCentroid As NumericUpDown
 End Class
