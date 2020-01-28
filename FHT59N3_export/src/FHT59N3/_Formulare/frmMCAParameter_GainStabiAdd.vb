@@ -107,47 +107,41 @@ Public Class frmMCAParameter_GainStabiAdd
                 End If
             Next
 
-            HSB_ADSShapingRiseTime.Minimum = CType(_LynxParCopy.FilterRiseTimeMinMax(0), Integer)
+            Num_ADSShapingRiseTime.Minimum = CType(_LynxParCopy.FilterRiseTimeMinMax(0), Integer)
             Lbl_ADSShapingRiseTimeMin.Text = Format(_LynxParCopy.FilterRiseTimeMinMax(0) / CType(_LynxParCopy.FilterRiseTimeMinMax(2), Integer), CType(_LynxParCopy.FilterRiseTimeMinMax(3), String)) & CType(_LynxParCopy.FilterRiseTimeMinMax(4), String)
-            HSB_ADSShapingRiseTime.Maximum = CType(_LynxParCopy.FilterRiseTimeMinMax(1), Integer)
+            Num_ADSShapingRiseTime.Maximum = CType(_LynxParCopy.FilterRiseTimeMinMax(1), Integer)
             Lbl_ADSShapingRiseTimeMax.Text = Format(_LynxParCopy.FilterRiseTimeMinMax(1) / CType(_LynxParCopy.FilterRiseTimeMinMax(2), Integer), CType(_LynxParCopy.FilterRiseTimeMinMax(3), String)) & CType(_LynxParCopy.FilterRiseTimeMinMax(4), String)
-            HSB_ADSShapingRiseTime.Value = CType(_LynxParCopy.AMP_FilterRiseTime * CType(_LynxParCopy.FilterRiseTimeMinMax(2), Integer), Integer)
-            Lbl_ADSShapingRiseTime.Text = Format(_LynxParCopy.AMP_FilterRiseTime, CType(_LynxParCopy.FilterRiseTimeMinMax(3), String))
+            Num_ADSShapingRiseTime.Value = CType(_LynxParCopy.AMP_FilterRiseTime * CType(_LynxParCopy.FilterRiseTimeMinMax(2), Integer), Integer)
 
-            HSB_ADSShapingFlatTop.Minimum = CType(_LynxParCopy.FilterFlatTopMinMax(0), Integer)
+            Num_ADSShapingFlatTop.Minimum = CType(_LynxParCopy.FilterFlatTopMinMax(0), Integer)
             Lbl_ADSShapingFlatTopMin.Text = Format(_LynxParCopy.FilterFlatTopMinMax(0) / CType(_LynxParCopy.FilterFlatTopMinMax(2), Integer), CType(_LynxParCopy.FilterFlatTopMinMax(3), String)) & CType(_LynxParCopy.FilterFlatTopMinMax(4), String)
-            HSB_ADSShapingFlatTop.Maximum = CType(_LynxParCopy.FilterFlatTopMinMax(1), Integer)
+            Num_ADSShapingFlatTop.Maximum = CType(_LynxParCopy.FilterFlatTopMinMax(1), Integer)
             Lbl_ADSShapingFlatTopMax.Text = Format(_LynxParCopy.FilterFlatTopMinMax(1) / CType(_LynxParCopy.FilterFlatTopMinMax(2), Integer), CType(_LynxParCopy.FilterFlatTopMinMax(3), String)) & CType(_LynxParCopy.FilterFlatTopMinMax(4), String)
-            HSB_ADSShapingFlatTop.Value = CType(_LynxParCopy.AMP_FilterFlatTop * CType(_LynxParCopy.FilterFlatTopMinMax(2), Integer), Integer)
-            Lbl_ADSShapingFlatTop.Text = Format(_LynxParCopy.AMP_FilterFlatTop, CType(_LynxParCopy.FilterFlatTopMinMax(3), String))
+            Num_ADSShapingFlatTop.Value = CType(_LynxParCopy.AMP_FilterFlatTop * CType(_LynxParCopy.FilterFlatTopMinMax(2), Integer), Integer)
 
-            HSB_ADSPoleZero.Minimum = CType(_LynxParCopy.AmplifierPoleZeroMinMax(0), Integer)
+            Num_ADSPoleZero.Minimum = CType(_LynxParCopy.AmplifierPoleZeroMinMax(0), Integer)
             Lbl_ADSPoleZeroMin.Text = Format(_LynxParCopy.AmplifierPoleZeroMinMax(0) / CType(_LynxParCopy.AmplifierPoleZeroMinMax(2), Integer), CType(_LynxParCopy.AmplifierPoleZeroMinMax(3), String)) & CType(_LynxParCopy.AmplifierPoleZeroMinMax(4), String)
-            HSB_ADSPoleZero.Maximum = CType(_LynxParCopy.AmplifierPoleZeroMinMax(1), Integer)
+            Num_ADSPoleZero.Maximum = CType(_LynxParCopy.AmplifierPoleZeroMinMax(1), Integer)
             Lbl_ADSPoleZeroMax.Text = Format(_LynxParCopy.AmplifierPoleZeroMinMax(1) / CType(_LynxParCopy.AmplifierPoleZeroMinMax(2), Integer), CType(_LynxParCopy.AmplifierPoleZeroMinMax(3), String)) & CType(_LynxParCopy.AmplifierPoleZeroMinMax(4), String)
-            HSB_ADSPoleZero.Value = CType(_LynxParCopy.AMP_PoleZero * CType(_LynxParCopy.AmplifierPoleZeroMinMax(2), Integer), Integer)
-            Lbl_ADSPoleZero.Text = Format(_LynxParCopy.AMP_PoleZero, CType(_LynxParCopy.AmplifierPoleZeroMinMax(3), String))
+            Num_ADSPoleZero.Value = CType(_LynxParCopy.AMP_PoleZero * CType(_LynxParCopy.AmplifierPoleZeroMinMax(2), Integer), Integer)
 
-            HSB_GainFineGain.Minimum = CType(_LynxParCopy.AmplifierFineGainMinMax(0), Integer)
+            Num_GainFineGain.Minimum = CType(_LynxParCopy.AmplifierFineGainMinMax(0), Integer)
             Lbl_GainFineGainMin.Text = Format(_LynxParCopy.AmplifierFineGainMinMax(0) / CType(_LynxParCopy.AmplifierFineGainMinMax(2), Integer), CType(_LynxParCopy.AmplifierFineGainMinMax(3), String)) & CType(_LynxParCopy.AmplifierFineGainMinMax(4), String)
-            HSB_GainFineGain.Maximum = CType(_LynxParCopy.AmplifierFineGainMinMax(1), Integer)
+            Num_GainFineGain.Maximum = CType(_LynxParCopy.AmplifierFineGainMinMax(1), Integer)
             Lbl_GainFineGainMax.Text = Format(_LynxParCopy.AmplifierFineGainMinMax(1) / CType(_LynxParCopy.AmplifierFineGainMinMax(2), Integer), CType(_LynxParCopy.AmplifierFineGainMinMax(3), String)) & CType(_LynxParCopy.AmplifierFineGainMinMax(4), String)
-            HSB_GainFineGain.Value = CType(_LynxParCopy.AMP_FineGain * CType(_LynxParCopy.AmplifierFineGainMinMax(2), Integer), Integer)
-            Lbl_GainFineGain.Text = Format(_LynxParCopy.AMP_FineGain, CType(_LynxParCopy.AmplifierFineGainMinMax(3), String))
+            Num_GainFineGain.Value = CType(_LynxParCopy.AMP_FineGain * CType(_LynxParCopy.AmplifierFineGainMinMax(2), Integer), Integer)
 
-            HSB_GainLLD.Minimum = CType(_LynxParCopy.ADCLLDMinMax(0), Integer)
+            Num_GainLLD.Minimum = CType(_LynxParCopy.ADCLLDMinMax(0), Integer)
             Lbl_GainLLDMin.Text = Format(_LynxParCopy.ADCLLDMinMax(0) / CType(_LynxParCopy.ADCLLDMinMax(2), Integer), CType(_LynxParCopy.ADCLLDMinMax(3), String)) & CType(_LynxParCopy.ADCLLDMinMax(4), String)
-            HSB_GainLLD.Maximum = CType(_LynxParCopy.ADCLLDMinMax(1), Integer)
+            Num_GainLLD.Maximum = CType(_LynxParCopy.ADCLLDMinMax(1), Integer)
             Lbl_GainLLDMax.Text = Format(_LynxParCopy.ADCLLDMinMax(1) / CType(_LynxParCopy.ADCLLDMinMax(2), Integer), CType(_LynxParCopy.ADCLLDMinMax(3), String)) & CType(_LynxParCopy.ADCLLDMinMax(4), String)
-            HSB_GainLLD.Value = CType(_LynxParCopy.ADC_LLD * CType(_LynxParCopy.ADCLLDMinMax(2), Integer), Integer)
-            Lbl_GainLLD.Text = Format(_LynxParCopy.ADC_LLD, CType(_LynxParCopy.ADCLLDMinMax(3), String))
+            Num_GainLLD.Value = CType(_LynxParCopy.ADC_LLD * CType(_LynxParCopy.ADCLLDMinMax(2), Integer), Integer)
 
-            HSB_GainULD.Minimum = CType(_LynxParCopy.ADCULDMinMax(0), Integer)
+            Num_GainULD.Minimum = CType(_LynxParCopy.ADCULDMinMax(0), Integer)
             Lbl_GainULDMin.Text = Format(_LynxParCopy.ADCULDMinMax(0) / CType(_LynxParCopy.ADCULDMinMax(2), Integer), CType(_LynxParCopy.ADCULDMinMax(3), String)) & CType(_LynxParCopy.ADCULDMinMax(4), String)
-            HSB_GainULD.Maximum = CType(_LynxParCopy.ADCULDMinMax(1), Integer)
+            Num_GainULD.Maximum = CType(_LynxParCopy.ADCULDMinMax(1), Integer)
             Lbl_GainULDMax.Text = Format(_LynxParCopy.ADCULDMinMax(1) / CType(_LynxParCopy.ADCULDMinMax(2), Integer), CType(_LynxParCopy.ADCULDMinMax(3), String)) & CType(_LynxParCopy.ADCULDMinMax(4), String)
-            HSB_GainULD.Value = CType(_LynxParCopy.ADC_ULD * CType(_LynxParCopy.ADCULDMinMax(2), Integer), Integer)
-            Lbl_GainULD.Text = Format(_LynxParCopy.ADC_ULD, CType(_LynxParCopy.ADCULDMinMax(3), String))
+            Num_GainULD.Value = CType(_LynxParCopy.ADC_ULD * CType(_LynxParCopy.ADCULDMinMax(2), Integer), Integer)
 
             Num_DSCentroid.Minimum = CType(_LynxParCopy.STABCentroidMinMax(0), Integer)
             Lbl_DSCentroidMin.Text = Format(_LynxParCopy.STABCentroidMinMax(0) / CType(_LynxParCopy.STABCentroidMinMax(2), Integer), CType(_LynxParCopy.STABCentroidMinMax(3), String)) & CType(_LynxParCopy.STABCentroidMinMax(4), String)
@@ -155,26 +149,23 @@ Public Class frmMCAParameter_GainStabiAdd
             Lbl_DSCentroidMax.Text = Format(_LynxParCopy.STABCentroidMinMax(1) / CType(_LynxParCopy.STABCentroidMinMax(2), Integer), CType(_LynxParCopy.STABCentroidMinMax(3), String)) & CType(_LynxParCopy.STABCentroidMinMax(4), String)
             Num_DSCentroid.Value = CType(_LynxParCopy.STAB_Centroid * CType(_LynxParCopy.STABCentroidMinMax(2), Integer), Integer)
 
-            HSB_DSWindow.Minimum = CType(_LynxParCopy.STABWindowMinMax(0), Integer)
+            Num_DSWindow.Minimum = CType(_LynxParCopy.STABWindowMinMax(0), Integer)
             Lbl_DSWindowMin.Text = Format(_LynxParCopy.STABWindowMinMax(0) / CType(_LynxParCopy.STABWindowMinMax(2), Integer), CType(_LynxParCopy.STABWindowMinMax(3), String)) & CType(_LynxParCopy.STABWindowMinMax(4), String)
-            HSB_DSWindow.Maximum = CType(_LynxParCopy.STABWindowMinMax(1), Integer)
+            Num_DSWindow.Maximum = CType(_LynxParCopy.STABWindowMinMax(1), Integer)
             Lbl_DSWindowMax.Text = Format(_LynxParCopy.STABWindowMinMax(1) / CType(_LynxParCopy.STABWindowMinMax(2), Integer), CType(_LynxParCopy.STABWindowMinMax(3), String)) & CType(_LynxParCopy.STABWindowMinMax(4), String)
-            HSB_DSWindow.Value = CType(_LynxParCopy.STAB_Window * CType(_LynxParCopy.STABWindowMinMax(2), Integer), Integer)
-            Lbl_DSWindow.Text = Format(_LynxParCopy.STAB_Window, CType(_LynxParCopy.STABWindowMinMax(3), String))
+            Num_DSWindow.Value = CType(_LynxParCopy.STAB_Window * CType(_LynxParCopy.STABWindowMinMax(2), Integer), Integer)
 
-            HSB_DSSpacing.Minimum = CType(_LynxParCopy.STABSpacingMinMax(0), Integer)
+            Num_DSSpacing.Minimum = CType(_LynxParCopy.STABSpacingMinMax(0), Integer)
             Lbl_DSSpacingMin.Text = Format(_LynxParCopy.STABSpacingMinMax(0) / CType(_LynxParCopy.STABSpacingMinMax(2), Integer), CType(_LynxParCopy.STABSpacingMinMax(3), String)) & CType(_LynxParCopy.STABSpacingMinMax(4), String)
-            HSB_DSSpacing.Maximum = CType(_LynxParCopy.STABSpacingMinMax(1), Integer)
+            Num_DSSpacing.Maximum = CType(_LynxParCopy.STABSpacingMinMax(1), Integer)
             Lbl_DSSpacingMax.Text = Format(_LynxParCopy.STABSpacingMinMax(1) / CType(_LynxParCopy.STABSpacingMinMax(2), Integer), CType(_LynxParCopy.STABSpacingMinMax(3), String)) & CType(_LynxParCopy.STABSpacingMinMax(4), String)
-            HSB_DSSpacing.Value = CType(_LynxParCopy.STAB_Spacing * CType(_LynxParCopy.STABSpacingMinMax(2), Integer), Integer)
-            Lbl_DSSpacing.Text = Format(_LynxParCopy.STAB_Spacing, CType(_LynxParCopy.STABSpacingMinMax(3), String))
+            Num_DSSpacing.Value = CType(_LynxParCopy.STAB_Spacing * CType(_LynxParCopy.STABSpacingMinMax(2), Integer), Integer)
 
-            HSB_DSRatio.Minimum = CType(_LynxParCopy.STABRatioMinMax(0), Integer)
+            Num_DSRatio.Minimum = CType(_LynxParCopy.STABRatioMinMax(0), Integer)
             Lbl_DSRatioMin.Text = Format(_LynxParCopy.STABRatioMinMax(0) / CType(_LynxParCopy.STABRatioMinMax(2), Integer), CType(_LynxParCopy.STABRatioMinMax(3), String)) & CType(_LynxParCopy.STABRatioMinMax(4), String)
-            HSB_DSRatio.Maximum = CType(_LynxParCopy.STABRatioMinMax(1), Integer)
+            Num_DSRatio.Maximum = CType(_LynxParCopy.STABRatioMinMax(1), Integer)
             Lbl_DSRatioMax.Text = Format(_LynxParCopy.STABRatioMinMax(1) / CType(_LynxParCopy.STABRatioMinMax(2), Integer), CType(_LynxParCopy.STABRatioMinMax(3), String)) & CType(_LynxParCopy.STABRatioMinMax(4), String)
-            HSB_DSRatio.Value = CType(_LynxParCopy.STAB_WindowRatio * CType(_LynxParCopy.STABRatioMinMax(2), Integer), Integer)
-            Lbl_DSRatio.Text = Format(_LynxParCopy.STAB_WindowRatio, CType(_LynxParCopy.STABRatioMinMax(3), String))
+            Num_DSRatio.Value = CType(_LynxParCopy.STAB_WindowRatio * CType(_LynxParCopy.STABRatioMinMax(2), Integer), Integer)
 
             _Initialized = True
             _MyControlCenter.MCA_StartMeasurement(60, True, False)
@@ -209,30 +200,6 @@ Public Class frmMCAParameter_GainStabiAdd
                 GUI_ShowMessageBox(FHT59N3Core.FHT59N3_LynxParams.MSG_SelectOneItemOfList, "OK", "", "", MYCOL_THERMOGREEN, Color.White)
                 CBox_ADSBLRMode.SelectedIndex = 0
             End If
-        Catch ex As Exception
-            Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
-        End Try
-    End Sub
-
-    Private Sub HSB_ADSShapingRiseTime_Scroll(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ScrollEventArgs) Handles HSB_ADSShapingRiseTime.Scroll
-        Try
-            Lbl_ADSShapingRiseTime.Text = Format(HSB_ADSShapingRiseTime.Value / CType(_LynxParCopy.FilterRiseTimeMinMax(2), Integer), CType(_LynxParCopy.FilterRiseTimeMinMax(3), String))
-        Catch ex As Exception
-            Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
-        End Try
-    End Sub
-
-    Private Sub HSB_ADSShapingFlatTop_Scroll(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ScrollEventArgs) Handles HSB_ADSShapingFlatTop.Scroll
-        Try
-            Lbl_ADSShapingFlatTop.Text = Format(HSB_ADSShapingFlatTop.Value / CType(_LynxParCopy.FilterFlatTopMinMax(2), Integer), CType(_LynxParCopy.FilterFlatTopMinMax(3), String))
-        Catch ex As Exception
-            Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
-        End Try
-    End Sub
-
-    Private Sub HSB_ADSPoleZero_Scroll(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ScrollEventArgs) Handles HSB_ADSPoleZero.Scroll
-        Try
-            Lbl_ADSPoleZero.Text = Format(HSB_ADSPoleZero.Value / CType(_LynxParCopy.AmplifierPoleZeroMinMax(2), Integer), CType(_LynxParCopy.AmplifierPoleZeroMinMax(3), String))
         Catch ex As Exception
             Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
         End Try
@@ -277,56 +244,6 @@ Public Class frmMCAParameter_GainStabiAdd
                 GUI_ShowMessageBox(FHT59N3Core.FHT59N3_LynxParams.MSG_SelectOneItemOfList, "OK", "", "", MYCOL_THERMOGREEN, Color.White)
                 CBox_GainCoarseGain.SelectedIndex = 0
             End If
-        Catch ex As Exception
-            Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
-        End Try
-    End Sub
-
-    Private Sub HSB_GainFineGain_Scroll(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ScrollEventArgs) Handles HSB_GainFineGain.Scroll
-        Try
-            Lbl_GainFineGain.Text = Format(HSB_GainFineGain.Value / CType(_LynxParCopy.AmplifierFineGainMinMax(2), Integer), CType(_LynxParCopy.AmplifierFineGainMinMax(3), String))
-        Catch ex As Exception
-            Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
-        End Try
-    End Sub
-
-    Private Sub HSB_GainLLD_Scroll(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ScrollEventArgs) Handles HSB_GainLLD.Scroll
-        Try
-            Lbl_GainLLD.Text = Format(HSB_GainLLD.Value / CType(_LynxParCopy.ADCLLDMinMax(2), Integer), CType(_LynxParCopy.ADCLLDMinMax(3), String))
-        Catch ex As Exception
-            Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
-        End Try
-    End Sub
-
-    Private Sub HSB_GainULD_Scroll(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ScrollEventArgs) Handles HSB_GainULD.Scroll
-        Try
-            Lbl_GainULD.Text = Format(HSB_GainULD.Value / CType(_LynxParCopy.ADCULDMinMax(2), Integer), CType(_LynxParCopy.ADCULDMinMax(3), String))
-        Catch ex As Exception
-            Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
-        End Try
-    End Sub
-
-
-
-    Private Sub HSB_DSWindow_Scroll(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ScrollEventArgs) Handles HSB_DSWindow.Scroll
-        Try
-            Lbl_DSWindow.Text = Format(HSB_DSWindow.Value / CType(_LynxParCopy.STABWindowMinMax(2), Integer), CType(_LynxParCopy.STABWindowMinMax(3), String))
-        Catch ex As Exception
-            Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
-        End Try
-    End Sub
-
-    Private Sub HSB_DSSpacing_Scroll(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ScrollEventArgs) Handles HSB_DSSpacing.Scroll
-        Try
-            Lbl_DSSpacing.Text = Format(HSB_DSSpacing.Value / CType(_LynxParCopy.STABSpacingMinMax(2), Integer), CType(_LynxParCopy.STABSpacingMinMax(3), String))
-        Catch ex As Exception
-            Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
-        End Try
-    End Sub
-
-    Private Sub HSB_DSRatio_Scroll(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ScrollEventArgs) Handles HSB_DSRatio.Scroll
-        Try
-            Lbl_DSRatio.Text = Format(HSB_DSRatio.Value / CType(_LynxParCopy.STABRatioMinMax(2), Integer), CType(_LynxParCopy.STABRatioMinMax(3), String))
         Catch ex As Exception
             Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
         End Try
@@ -396,21 +313,21 @@ Public Class frmMCAParameter_GainStabiAdd
             Me.Cursor = Cursors.WaitCursor
             _LynxParCopy.AMP_InputPolarity = _LynxParCopy.Polarity(CBox_GainInputPolarity.Text)
             _LynxParCopy.AMP_CoarseGain = _LynxParCopy.CoarseGainL(CBox_GainCoarseGain.Text)
-            _LynxParCopy.AMP_FineGain = CType(HSB_GainFineGain.Value / CType(_LynxParCopy.AmplifierFineGainMinMax(2), Integer), Double)
-            _LynxParCopy.AMP_PoleZero = CType(HSB_ADSPoleZero.Value / CType(_LynxParCopy.AmplifierPoleZeroMinMax(2), Integer), Double)
+            _LynxParCopy.AMP_FineGain = CType(Num_GainFineGain.Value / CType(_LynxParCopy.AmplifierFineGainMinMax(2), Integer), Double)
+            _LynxParCopy.AMP_PoleZero = CType(Num_ADSPoleZero.Value / CType(_LynxParCopy.AmplifierPoleZeroMinMax(2), Integer), Double)
             _LynxParCopy.AMP_BLRMode = _LynxParCopy.BLR(CBox_ADSBLRMode.Text)
-            _LynxParCopy.AMP_FilterRiseTime = CType(HSB_ADSShapingRiseTime.Value / CType(_LynxParCopy.FilterRiseTimeMinMax(2), Integer), Double)
-            _LynxParCopy.AMP_FilterFlatTop = CType(HSB_ADSShapingFlatTop.Value / CType(_LynxParCopy.FilterFlatTopMinMax(2), Integer), Double)
+            _LynxParCopy.AMP_FilterRiseTime = CType(Num_ADSShapingRiseTime.Value / CType(_LynxParCopy.FilterRiseTimeMinMax(2), Integer), Double)
+            _LynxParCopy.AMP_FilterFlatTop = CType(Num_ADSShapingFlatTop.Value / CType(_LynxParCopy.FilterFlatTopMinMax(2), Integer), Double)
             _LynxParCopy.ADC_AcquisitionMode = _LynxParCopy.Acq(CBox_ADSAquisitionMode.Text)
             _LynxParCopy.ADC_LLDMode = _LynxParCopy.ManAuto(CBox_GainLLDMode.Text)
-            _LynxParCopy.ADC_LLD = CType(HSB_GainLLD.Value / CType(_LynxParCopy.ADCLLDMinMax(2), Integer), Double)
-            _LynxParCopy.ADC_ULD = CType(HSB_GainULD.Value / CType(_LynxParCopy.ADCULDMinMax(2), Integer), Double)
+            _LynxParCopy.ADC_LLD = CType(Num_GainLLD.Value / CType(_LynxParCopy.ADCLLDMinMax(2), Integer), Double)
+            _LynxParCopy.ADC_ULD = CType(Num_GainULD.Value / CType(_LynxParCopy.ADCULDMinMax(2), Integer), Double)
             _LynxParCopy.ADC_ConversionGain = _LynxParCopy.ConversionGainL(CBox_GainConversionGain.Text)
             _LynxParCopy.STAB_Centroid = CType(Num_DSCentroid.Value / CType(_LynxParCopy.STABCentroidMinMax(2), Integer), Double)
-            _LynxParCopy.STAB_Window = CType(HSB_DSWindow.Value / CType(_LynxParCopy.STABWindowMinMax(2), Integer), Double)
-            _LynxParCopy.STAB_Spacing = CType(HSB_DSSpacing.Value / CType(_LynxParCopy.STABSpacingMinMax(2), Integer), Double)
+            _LynxParCopy.STAB_Window = CType(Num_DSWindow.Value / CType(_LynxParCopy.STABWindowMinMax(2), Integer), Double)
+            _LynxParCopy.STAB_Spacing = CType(Num_DSSpacing.Value / CType(_LynxParCopy.STABSpacingMinMax(2), Integer), Double)
             _LynxParCopy.STAB_Multiplier = _LynxParCopy.MultiplierL(CBox_DSDivider.Text)
-            _LynxParCopy.STAB_WindowRatio = CType(HSB_DSRatio.Value / CType(_LynxParCopy.STABRatioMinMax(2), Integer), Double)
+            _LynxParCopy.STAB_WindowRatio = CType(Num_DSRatio.Value / CType(_LynxParCopy.STABRatioMinMax(2), Integer), Double)
             _LynxParCopy.STAB_UseNaI = _LynxParCopy.StabRange(CBox_DSRange.Text)
             _LynxParCopy.STAB_GainRatioAutoMode = _LynxParCopy.ManAuto(CBox_DSRatioMode.Text)
             _LynxParCopy.STAB_StabMode = _LynxParCopy.Stabilizer(CBox_DSMode.Text)
@@ -438,21 +355,21 @@ Public Class frmMCAParameter_GainStabiAdd
                 Me.Cursor = Cursors.WaitCursor
                 _LynxParCopy.AMP_InputPolarity = _LynxParCopy.Polarity(CBox_GainInputPolarity.Text)
                 _LynxParCopy.AMP_CoarseGain = _LynxParCopy.CoarseGainL(CBox_GainCoarseGain.Text)
-                _LynxParCopy.AMP_FineGain = CType(HSB_GainFineGain.Value / CType(_LynxParCopy.AmplifierFineGainMinMax(2), Integer), Double)
-                _LynxParCopy.AMP_PoleZero = CType(HSB_ADSPoleZero.Value / CType(_LynxParCopy.AmplifierPoleZeroMinMax(2), Integer), Double)
+                _LynxParCopy.AMP_FineGain = CType(Num_GainFineGain.Value / CType(_LynxParCopy.AmplifierFineGainMinMax(2), Integer), Double)
+                _LynxParCopy.AMP_PoleZero = CType(Num_ADSPoleZero.Value / CType(_LynxParCopy.AmplifierPoleZeroMinMax(2), Integer), Double)
                 _LynxParCopy.AMP_BLRMode = _LynxParCopy.BLR(CBox_ADSBLRMode.Text)
-                _LynxParCopy.AMP_FilterRiseTime = CType(HSB_ADSShapingRiseTime.Value / CType(_LynxParCopy.FilterRiseTimeMinMax(2), Integer), Double)
-                _LynxParCopy.AMP_FilterFlatTop = CType(HSB_ADSShapingFlatTop.Value / CType(_LynxParCopy.FilterFlatTopMinMax(2), Integer), Double)
+                _LynxParCopy.AMP_FilterRiseTime = CType(Num_ADSShapingRiseTime.Value / CType(_LynxParCopy.FilterRiseTimeMinMax(2), Integer), Double)
+                _LynxParCopy.AMP_FilterFlatTop = CType(Num_ADSShapingFlatTop.Value / CType(_LynxParCopy.FilterFlatTopMinMax(2), Integer), Double)
                 _LynxParCopy.ADC_AcquisitionMode = _LynxParCopy.Acq(CBox_ADSAquisitionMode.Text)
                 _LynxParCopy.ADC_LLDMode = _LynxParCopy.ManAuto(CBox_GainLLDMode.Text)
-                _LynxParCopy.ADC_LLD = CType(HSB_GainLLD.Value / CType(_LynxParCopy.ADCLLDMinMax(2), Integer), Double)
-                _LynxParCopy.ADC_ULD = CType(HSB_GainULD.Value / CType(_LynxParCopy.ADCULDMinMax(2), Integer), Double)
+                _LynxParCopy.ADC_LLD = CType(Num_GainLLD.Value / CType(_LynxParCopy.ADCLLDMinMax(2), Integer), Double)
+                _LynxParCopy.ADC_ULD = CType(Num_GainULD.Value / CType(_LynxParCopy.ADCULDMinMax(2), Integer), Double)
                 _LynxParCopy.ADC_ConversionGain = _LynxParCopy.ConversionGainL(CBox_GainConversionGain.Text)
                 _LynxParCopy.STAB_Centroid = CType(Num_DSCentroid.Value / CType(_LynxParCopy.STABCentroidMinMax(2), Integer), Double)
-                _LynxParCopy.STAB_Window = CType(HSB_DSWindow.Value / CType(_LynxParCopy.STABWindowMinMax(2), Integer), Double)
-                _LynxParCopy.STAB_Spacing = CType(HSB_DSSpacing.Value / CType(_LynxParCopy.STABSpacingMinMax(2), Integer), Double)
+                _LynxParCopy.STAB_Window = CType(Num_DSWindow.Value / CType(_LynxParCopy.STABWindowMinMax(2), Integer), Double)
+                _LynxParCopy.STAB_Spacing = CType(Num_DSSpacing.Value / CType(_LynxParCopy.STABSpacingMinMax(2), Integer), Double)
                 _LynxParCopy.STAB_Multiplier = _LynxParCopy.MultiplierL(CBox_DSDivider.Text)
-                _LynxParCopy.STAB_WindowRatio = CType(HSB_DSRatio.Value / CType(_LynxParCopy.STABRatioMinMax(2), Integer), Double)
+                _LynxParCopy.STAB_WindowRatio = CType(Num_DSRatio.Value / CType(_LynxParCopy.STABRatioMinMax(2), Integer), Double)
                 _LynxParCopy.STAB_UseNaI = _LynxParCopy.StabRange(CBox_DSRange.Text)
                 _LynxParCopy.STAB_GainRatioAutoMode = _LynxParCopy.ManAuto(CBox_DSRatioMode.Text)
                 _LynxParCopy.STAB_StabMode = _LynxParCopy.Stabilizer(CBox_DSMode.Text)

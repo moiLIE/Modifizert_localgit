@@ -180,388 +180,67 @@
   <data name="&gt;&gt;BtnClose.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;Lbl_GainULD.Name" xml:space="preserve">
-    <value>Lbl_GainULD</value>
+  <data name="Num_GainULD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 289</value>
   </data>
-  <data name="&gt;&gt;Lbl_GainULD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Num_GainULD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 22</value>
   </data>
-  <data name="&gt;&gt;Lbl_GainULD.Parent" xml:space="preserve">
+  <data name="Num_GainULD.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="&gt;&gt;Num_GainULD.Name" xml:space="preserve">
+    <value>Num_GainULD</value>
+  </data>
+  <data name="&gt;&gt;Num_GainULD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Num_GainULD.Parent" xml:space="preserve">
     <value>GroupBox2</value>
   </data>
-  <data name="&gt;&gt;Lbl_GainULD.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Num_GainULD.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;Lbl_GainFineGain.Name" xml:space="preserve">
-    <value>Lbl_GainFineGain</value>
+  <data name="Num_GainLLD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 232</value>
   </data>
-  <data name="&gt;&gt;Lbl_GainFineGain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Num_GainLLD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 22</value>
   </data>
-  <data name="&gt;&gt;Lbl_GainFineGain.Parent" xml:space="preserve">
+  <data name="Num_GainLLD.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="&gt;&gt;Num_GainLLD.Name" xml:space="preserve">
+    <value>Num_GainLLD</value>
+  </data>
+  <data name="&gt;&gt;Num_GainLLD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Num_GainLLD.Parent" xml:space="preserve">
     <value>GroupBox2</value>
   </data>
-  <data name="&gt;&gt;Lbl_GainFineGain.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Num_GainLLD.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;Lbl_GainLLD.Name" xml:space="preserve">
-    <value>Lbl_GainLLD</value>
+  <data name="Num_GainFineGain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 178</value>
   </data>
-  <data name="&gt;&gt;Lbl_GainLLD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Num_GainFineGain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 22</value>
   </data>
-  <data name="&gt;&gt;Lbl_GainLLD.Parent" xml:space="preserve">
+  <data name="Num_GainFineGain.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="&gt;&gt;Num_GainFineGain.Name" xml:space="preserve">
+    <value>Num_GainFineGain</value>
+  </data>
+  <data name="&gt;&gt;Num_GainFineGain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Num_GainFineGain.Parent" xml:space="preserve">
     <value>GroupBox2</value>
   </data>
-  <data name="&gt;&gt;Lbl_GainLLD.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainULDMax.Name" xml:space="preserve">
-    <value>Lbl_GainULDMax</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainULDMax.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainULDMax.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainULDMax.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainULDMin.Name" xml:space="preserve">
-    <value>Lbl_GainULDMin</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainULDMin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainULDMin.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainULDMin.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;Label25.Name" xml:space="preserve">
-    <value>Label25</value>
-  </data>
-  <data name="&gt;&gt;Label25.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label25.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;Label25.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainULD.Name" xml:space="preserve">
-    <value>HSB_GainULD</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainULD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainULD.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainULD.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainLLDMax.Name" xml:space="preserve">
-    <value>Lbl_GainLLDMax</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainLLDMax.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainLLDMax.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainLLDMax.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainLLDMin.Name" xml:space="preserve">
-    <value>Lbl_GainLLDMin</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainLLDMin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainLLDMin.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainLLDMin.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;Label21.Name" xml:space="preserve">
-    <value>Label21</value>
-  </data>
-  <data name="&gt;&gt;Label21.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label21.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;Label21.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainLLD.Name" xml:space="preserve">
-    <value>HSB_GainLLD</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainLLD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainLLD.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainLLD.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainFineGainMax.Name" xml:space="preserve">
-    <value>Lbl_GainFineGainMax</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainFineGainMax.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainFineGainMax.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainFineGainMax.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainFineGainMin.Name" xml:space="preserve">
-    <value>Lbl_GainFineGainMin</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainFineGainMin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainFineGainMin.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainFineGainMin.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;Label17.Name" xml:space="preserve">
-    <value>Label17</value>
-  </data>
-  <data name="&gt;&gt;Label17.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label17.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;Label17.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainFineGain.Name" xml:space="preserve">
-    <value>HSB_GainFineGain</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainFineGain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainFineGain.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainFineGain.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;Label12.Name" xml:space="preserve">
-    <value>Label12</value>
-  </data>
-  <data name="&gt;&gt;Label12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label12.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;Label12.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;CBox_GainCoarseGain.Name" xml:space="preserve">
-    <value>CBox_GainCoarseGain</value>
-  </data>
-  <data name="&gt;&gt;CBox_GainCoarseGain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CBox_GainCoarseGain.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;CBox_GainCoarseGain.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;Label10.Name" xml:space="preserve">
-    <value>Label10</value>
-  </data>
-  <data name="&gt;&gt;Label10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label10.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;Label11.Name" xml:space="preserve">
-    <value>Label11</value>
-  </data>
-  <data name="&gt;&gt;Label11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label11.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;Label11.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;Label13.Name" xml:space="preserve">
-    <value>Label13</value>
-  </data>
-  <data name="&gt;&gt;Label13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label13.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;Label13.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;CBox_GainInputPolarity.Name" xml:space="preserve">
-    <value>CBox_GainInputPolarity</value>
-  </data>
-  <data name="&gt;&gt;CBox_GainInputPolarity.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CBox_GainInputPolarity.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;CBox_GainInputPolarity.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;CBox_GainLLDMode.Name" xml:space="preserve">
-    <value>CBox_GainLLDMode</value>
-  </data>
-  <data name="&gt;&gt;CBox_GainLLDMode.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CBox_GainLLDMode.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;CBox_GainLLDMode.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;CBox_GainConversionGain.Name" xml:space="preserve">
-    <value>CBox_GainConversionGain</value>
-  </data>
-  <data name="&gt;&gt;CBox_GainConversionGain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CBox_GainConversionGain.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;CBox_GainConversionGain.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="GroupBox2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
-  </data>
-  <data name="GroupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>372, 354</value>
-  </data>
-  <data name="GroupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>349, 344</value>
-  </data>
-  <data name="GroupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="GroupBox2.Text" xml:space="preserve">
-    <value>Gain</value>
-  </data>
-  <data name="&gt;&gt;GroupBox2.Name" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;GroupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;GroupBox2.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="Lbl_GainULD.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Lbl_GainULD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 268</value>
-  </data>
-  <data name="Lbl_GainULD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 22</value>
-  </data>
-  <data name="Lbl_GainULD.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="Lbl_GainULD.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainULD.Name" xml:space="preserve">
-    <value>Lbl_GainULD</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainULD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainULD.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainULD.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Lbl_GainFineGain.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Lbl_GainFineGain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 154</value>
-  </data>
-  <data name="Lbl_GainFineGain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 22</value>
-  </data>
-  <data name="Lbl_GainFineGain.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="Lbl_GainFineGain.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainFineGain.Name" xml:space="preserve">
-    <value>Lbl_GainFineGain</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainFineGain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainFineGain.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainFineGain.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Lbl_GainLLD.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Lbl_GainLLD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 211</value>
-  </data>
-  <data name="Lbl_GainLLD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 22</value>
-  </data>
-  <data name="Lbl_GainLLD.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="Lbl_GainLLD.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainLLD.Name" xml:space="preserve">
-    <value>Lbl_GainLLD</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainLLD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainLLD.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;Lbl_GainLLD.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Num_GainFineGain.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="Lbl_GainULDMax.AutoSize" type="System.Boolean, mscorlib">
@@ -654,30 +333,6 @@
   <data name="&gt;&gt;Label25.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="HSB_GainULD.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="HSB_GainULD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 291</value>
-  </data>
-  <data name="HSB_GainULD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 17</value>
-  </data>
-  <data name="HSB_GainULD.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainULD.Name" xml:space="preserve">
-    <value>HSB_GainULD</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainULD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainULD.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainULD.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <data name="Lbl_GainLLDMax.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -706,7 +361,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Lbl_GainLLDMax.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="Lbl_GainLLDMin.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -736,7 +391,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Lbl_GainLLDMin.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="Label21.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -766,31 +421,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Label21.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="HSB_GainLLD.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="HSB_GainLLD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>86, 234</value>
-  </data>
-  <data name="HSB_GainLLD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 17</value>
-  </data>
-  <data name="HSB_GainLLD.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainLLD.Name" xml:space="preserve">
-    <value>HSB_GainLLD</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainLLD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainLLD.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainLLD.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="Lbl_GainFineGainMax.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -820,7 +451,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Lbl_GainFineGainMax.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="Lbl_GainFineGainMin.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -850,7 +481,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Lbl_GainFineGainMin.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="Label17.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -877,31 +508,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Label17.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="HSB_GainFineGain.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="HSB_GainFineGain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>86, 177</value>
-  </data>
-  <data name="HSB_GainFineGain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 17</value>
-  </data>
-  <data name="HSB_GainFineGain.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainFineGain.Name" xml:space="preserve">
-    <value>HSB_GainFineGain</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainFineGain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainFineGain.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;HSB_GainFineGain.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>11</value>
   </data>
   <data name="Label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -928,7 +535,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Label12.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>12</value>
   </data>
   <data name="CBox_GainCoarseGain.Items" xml:space="preserve">
     <value>200</value>
@@ -958,7 +565,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;CBox_GainCoarseGain.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>13</value>
   </data>
   <data name="Label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -985,7 +592,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>14</value>
   </data>
   <data name="Label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1015,7 +622,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Label11.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>15</value>
   </data>
   <data name="Label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1042,7 +649,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Label13.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>16</value>
   </data>
   <data name="CBox_GainInputPolarity.Items" xml:space="preserve">
     <value>Positive</value>
@@ -1069,7 +676,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;CBox_GainInputPolarity.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>17</value>
   </data>
   <data name="CBox_GainLLDMode.Items" xml:space="preserve">
     <value>Positive</value>
@@ -1096,7 +703,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;CBox_GainLLDMode.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>18</value>
   </data>
   <data name="CBox_GainConversionGain.Items" xml:space="preserve">
     <value>200</value>
@@ -1126,286 +733,97 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;CBox_GainConversionGain.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
-    <value>Label1</value>
-  </data>
-  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
-    <value>Button1</value>
-  </data>
-  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSPoleZero.Name" xml:space="preserve">
-    <value>Lbl_ADSPoleZero</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSPoleZero.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSPoleZero.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSPoleZero.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingFlatTop.Name" xml:space="preserve">
-    <value>Lbl_ADSShapingFlatTop</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingFlatTop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingFlatTop.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingFlatTop.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingRiseTime.Name" xml:space="preserve">
-    <value>Lbl_ADSShapingRiseTime</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingRiseTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingRiseTime.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingRiseTime.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSPoleZeroMax.Name" xml:space="preserve">
-    <value>Lbl_ADSPoleZeroMax</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSPoleZeroMax.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSPoleZeroMax.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSPoleZeroMax.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSPoleZeroMin.Name" xml:space="preserve">
-    <value>Lbl_ADSPoleZeroMin</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSPoleZeroMin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSPoleZeroMin.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSPoleZeroMin.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;Label28.Name" xml:space="preserve">
-    <value>Label28</value>
-  </data>
-  <data name="&gt;&gt;Label28.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label28.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Label28.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSPoleZero.Name" xml:space="preserve">
-    <value>HSB_ADSPoleZero</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSPoleZero.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSPoleZero.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSPoleZero.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingFlatTopMax.Name" xml:space="preserve">
-    <value>Lbl_ADSShapingFlatTopMax</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingFlatTopMax.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingFlatTopMax.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingFlatTopMax.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingFlatTopMin.Name" xml:space="preserve">
-    <value>Lbl_ADSShapingFlatTopMin</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingFlatTopMin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingFlatTopMin.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingFlatTopMin.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;Label31.Name" xml:space="preserve">
-    <value>Label31</value>
-  </data>
-  <data name="&gt;&gt;Label31.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label31.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Label31.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSShapingFlatTop.Name" xml:space="preserve">
-    <value>HSB_ADSShapingFlatTop</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSShapingFlatTop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSShapingFlatTop.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSShapingFlatTop.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingRiseTimeMax.Name" xml:space="preserve">
-    <value>Lbl_ADSShapingRiseTimeMax</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingRiseTimeMax.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingRiseTimeMax.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingRiseTimeMax.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingRiseTimeMin.Name" xml:space="preserve">
-    <value>Lbl_ADSShapingRiseTimeMin</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingRiseTimeMin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingRiseTimeMin.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingRiseTimeMin.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;Label34.Name" xml:space="preserve">
-    <value>Label34</value>
-  </data>
-  <data name="&gt;&gt;Label34.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label34.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Label34.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSShapingRiseTime.Name" xml:space="preserve">
-    <value>HSB_ADSShapingRiseTime</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSShapingRiseTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSShapingRiseTime.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSShapingRiseTime.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;Label18.Name" xml:space="preserve">
-    <value>Label18</value>
-  </data>
-  <data name="&gt;&gt;Label18.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label18.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Label18.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;CBox_ADSBLRMode.Name" xml:space="preserve">
-    <value>CBox_ADSBLRMode</value>
-  </data>
-  <data name="&gt;&gt;CBox_ADSBLRMode.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CBox_ADSBLRMode.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;CBox_ADSBLRMode.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;Label14.Name" xml:space="preserve">
-    <value>Label14</value>
-  </data>
-  <data name="&gt;&gt;Label14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label14.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Label14.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
-  <data name="&gt;&gt;CBox_ADSAquisitionMode.Name" xml:space="preserve">
-    <value>CBox_ADSAquisitionMode</value>
-  </data>
-  <data name="&gt;&gt;CBox_ADSAquisitionMode.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CBox_ADSAquisitionMode.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;CBox_ADSAquisitionMode.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="GroupBox3.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="GroupBox2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
   </data>
-  <data name="GroupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 354</value>
+  <data name="GroupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>372, 354</value>
   </data>
-  <data name="GroupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>354, 344</value>
+  <data name="GroupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>349, 344</value>
   </data>
-  <data name="GroupBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
+  <data name="GroupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
   </data>
-  <data name="GroupBox3.Text" xml:space="preserve">
-    <value>Additional Settings</value>
+  <data name="GroupBox2.Text" xml:space="preserve">
+    <value>Gain</value>
   </data>
-  <data name="&gt;&gt;GroupBox3.Name" xml:space="preserve">
-    <value>GroupBox3</value>
+  <data name="&gt;&gt;GroupBox2.Name" xml:space="preserve">
+    <value>GroupBox2</value>
   </data>
-  <data name="&gt;&gt;GroupBox3.Type" xml:space="preserve">
+  <data name="&gt;&gt;GroupBox2.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GroupBox3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;GroupBox2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;GroupBox3.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;GroupBox2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="Num_ADSPoleZero.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 193</value>
+  </data>
+  <data name="Num_ADSPoleZero.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 22</value>
+  </data>
+  <data name="Num_ADSPoleZero.TabIndex" type="System.Int32, mscorlib">
+    <value>81</value>
+  </data>
+  <data name="&gt;&gt;Num_ADSPoleZero.Name" xml:space="preserve">
+    <value>Num_ADSPoleZero</value>
+  </data>
+  <data name="&gt;&gt;Num_ADSPoleZero.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Num_ADSPoleZero.Parent" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;Num_ADSPoleZero.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Num_ADSShapingFlatTop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 137</value>
+  </data>
+  <data name="Num_ADSShapingFlatTop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 22</value>
+  </data>
+  <data name="Num_ADSShapingFlatTop.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="&gt;&gt;Num_ADSShapingFlatTop.Name" xml:space="preserve">
+    <value>Num_ADSShapingFlatTop</value>
+  </data>
+  <data name="&gt;&gt;Num_ADSShapingFlatTop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Num_ADSShapingFlatTop.Parent" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;Num_ADSShapingFlatTop.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Num_ADSShapingRiseTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 84</value>
+  </data>
+  <data name="Num_ADSShapingRiseTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 22</value>
+  </data>
+  <data name="Num_ADSShapingRiseTime.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="&gt;&gt;Num_ADSShapingRiseTime.Name" xml:space="preserve">
+    <value>Num_ADSShapingRiseTime</value>
+  </data>
+  <data name="&gt;&gt;Num_ADSShapingRiseTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Num_ADSShapingRiseTime.Parent" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;Num_ADSShapingRiseTime.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1438,7 +856,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="Button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1468,87 +886,6 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Lbl_ADSPoleZero.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Lbl_ADSPoleZero.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 172</value>
-  </data>
-  <data name="Lbl_ADSPoleZero.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 22</value>
-  </data>
-  <data name="Lbl_ADSPoleZero.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="Lbl_ADSPoleZero.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSPoleZero.Name" xml:space="preserve">
-    <value>Lbl_ADSPoleZero</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSPoleZero.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSPoleZero.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSPoleZero.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Lbl_ADSShapingFlatTop.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Lbl_ADSShapingFlatTop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 116</value>
-  </data>
-  <data name="Lbl_ADSShapingFlatTop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 22</value>
-  </data>
-  <data name="Lbl_ADSShapingFlatTop.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
-  </data>
-  <data name="Lbl_ADSShapingFlatTop.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingFlatTop.Name" xml:space="preserve">
-    <value>Lbl_ADSShapingFlatTop</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingFlatTop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingFlatTop.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingFlatTop.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="Lbl_ADSShapingRiseTime.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Lbl_ADSShapingRiseTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 59</value>
-  </data>
-  <data name="Lbl_ADSShapingRiseTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 22</value>
-  </data>
-  <data name="Lbl_ADSShapingRiseTime.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="Lbl_ADSShapingRiseTime.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingRiseTime.Name" xml:space="preserve">
-    <value>Lbl_ADSShapingRiseTime</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingRiseTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingRiseTime.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Lbl_ADSShapingRiseTime.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="Lbl_ADSPoleZeroMax.AutoSize" type="System.Boolean, mscorlib">
@@ -1638,30 +975,6 @@
   <data name="&gt;&gt;Label28.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="HSB_ADSPoleZero.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="HSB_ADSPoleZero.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 195</value>
-  </data>
-  <data name="HSB_ADSPoleZero.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 17</value>
-  </data>
-  <data name="HSB_ADSPoleZero.TabIndex" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSPoleZero.Name" xml:space="preserve">
-    <value>HSB_ADSPoleZero</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSPoleZero.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSPoleZero.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSPoleZero.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
   <data name="Lbl_ADSShapingFlatTopMax.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1690,7 +1003,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;Lbl_ADSShapingFlatTopMax.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="Lbl_ADSShapingFlatTopMin.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1720,7 +1033,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;Lbl_ADSShapingFlatTopMin.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="Label31.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1747,31 +1060,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;Label31.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="HSB_ADSShapingFlatTop.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="HSB_ADSShapingFlatTop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 139</value>
-  </data>
-  <data name="HSB_ADSShapingFlatTop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 17</value>
-  </data>
-  <data name="HSB_ADSShapingFlatTop.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSShapingFlatTop.Name" xml:space="preserve">
-    <value>HSB_ADSShapingFlatTop</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSShapingFlatTop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSShapingFlatTop.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSShapingFlatTop.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="Lbl_ADSShapingRiseTimeMax.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1801,7 +1090,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;Lbl_ADSShapingRiseTimeMax.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>11</value>
   </data>
   <data name="Lbl_ADSShapingRiseTimeMin.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1831,7 +1120,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;Lbl_ADSShapingRiseTimeMin.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>12</value>
   </data>
   <data name="Label34.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1858,31 +1147,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;Label34.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="HSB_ADSShapingRiseTime.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="HSB_ADSShapingRiseTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 82</value>
-  </data>
-  <data name="HSB_ADSShapingRiseTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 17</value>
-  </data>
-  <data name="HSB_ADSShapingRiseTime.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSShapingRiseTime.Name" xml:space="preserve">
-    <value>HSB_ADSShapingRiseTime</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSShapingRiseTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSShapingRiseTime.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;HSB_ADSShapingRiseTime.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>13</value>
   </data>
   <data name="Label18.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
@@ -1912,7 +1177,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;Label18.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>14</value>
   </data>
   <data name="CBox_ADSBLRMode.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
@@ -1945,7 +1210,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;CBox_ADSBLRMode.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>15</value>
   </data>
   <data name="Label14.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
@@ -1975,7 +1240,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;Label14.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>16</value>
   </data>
   <data name="CBox_ADSAquisitionMode.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
@@ -2008,13 +1273,103 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;CBox_ADSAquisitionMode.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>17</value>
+  </data>
+  <data name="GroupBox3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="GroupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 354</value>
+  </data>
+  <data name="GroupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>354, 344</value>
+  </data>
+  <data name="GroupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="GroupBox3.Text" xml:space="preserve">
+    <value>Additional Settings</value>
+  </data>
+  <data name="&gt;&gt;GroupBox3.Name" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GroupBox3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Num_DSRatio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 211</value>
+  </data>
+  <data name="Num_DSRatio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 22</value>
+  </data>
+  <data name="Num_DSRatio.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="&gt;&gt;Num_DSRatio.Name" xml:space="preserve">
+    <value>Num_DSRatio</value>
+  </data>
+  <data name="&gt;&gt;Num_DSRatio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Num_DSRatio.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;Num_DSRatio.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Num_DSSpacing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 158</value>
+  </data>
+  <data name="Num_DSSpacing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 22</value>
+  </data>
+  <data name="Num_DSSpacing.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="&gt;&gt;Num_DSSpacing.Name" xml:space="preserve">
+    <value>Num_DSSpacing</value>
+  </data>
+  <data name="&gt;&gt;Num_DSSpacing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Num_DSSpacing.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;Num_DSSpacing.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Num_DSWindow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 97</value>
+  </data>
+  <data name="Num_DSWindow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 22</value>
+  </data>
+  <data name="Num_DSWindow.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="&gt;&gt;Num_DSWindow.Name" xml:space="preserve">
+    <value>Num_DSWindow</value>
+  </data>
+  <data name="&gt;&gt;Num_DSWindow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Num_DSWindow.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;Num_DSWindow.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="Num_DSCentroid.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 44</value>
+    <value>111, 44</value>
   </data>
   <data name="Num_DSCentroid.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 22</value>
+    <value>120, 22</value>
   </data>
   <data name="Num_DSCentroid.TabIndex" type="System.Int32, mscorlib">
     <value>73</value>
@@ -2029,34 +1384,7 @@
     <value>GroupBox4</value>
   </data>
   <data name="&gt;&gt;Num_DSCentroid.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Lbl_DSRatio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Lbl_DSRatio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 192</value>
-  </data>
-  <data name="Lbl_DSRatio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 22</value>
-  </data>
-  <data name="Lbl_DSRatio.TabIndex" type="System.Int32, mscorlib">
-    <value>67</value>
-  </data>
-  <data name="Lbl_DSRatio.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;Lbl_DSRatio.Name" xml:space="preserve">
-    <value>Lbl_DSRatio</value>
-  </data>
-  <data name="&gt;&gt;Lbl_DSRatio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_DSRatio.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;Lbl_DSRatio.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="CBox_DSDivider.Items" xml:space="preserve">
     <value>Positive</value>
@@ -2083,34 +1411,7 @@
     <value>GroupBox4</value>
   </data>
   <data name="&gt;&gt;CBox_DSDivider.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Lbl_DSSpacing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Lbl_DSSpacing.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 136</value>
-  </data>
-  <data name="Lbl_DSSpacing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 22</value>
-  </data>
-  <data name="Lbl_DSSpacing.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
-  </data>
-  <data name="Lbl_DSSpacing.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;Lbl_DSSpacing.Name" xml:space="preserve">
-    <value>Lbl_DSSpacing</value>
-  </data>
-  <data name="&gt;&gt;Lbl_DSSpacing.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_DSSpacing.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;Lbl_DSSpacing.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="Label48.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2140,33 +1441,6 @@
     <value>GroupBox4</value>
   </data>
   <data name="&gt;&gt;Label48.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="Lbl_DSWindow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Lbl_DSWindow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 79</value>
-  </data>
-  <data name="Lbl_DSWindow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 22</value>
-  </data>
-  <data name="Lbl_DSWindow.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <data name="Lbl_DSWindow.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;Lbl_DSWindow.Name" xml:space="preserve">
-    <value>Lbl_DSWindow</value>
-  </data>
-  <data name="&gt;&gt;Lbl_DSWindow.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Lbl_DSWindow.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;Lbl_DSWindow.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="Label49.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -2341,7 +1615,7 @@
     <value>NoControl</value>
   </data>
   <data name="Lbl_DSRatioMax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>278, 232</value>
+    <value>234, 232</value>
   </data>
   <data name="Lbl_DSRatioMax.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 16</value>
@@ -2371,7 +1645,7 @@
     <value>NoControl</value>
   </data>
   <data name="Lbl_DSRatioMin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 232</value>
+    <value>69, 232</value>
   </data>
   <data name="Lbl_DSRatioMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 16</value>
@@ -2424,30 +1698,6 @@
   <data name="&gt;&gt;Label47.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="HSB_DSRatio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="HSB_DSRatio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>86, 215</value>
-  </data>
-  <data name="HSB_DSRatio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 17</value>
-  </data>
-  <data name="HSB_DSRatio.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="&gt;&gt;HSB_DSRatio.Name" xml:space="preserve">
-    <value>HSB_DSRatio</value>
-  </data>
-  <data name="&gt;&gt;HSB_DSRatio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HSB_DSRatio.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;HSB_DSRatio.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
   <data name="Lbl_DSSpacingMax.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2455,7 +1705,7 @@
     <value>NoControl</value>
   </data>
   <data name="Lbl_DSSpacingMax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>278, 176</value>
+    <value>234, 178</value>
   </data>
   <data name="Lbl_DSSpacingMax.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 16</value>
@@ -2476,7 +1726,7 @@
     <value>GroupBox4</value>
   </data>
   <data name="&gt;&gt;Lbl_DSSpacingMax.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>15</value>
   </data>
   <data name="Lbl_DSSpacingMin.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2485,7 +1735,7 @@
     <value>NoControl</value>
   </data>
   <data name="Lbl_DSSpacingMin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 176</value>
+    <value>85, 178</value>
   </data>
   <data name="Lbl_DSSpacingMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>16, 16</value>
@@ -2506,7 +1756,7 @@
     <value>GroupBox4</value>
   </data>
   <data name="&gt;&gt;Lbl_DSSpacingMin.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>16</value>
   </data>
   <data name="Label38.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2536,31 +1786,7 @@
     <value>GroupBox4</value>
   </data>
   <data name="&gt;&gt;Label38.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="HSB_DSSpacing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="HSB_DSSpacing.Location" type="System.Drawing.Point, System.Drawing">
-    <value>86, 159</value>
-  </data>
-  <data name="HSB_DSSpacing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 17</value>
-  </data>
-  <data name="HSB_DSSpacing.TabIndex" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="&gt;&gt;HSB_DSSpacing.Name" xml:space="preserve">
-    <value>HSB_DSSpacing</value>
-  </data>
-  <data name="&gt;&gt;HSB_DSSpacing.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HSB_DSSpacing.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;HSB_DSSpacing.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>17</value>
   </data>
   <data name="Lbl_DSWindowMax.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2569,7 +1795,7 @@
     <value>NoControl</value>
   </data>
   <data name="Lbl_DSWindowMax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>277, 119</value>
+    <value>234, 117</value>
   </data>
   <data name="Lbl_DSWindowMax.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 16</value>
@@ -2590,7 +1816,7 @@
     <value>GroupBox4</value>
   </data>
   <data name="&gt;&gt;Lbl_DSWindowMax.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>18</value>
   </data>
   <data name="Lbl_DSWindowMin.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2599,7 +1825,7 @@
     <value>NoControl</value>
   </data>
   <data name="Lbl_DSWindowMin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 119</value>
+    <value>85, 116</value>
   </data>
   <data name="Lbl_DSWindowMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>16, 16</value>
@@ -2620,7 +1846,7 @@
     <value>GroupBox4</value>
   </data>
   <data name="&gt;&gt;Lbl_DSWindowMin.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>19</value>
   </data>
   <data name="Label41.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2650,31 +1876,7 @@
     <value>GroupBox4</value>
   </data>
   <data name="&gt;&gt;Label41.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="HSB_DSWindow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="HSB_DSWindow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 102</value>
-  </data>
-  <data name="HSB_DSWindow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 17</value>
-  </data>
-  <data name="HSB_DSWindow.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="&gt;&gt;HSB_DSWindow.Name" xml:space="preserve">
-    <value>HSB_DSWindow</value>
-  </data>
-  <data name="&gt;&gt;HSB_DSWindow.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HSB_DSWindow.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;HSB_DSWindow.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>20</value>
   </data>
   <data name="Lbl_DSCentroidMax.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2683,7 +1885,7 @@
     <value>NoControl</value>
   </data>
   <data name="Lbl_DSCentroidMax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>231, 54</value>
+    <value>234, 54</value>
   </data>
   <data name="Lbl_DSCentroidMax.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 16</value>
@@ -2704,7 +1906,7 @@
     <value>GroupBox4</value>
   </data>
   <data name="&gt;&gt;Lbl_DSCentroidMax.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>21</value>
   </data>
   <data name="Lbl_DSCentroidMin.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2734,7 +1936,7 @@
     <value>GroupBox4</value>
   </data>
   <data name="&gt;&gt;Lbl_DSCentroidMin.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>22</value>
   </data>
   <data name="Label44.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2764,7 +1966,7 @@
     <value>GroupBox4</value>
   </data>
   <data name="&gt;&gt;Label44.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>23</value>
   </data>
   <data name="GroupBox4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>

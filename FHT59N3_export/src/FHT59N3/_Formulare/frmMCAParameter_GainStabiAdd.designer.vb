@@ -27,21 +27,18 @@ Partial Class frmMCAParameter_GainStabiAdd
         Me.BtnAccept = New System.Windows.Forms.Button()
         Me.BtnClose = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Lbl_GainULD = New System.Windows.Forms.Label()
-        Me.Lbl_GainFineGain = New System.Windows.Forms.Label()
-        Me.Lbl_GainLLD = New System.Windows.Forms.Label()
+        Me.Num_GainULD = New System.Windows.Forms.NumericUpDown()
+        Me.Num_GainLLD = New System.Windows.Forms.NumericUpDown()
+        Me.Num_GainFineGain = New System.Windows.Forms.NumericUpDown()
         Me.Lbl_GainULDMax = New System.Windows.Forms.Label()
         Me.Lbl_GainULDMin = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
-        Me.HSB_GainULD = New System.Windows.Forms.HScrollBar()
         Me.Lbl_GainLLDMax = New System.Windows.Forms.Label()
         Me.Lbl_GainLLDMin = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.HSB_GainLLD = New System.Windows.Forms.HScrollBar()
         Me.Lbl_GainFineGainMax = New System.Windows.Forms.Label()
         Me.Lbl_GainFineGainMin = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.HSB_GainFineGain = New System.Windows.Forms.HScrollBar()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.CBox_GainCoarseGain = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -51,34 +48,31 @@ Partial Class frmMCAParameter_GainStabiAdd
         Me.CBox_GainLLDMode = New System.Windows.Forms.ComboBox()
         Me.CBox_GainConversionGain = New System.Windows.Forms.ComboBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Num_ADSPoleZero = New System.Windows.Forms.NumericUpDown()
+        Me.Num_ADSShapingFlatTop = New System.Windows.Forms.NumericUpDown()
+        Me.Num_ADSShapingRiseTime = New System.Windows.Forms.NumericUpDown()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Lbl_ADSPoleZero = New System.Windows.Forms.Label()
-        Me.Lbl_ADSShapingFlatTop = New System.Windows.Forms.Label()
-        Me.Lbl_ADSShapingRiseTime = New System.Windows.Forms.Label()
         Me.Lbl_ADSPoleZeroMax = New System.Windows.Forms.Label()
         Me.Lbl_ADSPoleZeroMin = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
-        Me.HSB_ADSPoleZero = New System.Windows.Forms.HScrollBar()
         Me.Lbl_ADSShapingFlatTopMax = New System.Windows.Forms.Label()
         Me.Lbl_ADSShapingFlatTopMin = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
-        Me.HSB_ADSShapingFlatTop = New System.Windows.Forms.HScrollBar()
         Me.Lbl_ADSShapingRiseTimeMax = New System.Windows.Forms.Label()
         Me.Lbl_ADSShapingRiseTimeMin = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
-        Me.HSB_ADSShapingRiseTime = New System.Windows.Forms.HScrollBar()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.CBox_ADSBLRMode = New System.Windows.Forms.ComboBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.CBox_ADSAquisitionMode = New System.Windows.Forms.ComboBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Num_DSRatio = New System.Windows.Forms.NumericUpDown()
+        Me.Num_DSSpacing = New System.Windows.Forms.NumericUpDown()
+        Me.Num_DSWindow = New System.Windows.Forms.NumericUpDown()
         Me.Num_DSCentroid = New System.Windows.Forms.NumericUpDown()
-        Me.Lbl_DSRatio = New System.Windows.Forms.Label()
         Me.CBox_DSDivider = New System.Windows.Forms.ComboBox()
-        Me.Lbl_DSSpacing = New System.Windows.Forms.Label()
         Me.Label48 = New System.Windows.Forms.Label()
-        Me.Lbl_DSWindow = New System.Windows.Forms.Label()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Label50 = New System.Windows.Forms.Label()
         Me.Label51 = New System.Windows.Forms.Label()
@@ -88,15 +82,12 @@ Partial Class frmMCAParameter_GainStabiAdd
         Me.Lbl_DSRatioMax = New System.Windows.Forms.Label()
         Me.Lbl_DSRatioMin = New System.Windows.Forms.Label()
         Me.Label47 = New System.Windows.Forms.Label()
-        Me.HSB_DSRatio = New System.Windows.Forms.HScrollBar()
         Me.Lbl_DSSpacingMax = New System.Windows.Forms.Label()
         Me.Lbl_DSSpacingMin = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
-        Me.HSB_DSSpacing = New System.Windows.Forms.HScrollBar()
         Me.Lbl_DSWindowMax = New System.Windows.Forms.Label()
         Me.Lbl_DSWindowMin = New System.Windows.Forms.Label()
         Me.Label41 = New System.Windows.Forms.Label()
-        Me.HSB_DSWindow = New System.Windows.Forms.HScrollBar()
         Me.Lbl_DSCentroidMax = New System.Windows.Forms.Label()
         Me.Lbl_DSCentroidMin = New System.Windows.Forms.Label()
         Me.Label44 = New System.Windows.Forms.Label()
@@ -106,8 +97,17 @@ Partial Class frmMCAParameter_GainStabiAdd
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SpectralDisplay = New AxCanberraDataDisplayLib.AxMvc()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.Num_GainULD, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Num_GainLLD, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Num_GainFineGain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.Num_ADSPoleZero, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Num_ADSShapingFlatTop, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Num_ADSShapingRiseTime, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
+        CType(Me.Num_DSRatio, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Num_DSSpacing, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Num_DSWindow, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Num_DSCentroid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpectralDisplay, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -128,21 +128,18 @@ Partial Class frmMCAParameter_GainStabiAdd
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Lbl_GainULD)
-        Me.GroupBox2.Controls.Add(Me.Lbl_GainFineGain)
-        Me.GroupBox2.Controls.Add(Me.Lbl_GainLLD)
+        Me.GroupBox2.Controls.Add(Me.Num_GainULD)
+        Me.GroupBox2.Controls.Add(Me.Num_GainLLD)
+        Me.GroupBox2.Controls.Add(Me.Num_GainFineGain)
         Me.GroupBox2.Controls.Add(Me.Lbl_GainULDMax)
         Me.GroupBox2.Controls.Add(Me.Lbl_GainULDMin)
         Me.GroupBox2.Controls.Add(Me.Label25)
-        Me.GroupBox2.Controls.Add(Me.HSB_GainULD)
         Me.GroupBox2.Controls.Add(Me.Lbl_GainLLDMax)
         Me.GroupBox2.Controls.Add(Me.Lbl_GainLLDMin)
         Me.GroupBox2.Controls.Add(Me.Label21)
-        Me.GroupBox2.Controls.Add(Me.HSB_GainLLD)
         Me.GroupBox2.Controls.Add(Me.Lbl_GainFineGainMax)
         Me.GroupBox2.Controls.Add(Me.Lbl_GainFineGainMin)
         Me.GroupBox2.Controls.Add(Me.Label17)
-        Me.GroupBox2.Controls.Add(Me.HSB_GainFineGain)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Controls.Add(Me.CBox_GainCoarseGain)
         Me.GroupBox2.Controls.Add(Me.Label10)
@@ -156,29 +153,26 @@ Partial Class frmMCAParameter_GainStabiAdd
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.TabStop = False
         '
-        'Lbl_GainULD
+        'Num_GainULD
         '
-        Me.Lbl_GainULD.BackColor = System.Drawing.Color.White
-        Me.Lbl_GainULD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Lbl_GainULD.ForeColor = System.Drawing.Color.Black
-        resources.ApplyResources(Me.Lbl_GainULD, "Lbl_GainULD")
-        Me.Lbl_GainULD.Name = "Lbl_GainULD"
+        Me.Num_GainULD.DecimalPlaces = 1
+        Me.Num_GainULD.Increment = New Decimal(New Integer() {1, 0, 0, 65536})
+        resources.ApplyResources(Me.Num_GainULD, "Num_GainULD")
+        Me.Num_GainULD.Name = "Num_GainULD"
         '
-        'Lbl_GainFineGain
+        'Num_GainLLD
         '
-        Me.Lbl_GainFineGain.BackColor = System.Drawing.Color.White
-        Me.Lbl_GainFineGain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Lbl_GainFineGain.ForeColor = System.Drawing.Color.Black
-        resources.ApplyResources(Me.Lbl_GainFineGain, "Lbl_GainFineGain")
-        Me.Lbl_GainFineGain.Name = "Lbl_GainFineGain"
+        Me.Num_GainLLD.DecimalPlaces = 1
+        Me.Num_GainLLD.Increment = New Decimal(New Integer() {1, 0, 0, 65536})
+        resources.ApplyResources(Me.Num_GainLLD, "Num_GainLLD")
+        Me.Num_GainLLD.Name = "Num_GainLLD"
         '
-        'Lbl_GainLLD
+        'Num_GainFineGain
         '
-        Me.Lbl_GainLLD.BackColor = System.Drawing.Color.White
-        Me.Lbl_GainLLD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Lbl_GainLLD.ForeColor = System.Drawing.Color.Black
-        resources.ApplyResources(Me.Lbl_GainLLD, "Lbl_GainLLD")
-        Me.Lbl_GainLLD.Name = "Lbl_GainLLD"
+        Me.Num_GainFineGain.DecimalPlaces = 5
+        Me.Num_GainFineGain.Increment = New Decimal(New Integer() {1, 0, 0, 327680})
+        resources.ApplyResources(Me.Num_GainFineGain, "Num_GainFineGain")
+        Me.Num_GainFineGain.Name = "Num_GainFineGain"
         '
         'Lbl_GainULDMax
         '
@@ -195,12 +189,6 @@ Partial Class frmMCAParameter_GainStabiAdd
         resources.ApplyResources(Me.Label25, "Label25")
         Me.Label25.Name = "Label25"
         '
-        'HSB_GainULD
-        '
-        resources.ApplyResources(Me.HSB_GainULD, "HSB_GainULD")
-        Me.HSB_GainULD.LargeChange = 1
-        Me.HSB_GainULD.Name = "HSB_GainULD"
-        '
         'Lbl_GainLLDMax
         '
         resources.ApplyResources(Me.Lbl_GainLLDMax, "Lbl_GainLLDMax")
@@ -216,12 +204,6 @@ Partial Class frmMCAParameter_GainStabiAdd
         resources.ApplyResources(Me.Label21, "Label21")
         Me.Label21.Name = "Label21"
         '
-        'HSB_GainLLD
-        '
-        resources.ApplyResources(Me.HSB_GainLLD, "HSB_GainLLD")
-        Me.HSB_GainLLD.LargeChange = 1
-        Me.HSB_GainLLD.Name = "HSB_GainLLD"
-        '
         'Lbl_GainFineGainMax
         '
         resources.ApplyResources(Me.Lbl_GainFineGainMax, "Lbl_GainFineGainMax")
@@ -236,12 +218,6 @@ Partial Class frmMCAParameter_GainStabiAdd
         '
         resources.ApplyResources(Me.Label17, "Label17")
         Me.Label17.Name = "Label17"
-        '
-        'HSB_GainFineGain
-        '
-        resources.ApplyResources(Me.HSB_GainFineGain, "HSB_GainFineGain")
-        Me.HSB_GainFineGain.LargeChange = 1
-        Me.HSB_GainFineGain.Name = "HSB_GainFineGain"
         '
         'Label12
         '
@@ -293,23 +269,20 @@ Partial Class frmMCAParameter_GainStabiAdd
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.Num_ADSPoleZero)
+        Me.GroupBox3.Controls.Add(Me.Num_ADSShapingFlatTop)
+        Me.GroupBox3.Controls.Add(Me.Num_ADSShapingRiseTime)
         Me.GroupBox3.Controls.Add(Me.Label1)
         Me.GroupBox3.Controls.Add(Me.Button1)
-        Me.GroupBox3.Controls.Add(Me.Lbl_ADSPoleZero)
-        Me.GroupBox3.Controls.Add(Me.Lbl_ADSShapingFlatTop)
-        Me.GroupBox3.Controls.Add(Me.Lbl_ADSShapingRiseTime)
         Me.GroupBox3.Controls.Add(Me.Lbl_ADSPoleZeroMax)
         Me.GroupBox3.Controls.Add(Me.Lbl_ADSPoleZeroMin)
         Me.GroupBox3.Controls.Add(Me.Label28)
-        Me.GroupBox3.Controls.Add(Me.HSB_ADSPoleZero)
         Me.GroupBox3.Controls.Add(Me.Lbl_ADSShapingFlatTopMax)
         Me.GroupBox3.Controls.Add(Me.Lbl_ADSShapingFlatTopMin)
         Me.GroupBox3.Controls.Add(Me.Label31)
-        Me.GroupBox3.Controls.Add(Me.HSB_ADSShapingFlatTop)
         Me.GroupBox3.Controls.Add(Me.Lbl_ADSShapingRiseTimeMax)
         Me.GroupBox3.Controls.Add(Me.Lbl_ADSShapingRiseTimeMin)
         Me.GroupBox3.Controls.Add(Me.Label34)
-        Me.GroupBox3.Controls.Add(Me.HSB_ADSShapingRiseTime)
         Me.GroupBox3.Controls.Add(Me.Label18)
         Me.GroupBox3.Controls.Add(Me.CBox_ADSBLRMode)
         Me.GroupBox3.Controls.Add(Me.Label14)
@@ -318,6 +291,25 @@ Partial Class frmMCAParameter_GainStabiAdd
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.TabStop = False
+        '
+        'Num_ADSPoleZero
+        '
+        resources.ApplyResources(Me.Num_ADSPoleZero, "Num_ADSPoleZero")
+        Me.Num_ADSPoleZero.Name = "Num_ADSPoleZero"
+        '
+        'Num_ADSShapingFlatTop
+        '
+        Me.Num_ADSShapingFlatTop.DecimalPlaces = 1
+        Me.Num_ADSShapingFlatTop.Increment = New Decimal(New Integer() {1, 0, 0, 65536})
+        resources.ApplyResources(Me.Num_ADSShapingFlatTop, "Num_ADSShapingFlatTop")
+        Me.Num_ADSShapingFlatTop.Name = "Num_ADSShapingFlatTop"
+        '
+        'Num_ADSShapingRiseTime
+        '
+        Me.Num_ADSShapingRiseTime.DecimalPlaces = 1
+        Me.Num_ADSShapingRiseTime.Increment = New Decimal(New Integer() {1, 0, 0, 65536})
+        resources.ApplyResources(Me.Num_ADSShapingRiseTime, "Num_ADSShapingRiseTime")
+        Me.Num_ADSShapingRiseTime.Name = "Num_ADSShapingRiseTime"
         '
         'Label1
         '
@@ -329,30 +321,6 @@ Partial Class frmMCAParameter_GainStabiAdd
         resources.ApplyResources(Me.Button1, "Button1")
         Me.Button1.Name = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Lbl_ADSPoleZero
-        '
-        Me.Lbl_ADSPoleZero.BackColor = System.Drawing.Color.White
-        Me.Lbl_ADSPoleZero.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Lbl_ADSPoleZero.ForeColor = System.Drawing.Color.Black
-        resources.ApplyResources(Me.Lbl_ADSPoleZero, "Lbl_ADSPoleZero")
-        Me.Lbl_ADSPoleZero.Name = "Lbl_ADSPoleZero"
-        '
-        'Lbl_ADSShapingFlatTop
-        '
-        Me.Lbl_ADSShapingFlatTop.BackColor = System.Drawing.Color.White
-        Me.Lbl_ADSShapingFlatTop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Lbl_ADSShapingFlatTop.ForeColor = System.Drawing.Color.Black
-        resources.ApplyResources(Me.Lbl_ADSShapingFlatTop, "Lbl_ADSShapingFlatTop")
-        Me.Lbl_ADSShapingFlatTop.Name = "Lbl_ADSShapingFlatTop"
-        '
-        'Lbl_ADSShapingRiseTime
-        '
-        Me.Lbl_ADSShapingRiseTime.BackColor = System.Drawing.Color.White
-        Me.Lbl_ADSShapingRiseTime.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Lbl_ADSShapingRiseTime.ForeColor = System.Drawing.Color.Black
-        resources.ApplyResources(Me.Lbl_ADSShapingRiseTime, "Lbl_ADSShapingRiseTime")
-        Me.Lbl_ADSShapingRiseTime.Name = "Lbl_ADSShapingRiseTime"
         '
         'Lbl_ADSPoleZeroMax
         '
@@ -369,12 +337,6 @@ Partial Class frmMCAParameter_GainStabiAdd
         resources.ApplyResources(Me.Label28, "Label28")
         Me.Label28.Name = "Label28"
         '
-        'HSB_ADSPoleZero
-        '
-        resources.ApplyResources(Me.HSB_ADSPoleZero, "HSB_ADSPoleZero")
-        Me.HSB_ADSPoleZero.LargeChange = 1
-        Me.HSB_ADSPoleZero.Name = "HSB_ADSPoleZero"
-        '
         'Lbl_ADSShapingFlatTopMax
         '
         resources.ApplyResources(Me.Lbl_ADSShapingFlatTopMax, "Lbl_ADSShapingFlatTopMax")
@@ -390,12 +352,6 @@ Partial Class frmMCAParameter_GainStabiAdd
         resources.ApplyResources(Me.Label31, "Label31")
         Me.Label31.Name = "Label31"
         '
-        'HSB_ADSShapingFlatTop
-        '
-        resources.ApplyResources(Me.HSB_ADSShapingFlatTop, "HSB_ADSShapingFlatTop")
-        Me.HSB_ADSShapingFlatTop.LargeChange = 1
-        Me.HSB_ADSShapingFlatTop.Name = "HSB_ADSShapingFlatTop"
-        '
         'Lbl_ADSShapingRiseTimeMax
         '
         resources.ApplyResources(Me.Lbl_ADSShapingRiseTimeMax, "Lbl_ADSShapingRiseTimeMax")
@@ -410,12 +366,6 @@ Partial Class frmMCAParameter_GainStabiAdd
         '
         resources.ApplyResources(Me.Label34, "Label34")
         Me.Label34.Name = "Label34"
-        '
-        'HSB_ADSShapingRiseTime
-        '
-        resources.ApplyResources(Me.HSB_ADSShapingRiseTime, "HSB_ADSShapingRiseTime")
-        Me.HSB_ADSShapingRiseTime.LargeChange = 1
-        Me.HSB_ADSShapingRiseTime.Name = "HSB_ADSShapingRiseTime"
         '
         'Label18
         '
@@ -443,12 +393,12 @@ Partial Class frmMCAParameter_GainStabiAdd
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.Num_DSRatio)
+        Me.GroupBox4.Controls.Add(Me.Num_DSSpacing)
+        Me.GroupBox4.Controls.Add(Me.Num_DSWindow)
         Me.GroupBox4.Controls.Add(Me.Num_DSCentroid)
-        Me.GroupBox4.Controls.Add(Me.Lbl_DSRatio)
         Me.GroupBox4.Controls.Add(Me.CBox_DSDivider)
-        Me.GroupBox4.Controls.Add(Me.Lbl_DSSpacing)
         Me.GroupBox4.Controls.Add(Me.Label48)
-        Me.GroupBox4.Controls.Add(Me.Lbl_DSWindow)
         Me.GroupBox4.Controls.Add(Me.Label49)
         Me.GroupBox4.Controls.Add(Me.Label50)
         Me.GroupBox4.Controls.Add(Me.Label51)
@@ -458,15 +408,12 @@ Partial Class frmMCAParameter_GainStabiAdd
         Me.GroupBox4.Controls.Add(Me.Lbl_DSRatioMax)
         Me.GroupBox4.Controls.Add(Me.Lbl_DSRatioMin)
         Me.GroupBox4.Controls.Add(Me.Label47)
-        Me.GroupBox4.Controls.Add(Me.HSB_DSRatio)
         Me.GroupBox4.Controls.Add(Me.Lbl_DSSpacingMax)
         Me.GroupBox4.Controls.Add(Me.Lbl_DSSpacingMin)
         Me.GroupBox4.Controls.Add(Me.Label38)
-        Me.GroupBox4.Controls.Add(Me.HSB_DSSpacing)
         Me.GroupBox4.Controls.Add(Me.Lbl_DSWindowMax)
         Me.GroupBox4.Controls.Add(Me.Lbl_DSWindowMin)
         Me.GroupBox4.Controls.Add(Me.Label41)
-        Me.GroupBox4.Controls.Add(Me.HSB_DSWindow)
         Me.GroupBox4.Controls.Add(Me.Lbl_DSCentroidMax)
         Me.GroupBox4.Controls.Add(Me.Lbl_DSCentroidMin)
         Me.GroupBox4.Controls.Add(Me.Label44)
@@ -475,18 +422,27 @@ Partial Class frmMCAParameter_GainStabiAdd
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.TabStop = False
         '
+        'Num_DSRatio
+        '
+        Me.Num_DSRatio.DecimalPlaces = 2
+        Me.Num_DSRatio.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+        resources.ApplyResources(Me.Num_DSRatio, "Num_DSRatio")
+        Me.Num_DSRatio.Name = "Num_DSRatio"
+        '
+        'Num_DSSpacing
+        '
+        resources.ApplyResources(Me.Num_DSSpacing, "Num_DSSpacing")
+        Me.Num_DSSpacing.Name = "Num_DSSpacing"
+        '
+        'Num_DSWindow
+        '
+        resources.ApplyResources(Me.Num_DSWindow, "Num_DSWindow")
+        Me.Num_DSWindow.Name = "Num_DSWindow"
+        '
         'Num_DSCentroid
         '
         resources.ApplyResources(Me.Num_DSCentroid, "Num_DSCentroid")
         Me.Num_DSCentroid.Name = "Num_DSCentroid"
-        '
-        'Lbl_DSRatio
-        '
-        Me.Lbl_DSRatio.BackColor = System.Drawing.Color.White
-        Me.Lbl_DSRatio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Lbl_DSRatio.ForeColor = System.Drawing.Color.Black
-        resources.ApplyResources(Me.Lbl_DSRatio, "Lbl_DSRatio")
-        Me.Lbl_DSRatio.Name = "Lbl_DSRatio"
         '
         'CBox_DSDivider
         '
@@ -495,26 +451,10 @@ Partial Class frmMCAParameter_GainStabiAdd
         resources.ApplyResources(Me.CBox_DSDivider, "CBox_DSDivider")
         Me.CBox_DSDivider.Name = "CBox_DSDivider"
         '
-        'Lbl_DSSpacing
-        '
-        Me.Lbl_DSSpacing.BackColor = System.Drawing.Color.White
-        Me.Lbl_DSSpacing.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Lbl_DSSpacing.ForeColor = System.Drawing.Color.Black
-        resources.ApplyResources(Me.Lbl_DSSpacing, "Lbl_DSSpacing")
-        Me.Lbl_DSSpacing.Name = "Lbl_DSSpacing"
-        '
         'Label48
         '
         resources.ApplyResources(Me.Label48, "Label48")
         Me.Label48.Name = "Label48"
-        '
-        'Lbl_DSWindow
-        '
-        Me.Lbl_DSWindow.BackColor = System.Drawing.Color.White
-        Me.Lbl_DSWindow.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Lbl_DSWindow.ForeColor = System.Drawing.Color.Black
-        resources.ApplyResources(Me.Lbl_DSWindow, "Lbl_DSWindow")
-        Me.Lbl_DSWindow.Name = "Lbl_DSWindow"
         '
         'Label49
         '
@@ -566,12 +506,6 @@ Partial Class frmMCAParameter_GainStabiAdd
         resources.ApplyResources(Me.Label47, "Label47")
         Me.Label47.Name = "Label47"
         '
-        'HSB_DSRatio
-        '
-        resources.ApplyResources(Me.HSB_DSRatio, "HSB_DSRatio")
-        Me.HSB_DSRatio.LargeChange = 1
-        Me.HSB_DSRatio.Name = "HSB_DSRatio"
-        '
         'Lbl_DSSpacingMax
         '
         resources.ApplyResources(Me.Lbl_DSSpacingMax, "Lbl_DSSpacingMax")
@@ -587,12 +521,6 @@ Partial Class frmMCAParameter_GainStabiAdd
         resources.ApplyResources(Me.Label38, "Label38")
         Me.Label38.Name = "Label38"
         '
-        'HSB_DSSpacing
-        '
-        resources.ApplyResources(Me.HSB_DSSpacing, "HSB_DSSpacing")
-        Me.HSB_DSSpacing.LargeChange = 1
-        Me.HSB_DSSpacing.Name = "HSB_DSSpacing"
-        '
         'Lbl_DSWindowMax
         '
         resources.ApplyResources(Me.Lbl_DSWindowMax, "Lbl_DSWindowMax")
@@ -607,12 +535,6 @@ Partial Class frmMCAParameter_GainStabiAdd
         '
         resources.ApplyResources(Me.Label41, "Label41")
         Me.Label41.Name = "Label41"
-        '
-        'HSB_DSWindow
-        '
-        resources.ApplyResources(Me.HSB_DSWindow, "HSB_DSWindow")
-        Me.HSB_DSWindow.LargeChange = 1
-        Me.HSB_DSWindow.Name = "HSB_DSWindow"
         '
         'Lbl_DSCentroidMax
         '
@@ -682,10 +604,19 @@ Partial Class frmMCAParameter_GainStabiAdd
         Me.Name = "frmMCAParameter_GainStabiAdd"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.Num_GainULD, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Num_GainLLD, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Num_GainFineGain, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.Num_ADSPoleZero, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Num_ADSShapingFlatTop, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Num_ADSShapingRiseTime, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        CType(Me.Num_DSRatio, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Num_DSSpacing, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Num_DSWindow, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Num_DSCentroid, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpectralDisplay, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -707,15 +638,12 @@ Partial Class frmMCAParameter_GainStabiAdd
     Friend WithEvents Lbl_GainLLDMax As System.Windows.Forms.Label
     Friend WithEvents Lbl_GainLLDMin As System.Windows.Forms.Label
     Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents HSB_GainLLD As System.Windows.Forms.HScrollBar
     Friend WithEvents Lbl_GainFineGainMax As System.Windows.Forms.Label
     Friend WithEvents Lbl_GainFineGainMin As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents HSB_GainFineGain As System.Windows.Forms.HScrollBar
     Friend WithEvents Lbl_GainULDMax As System.Windows.Forms.Label
     Friend WithEvents Lbl_GainULDMin As System.Windows.Forms.Label
     Friend WithEvents Label25 As System.Windows.Forms.Label
-    Friend WithEvents HSB_GainULD As System.Windows.Forms.HScrollBar
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents CBox_ADSAquisitionMode As System.Windows.Forms.ComboBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
@@ -723,27 +651,21 @@ Partial Class frmMCAParameter_GainStabiAdd
     Friend WithEvents Lbl_ADSPoleZeroMax As System.Windows.Forms.Label
     Friend WithEvents Lbl_ADSPoleZeroMin As System.Windows.Forms.Label
     Friend WithEvents Label28 As System.Windows.Forms.Label
-    Friend WithEvents HSB_ADSPoleZero As System.Windows.Forms.HScrollBar
     Friend WithEvents Lbl_ADSShapingFlatTopMax As System.Windows.Forms.Label
     Friend WithEvents Lbl_ADSShapingFlatTopMin As System.Windows.Forms.Label
     Friend WithEvents Label31 As System.Windows.Forms.Label
-    Friend WithEvents HSB_ADSShapingFlatTop As System.Windows.Forms.HScrollBar
     Friend WithEvents Lbl_ADSShapingRiseTimeMax As System.Windows.Forms.Label
     Friend WithEvents Lbl_ADSShapingRiseTimeMin As System.Windows.Forms.Label
     Friend WithEvents Label34 As System.Windows.Forms.Label
-    Friend WithEvents HSB_ADSShapingRiseTime As System.Windows.Forms.HScrollBar
     Friend WithEvents Lbl_DSRatioMax As System.Windows.Forms.Label
     Friend WithEvents Lbl_DSRatioMin As System.Windows.Forms.Label
     Friend WithEvents Label47 As System.Windows.Forms.Label
-    Friend WithEvents HSB_DSRatio As System.Windows.Forms.HScrollBar
     Friend WithEvents Lbl_DSSpacingMax As System.Windows.Forms.Label
     Friend WithEvents Lbl_DSSpacingMin As System.Windows.Forms.Label
     Friend WithEvents Label38 As System.Windows.Forms.Label
-    Friend WithEvents HSB_DSSpacing As System.Windows.Forms.HScrollBar
     Friend WithEvents Lbl_DSWindowMax As System.Windows.Forms.Label
     Friend WithEvents Lbl_DSWindowMin As System.Windows.Forms.Label
     Friend WithEvents Label41 As System.Windows.Forms.Label
-    Friend WithEvents HSB_DSWindow As System.Windows.Forms.HScrollBar
     Friend WithEvents Lbl_DSCentroidMax As System.Windows.Forms.Label
     Friend WithEvents Lbl_DSCentroidMin As System.Windows.Forms.Label
     Friend WithEvents Label44 As System.Windows.Forms.Label
@@ -755,15 +677,6 @@ Partial Class frmMCAParameter_GainStabiAdd
     Friend WithEvents CBox_DSRatioMode As System.Windows.Forms.ComboBox
     Friend WithEvents CBox_DSRange As System.Windows.Forms.ComboBox
     Friend WithEvents CBox_DSDivider As System.Windows.Forms.ComboBox
-    Friend WithEvents Lbl_ADSPoleZero As System.Windows.Forms.Label
-    Friend WithEvents Lbl_ADSShapingFlatTop As System.Windows.Forms.Label
-    Friend WithEvents Lbl_ADSShapingRiseTime As System.Windows.Forms.Label
-    Friend WithEvents Lbl_GainULD As System.Windows.Forms.Label
-    Friend WithEvents Lbl_GainFineGain As System.Windows.Forms.Label
-    Friend WithEvents Lbl_GainLLD As System.Windows.Forms.Label
-    Friend WithEvents Lbl_DSRatio As System.Windows.Forms.Label
-    Friend WithEvents Lbl_DSSpacing As System.Windows.Forms.Label
-    Friend WithEvents Lbl_DSWindow As System.Windows.Forms.Label
     Friend WithEvents BtnSet As System.Windows.Forms.Button
     Friend WithEvents BtnReset As System.Windows.Forms.Button
     Friend WithEvents SpectralDisplay As AxCanberraDataDisplayLib.AxMvc
@@ -772,4 +685,13 @@ Partial Class frmMCAParameter_GainStabiAdd
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Num_DSCentroid As NumericUpDown
+    Friend WithEvents Num_DSWindow As NumericUpDown
+    Friend WithEvents Num_DSSpacing As NumericUpDown
+    Friend WithEvents Num_DSRatio As NumericUpDown
+    Friend WithEvents Num_GainFineGain As NumericUpDown
+    Friend WithEvents Num_GainLLD As NumericUpDown
+    Friend WithEvents Num_GainULD As NumericUpDown
+    Friend WithEvents Num_ADSShapingRiseTime As NumericUpDown
+    Friend WithEvents Num_ADSShapingFlatTop As NumericUpDown
+    Friend WithEvents Num_ADSPoleZero As NumericUpDown
 End Class
