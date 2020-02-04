@@ -811,7 +811,7 @@ Public Module FHT59N3_ControlFunctions
             If _MyFHT59N3Par.EnableCapturingDetectorTemperature And _MyFHT59N3Par.IsCanberraDetector Then
 
                 ' Read the temperature
-                _DetectorTemperaturValue = _MyControlCenter.iPA_DetectorTemperature(_MyFHT59N3Par.iPA_TemperatureJARpath, _MyFHT59N3Par.iPACom)
+                _DetectorTemperaturValue = _MyControlCenter.CanberraDetectorTemperature
 
                 ' The detector temperature recording needs also the information if the temperature readback failed
                 If _DetectorTemperaturValue = Double.MinValue Then

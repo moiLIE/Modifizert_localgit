@@ -18,7 +18,7 @@ Public Class FHT59N3_ControlCenter
     Private _MCAPeaks As New FHT59N3MCA_Peaks
 
 
-    Private _iPA_Temperature_Connection As BAGiPAConnection.BAGDetectorTemperature
+    Private _CP5_Connection As BAGiPAConnection.BAGCryoCooler
 
 
 #End Region
@@ -286,9 +286,9 @@ Public Class FHT59N3_ControlCenter
         End Get
     End Property
 
-    Public ReadOnly Property iPA_DetectorTemperature(ByVal jarpath As String, ByVal comPort As String) As Double
+    Public ReadOnly Property CanberraDetectorTemperature() As Double
         Get
-            Return _iPA_Temperature_Connection.iPA_ReadTemperature(jarpath, comPort)
+            Return _CP5_Connection.CP5_ReadTemperature()
         End Get
     End Property
 
@@ -524,8 +524,10 @@ Public Class FHT59N3_ControlCenter
         Catch ex As Exception
             Trace.TraceError("Error starting remote control webserver: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
         End Try
-        'Den Reader der iPA_Temperatur starten...
-        _iPA_Temperature_Connection = New BAGiPAConnection.BAGDetectorTemperature()
+        'Das Interface zum CryoCooler starten...
+        If True Then
+            _CP5_Connection = New BAGiPAConnection.BAGCryoCooler("COM3")
+        End If
     End Sub
 
     Public Sub Dispose()
