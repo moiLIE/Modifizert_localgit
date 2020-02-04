@@ -768,6 +768,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FHT59N3.ico" />
+    <None Include="_Resources\TEMPLATE_MAINTENANCE_ANSI4242 - Kopieren.xml" />
+    <None Include="_Resources\TEMPLATE_MAINTENANCE_ANSI4242.xml" />
     <None Include="_Resources\ThermoScientificSoftware_Stacked.png" />
     <None Include="_Resources\TEMPLATE_SPECTRA_ANALYSIS_ANSI4242.xml">
       <SubType>Designer</SubType>

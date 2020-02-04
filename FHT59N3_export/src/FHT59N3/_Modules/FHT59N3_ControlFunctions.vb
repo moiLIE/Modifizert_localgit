@@ -996,12 +996,41 @@ Public Module FHT59N3_ControlFunctions
         End Try
     End Function
 
+    Private Sub WriteMaintenanceN42()
+        Try
+            Dim persistSpectrumAnsiN4242 As New FHT59N3_PersistSpectrumAnalyse_ANSIN4242
+            Dim templateData As IDictionary(Of String, Object) = New Dictionary(Of String, Object)()
+            Dim SpecType As Integer = FHT59N3_Persist.SPECTYPE_WARTUNG
+            persistSpectrumAnsiN4242.SYS_StoreCurrentMaintenanceStateAnsiN4242(templateData, SpecType)
+            persistSpectrumAnsiN4242.SYS_WriteMaintenanceFileAnsiN4242(templateData, SpecType)
+
+        Catch ex As Exception
+            Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
+        End Try
+    End Sub
+
     Private Sub MCA_CheckIfMeasurementDone()
         Try
             'ehemals sub takterNormal_Timer!
 
             _SSPRSTR4 = Format(Now, "dd.MM.yy HH:mm")
-            If (_MyControlCenter.MCA_LiveMeasTime = 0) Or (Not _Measurement) Then
+            Dim exitSub As Boolean = False
+            Try
+                If (_MyControlCenter.MCA_LiveMeasTime = 0) Or (Not _Measurement) Then
+                    exitSub = True
+                End If
+            Catch ex As Exception
+                exitSub = True
+                Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
+            End Try
+
+            If exitSub Then
+                '''Exit and potentially write N42:
+                '''
+                If Now >= _AlarmCheckTimeDate Then
+                    WriteMaintenanceN42()
+                    SYS_SynchronizeNextAlarmCheckTime(MinutesOfDayNow(), Nothing)
+                End If
                 Exit Sub
             End If
 
@@ -1056,6 +1085,10 @@ Public Module FHT59N3_ControlFunctions
                 End If
 
             Else 'ich bin in der Kalibrierung oder der WKP
+                If Now >= _AlarmCheckTimeDate Then
+                    WriteMaintenanceN42()
+                    SYS_SynchronizeNextAlarmCheckTime(MinutesOfDayNow(), Nothing)
+                End If
 
                 If (_MyControlCenter.MCA_LiveMeasTime >= _LastMeasurementTimeMin * 60) Or (_MyControlCenter.MCA_AquireDone) Then
                     If Not _MyControlCenter.MCA_AquireDone Then
@@ -1979,7 +2012,6 @@ Public Module FHT59N3_ControlFunctions
     Public Sub SYS_SynchronizeNextAlarmCheckTime(actualMinuteOfDay As Integer, callInfo As String)
         Try
             Dim AlarmCheckTimeMinute As Integer
-
             'Dim actualMinuteOfDay As Integer = 60 * Now.Hour + Now.Minute
             If actualMinuteOfDay Mod _AlarmCheckPoints > 0 Then
                 AlarmCheckTimeMinute = (actualMinuteOfDay + 2 * _AlarmCheckPoints) - (actualMinuteOfDay Mod _AlarmCheckPoints)

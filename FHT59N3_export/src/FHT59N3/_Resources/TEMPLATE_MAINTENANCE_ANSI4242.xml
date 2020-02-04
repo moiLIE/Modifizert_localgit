@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<N42InstrumentData
+	xmlns="http://physics.nist.gov/Divisions/Div846/Gp4/ANSIN4242/2005/ANSIN4242" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:sara="http://www.technidata.com/ENVINET/SARA" xmlns:fht="http://www.thermofisher.com/DivisionSpectro/FHT59N3/ANSI4242/V1"
+	xmlns:n42_2012="http://physics.nist.gov/Divisions/Div846/Gp4/ANSIN4242/2011/ANSIN4242">
+
+  <Measurement ID="{{measurement_id}}">
+    <InstrumentInformation>
+      <InstrumentType>Spectrometer</InstrumentType>
+      <Manufacturer>Thermo</Manufacturer>
+      <InstrumentModel>FHT-59N3T</InstrumentModel>
+      <!-- the software revision of the monitor application is sufficient to describe the overall system configuration  -->
+      <InstrumentVersion>Software Rev. {{program_version}}</InstrumentVersion>
+      <!-- defines the serial number of the FHT59N3T unit -->
+      <InstrumentID>{{serial_id}}</InstrumentID>
+
+      <!-- should always be Measure although the following four values are allowed: Measure, Calibrate, Test, Other -->
+      <InstrumentMode>{{type_instrument_mode}}</InstrumentMode>
+
+      <!-- voerst werden bisherige Auswertungstypen übernommen obwohl BAG an kontinuierlicher Auswertung interessiert ist: 
+			    AlarmCheck, SpectrumOfMeasurementPeriod, SpectrumOfDustationPeriod, SpectrumOfTheDay 
+          (for testing we have type UserForcedAnalysis which is the case when user manually evaluates spectrum) -->
+      <fht:FileType>{{file_type}}</fht:FileType>
+      <!-- defines the measurement mode: e.g. Normal, Alarm, Intensive and Maintenance (although also informed as system state) -->
+      <fht:Mode>{{measurement_mode}}</fht:Mode>
+
+      <!-- numerical summary of the system state -->
+      <fht:SystemStatus>{{systemstate_summary}}</fht:SystemStatus>
+      <!-- comma-separated enumeration of system states:
+  			     MaintenanceOn (0x1), 
+             K40NotDetected (0x2), 
+             AirFlowBelowLimit (0x4), 
+             McaHighVoltageOff (0x8), 
+             NoFilterStep (0x16), 
+             BypassOpen (0x32), 
+             AnalyzationCancelled (0x64), 
+             AirFlowAboveLimit (0x128), 
+             EcoolerOff (0x256), 
+             SpectrumDeadTimeBigger20Percent (0x512), 
+             InvalidDetectorTemperature (0x1024), 
+             FilterHasToBeChanged (0x2048), 
+             InvalidAirTempOrPressure (0x4096), 
+             K40ToBig (0x8192), 
+				    DataTransferErrorPlc (0x16384)
+        -->
+      <fht:SystemStatusDescription>{{systemstate_enumeration}}</fht:SystemStatusDescription>
+
+      <!-- the name of the station as configured in the monitor application-->
+      <fht:StationName>{{station_name}}</fht:StationName>
+
+
+
+    </InstrumentInformation>
+
+    <Spectrum MeasurementType="" CalibrationIDs="">
+      <!-- format yyyy-MM-ddTHH-mm-00Z -->
+      <StartTime>{{end_measurement_time_utc}}</StartTime>
+      <RealTime>PT0S</RealTime>
+      <LiveTime>PT0S</LiveTime>
+      <!-- format yyyy-MM-ddTHH-mm-00Z -->
+      <fht:EndTime>{{end_measurement_time_utc}}</fht:EndTime>
+
+      <!-- output only mean air flow, not actual air flow (as discussed) -->
+      <fht:Airflow Units="m3/h" Type="{{air_flow_type}}">{{air_flow_value}}</fht:Airflow>
+
+      <!-- contains various analog sensor values at the FHT59N3T device -->
+      <fht:TemperatureSensors detector="{{sensor_temperature_detector}}"
+                                  airflow="{{sensor_temperature_after_filter}}" extern="{{sensor_temperature_external}}" unit="°C" />
+      <fht:PressureSensors ambient="{{sensor_pressure_environment}}" pressureDiffFilter="{{sensor_pressure_filter}}"
+                           pressureDiffBezel="{{sensor_pressure_bezel}}" unit="hPa" />
+    </Spectrum>
+    <AnalysisResults>
+      <NuclideAnalysis ActivityUnits="" sara:ActivityRelation="" AlgorithmDescription="" AlgorithmVersion="" fht:CoverageValue="">
+        <fht:MaxViolatedLevelGlobal>{{maxViolatedAlarmLevel_AllNuclides}}</fht:MaxViolatedLevelGlobal>
+      </NuclideAnalysis>
+    </AnalysisResults>
+  </Measurement>
+  <Calibration ID="" Type="" EnergyUnits=""></Calibration>
+</N42InstrumentData>
