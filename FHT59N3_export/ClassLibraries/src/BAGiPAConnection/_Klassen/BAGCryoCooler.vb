@@ -9,7 +9,7 @@
     Private _LastColdTipTemp As Double
     Private _LastCompressorTemp As Double
     Private _LastControllerTemp As Double
-    Private _LastErrorStatus As Double
+    Private _LastErrorStatus As String
 
     Private _Last_Readback As DateTime
     Private Const _ReadbackCycle As Integer = 30 'in seconds
@@ -178,7 +178,7 @@
             Return _LastPower
         End Get
     End Property
-    Public ReadOnly Property CP5_Status() As Double
+    Public ReadOnly Property CP5_Status() As Boolean
         Get
             _UpdateValues()
             Return _Last_CoolerStatus

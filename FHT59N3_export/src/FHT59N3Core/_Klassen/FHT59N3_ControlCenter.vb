@@ -288,7 +288,19 @@ Public Class FHT59N3_ControlCenter
 
     Public ReadOnly Property CanberraDetectorTemperature() As Double
         Get
-            Return _CP5_Connection.CP5_ReadTemperature()
+            Return _CP5_Connection.CP5_ReadTemperature
+        End Get
+    End Property
+
+
+    Public ReadOnly Property CanberraCryoCoolerPower() As Double
+        Get
+            Return _CP5_Connection.CP5_ReadPower
+        End Get
+    End Property
+    Public ReadOnly Property CanberraCryoCoolerStatus() As Boolean
+        Get
+            Return _CP5_Connection.CP5_Status
         End Get
     End Property
 

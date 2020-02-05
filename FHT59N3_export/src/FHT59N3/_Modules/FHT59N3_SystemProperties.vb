@@ -100,6 +100,7 @@ Public Module FHT59N3_SystemProperties
 
     Public _DetectorTemperaturValue As Double _
                     = Double.MinValue           'Detectore temperature, accessed from SPS and calculated in SPS_AnalyzeAnalogStates
+    Public _CryoPower As Double
 
     Public _ASPSTR As String 'Messstartzait: jjmmttssnn
     Public _SSPRSTR2 As String 'Messstartzait für tagS: tt.mm.jj ss:nn

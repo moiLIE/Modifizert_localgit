@@ -807,8 +807,11 @@ Public Module FHT59N3_ControlFunctions
                     End If
                 End If
 
-            'Read Temperature of the Canberra detector
+            'Read Temperature and Power of the Canberra detector
             If _MyFHT59N3Par.EnableCapturingDetectorTemperature And _MyFHT59N3Par.IsCanberraDetector Then
+
+                'Read the power
+                _CryoPower = _MyControlCenter.CanberraCryoCoolerPower
 
                 ' Read the temperature
                 _DetectorTemperaturValue = _MyControlCenter.CanberraDetectorTemperature

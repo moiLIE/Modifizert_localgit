@@ -285,6 +285,16 @@ Module FHT59N3_ShowFunctions
 
             frmMain.UcStatusSideBar.LblDetectTemp.Text = If(_DetectorTemperaturValue <> Double.MinValue,
                                             Format(_DetectorTemperaturValue, "0.00"), "--")
+            If _MyFHT59N3Par.IsCanberraDetector Then
+                'Show cooling power
+                frmMain.UcStatusSideBar.LblCryoPowerName.Visible = True
+                frmMain.UcStatusSideBar.LblCryoPowerValue.Visible = True
+                frmMain.UcStatusSideBar.LblCryoPowerValue.Text = Format(_CryoPower, "0")
+            Else
+                'Hide cooling power
+                frmMain.UcStatusSideBar.LblCryoPowerName.Visible = False
+                frmMain.UcStatusSideBar.LblCryoPowerValue.Visible = False
+            End If
 
             If _MyControlCenter.SYS_States.Maintenance Then
                 frmMain.UcStatusSideBar.LblStatus.Text = ml_string(65, "Maintenance")
@@ -614,7 +624,11 @@ Module FHT59N3_ShowFunctions
                         End If
                     End If
                 Else
-                    frmMeasScreen.ListView3.Items.Add(ml_string(650, "ECooler") & ": " & ml_string(675, "Canberra"), "YellowDot")
+                    If _MyControlCenter.CanberraCryoCoolerStatus Then
+                        frmMeasScreen.ListView3.Items.Add(ml_string(650, "ECooler") & ": " & ml_string(675, "Canberra"), "GreenDot")
+                    Else
+                        frmMeasScreen.ListView3.Items.Add(ml_string(650, "ECooler") & ": " & ml_string(675, "Canberra"), "RedDot")
+                    End If
                 End If
 
 
