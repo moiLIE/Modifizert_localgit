@@ -505,7 +505,8 @@ Public Class FHT59N3_ControlCenter
     Public Sub New(ByVal ComPortSPS As String, ByVal NetworkAddress As String, ByVal RemotePort As UInt16, ByVal SPSConnectionType As String,
                    ByVal UseStxEtxProtocolSPS As Boolean,
                    ByVal MCAType As MCATypes, ByVal IPMCA As String,
-                   ByVal LogFilePath As String, ByVal SimulateLynxSystem As Boolean, ByRef BeforeLynxCommandSub As Action(Of String))
+                   ByVal LogFilePath As String, ByVal SimulateLynxSystem As Boolean, ByRef BeforeLynxCommandSub As Action(Of String),
+                   Optional ByVal ComPortCryoCool As String = "COM99")
         Try
 
             _MCAType = MCAType
@@ -544,10 +545,14 @@ Public Class FHT59N3_ControlCenter
         Catch ex As Exception
             Trace.TraceError("Error starting remote control webserver: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
         End Try
+
         'Das Interface zum CryoCooler starten...
-        If True Then
-            _CP5_Connection = New BAGiPAConnection.BAGCryoCooler("COM3")
-        End If
+        Try
+            _CP5_Connection = New BAGiPAConnection.BAGCryoCooler(ComPortCryoCool)
+        Catch ex As Exception
+            Trace.TraceError("Error starting remote control webserver: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
+        End Try
+
     End Sub
 
     Public Sub Dispose()

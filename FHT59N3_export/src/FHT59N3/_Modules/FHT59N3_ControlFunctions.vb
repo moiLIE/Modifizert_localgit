@@ -1617,7 +1617,8 @@ Public Module FHT59N3_ControlFunctions
                                                          _SimulateLynxSystem,
                                                          Sub(msg As String)
                                                              InterruptedTracing(msg)
-                                                         End Sub)
+                                                         End Sub,
+                                                          _MyFHT59N3Par.CP5Com)
 
             AddHandler _MyControlCenter.CommandReceived, AddressOf SYS_RemoteCommandReceivedHandler
             AddHandler _MyControlCenter.SystemStateChanged, AddressOf SYS_SystemStateChangedHandler

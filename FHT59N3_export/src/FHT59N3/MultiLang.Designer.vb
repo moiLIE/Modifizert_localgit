@@ -4845,7 +4845,7 @@ Friend Class MultiLang
     End Property
     
     '''<summary>
-    '''  Sucht eine lokalisierte Zeichenfolge, die Test whether the Cryo-Cool control is linked correctly? ähnelt.
+    '''  Sucht eine lokalisierte Zeichenfolge, die Please restart to carry out the changes. ähnelt.
     '''</summary>
     Friend Shared ReadOnly Property _667() As String
         Get
@@ -4890,7 +4890,7 @@ Friend Class MultiLang
     End Property
     
     '''<summary>
-    '''  Sucht eine lokalisierte Zeichenfolge, die iPA Serial Port ähnelt.
+    '''  Sucht eine lokalisierte Zeichenfolge, die CP5 Serial Port ähnelt.
     '''</summary>
     Friend Shared ReadOnly Property _671() As String
         Get
@@ -4899,7 +4899,7 @@ Friend Class MultiLang
     End Property
     
     '''<summary>
-    '''  Sucht eine lokalisierte Zeichenfolge, die Serial Port to communicate with the Canberra iPA. ähnelt.
+    '''  Sucht eine lokalisierte Zeichenfolge, die Serial Port to communicate with the Canberra CP5. ähnelt.
     '''</summary>
     Friend Shared ReadOnly Property _672() As String
         Get

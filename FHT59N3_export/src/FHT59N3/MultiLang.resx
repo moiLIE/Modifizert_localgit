@@ -1888,7 +1888,7 @@ To prevent any damage of the detector, the detector must bei warmed up to the no
     <value>Path pointing to the location of the CryoCool control software.</value>
   </data>
       <data name="_667" xml:space="preserve">
-    <value>Test whether the Cryo-Cool control is linked correctly?</value>
+    <value>Please restart to carry out the changes.</value>
   </data>
   <data name="_668" xml:space="preserve">
     <value>Canberra Temperature logfile</value>
@@ -1900,10 +1900,10 @@ To prevent any damage of the detector, the detector must bei warmed up to the no
     <value>Try to turn the CryoCooler On/Off</value>
   </data>
   <data name="_671" xml:space="preserve">
-    <value>iPA Serial Port</value>
+    <value>CP5 Serial Port</value>
   </data>
   <data name="_672" xml:space="preserve">
-    <value>Serial Port to communicate with the Canberra iPA.</value>
+    <value>Serial Port to communicate with the Canberra CP5.</value>
   </data>
   <data name="_673" xml:space="preserve">
     <value>Path to ipATemperatureLogger.jar</value>

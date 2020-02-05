@@ -2304,7 +2304,7 @@ Um eine Beschädigung des Detectors zu verhindern, muss dieser zuerst auf Normal
     <value>Pfad der Cryo-Cool Steuerungs Software.</value>
   </data>
   <data name="_667" xml:space="preserve">
-    <value>Wollen Sie überprüfen ob die Cryo-Cool Steuerung korrekt verlinkt ist?</value>
+    <value>Bitte neustarten um die Änderungen umzusetzen.</value>
   </data>
   <data name="_668" xml:space="preserve">
     <value>Canberra Temperatur-Logfile</value>
@@ -2316,10 +2316,10 @@ Um eine Beschädigung des Detectors zu verhindern, muss dieser zuerst auf Normal
     <value>Schalte den CryoCooler ein/aus.</value>
   </data>
   <data name="_671" xml:space="preserve">
-    <value>Serieller Anschluss des iPA</value>
+    <value>Serieller Anschluss des CP5</value>
   </data>
   <data name="_672" xml:space="preserve">
-    <value>Serieller Anschluss um mit dem Canberra iPA zu kommunizieren.</value>
+    <value>Serieller Anschluss um mit dem Canberra CryoCooler zu kommunizieren.</value>
   </data>
   <data name="_673" xml:space="preserve">
     <value>Pfad zu ipATemperatureLogger.jar</value>
