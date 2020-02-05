@@ -111,7 +111,7 @@
         If Not _CP5Port Is Nothing Then
             _CP5Port.WriteLine("REMOTE")
             Dim Readback As String = _CP5Port.ReadLine()
-            If Readback = "1" Then
+            If Val(Readback) = 1 Then
                 _Last_CoolerStatus = True
                 Exit Sub
             End If
@@ -223,6 +223,7 @@
                 'Readback should be "y"
             End If
             _ReleaseCP5()
+            _ReadoutValues()
         Catch ex As Exception
             _ReleaseCP5()
         End Try
@@ -236,6 +237,7 @@
                 'Readback should be "y"
             End If
             _ReleaseCP5()
+            _ReadoutValues()
         Catch ex As Exception
             _ReleaseCP5()
         End Try

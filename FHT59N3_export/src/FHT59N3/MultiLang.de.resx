@@ -2313,7 +2313,7 @@ Um eine Beschädigung des Detectors zu verhindern, muss dieser zuerst auf Normal
     <value>Pfad der Logdatei mit der aktuellen Detektortemperatur.</value>
   </data>
   <data name="_670" xml:space="preserve">
-    <value>Der Canberra  Cryo Cooler muss mit einem anderen Programm gesteuert werden. Möchten Sie es öffnen?</value>
+    <value>Schalte den CryoCooler ein/aus.</value>
   </data>
   <data name="_671" xml:space="preserve">
     <value>Serieller Anschluss des iPA</value>
@@ -2329,5 +2329,14 @@ Um eine Beschädigung des Detectors zu verhindern, muss dieser zuerst auf Normal
   </data>
   <data name="_675" xml:space="preserve">
     <value>Canberra</value>
+  </data>
+  <data name="_676" xml:space="preserve">
+    <value>Ein</value>
+  </data>
+  <data name="_677" xml:space="preserve">
+    <value>Aus</value>
+  </data>
+  <data name="_678" xml:space="preserve">
+    <value>Timeout</value>
   </data>
 </root>

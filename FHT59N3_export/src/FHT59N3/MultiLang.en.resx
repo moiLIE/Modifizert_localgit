@@ -2231,7 +2231,7 @@ To prevent any damage of the detector, the detector must bei warmed up to the no
     <value>Path pointing to the location of the logfile containing the current detector temperature.</value>
   </data>
   <data name="_670" xml:space="preserve">
-    <value>The Canberra Cryo Cooler has to be controlled in a seperate GUI. Do you want to open it?</value>
+    <value>Try to turn the CryoCooler On/Off</value>
   </data>
   <data name="_671" xml:space="preserve">
     <value>iPA Serial Port</value>
@@ -2248,6 +2248,12 @@ To prevent any damage of the detector, the detector must bei warmed up to the no
   <data name="_675" xml:space="preserve">
     <value>Canberra</value>
   </data>
+  <data name="_676" xml:space="preserve">
+    <value>ON</value>
+  </data>
+  <data name="_677" xml:space="preserve">
+    <value>Off</value>
+  </data>
   <data name="_1209" xml:space="preserve">
     <value>extracted from NAH.cnf: </value>
     <comment>2</comment>
@@ -2255,5 +2261,8 @@ To prevent any damage of the detector, the detector must bei warmed up to the no
   <data name="_1210" xml:space="preserve">
     <value>extracted from NAH_MISCH.cnf: </value>
     <comment>2</comment>
+  </data>
+  <data name="_678" xml:space="preserve">
+    <value>Timeout</value>
   </data>
 </root>

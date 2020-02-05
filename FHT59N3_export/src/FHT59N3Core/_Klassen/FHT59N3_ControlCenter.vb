@@ -304,6 +304,14 @@ Public Class FHT59N3_ControlCenter
         End Get
     End Property
 
+    Public Sub CanberraCryoCooler_ON()
+        _CP5_Connection.CP5_ON()
+    End Sub
+    Public Sub CanberraCryoCooler_OFF()
+        _CP5_Connection.CP5_OFF()
+    End Sub
+
+
     ''' <summary>
     ''' Gets the second temperature. New for V2.0.3 (June 2017)
     ''' </summary>

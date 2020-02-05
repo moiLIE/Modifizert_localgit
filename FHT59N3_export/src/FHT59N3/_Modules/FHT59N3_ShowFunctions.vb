@@ -192,8 +192,17 @@ Module FHT59N3_ShowFunctions
                     frmControlMenu.LblEcoolerState.BackColor = MYCOL_OK
                 End If
             Else 'Canberra
-                frmControlMenu.LblEcoolerState.Text = ml_string(675, "Canberra")
-                frmControlMenu.LblEcoolerState.BackColor = MYCOL_WARNING
+                If _MyControlCenter.CanberraCryoCoolerStatus Then
+                    frmControlMenu.LblEcoolerState.Text = ml_string(534, "running")
+                    frmControlMenu.LblEcoolerState.BackColor = MYCOL_OK
+                Else
+                    frmControlMenu.LblEcoolerState.Text = ml_string(55, "off")
+                    frmControlMenu.LblEcoolerState.BackColor = MYCOL_NotOK
+                End If
+                If _MyControlCenter.CanberraDetectorTemperature = Double.MinValue Then
+                    frmControlMenu.LblEcoolerState.Text = ml_string(678, "Timeout")
+                    frmControlMenu.LblEcoolerState.BackColor = MYCOL_WARNING
+                End If
             End If
 
 
@@ -747,13 +756,24 @@ Module FHT59N3_ShowFunctions
                     End If
                 End If
             Else
-                stateLv.Items(5).Text = (ml_string(650, "ECooler") & ": " & ml_string(675, "Canberra"))
-                stateLv.Items(5).ImageKey = "YellowDot"
+
+                If _MyControlCenter.CanberraCryoCoolerStatus Then
+                    stateLv.Items(5).Text = (ml_string(650, "ECooler") & ": " & ml_string(675, "Canberra"))
+                    stateLv.Items(5).ImageKey = "GreenDot"
+                Else
+                    stateLv.Items(5).Text = (ml_string(650, "ECooler") & ": " & ml_string(675, "Canberra"))
+                    stateLv.Items(5).ImageKey = "RedDot"
+                End If
+                'Handle case of no communication with CP5:
+                If _MyControlCenter.CanberraDetectorTemperature = Double.MinValue Then
+                    stateLv.Items(5).Text = (ml_string(650, "ECooler") & ": " & ml_string(678, "Timeout"))
+                    stateLv.Items(5).ImageKey = "YellowDot"
+                End If
             End If
 
 
 
-            If _MyControlCenter.MCA_GetHVState Then
+                If _MyControlCenter.MCA_GetHVState Then
 
                 If stateLv.Items(6).ImageKey <> "GreenDot" Then
                     stateLv.Items(6).Text = (ml_string(59, "High Voltage") & ": " & ml_string(248, "on"))
@@ -783,16 +803,21 @@ Module FHT59N3_ShowFunctions
         Dim questionResult1, questionResult2 As MsgBoxResult
 
         If _MyFHT59N3Par.IsCanberraDetector Then
-            questionResult1 = GUI_ShowMessageBox(ml_string(670, "The Canberra Cryo Cooler has to be controlled in a seperate GUI. Do you want to open it?"), ml_string(90, "Yes"), ml_string(91, "No"), "", MYCOL_THERMOGREEN, Color.White)
+            questionResult1 = GUI_ShowMessageBox(
+                ml_string(670, "Try to turn the CryoCooler On/Off"),
+                ml_string(676, "ON"),
+                ml_string(677, "OFF"),
+                ml_string(12, "Cancel"), MYCOL_THERMOGREEN, Color.White)
             If questionResult1 = MsgBoxResult.Yes Then
-                Try
-                    Process.Start(_MyFHT59N3Par.CryoCoolExecutable) '("""C:\Program Files (x86)\CANBERRA\CP5 Control Panel\CP5.exe""")
-                Catch e As Exception
-                    MsgBox(e.Message)
-                End Try
+                _MyControlCenter.CanberraCryoCooler_ON()
+                Return EcoolerGuiStates.ACTIVATED
+            End If
+            If questionResult1 = MsgBoxResult.No Then
+                _MyControlCenter.CanberraCryoCooler_OFF()
+                Return EcoolerGuiStates.DEACTIVATED
             End If
         Else
-            If (_DetectorTemperaturValue = Double.MinValue) Then
+                If (_DetectorTemperaturValue = Double.MinValue) Then
                 'we don't know the temperature, let the ecooler untouched
                 Return EcoolerGuiStates.UNCHANGED
             End If

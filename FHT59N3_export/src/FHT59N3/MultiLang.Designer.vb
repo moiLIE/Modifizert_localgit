@@ -4881,7 +4881,7 @@ Friend Class MultiLang
     End Property
     
     '''<summary>
-    '''  Sucht eine lokalisierte Zeichenfolge, die The Canberra Cryo Cooler has to be controlled in a seperate GUI. Do you want to open it? ähnelt.
+    '''  Sucht eine lokalisierte Zeichenfolge, die Try to turn the CryoCooler On/Off ähnelt.
     '''</summary>
     Friend Shared ReadOnly Property _670() As String
         Get
@@ -4931,6 +4931,33 @@ Friend Class MultiLang
     Friend Shared ReadOnly Property _675() As String
         Get
             Return ResourceManager.GetString("_675", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die ON ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _676() As String
+        Get
+            Return ResourceManager.GetString("_676", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Off ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _677() As String
+        Get
+            Return ResourceManager.GetString("_677", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Timeout ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _678() As String
+        Get
+            Return ResourceManager.GetString("_678", resourceCulture)
         End Get
     End Property
     
