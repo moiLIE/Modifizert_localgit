@@ -306,7 +306,7 @@ Class FHT59N3_ComputeSpectrumAnalyze
         NuclideChannel(7) = CanberraDataAccessLib.ParamCodes.CAM_F_PSDAREA   'Error on Area
         NuclideChannel(8) = CanberraDataAccessLib.ParamCodes.CAM_F_PSBACKGND 'Backgrond
         NuclideChannel(9) = CanberraDataAccessLib.ParamCodes.CAM_F_PSDBACK   'Error on Background
-        'NuclideChannel(10) = CanberraDataAccessLib.ParamCodes.CAM_F_PSFIT    'Quality of the fit
+        NuclideChannel(10) = CanberraDataAccessLib.ParamCodes.CAM_L_NLFNOUSEWTM    'Don't use the line in weighted average?
 
 
         ' CAM_F_NLMDANETERR
@@ -326,9 +326,11 @@ Class FHT59N3_ComputeSpectrumAnalyze
             Dim PeakAreaErr = CType(ParamBuffer(7), Double)  'Error on Area
             Dim PeakBckg = CType(ParamBuffer(8), Double)  'Backgrond
             Dim PeakBckgErr = CType(ParamBuffer(9), Double)  'Error on Backgrond
-            'Dim PeakRChiSq = CType(ParamBuffer(10), Double)  'Quality of the fit
+            Dim PeakUseWtm = Not (CType(ParamBuffer(10), Boolean))  'Use the line in weighted average?
 
             Dim peak As FHT59N3MCA_Peak = New FHT59N3MCA_Peak()
+            peak.NuclideNumber = NuclideNumber
+
             peak.PeakEnergy = PeakEnergy
             peak.PeakChannel = PeakChannel
             peak.IsKeyLine = IsKeyLine
@@ -342,7 +344,7 @@ Class FHT59N3_ComputeSpectrumAnalyze
             peak.PeakBckgErr = PeakBckgErr
             'peak.PeakRChiSq = PeakRChiSq
 
-
+            peak.UseWtm = PeakUseWtm
 
 
             _MyControlCenter.MCA_Peaks.PeakList.Add(peak)

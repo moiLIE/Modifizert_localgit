@@ -197,7 +197,7 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
     ''' <remarks></remarks>
     Private Sub SetTemplateTagsNuclidAnalysis(ByRef templateData As IDictionary(Of String, Object))
         'add data for <AnalysisResults></AnalysisResults>
-        Dim analysisNuclidData As IList(Of Dictionary(Of String, String)) = New List(Of Dictionary(Of String, String))()
+        Dim analysisNuclidData As IList(Of Dictionary(Of String, Object)) = New List(Of Dictionary(Of String, Object))()
         templateData.Add("analysis_nuclids", analysisNuclidData)
 
         Dim nuclideList As FHT59N3MCA_NuclideList = _MyControlCenter.MCA_Nuclides
@@ -213,13 +213,14 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
             Dim detectLimitBqm3 As Double = nuclide.SpectrumAnalysis.DetectionLimit_Bqm3
             Dim uncertainty As Double = nuclide.SpectrumAnalysis.DetectionError_Percent
             Dim correctionFactor As Double = nuclide.SpectrumAnalysis.NuclideCorrectionFactor
+            Dim nuclidenumber As Integer = nuclide.Library.NuclidNumber
 
             Dim showEmpty As Boolean = _MyFHT59N3Par.AnsiN4242Settings.HasFlag(AnsiN4242Settings.ShowEmptyAnalyzedNuclids)
 
             Dim showNuclid = (showEmpty Or concBqm3 > 0) AndAlso nuclide.Library.Name <> "K-40"
             'Dim showNuclid = concBqm3 > detectLimitBqm3 And mcaNuclide.Name <> "K-40"
 
-            Dim nuclidData As Dictionary(Of String, String) = New Dictionary(Of String, String)()
+            Dim nuclidData As Dictionary(Of String, Object) = New Dictionary(Of String, Object)()
             nuclidData.Add("showNuclid", If(showNuclid, "True", Nothing))
 
             nuclidData.Add("nuclid_remark", "")
@@ -247,25 +248,43 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
             'Dim peaksForNuclide As List(Of FHT59N3MCA_Peak) = _MyControlCenter.MCA_Peaks.GetPeakByNuclidEnergy(mcaNuclide.KeyLineEnergy)
             Dim peaksForNuclide As IEnumerable(Of FHT59N3MCA_Peak) = _MyControlCenter.MCA_Peaks.PeakList.Where(Function(d)
                                                                                                                    'Return CInt(nuclide.SpectrumAnalysis.KeyLineEnergy) = CInt(d.PeakEnergy)
-                                                                                                                   Return System.Math.Abs(nuclide.SpectrumAnalysis.KeyLineEnergy - d.PeakEnergy) < 1
+                                                                                                                   Return d.NuclideNumber = nuclidenumber
                                                                                                                End Function)
 
             '0 falls kein Peak, wird von Template-Engine dann nicht genutzt...
             nuclidData.Add("isPeak", If(peaksForNuclide.Count > 0, "true", Nothing))
             If (peaksForNuclide.Count > 0) Then
-                Dim firstPeak As FHT59N3MCA_Peak = peaksForNuclide.First()
-                nuclidData.Add("peak_channel", firstPeak.PeakChannel)
-                nuclidData.Add("peak_energy", GetDecimal(firstPeak.PeakEnergy))
-                nuclidData.Add("peak_area", GetDecimal(firstPeak.PeakArea))
-                nuclidData.Add("peak_fwhm", GetDecimalThreeDigit(firstPeak.PeakFwhm))
+                Dim NuclidPeaks As IList(Of Dictionary(Of String, String)) = New List(Of Dictionary(Of String, String))()
+                nuclidData.Add("nuclide_peaks", NuclidPeaks)
+                For m As Integer = 1 To peaksForNuclide.Count
+                    Dim peakData As Dictionary(Of String, String) = New Dictionary(Of String, String)()
+                    Dim peak As FHT59N3MCA_Peak = peaksForNuclide(m)
+                    peakData.Add("peak_channel", peak.PeakChannel)
+                    peakData.Add("peak_energy", GetDecimal(peak.PeakEnergy))
+                    peakData.Add("peak_area", GetDecimal(peak.PeakArea))
+                    peakData.Add("peak_fwhm", GetDecimalThreeDigit(peak.PeakFwhm))
 
-                nuclidData.Add("peak_areaerr", GetDecimal(firstPeak.PeakAreaErr))
-                nuclidData.Add("peak_bckg", GetDecimalThreeDigit(firstPeak.PeakBckg))
-                nuclidData.Add("peak_bckgerr", GetDecimalThreeDigit(firstPeak.PeakBckgErr))
-                'nuclidData.Add("peak_rchisq", GetDecimalThreeDigit(firstPeak.PeakRChiSq))
+                    peakData.Add("peak_areaerr", GetDecimal(peak.PeakAreaErr))
+                    peakData.Add("peak_bckg", GetDecimalThreeDigit(peak.PeakBckg))
+                    peakData.Add("peak_bckgerr", GetDecimalThreeDigit(peak.PeakBckgErr))
 
-                'ist nur eine temporäre Liste, daher die bereits ausgegebenen Peaks rausnehmen, damit die "not assigned peaks" übrigbleiben
-                _MyControlCenter.MCA_Peaks.PeakList.Remove(firstPeak)
+                    Dim peaktype As String = "misc"
+                    If peak.IsKeyLine Then
+                        peaktype = "key"
+                    ElseIf peak.UseWtm Then
+                        peaktype = "wtm"
+                    End If
+                    peakData.Add("peak_type", peaktype)
+
+                    'Add the peak to the list of peaks associated with the nuclide 
+                    NuclidPeaks.Add(peakData)
+
+                    'ist nur eine temporäre Liste, daher die bereits ausgegebenen Peaks rausnehmen, damit die "not assigned peaks" übrigbleiben
+                    _MyControlCenter.MCA_Peaks.PeakList.Remove(peak)
+                Next
+
+
+
             End If
 
             'Wert wird immer ausgegeben
@@ -284,8 +303,9 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
         Next n
 
         'Kleine Umsortierung um natürliche Nuklide am Anfang der Liste zu haben (wegen CSV-Export)
-        For Each nuclideEntry As Dictionary(Of String, String) In New List(Of Dictionary(Of String, String))(analysisNuclidData)
-            Dim name As String = nuclideEntry("nuclid_name")
+        For Each nuclideEntry As Dictionary(Of String, Object) In New List(Of Dictionary(Of String, Object))(analysisNuclidData)
+            'Object->String might not work anymore ?
+            Dim name As String = ToString(nuclideEntry("nuclid_name"))
             If (name = "Pb-214" Or name = "Bi-214" Or name = "K-40") Then
                 analysisNuclidData.Remove(nuclideEntry)
                 analysisNuclidData.Insert(0, nuclideEntry)

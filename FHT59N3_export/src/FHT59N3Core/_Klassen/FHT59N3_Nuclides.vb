@@ -356,7 +356,8 @@ Public Class FHT59N3MCA_Peak
 
     Public Property IsKeyLine As Boolean
 
-    'Public Property NuclideNumber As Integer
+    Public Property NuclideNumber As Integer
+    Public Property UseWtm As Boolean
 
     'Public Property NuclideName As String
 
