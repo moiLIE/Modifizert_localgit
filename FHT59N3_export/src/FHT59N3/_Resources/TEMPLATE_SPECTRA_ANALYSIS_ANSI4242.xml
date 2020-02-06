@@ -2,7 +2,8 @@
 <N42InstrumentData 
 	xmlns="http://physics.nist.gov/Divisions/Div846/Gp4/ANSIN4242/2005/ANSIN4242" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:sara="http://www.technidata.com/ENVINET/SARA" xmlns:fht="http://www.thermofisher.com/DivisionSpectro/FHT59N3/ANSI4242/V1"
-	xmlns:n42_2012="http://physics.nist.gov/Divisions/Div846/Gp4/ANSIN4242/2011/ANSIN4242">
+	xmlns:n42_2012="http://physics.nist.gov/Divisions/Div846/Gp4/ANSIN4242/2011/ANSIN4242" xmlns:bag="testing">
+  
 	
   <Measurement ID="{{measurement_id}}">
 		<InstrumentInformation>
@@ -79,6 +80,14 @@
                                   airflow="{{sensor_temperature_after_filter}}" extern="{{sensor_temperature_external}}" unit="°C" />
       <fht:PressureSensors ambient="{{sensor_pressure_environment}}" pressureDiffFilter="{{sensor_pressure_filter}}" 
                            pressureDiffBezel="{{sensor_pressure_bezel}}" unit="hPa" />
+      
+      {{#if canberra_detector}}
+      <bag:Ecooler status="{{cooler_status}}">
+        <bag:TemperatureSensors compressor="{{compressor_temperature}}"
+                                 controller="{{controller_temperature}}" coldhead="{{coldhead_temperature}}" unit="°C" />
+        <bag:CoolingPower unit="W">{{cooling_power}}</bag:CoolingPower> 
+      </bag:Ecooler> 
+      {{/if}}
 
       <ChannelData>{{channel_data}}</ChannelData>
 

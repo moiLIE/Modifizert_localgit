@@ -146,6 +146,37 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
         templateData.Add("sensor_pressure_bezel", GetDecimalThreeDigit(_PressureBezel))
         templateData.Add("sensor_pressure_filter", GetDecimalThreeDigit(_PressureFilter))
 
+        'Add Detector information:
+        '  initialize:
+
+        templateData.Add("canberra_detector", Nothing)
+        templateData.Add("cooler_status", "")
+        templateData.Add("compressor_temperature", "")
+        templateData.Add("controller_temperature", "")
+        templateData.Add("coldhead_temperature", "")
+        templateData.Add("cooling_power", "")
+        '  fill fields for Canberra Detector:
+
+        If _MyFHT59N3Par.IsCanberraDetector Then
+
+            templateData("canberra_detector") = True
+            If _MyControlCenter.CanberraCryoCoolerStatus Then
+                templateData("cooler_status") = "On"
+            Else
+                templateData("cooler_status") = "Off"
+            End If
+            If _MyControlCenter.CanberraCryoCoolerCompressorTemp <> Double.MinValue Then
+                templateData("compressor_temperature") = GetDecimalThreeDigit(_MyControlCenter.CanberraCryoCoolerCompressorTemp)
+            End If
+            If _MyControlCenter.CanberraCryoCoolerControllerTemp <> Double.MinValue Then
+                templateData("controller_temperature") = GetDecimalThreeDigit(_MyControlCenter.CanberraCryoCoolerControllerTemp)
+            End If
+            If _MyControlCenter.CanberraCryoCoolerHeadTemp <> Double.MinValue Then
+                templateData("coldhead_temperature") = GetDecimalThreeDigit(_MyControlCenter.CanberraCryoCoolerHeadTemp)
+            End If
+            templateData("cooling_power") = GetDecimal(_MyControlCenter.CanberraCryoCoolerPower)
+
+        End If
 
     End Sub
 

@@ -6,7 +6,7 @@
     Private _Last_CoolerStatus As Boolean
     Private _LastPower As Double
     Private _LastTemperature As Double
-    Private _LastColdTipTemp As Double
+    Private _LastColdheadTemp As Double
     Private _LastCompressorTemp As Double
     Private _LastControllerTemp As Double
     Private _LastErrorStatus As String
@@ -66,7 +66,7 @@
 
     Private Sub _ReadoutValues()
         _InitCP5()
-        UpdateColdTipTemp()
+        UpdateColdheadTemp()
         UpdateCompressorTemp()
         UpdateControllerTemp()
         UpdateDetectorTemperature()
@@ -80,7 +80,7 @@
         _Last_CoolerStatus = False
         _LastPower = 0
         _LastTemperature = _readbackFailedValue
-        _LastColdTipTemp = _readbackFailedValue
+        _LastColdheadTemp = _readbackFailedValue
         _LastCompressorTemp = _readbackFailedValue
         _LastControllerTemp = _readbackFailedValue
         _LastErrorStatus = "Readback failed."
@@ -120,14 +120,14 @@
     End Sub
 
 
-    Private Sub UpdateColdTipTemp()
+    Private Sub UpdateColdheadTemp()
         If Not _CP5Port Is Nothing Then
             _CP5Port.WriteLine("TWE")
             Dim Readback As String = _CP5Port.ReadLine()
-            _LastColdTipTemp = Val(Readback)
+            _LastColdheadTemp = Val(Readback)
             Exit Sub
         End If
-        _LastColdTipTemp = _readbackFailedValue
+        _LastColdheadTemp = _readbackFailedValue
     End Sub
 
     Private Sub UpdateCompressorTemp()
@@ -185,10 +185,10 @@
         End Get
     End Property
 
-    Public ReadOnly Property CP5_ColdTipTemp() As Double
+    Public ReadOnly Property CP5_ColdheadTemp() As Double
         Get
             _UpdateValues()
-            Return _LastColdTipTemp
+            Return _LastColdheadTemp
         End Get
     End Property
 
