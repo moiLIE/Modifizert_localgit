@@ -255,10 +255,12 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
             nuclidData.Add("isPeak", If(peaksForNuclide.Count > 0, "true", Nothing))
             If (peaksForNuclide.Count > 0) Then
                 Dim NuclidPeaks As IList(Of Dictionary(Of String, String)) = New List(Of Dictionary(Of String, String))()
+                Dim PeaksToRemove As IList(Of FHT59N3MCA_Peak) = New List(Of FHT59N3MCA_Peak)()
                 nuclidData.Add("nuclide_peaks", NuclidPeaks)
-                For m As Integer = 1 To peaksForNuclide.Count
+                For Each peak As FHT59N3MCA_Peak In peaksForNuclide
+                    'For m As Integer = 0 To peaksForNuclide.Count - 1
                     Dim peakData As Dictionary(Of String, String) = New Dictionary(Of String, String)()
-                    Dim peak As FHT59N3MCA_Peak = peaksForNuclide(m)
+                    'Dim peak As FHT59N3MCA_Peak = peaksForNuclide.ElementAt(m)
                     peakData.Add("peak_channel", peak.PeakChannel)
                     peakData.Add("peak_energy", GetDecimal(peak.PeakEnergy))
                     peakData.Add("peak_area", GetDecimal(peak.PeakArea))
@@ -279,11 +281,13 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
                     'Add the peak to the list of peaks associated with the nuclide 
                     NuclidPeaks.Add(peakData)
 
+                    PeaksToRemove.Add(peak)
+                Next
+
+                For Each peak As FHT59N3MCA_Peak In PeaksToRemove
                     'ist nur eine temporäre Liste, daher die bereits ausgegebenen Peaks rausnehmen, damit die "not assigned peaks" übrigbleiben
                     _MyControlCenter.MCA_Peaks.PeakList.Remove(peak)
                 Next
-
-
 
             End If
 
@@ -303,14 +307,18 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
         Next n
 
         'Kleine Umsortierung um natürliche Nuklide am Anfang der Liste zu haben (wegen CSV-Export)
-        For Each nuclideEntry As Dictionary(Of String, Object) In New List(Of Dictionary(Of String, Object))(analysisNuclidData)
-            'Object->String might not work anymore ?
-            Dim name As String = ToString(nuclideEntry("nuclid_name"))
-            If (name = "Pb-214" Or name = "Bi-214" Or name = "K-40") Then
-                analysisNuclidData.Remove(nuclideEntry)
-                analysisNuclidData.Insert(0, nuclideEntry)
-            End If
-        Next
+        Try
+            For Each nuclideEntry As Dictionary(Of String, Object) In New List(Of Dictionary(Of String, Object))(analysisNuclidData)
+                'Object->String might not work anymore ?
+                Dim name As String = ToString(nuclideEntry("nuclid_name"))
+                If (name = "Pb-214" Or name = "Bi-214" Or name = "K-40") Then
+                    analysisNuclidData.Remove(nuclideEntry)
+                    analysisNuclidData.Insert(0, nuclideEntry)
+                End If
+            Next
+        Catch ex As Exception
+            MsgBox(ex)
+        End Try
 
         Dim notAssignedPeaks As IList(Of Dictionary(Of String, String)) = New List(Of Dictionary(Of String, String))()
         templateData.Add("not_assigned_peaks", notAssignedPeaks)

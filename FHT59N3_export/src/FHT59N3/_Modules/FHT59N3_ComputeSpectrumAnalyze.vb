@@ -293,7 +293,7 @@ Class FHT59N3_ComputeSpectrumAnalyze
 
 
 
-        Dim NuclideChannel(9) As CanberraDataAccessLib.ParamCodes
+        Dim NuclideChannel(10) As CanberraDataAccessLib.ParamCodes
         NuclideChannel(0) = CanberraDataAccessLib.ParamCodes.CAM_L_NLNUCL   'Nuklidnr in Nukliddatei
         NuclideChannel(1) = CanberraDataAccessLib.ParamCodes.CAM_F_PSENERGY 'Energi der Linie
         NuclideChannel(2) = CanberraDataAccessLib.ParamCodes.CAM_F_PSCENTRD 'Kanallage
