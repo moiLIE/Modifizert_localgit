@@ -365,6 +365,7 @@ Class FHT59N3_ComputeSpectrumAnalyze
             Dim KeyLine = CType(ParamBuffer(2), Integer)         'Clüssellinienmerker
             Dim Energy = CType(ParamBuffer(3), Integer)
 
+            'Dies scheint inkorrekt zu sein? (BAG)
             Dim nucl As FHT59N3MCA_Nuclide = _MyControlCenter.MCA_Nuclides.GetNuclide(NuclideNumber)
 
             If Not IsNothing(nucl) Then
@@ -865,7 +866,7 @@ Class FHT59N3_ComputeSpectrumAnalyze
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub CalculateNuclidActivityAndDetectionLimit()
-        Dim NuclideParameter(0 To 3) As CanberraDataAccessLib.ParamCodes  '0=Energi, 1=Kanallage, 2=Nettofläche, 3=Fwhm
+        Dim NuclideParameter(0 To 4) As CanberraDataAccessLib.ParamCodes  '0=Energi, 1=Kanallage, 2=Nettofläche, 3=Fwhm 4=NclNumb
         Dim NumberOfRecords As Integer = _SpectraFile.NumberOfRecords(CanberraDataAccessLib.ClassCodes.CAM_CLS_NUCL) 'NUCL
         Dim i
 
@@ -873,6 +874,7 @@ Class FHT59N3_ComputeSpectrumAnalyze
         NuclideParameter(1) = CanberraDataAccessLib.ParamCodes.CAM_G_NCLWTMERR
         NuclideParameter(2) = CanberraDataAccessLib.ParamCodes.CAM_G_NCLMDA
         NuclideParameter(3) = CanberraDataAccessLib.ParamCodes.CAM_G_NCLDECAY  'überschraibt lediglich CAM_F_PSFWHM, wird nicht benötigt
+        NuclideParameter(4) = CanberraDataAccessLib.ParamCodes.CAM_L_NLNUCL
         For i = 1 To NumberOfRecords          'holt Säze
             Dim nuclide As FHT59N3MCA_Nuclide = _MyControlCenter.MCA_Nuclides.GetNuclide(i)
 
@@ -881,6 +883,7 @@ Class FHT59N3_ComputeSpectrumAnalyze
             nuclide.SpectrumAnalysis.Activity = CType(Buffer(0), Double)
             nuclide.SpectrumAnalysis.DetectError = CType(Buffer(1), Double)
             nuclide.SpectrumAnalysis.DetectionLimit = CType(Buffer(2), Double)
+            nuclide.SpectrumAnalysis.SpectrumNuclideNumber = CType(Buffer(2), Integer)
         Next i
 
     End Sub

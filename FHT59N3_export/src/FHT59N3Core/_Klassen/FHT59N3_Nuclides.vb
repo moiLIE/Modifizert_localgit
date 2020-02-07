@@ -150,6 +150,8 @@ Public Class NuclideSpectrumParams
     'Aus aktueller Spektrumanalyse
     Public Property KeyLineEnergy As Double
 
+    Public Property SpectrumNuclideNumber As Integer
+
     'Aus aktueller Spektrumanalyse
     Public Property ChannelNumber As Integer
 
