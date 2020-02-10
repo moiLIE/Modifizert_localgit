@@ -417,11 +417,9 @@ Class FHT59N3_ComputeSpectrumAnalyze
             decayTime2 = nucl2.Library.DecayConstant * _EREALHour
             exp2 = 1 - Math.Exp(-decayTime2)
 
-            Dim nucl3 As FHT59N3MCA_Nuclide = _MyControlCenter.MCA_Nuclides.GetNuclide(n3)
-            If Not IsNothing(n3) Then
-                decayTime3 = nucl3.Library.DecayConstant * _EREALHour
-                exp3 = 1 - Math.Exp(-decayTime3)
-            End If
+            'If Not IsNothing(n3) Then
+            ' moved further down, because the nucl3 variable is only welldef inside the If(n3 is not nothing) block.
+            'End If
 
             'Berechnungen
             zf1 = decayTime1 * (1 - exp2 / decayTime2) / decayTime2
@@ -429,6 +427,9 @@ Class FHT59N3_ComputeSpectrumAnalyze
             nucl2.SpectrumAnalysis.NuclideCorrectionFactor = zf1 / (zf1 + zf2)
 
             If Not IsNothing(n3) Then
+                Dim nucl3 As FHT59N3MCA_Nuclide = _MyControlCenter.MCA_Nuclides.GetNuclide(n3)
+                decayTime3 = nucl3.Library.DecayConstant * _EREALHour
+                exp3 = 1 - Math.Exp(-decayTime3)
 
                 zf3 = ((exp3 - exp2) / (decayTime3 - decayTime2) + (exp3 - exp1) / (decayTime1 - decayTime3)) * decayTime2 / (decayTime2 - decayTime1) + (exp3 - exp2) / (decayTime2 - decayTime3)
                 zf3 = 1 - zf3 - (exp2 - exp1) / (decayTime1 - decayTime2) - exp3 / decayTime3 - exp2 / decayTime2 - exp1 / decayTime1
@@ -883,7 +884,7 @@ Class FHT59N3_ComputeSpectrumAnalyze
             nuclide.SpectrumAnalysis.Activity = CType(Buffer(0), Double)
             nuclide.SpectrumAnalysis.DetectError = CType(Buffer(1), Double)
             nuclide.SpectrumAnalysis.DetectionLimit = CType(Buffer(2), Double)
-            nuclide.SpectrumAnalysis.SpectrumNuclideNumber = CType(Buffer(2), Integer)
+            nuclide.SpectrumAnalysis.SpectrumNuclideNumber = CType(Buffer(4), Integer)
         Next i
 
     End Sub
