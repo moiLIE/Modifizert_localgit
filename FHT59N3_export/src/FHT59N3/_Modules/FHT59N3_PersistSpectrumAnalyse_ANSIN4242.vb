@@ -302,7 +302,15 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
             nuclidData.Add("alarm2_limit_configured", GetDoubleScientific(nuclide.SpectrumAnalysis.Alarm2Limit))
             nuclidData.Add("alarm2_limit_2hour_hysterese", GetDoubleScientific(nuclide.SpectrumAnalysis.Alarm2LimitCurrent))
 
-            analysisNuclidData.Add(nuclidData)
+            'Kleine Umsortierung um natürliche Nuklide am Anfang der Liste zu haben (wegen CSV-Export)
+            Dim name As String = StrConv(nuclide.Library.Name, VbStrConv.ProperCase)
+            If (name = "Pb-214" Or name = "Bi-214" Or name = "K-40") Then
+                'analysisNuclidData.Remove(nuclideEntry)
+                analysisNuclidData.Insert(0, nuclidData)
+            Else
+                analysisNuclidData.Add(nuclidData)
+            End If
+
 
         Next n
 
