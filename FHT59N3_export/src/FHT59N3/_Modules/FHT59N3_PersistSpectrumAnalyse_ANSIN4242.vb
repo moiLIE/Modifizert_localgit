@@ -206,7 +206,6 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
 
         'Schleife über alle gefundenen Nuklide der letzten Auswertung...
         For n As Integer = 1 To nuclideList.NuclideCount
-            Dim nuclidenumber As Integer = n
 
             Dim nuclide As FHT59N3MCA_Nuclide = nuclideList.GetNuclide(n)
 
@@ -215,7 +214,7 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
             Dim detectLimitBqm3 As Double = nuclide.SpectrumAnalysis.DetectionLimit_Bqm3
             Dim uncertainty As Double = nuclide.SpectrumAnalysis.DetectionError_Percent
             Dim correctionFactor As Double = nuclide.SpectrumAnalysis.NuclideCorrectionFactor
-            'Dim nuclidenumber As Integer = nuclide.SpectrumAnalysis.SpectrumNuclideNumber
+            Dim nuclidenumber As Integer = n
 
 
             Dim showEmpty As Boolean = _MyFHT59N3Par.AnsiN4242Settings.HasFlag(AnsiN4242Settings.ShowEmptyAnalyzedNuclids)
@@ -325,19 +324,6 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
 
         Next n
 
-        'Kleine Umsortierung um natürliche Nuklide am Anfang der Liste zu haben (wegen CSV-Export)
-        'Try
-        'For Each nuclideEntry As Dictionary(Of String, Object) In New List(Of Dictionary(Of String, Object))(analysisNuclidData)
-        ''Object->String might not work anymore ?
-        'Dim name As String = ToString(nuclideEntry("nuclid_name"))
-        'If (name = "Pb-214" Or name = "Bi-214" Or name = "K-40") Then
-        'analysisNuclidData.Remove(nuclideEntry)
-        'analysisNuclidData.Insert(0, nuclideEntry)
-        'End If
-        'Next
-        'Catch ex As Exception
-        'MsgBox(ex.Message)
-        'End Try
 
         Dim notAssignedPeaks As IList(Of Dictionary(Of String, String)) = New List(Of Dictionary(Of String, String))()
         templateData.Add("not_assigned_peaks", notAssignedPeaks)

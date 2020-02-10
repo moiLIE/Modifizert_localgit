@@ -1009,8 +1009,7 @@ Public Module FHT59N3_ControlFunctions
 
                 'Alarmprüfung
                 'nach einem filterschritt mindestens 10 min warten bis zur ersten Alarmprüfung
-                ''''''' TODO''''
-                If _MyControlCenter.MCA_RealMeasTime > 9 Then '_MinMeasTimeBeforeAlarmCheck Then     '1.Alarmprüfung frühestens nach _MinMeasTimeBeforeAlarmCheck s
+                If _MyControlCenter.MCA_RealMeasTime > _MinMeasTimeBeforeAlarmCheck Then     '1.Alarmprüfung frühestens nach _MinMeasTimeBeforeAlarmCheck s
                     If Now >= _AlarmCheckTimeDate Then
                         MCA_StopMeasurement(True) 'Pause
                         _MyControlCenter.MCA_SaveSpectrum(_minS, True)
