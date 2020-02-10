@@ -221,14 +221,13 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
             Dim showEmpty As Boolean = _MyFHT59N3Par.AnsiN4242Settings.HasFlag(AnsiN4242Settings.ShowEmptyAnalyzedNuclids)
 
             'Show K-40
-            Dim showNuclid = (showEmpty Or concBqm3 > 0) 'AndAlso nuclide.Library.Name <> "K-40"
+            'Dim showNuclid = (showEmpty Or concBqm3 > 0) 'AndAlso nuclide.Library.Name <> "K-40"
             'Don't show K-40, but leave the peak in the unassigned
-            'Dim showNuclid = (showEmpty Or concBqm3 > 0) AndAlso nuclide.Library.Name <> "K-40"
-            'If nuclide.Library.Name = "K-40" Then
-            'Continue For
-            'End If
-            'Next nuclide, otherwise the K-40 peak won't show up.
-
+            Dim showNuclid = (showEmpty Or concBqm3 > 0) AndAlso nuclide.Library.Name <> "K-40"
+            If nuclide.Library.Name = "K-40" Then
+                Continue For
+                'Next nuclide, otherwise the K-40 peak won't show up.
+            End If
 
             'Dim showNuclid = concBqm3 > detectLimitBqm3 And mcaNuclide.Name <> "K-40"
 
@@ -350,15 +349,13 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
             peakData.Add("peak_channel", remainingPeak.PeakChannel)
             peakData.Add("peak_energy", GetDecimal(remainingPeak.PeakEnergy))
 
-            peakData.Add("peak_grosscounts", GetDecimal(remainingPeak.GrossCounts))
+
             peakData.Add("peak_area", GetDecimal(remainingPeak.PeakArea))
             peakData.Add("peak_fwhm", GetDecimal(remainingPeak.PeakFwhm))
-            'peakData.Add("nuclid_name", remainingPeak.NuclideName)
 
             peakData.Add("peak_areaerr", GetDecimal(remainingPeak.PeakAreaErr))
             peakData.Add("peak_bckg", GetDecimalThreeDigit(remainingPeak.PeakBckg))
             peakData.Add("peak_bckgerr", GetDecimalThreeDigit(remainingPeak.PeakBckgErr))
-            'peakData.Add("peak_rchisq", GetDecimalThreeDigit(remainingPeak.PeakRChiSq))
 
             notAssignedPeaks.Add(peakData)
         Next

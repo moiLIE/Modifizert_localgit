@@ -293,20 +293,15 @@ Class FHT59N3_ComputeSpectrumAnalyze
 
 
 
-        Dim NuclideChannel(10) As CanberraDataAccessLib.ParamCodes
-        NuclideChannel(0) = CanberraDataAccessLib.ParamCodes.CAM_L_NLNUCL   'Nuklidnr in Nukliddatei
-        NuclideChannel(1) = CanberraDataAccessLib.ParamCodes.CAM_F_PSENERGY 'Energi der Linie
-        NuclideChannel(2) = CanberraDataAccessLib.ParamCodes.CAM_F_PSCENTRD 'Kanallage
-        NuclideChannel(3) = CanberraDataAccessLib.ParamCodes.CAM_F_PSAREA   'Nettofläche
-        NuclideChannel(4) = CanberraDataAccessLib.ParamCodes.CAM_F_PSFWHM   'Fwhm
-        NuclideChannel(5) = CanberraDataAccessLib.ParamCodes.CAM_L_NLFKEYLINE  '1=Clüssellinie, 0=sonst
-        'zum testen
-        NuclideChannel(6) = CanberraDataAccessLib.ParamCodes.CAM_F_NLMDANET  'netto counts 
+        Dim NuclideChannel(6) As CanberraDataAccessLib.ParamCodes
+        NuclideChannel(0) = CanberraDataAccessLib.ParamCodes.CAM_F_PSENERGY 'Energi der Linie
+        NuclideChannel(1) = CanberraDataAccessLib.ParamCodes.CAM_F_PSCENTRD 'Kanallage
+        NuclideChannel(2) = CanberraDataAccessLib.ParamCodes.CAM_F_PSAREA   'Nettofläche
+        NuclideChannel(3) = CanberraDataAccessLib.ParamCodes.CAM_F_PSFWHM   'Fwhm
         'Additional Fields: 
-        NuclideChannel(7) = CanberraDataAccessLib.ParamCodes.CAM_F_PSDAREA   'Error on Area
-        NuclideChannel(8) = CanberraDataAccessLib.ParamCodes.CAM_F_PSBACKGND 'Backgrond
-        NuclideChannel(9) = CanberraDataAccessLib.ParamCodes.CAM_F_PSDBACK   'Error on Background
-        NuclideChannel(10) = CanberraDataAccessLib.ParamCodes.CAM_L_NLFNOUSEWTM    'Don't use the line in weighted average?
+        NuclideChannel(4) = CanberraDataAccessLib.ParamCodes.CAM_F_PSDAREA   'Error on Area
+        NuclideChannel(5) = CanberraDataAccessLib.ParamCodes.CAM_F_PSBACKGND 'Backgrond
+        NuclideChannel(6) = CanberraDataAccessLib.ParamCodes.CAM_F_PSDBACK   'Error on Background
 
 
         ' CAM_F_NLMDANETERR
@@ -316,25 +311,18 @@ Class FHT59N3_ComputeSpectrumAnalyze
         Dim NumberOfPeaks As Integer = _SpectraFile.NumberOfRecords(CanberraDataAccessLib.ClassCodes.CAM_CLS_PEAK)
         For idx As Integer = 1 To NumberOfPeaks
             Dim ParamBuffer = _SpectraFile.ParamArray(NuclideChannel, idx)
-            Dim NuclideNumber = CType(ParamBuffer(0), Integer) 'Wrong table
-            Dim PeakEnergy = CType(ParamBuffer(1), Double) 'Energie der Linie
-            Dim PeakChannel As Integer = CType(ParamBuffer(2), Integer) 'Kanallage
-            Dim PeakArea = CType(ParamBuffer(3), Double) 'Nettofläche
-            Dim PeakFwhm = CType(ParamBuffer(4), Double) 'Fwhm
-            Dim IsKeyLine = CType(ParamBuffer(5), Integer) 'Wrong table
-            Dim GrossCounts = CType(ParamBuffer(6), Integer) 'Wrong table
-            Dim PeakAreaErr = CType(ParamBuffer(7), Double)  'Error on Area
-            Dim PeakBckg = CType(ParamBuffer(8), Double)  'Backgrond
-            Dim PeakBckgErr = CType(ParamBuffer(9), Double)  'Error on Backgrond
-            'Dim PeakUseWtm = Not (CType(ParamBuffer(10), Boolean))  'Wrong table
+            Dim PeakEnergy = CType(ParamBuffer(0), Double) 'Energie der Linie
+            Dim PeakChannel As Integer = CType(ParamBuffer(1), Integer) 'Kanallage
+            Dim PeakArea = CType(ParamBuffer(2), Double) 'Nettofläche
+            Dim PeakFwhm = CType(ParamBuffer(3), Double) 'Fwhm
+            Dim PeakAreaErr = CType(ParamBuffer(4), Double)  'Error on Area
+            Dim PeakBckg = CType(ParamBuffer(5), Double)  'Backgrond
+            Dim PeakBckgErr = CType(ParamBuffer(6), Double)  'Error on Backgrond
 
             Dim peak As FHT59N3MCA_Peak = New FHT59N3MCA_Peak()
-            peak.NuclideNumber = 0
 
             peak.PeakEnergy = PeakEnergy
             peak.PeakChannel = PeakChannel
-            peak.IsKeyLine = False
-            peak.GrossCounts = 0
 
             peak.PeakArea = PeakArea
             peak.PeakFwhm = PeakFwhm
@@ -342,9 +330,11 @@ Class FHT59N3_ComputeSpectrumAnalyze
             peak.PeakAreaErr = PeakAreaErr
             peak.PeakBckg = PeakBckg
             peak.PeakBckgErr = PeakBckgErr
-            'peak.PeakRChiSq = PeakRChiSq
 
+            'Initialize remaining fields:
+            peak.NuclideNumber = 0
             peak.UseWtm = False
+            peak.IsKeyLine = False
 
 
 
@@ -365,22 +355,27 @@ Class FHT59N3_ComputeSpectrumAnalyze
             Dim PeakLineIdentified = CType(ParamBuffer(0), Integer)      'Liniennr
             Dim NuclideNumber = CType(ParamBuffer(1), Integer)   'Nuklidnr
             Dim KeyLine = CType(ParamBuffer(2), Integer)         'Clüssellinienmerker
-            Dim Energy = CType(ParamBuffer(3), Integer)
+            Dim Energy = CType(ParamBuffer(3), Integer)          ' Energy of the line
             Dim PeakUseWtm = Not (CType(ParamBuffer(4), Boolean)) 'use the line in weighted average?
             Dim PeakNumber As Integer = PeakLineIdentified
 
-            'Get the Nuclide and Peak corresponding to the Line
-            Dim nucl As FHT59N3MCA_Nuclide = _MyControlCenter.MCA_Nuclides.GetNuclide(NuclideNumber)
 
             If PeakNumber > 0 Then
+                'Get the peak corresponding to the line
                 Dim peak As FHT59N3MCA_Peak = _MyControlCenter.MCA_Peaks.PeakList.ElementAt(PeakNumber - 1)
                 If Not IsNothing((peak)) Then
+                    'Assing Nuclide
                     peak.IsKeyLine = KeyLine
                     peak.UseWtm = PeakUseWtm
                     peak.NuclideNumber = NuclideNumber
                 End If
             End If
 
+
+            'Get the Nuclide and Peak corresponding to the Line
+            Dim nucl As FHT59N3MCA_Nuclide = _MyControlCenter.MCA_Nuclides.GetNuclide(NuclideNumber)
+
+            '(not used anymore):
             If Not IsNothing(nucl) Then
                 If KeyLine > 0 And PeakLineIdentified > 0 Then
                     nucl.SpectrumAnalysis.KeyLineFound = True
@@ -880,7 +875,7 @@ Class FHT59N3_ComputeSpectrumAnalyze
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub CalculateNuclidActivityAndDetectionLimit()
-        Dim NuclideParameter(0 To 4) As CanberraDataAccessLib.ParamCodes  '0=Energi, 1=Kanallage, 2=Nettofläche, 3=Fwhm 4=NclNumb
+        Dim NuclideParameter(0 To 3) As CanberraDataAccessLib.ParamCodes  '0=Energi, 1=Kanallage, 2=Nettofläche, 3=Fwhm
         Dim NumberOfRecords As Integer = _SpectraFile.NumberOfRecords(CanberraDataAccessLib.ClassCodes.CAM_CLS_NUCL) 'NUCL
         Dim i
 
@@ -888,7 +883,7 @@ Class FHT59N3_ComputeSpectrumAnalyze
         NuclideParameter(1) = CanberraDataAccessLib.ParamCodes.CAM_G_NCLWTMERR
         NuclideParameter(2) = CanberraDataAccessLib.ParamCodes.CAM_G_NCLMDA
         NuclideParameter(3) = CanberraDataAccessLib.ParamCodes.CAM_G_NCLDECAY  'überschraibt lediglich CAM_F_PSFWHM, wird nicht benötigt
-        NuclideParameter(4) = CanberraDataAccessLib.ParamCodes.CAM_L_NLNUCL
+
         For i = 1 To NumberOfRecords          'holt Säze
             Dim nuclide As FHT59N3MCA_Nuclide = _MyControlCenter.MCA_Nuclides.GetNuclide(i)
 
@@ -897,7 +892,6 @@ Class FHT59N3_ComputeSpectrumAnalyze
             nuclide.SpectrumAnalysis.Activity = CType(Buffer(0), Double)
             nuclide.SpectrumAnalysis.DetectError = CType(Buffer(1), Double)
             nuclide.SpectrumAnalysis.DetectionLimit = CType(Buffer(2), Double)
-            nuclide.SpectrumAnalysis.SpectrumNuclideNumber = CType(Buffer(4), Integer)
         Next i
 
     End Sub

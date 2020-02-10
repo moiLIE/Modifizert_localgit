@@ -150,11 +150,6 @@ Public Class NuclideSpectrumParams
     'Aus aktueller Spektrumanalyse
     Public Property KeyLineEnergy As Double
 
-    Public Property SpectrumNuclideNumber As Integer
-
-    'Aus aktueller Spektrumanalyse
-    Public Property ChannelNumber As Integer
-
     'Aus aktueller Spektrumanalyse
     Public Property ExceededAlarmLevel As Integer
 
@@ -352,17 +347,14 @@ Public Class FHT59N3MCA_Peak
 
     Public Property PeakBckgErr As Double
 
-    'Public Property PeakRChiSq As Double
-
     Public Property PeakFwhm As Double
 
     Public Property IsKeyLine As Boolean
 
     Public Property NuclideNumber As Integer
+
     Public Property UseWtm As Boolean
 
-    'Public Property NuclideName As String
 
-    Property GrossCounts As Object
 
 End Class
