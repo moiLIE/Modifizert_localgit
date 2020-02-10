@@ -316,25 +316,25 @@ Class FHT59N3_ComputeSpectrumAnalyze
         Dim NumberOfPeaks As Integer = _SpectraFile.NumberOfRecords(CanberraDataAccessLib.ClassCodes.CAM_CLS_PEAK)
         For idx As Integer = 1 To NumberOfPeaks
             Dim ParamBuffer = _SpectraFile.ParamArray(NuclideChannel, idx)
-            Dim NuclideNumber = CType(ParamBuffer(0), Integer) 'Irgendeine komische Nuklidnr
+            Dim NuclideNumber = CType(ParamBuffer(0), Integer) 'Wrong table
             Dim PeakEnergy = CType(ParamBuffer(1), Double) 'Energie der Linie
             Dim PeakChannel As Integer = CType(ParamBuffer(2), Integer) 'Kanallage
             Dim PeakArea = CType(ParamBuffer(3), Double) 'Nettofläche
             Dim PeakFwhm = CType(ParamBuffer(4), Double) 'Fwhm
-            Dim IsKeyLine = CType(ParamBuffer(5), Integer) 'ist die Schlüssellinie?
-            Dim GrossCounts = CType(ParamBuffer(6), Integer) 'Gross counts
+            Dim IsKeyLine = CType(ParamBuffer(5), Integer) 'Wrong table
+            Dim GrossCounts = CType(ParamBuffer(6), Integer) 'Wrong table
             Dim PeakAreaErr = CType(ParamBuffer(7), Double)  'Error on Area
             Dim PeakBckg = CType(ParamBuffer(8), Double)  'Backgrond
             Dim PeakBckgErr = CType(ParamBuffer(9), Double)  'Error on Backgrond
-            Dim PeakUseWtm = Not (CType(ParamBuffer(10), Boolean))  'Use the line in weighted average?
+            'Dim PeakUseWtm = Not (CType(ParamBuffer(10), Boolean))  'Wrong table
 
             Dim peak As FHT59N3MCA_Peak = New FHT59N3MCA_Peak()
-            peak.NuclideNumber = NuclideNumber
+            peak.NuclideNumber = 0
 
             peak.PeakEnergy = PeakEnergy
             peak.PeakChannel = PeakChannel
-            peak.IsKeyLine = IsKeyLine
-            peak.GrossCounts = GrossCounts
+            peak.IsKeyLine = False
+            peak.GrossCounts = 0
 
             peak.PeakArea = PeakArea
             peak.PeakFwhm = PeakFwhm
@@ -344,17 +344,19 @@ Class FHT59N3_ComputeSpectrumAnalyze
             peak.PeakBckgErr = PeakBckgErr
             'peak.PeakRChiSq = PeakRChiSq
 
-            peak.UseWtm = PeakUseWtm
+            peak.UseWtm = False
+
 
 
             _MyControlCenter.MCA_Peaks.PeakList.Add(peak)
         Next
 
-        Dim NuclideParameter(3) As CanberraDataAccessLib.ParamCodes
+        Dim NuclideParameter(4) As CanberraDataAccessLib.ParamCodes
         NuclideParameter(0) = CanberraDataAccessLib.ParamCodes.CAM_L_NLPEAK      '0=Linie nicht zugeordnet bzw. zurüchgewisen, >0 ferwendet
         NuclideParameter(1) = CanberraDataAccessLib.ParamCodes.CAM_L_NLNUCL      'Nuklidnr inn Nukliddatai, di der Linie NLPEAK zugeordnet
         NuclideParameter(2) = CanberraDataAccessLib.ParamCodes.CAM_L_NLFKEYLINE  '1=Clüssellinie, 0=sonst
         NuclideParameter(3) = CanberraDataAccessLib.ParamCodes.CAM_F_NLENERGY    'Energilage
+        NuclideParameter(4) = CanberraDataAccessLib.ParamCodes.CAM_L_NLFNOUSEWTM    'Don't use the line in weighted average?
 
         Dim NumberOfRecords As Integer = _SpectraFile.NumberOfRecords(CanberraDataAccessLib.ClassCodes.CAM_CLS_NLINES)
         For idx As Integer = 1 To NumberOfRecords            'prüft, obb Clüssellinien für Identifizirung benuzt
@@ -364,9 +366,20 @@ Class FHT59N3_ComputeSpectrumAnalyze
             Dim NuclideNumber = CType(ParamBuffer(1), Integer)   'Nuklidnr
             Dim KeyLine = CType(ParamBuffer(2), Integer)         'Clüssellinienmerker
             Dim Energy = CType(ParamBuffer(3), Integer)
+            Dim PeakUseWtm = Not (CType(ParamBuffer(4), Boolean)) 'use the line in weighted average?
+            Dim PeakNumber As Integer = PeakLineIdentified
 
-            'Dies scheint inkorrekt zu sein? (BAG)
+            'Get the Nuclide and Peak corresponding to the Line
             Dim nucl As FHT59N3MCA_Nuclide = _MyControlCenter.MCA_Nuclides.GetNuclide(NuclideNumber)
+
+            If PeakNumber > 0 Then
+                Dim peak As FHT59N3MCA_Peak = _MyControlCenter.MCA_Peaks.PeakList.ElementAt(PeakNumber - 1)
+                If Not IsNothing((peak)) Then
+                    peak.IsKeyLine = KeyLine
+                    peak.UseWtm = PeakUseWtm
+                    peak.NuclideNumber = NuclideNumber
+                End If
+            End If
 
             If Not IsNothing(nucl) Then
                 If KeyLine > 0 And PeakLineIdentified > 0 Then

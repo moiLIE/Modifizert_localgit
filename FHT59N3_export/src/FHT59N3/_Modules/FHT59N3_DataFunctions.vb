@@ -169,6 +169,7 @@ Public Module FHT59N3_DataFunctions
 
             nukGroes(0) = CanberraDataAccessLib.ParamCodes.CAM_T_NCLNAME
             nukGroes(1) = CanberraDataAccessLib.ParamCodes.CAM_X_NCLHLFLIFE
+            'This is the line number not the library number. The library number is (probably the loop variable i).
             nukGroes(2) = CanberraDataAccessLib.ParamCodes.CAM_L_NLNUCL
 
             For i As Integer = 1 To NucCount
