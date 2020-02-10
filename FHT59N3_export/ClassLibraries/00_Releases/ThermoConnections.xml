@@ -1,0 +1,703 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ThermoConnections
+</name>
+</assembly>
+<members>
+<member name="T:ThermoConnections.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:ThermoConnections.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:ThermoConnections.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:ThermoConnections.ThermoCommunicationHandler">
+ <summary>
+ This class is a summary of the DataCollector and the DataCollector_WithOutEvents, so it can be operated with events or with polling
+ Additionally it can handle all data transfers which need a wake up sign before the real data transfer
+ 
+ IMPORTANT: This class is an "Alias" for the ThermoDataCollectorA. This name is not very significant. Therefor we wanted to rename it.
+ But we cannot rename the old class itself because it is used several times.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoCommunicationHandler.#ctor(ThermoIOControls.ThermoIOControl_General,System.Int32)">
+ <summary>
+ Konstruktor
+ </summary>
+ <param name="MyInterface">Interface zur RS232/Ethernet</param>
+ <param name="Repeats">Wieviele Wiederholungen beim Timeout</param>
+ <remarks></remarks>
+</member>
+<member name="T:ThermoConnections.ThermoConnectionDiagnosis">
+ <summary>
+ Klasse für Verbindungsdiagnose im Datenkollektor
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoConnectionDiagnosis.CounterTotalQueries">
+ <summary>
+ Totale übertragungen
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoConnectionDiagnosis.CounterGoodQueries">
+ <summary>
+ Gute Übertragungen
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoConnectionDiagnosis.CounterRepeats">
+ <summary>
+ Wiederholungen
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoConnectionDiagnosis.CounterTimeouts">
+ <summary>
+ Timeouts
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoConnectionDiagnosis.DiagString">
+ <summary>
+ Alle Daten in einem String
+ </summary>
+ <returns>CounterTotal;CounterGood;CounterTimeouts;CounterRepeats;GoodQuerieStat;TimeOutStat;RepeatStat</returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoConnectionDiagnosis.Alive">
+ <summary>
+ der Datencollector noch
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoConnectionDiagnosis.CalculateStatistics">
+ <summary>
+ eine kleine Statistik
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoConnectionDiagnosis.BuildDiagstring">
+ <summary>
+ Diagnosestring ausgeben
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoConnectionDiagnosis.#ctor(System.Int32)">
+ <summary>
+ Konstruktor
+ </summary>
+ <param name="AliveCheckIntervall"></param>
+ <remarks></remarks>
+</member>
+<member name="T:ThermoConnections.ThermoDataCollector">
+ <summary>
+ Handelt eine Datenabfrage ab; Timeout und Repeats werden hier verwaltet
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoDataCollector.Repeats">
+ <summary>
+ Anzahl der Wiederholungen; wird bei New mit eingestellt
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoDataCollector.ActRepeats">
+ <summary>
+ Anzahl der tatsächlich gemachten Wiederholungen;
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoDataCollector.ErrorsTillStopCommunication">
+ <summary>
+ Wieviele Fehler dürfen passieren bevor ich die Kommunikation unterbreche
+ -1 = aus
+ 0-?
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoDataCollector.Diagnosis">
+ <summary>
+ Verbindungsdiagnose
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoDataCollector.Timeout">
+ <summary>
+ Timeout
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoConnections.ThermoDataCollector.DataCollectorReadyAr">
+ <summary>
+ Event das ausgelöst wird wenn die Übertragung beendet wurde 
+ </summary>
+ <remarks>
+ 0 = ok
+ 1 = Timeout
+</remarks>
+</member>
+<member name="E:ThermoConnections.ThermoDataCollector.DataCollectorReadyStr">
+ <summary>
+ Event das ausgelöst wird wenn die Übertragung beendet wurde 
+ </summary>
+ <param name="ErrorState">
+ 0 = ok
+ 1 = Timeout
+ 2 = Keine Datenübertragung mehr!</param>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoConnections.ThermoDataCollector.ErrorEvent">
+ <summary>
+ Fehler
+ </summary>
+ <param name="ex">
+ Exception Klasse
+ </param>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoConnections.ThermoDataCollector.Disconnected">
+ <summary>
+ eine Verbindung zu einem Gerät wurde unterbrochen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollector.ErrorHandler(System.Exception)">
+ <summary>
+ Fehlerbehandlung
+ </summary>
+ <param name="ex"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollector.DataOKAr">
+ <summary>
+ Daten empfangen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollector.DataOKStr">
+ <summary>
+ Daten empfangen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollector.DisconnectEvent">
+ <summary>
+ Verbindung unterbrochen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollector.DataNotOK">
+ <summary>
+ Timeout verwalten, wiederholen oder Fehler
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollector.#ctor(ThermoInterfaces.ThermoIOControls_Interface,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ Konstruktor
+ </summary>
+ <param name="MyInterface">Interface zur RS232/Ethernet</param>
+ <param name="Repeats">Wieviele Wiederholungen beim Timeout</param>
+ <param name="AliveCheckIntervall">Aller wieiviel millisekunden wird geschaut ob die Verbindung noch lebt?</param>
+ <param name="ErrorsTillStopCommunication">Wieviele Fehler dürfen passieren bevor ich die Kommunikation unterbreche(-1 = aus; 0-?</param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollector.SendQuestion(System.Array,System.Int32,System.Int32)">
+ <summary>
+ Abfrage abschicken
+ </summary>
+ <param name="Command">Befehl an das Gerät</param>
+ <param name="ComLength">Länge des Befehls im Puffer</param> 
+ <param name="SendFlag">Soll der Befehl tatsächlich gesendet werden (0/1)</param> 
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollector.SendQuestion(System.String,System.Int32)">
+ <summary>
+ Abfrage abschicken
+ </summary>
+ <param name="Command">Befehl an das Gerät</param>
+ <param name="SendFlag">Soll der Befehl tatsächlich gesendet werden (0/1)</param> 
+ <remarks></remarks>
+</member>
+<member name="T:ThermoConnections.ThermoDataCollectorA">
+ <summary>
+ This class is a summary of the DataCollector and the DataCollector_WithOutEvents, so it can be operated with events or with polling
+ Additionally it can handle all data transfers which need a wake up sign before the real data transfer
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoDataCollectorA.Repeats">
+ <summary>
+ Wieviele Wiederholungen soll es geben
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoDataCollectorA.Diagnosis">
+ <summary>
+ Verbindungsdiagnose (Totale Übertragungen, Repeats, Timeouts)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoDataCollectorA.Timeout">
+ <summary>
+ Timeoutzeit der Verbindung
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoDataCollectorA.TimeUntilNextWakeUpSign">
+ <summary>
+ Nur für die Kommunikation mit Weckzeichen.
+ Wenn zwischen der letzten Sendung und der aktuellen mehr als TimeUntilNextWakeUpSign ms vergangen sind
+ dann wird das Weckzeichen gesendet, sonst nicht.
+ Im Falle einer Wiederholung wird auf jeden Fall das Weckzeichen gesendet!
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoDataCollectorA.DisconnectedFlag">
+ <summary>
+ Gerät ist nicht mehr verbunden
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoConnections.ThermoDataCollectorA.DataCollectorReadyAr">
+ <summary>
+ Event das ausgelöst wird wenn die Übertragung beendet wurde 
+ </summary>
+ <param name="ReturnState">
+ >0 = Number of Databytes receid
+ -1 = Timeout
+ -2 = Checksum error
+ -3 = Parity error
+ -4 = NACK error
+ -5 = Special NACK error (eg. from FHT681)
+ -10 = Exception occured
+ </param>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoConnections.ThermoDataCollectorA.DataCollectorReadyStr">
+ <summary>
+ Event das ausgelöst wird wenn die Übertragung beendet wurde 
+ </summary>
+ <param name="ReturnState">
+ >0 = Number of Databytes receid
+ -1 = Timeout
+ -2 = Checksum error
+ -3 = Parity error
+ -4 = NACK error
+ -5 = Special NACK error (eg. from FHT681)
+ -10 = Exception occured
+ </param>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoConnections.ThermoDataCollectorA.Disconnected">
+ <summary>
+ eine Verbindung zu einem Gerät wurde unterbrochen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollectorA.DataReceived_ByteArray(System.Int32)">
+ <summary>
+ Daten empfangen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollectorA.DataReceived_String(System.Int32)">
+ <summary>
+ Daten empfangen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollectorA.TransferErr(System.Int32)">
+ <summary>
+ Timeout verwalten, wiederholen oder Fehler
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollectorA.DisconnectEvent">
+ <summary>
+ Verbindung unterbrochen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollectorA.WarteMs(System.Int32)">
+ <summary>
+ Wartet x ms
+ </summary>
+ <param name="TimeToWait">Zeit die gewartet werden soll</param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollectorA.#ctor(ThermoIOControls.ThermoIOControl_General,System.Int32)">
+ <summary>
+ Konstruktor
+ </summary>
+ <param name="MyInterface">Interface zur RS232/Ethernet</param>
+ <param name="Repeats">Wieviele Wiederholungen beim Timeout</param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollectorA.StartTransfer(System.Array,System.Int32,System.Int32,System.Boolean,System.Int32)">
+ <summary>
+ Abfrage abschicken
+ </summary>
+ <param name="Command">Befehl an das Gerät</param>
+ <param name="ComLength">Länge des Befehls im Puffer</param> 
+ <param name="SendFlag">Soll der Befehl tatsächlich gesendet werden (0/1)</param>
+ <param name="SetBusy">soll die Kommunikation blockieren bis eine vorherige abgeschlossen wurde</param>
+ <param name="WaitTimeMS">Wartezeit in ms vor dem Senden (=-1 -> nicht verwendet)</param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollectorA.StartTransfer(System.String,System.Int32,System.Boolean,System.Int32)">
+ <summary>
+ Abfrage abschicken
+ </summary>
+ <param name="Command">Befehl an das Gerät</param>
+ <param name="SendFlag">Soll der Befehl tatsächlich gesendet werden (0/1)</param> 
+ <param name="SetBusy">soll die Kommunikation blockieren bis eine vorherige abgeschlossen wurde</param>
+ <param name="WaitTimeMS">Wartezeit in ms vor dem Senden (=-1 -> nicht verwendet)</param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollectorA.StartTransferWakeupCharOnly(System.String,System.Int32,System.Boolean,System.Int32)">
+ <summary>
+ Abfrage abschicken; Weckzeichen wird mitgeschickt, aber Funktion kommt sofort nach senden des Weckzeichens zurück
+ das eigentliche Kommando wird nach erhalt der Antwort auf das Weckzeichen automatisch gesendet.
+ </summary>
+ <param name="Command">Befehl an das Gerät</param>
+ <param name="SendFlag">Soll der Befehl tatsächlich gesendet werden (0/1)</param> 
+ <param name="SetBusy">soll die Kommunikation blockieren bis eine vorherige abgeschlossen wurde</param>
+ <param name="WaitTimeMS">Wartezeit in ms vor dem Senden (=-1 -> nicht verwendet)</param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollectorA.StartTransferWakeUpComplete(System.Int16,System.String,System.Int32,System.Boolean,System.Boolean,System.Int32)">
+ <summary>
+ Start data transfer using procedure with wake character (used by FH40G and RadEye)
+ This function returns when both, wake character and command string, are sent.
+ </summary>
+ <param name="TimeOutWakeUp">Time intervall which is used for waiting for the response to the wake character (in ms)</param>
+ <param name="Command">Command text to be sent to the device</param>
+ <param name="SendFlag">Flag, if the command should really be sent (0/1)</param> 
+ <param name="SetBusy">soll die Kommunikation blockieren bis eine vorherige abgeschlossen wurde</param>
+ <param name="WaitTimeMS">Delay time before sending (=-1 -> no delay)</param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollectorA.ReadData">
+ <summary>
+ Reads the Available data from the socket and checks if they are correct (Protocol)
+ </summary>
+ <returns>
+ >0 = number of databytes correctly received
+  0 = still waiting for correct answer
+ -1 = timeout
+ -2 = checksum error
+ -3 = parity error
+ -4 = NAK error
+ -10 = Exception
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="T:ThermoConnections.ThermoDataCollectorMulti">
+ <summary>
+ Handelt eine Datenabfrage ab; Timeout und Repeats werden hier verwaltet
+ Über die Eigenschaft ID kann ich mehrere Datencollectoren verwalten!
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoDataCollectorMulti.Repeats">
+ <summary>
+ Anzahl der Wiederholungen; wird bei New mit eingestellt
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoDataCollectorMulti.ActRepeats">
+ <summary>
+ Anzahl der tatsächlich gemachten Wiederholungen;
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoDataCollectorMulti.ErrorsTillStopCommunication">
+ <summary>
+ Wieviele Fehler dürfen passieren bevor ich die Kommunikation unterbreche
+ -1 = aus
+ 0-?
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoDataCollectorMulti.ID">
+ <summary>
+ Identifier
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoDataCollectorMulti.Diagnosis">
+ <summary>
+ Verbindungsdiagnose
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoDataCollectorMulti.Timeout">
+ <summary>
+ Timeout
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoConnections.ThermoDataCollectorMulti.DataCollectorReadyAr">
+ <summary>
+ Event das ausgelöst wird wenn die Übertragung beendet wurde 
+ </summary>
+ <remarks>
+ 0 = ok
+ 1 = Timeout
+ </remarks>
+</member>
+<member name="E:ThermoConnections.ThermoDataCollectorMulti.DataCollectorReadyStr">
+ <summary>
+ Event das ausgelöst wird wenn die Übertragung beendet wurde 
+ </summary>
+ <param name="ErrorState">
+ 0 = ok
+ 1 = Timeout</param>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoConnections.ThermoDataCollectorMulti.ErrorEvent">
+ <summary>
+ Fehler
+ </summary>
+ <param name="ex">
+ Exception Klasse
+ </param>
+ <remarks></remarks>
+</member>
+<member name="E:ThermoConnections.ThermoDataCollectorMulti.Disconnected">
+ <summary>
+ Verbindung unterbrochen
+ </summary>
+ <param name="ID"></param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollectorMulti.DataOKAr">
+ <summary>
+ Daten empfangen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollectorMulti.DataOKStr">
+ <summary>
+ Daten empfangen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollectorMulti.DisconnectEvent">
+ <summary>
+ Verbindung unterbrochen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollectorMulti.DataNotOK">
+ <summary>
+ Timeout verwalten, wiederholen oder Fehler
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollectorMulti.#ctor(ThermoInterfaces.ThermoIOControls_Interface,System.Int32,System.String,System.Int32,System.Int32)">
+ <summary>
+ Konstruktor
+ </summary>
+ <param name="MyInterface">Interface zur RS232/Ethernet</param>
+ <param name="Repeats">Wieviele Wiederholungen beim Timeout</param>
+ <param name="ID">Meine ID</param>
+ <param name="AliveCheckIntervall">Aller wieiviel millisekunden wird geschaut ob die Verbindung noch lebt?</param>
+ <param name="ErrorsTillStopCommunication">Wieviele Fehler dürfen passieren bevor ich die Kommunikation unterbreche(-1 = aus; 0-?</param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollectorMulti.SendQuestion(System.Array,System.Int32,System.Int32)">
+ <summary>
+ Abfrage abschicken
+ </summary>
+ <param name="Command">Befehl an das Gerät</param>
+ <param name="ComLength">Länge des Befehls im Puffer</param> 
+ <param name="SendFlag">Soll der Befehl tatsächlich gesendet werden (0/1)</param> 
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollectorMulti.SendQuestion(System.String,System.Int32)">
+ <summary>
+ Abfrage abschicken
+ </summary>
+ <param name="Command">Befehl an das Gerät</param>
+ 
+ <param name="SendFlag">Soll der Befehl tatsächlich gesendet werden (0/1)</param> 
+ <remarks></remarks>
+</member>
+<member name="T:ThermoConnections.ThermoDataCollector_WithOutEvents">
+ <summary>
+ Handelt eine Datenabfrage ab; Timeout und Repeats werden hier verwaltet
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoDataCollector_WithOutEvents.Diagnosis">
+ <summary>
+ Verbindungsdiagnose
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:ThermoConnections.ThermoDataCollector_WithOutEvents.Timeout">
+ <summary>
+ Timeout
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollector_WithOutEvents.#ctor(ThermoIOControls.ThermoIOControl_Ethernet_WithOutEvents,System.Int32,System.Int32)">
+ <summary>
+ Konstruktor
+ </summary>
+ <param name="MyInterface">Interface zur RS232/Ethernet</param>
+ <param name="Repeats">Wieviele Wiederholungen beim Timeout</param>
+ <param name="AliveCheckIntervall">Aller wieiviel millisekunden wird geschaut ob die Verbindung noch lebt?</param>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollector_WithOutEvents.SendQuestion(System.Array,System.Int32,System.Int32,System.Boolean)">
+ <summary>
+ Abfrage abschicken
+ </summary>
+ <param name="Command">Befehl an das Gerät</param>
+ <param name="ComLength">Länge des Befehls im Puffer</param> 
+ <param name="SendFlag">Soll der Befehl tatsächlich gesendet werden (0/1)</param> 
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollector_WithOutEvents.SendQuestion(System.String,System.Int32,System.Boolean)">
+ <summary>
+ Abfrage abschicken
+ </summary>
+ <param name="Command">Befehl an das Gerät</param>
+ <param name="SendFlag">Soll der Befehl tatsächlich gesendet werden (0/1)</param> 
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoDataCollector_WithOutEvents.ReadData">
+ <summary>
+ Reads the Available data from the socket and checks if they are correct (Protocol)
+ </summary>
+ <returns>
+ 0 = still waiting for correct answer
+ 1 = correct answer received
+ 2 = timeout
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="T:ThermoConnections.ThermoStateMachine">
+ <summary>
+ WICHTIG:
+ - es können immer nur Geräte gleichen Typs gleichzeitig behandelt werden
+ - kein Mischbetrieb seriell/ethernet möglich
+ - Trigger für die Maschine kommt von außen
+ SERIELL:
+ - Statusmaschine kann eine Liste von Kommandos an ein/mehrere Gerät senden, es wird solange gewartet bis
+   das Gerät den Empfang bestätigt hat (IsReceiveReady + DataCollector), d.h. für mehrere Geräte z.B. erst Befehl 1 für
+   Gerät 1 in die Liste, dann Befehl 1 für Gerät 2 ... usw. (Adresse wird im Befehl codiert!)
+ - ich kann auch "asynchron" was dazwischenschieben, indem ich für die Geräte die Liste ändere und 
+   die Maschine triggere und die Liste danach wieder zurückändere oder mit der Funktion "SendAsyncCommand..."
+   einen Befehl an ein bestimmtes Gerät sende und wieder triggere
+ - die Empfangenen Antworten werden in der Returnlist gespeichert und in der übergeordneten Instanz decodiert!
+ ETHERNET:
+ - Statusmaschine kann eine Liste von Befehlen für ein/mehrere Geräte senden (erst Befehl 1 für Gerät 1 - n, dann Befehl 2 usw)
+ - ich kann auch "asynchron" was dazwischenschieben, indem ich für die Geräte die Liste ändere und 
+   die Maschine triggere und die Liste danach wieder zurückändere oder mit der Funktion "SendAsyncCommand..."
+   einen Befehl an ein bestimmtes Gerät sende und wieder triggere
+ - die Empfangenen Antworten werden in der Returnlist gespeichert und in der übergeordneten Instanz decodiert!
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:ThermoConnections.ThermoStateMachineContainer">
+ <summary>
+ eine Klasse die viele unabhängige Statusmaschinen triggern können soll. Das Problem bei einer Statusmaschine und
+ vielen Geräten ist, wenn ein Gerät nicht mehr antwortet. Die Statusmaschine ist so geschrieben, das erst eine
+ neue Runde von Befehlen gesetzt und ausgeführt werden kann, wenn alle Befehle für alle Geräte abgearbeitet wurden.
+ Das ist unter umständen eine Bremse!
+ Dieser über diesen Container können die Statusmaschinen unabhängig getriggert werden.
+ Dieser Container macht aber generell nur im Ethernet-Mode Sinn, das sich im seriellen Fall nix Beschleunigen
+ lässt.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:ThermoConnections.ThermoTCPIPConnection">
+ <summary>
+ Diese Klasse soll eine Verbindung zu einer IP Adresse und einem Port herstellen. Gleichzeitig ist sie dafür zuständig
+ diese Verbindung aufrecht zu erhalten und bei Verbindungsverlust zu versuchen diese Verbindung wieder aufzunehmen
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoTCPIPConnection.SetupConnectionToDevice">
+ <summary>
+ Sucht die Verbindung zum Device via asynchronem Call von _MySocket.BeginConnect()
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoTCPIPConnection.#ctor(System.String,System.Int32,System.Int32)">
+ <summary>
+ Konstruktor
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:ThermoConnections.ThermoTCPIPConnection.Dispose">
+ <summary>
+ alles zerstören
+ </summary>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

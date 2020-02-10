@@ -213,11 +213,22 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
             Dim detectLimitBqm3 As Double = nuclide.SpectrumAnalysis.DetectionLimit_Bqm3
             Dim uncertainty As Double = nuclide.SpectrumAnalysis.DetectionError_Percent
             Dim correctionFactor As Double = nuclide.SpectrumAnalysis.NuclideCorrectionFactor
-            Dim nuclidenumber As Integer = nuclide.SpectrumAnalysis.SpectrumNuclideNumber
+            'Dim nuclidenumber As Integer = nuclide.SpectrumAnalysis.SpectrumNuclideNumber
+            Dim nuclidenumber As Integer = nuclide.Library.NuclidNumber
+
 
             Dim showEmpty As Boolean = _MyFHT59N3Par.AnsiN4242Settings.HasFlag(AnsiN4242Settings.ShowEmptyAnalyzedNuclids)
 
-            Dim showNuclid = (showEmpty Or concBqm3 > 0) AndAlso nuclide.Library.Name <> "K-40"
+            'Show K-40
+            Dim showNuclid = (showEmpty Or concBqm3 > 0) 'AndAlso nuclide.Library.Name <> "K-40"
+            'Don't show K-40, but leave the peak in the unassigned
+            'Dim showNuclid = (showEmpty Or concBqm3 > 0) AndAlso nuclide.Library.Name <> "K-40"
+            'If nuclide.Library.Name = "K-40" Then
+            'Continue For
+            'End If
+            'Next nuclide, otherwise the K-40 peak won't show up.
+
+
             'Dim showNuclid = concBqm3 > detectLimitBqm3 And mcaNuclide.Name <> "K-40"
 
             Dim nuclidData As Dictionary(Of String, Object) = New Dictionary(Of String, Object)()
@@ -304,6 +315,7 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
 
             'Kleine Umsortierung um natürliche Nuklide am Anfang der Liste zu haben (wegen CSV-Export)
             Dim name As String = StrConv(nuclide.Library.Name, VbStrConv.ProperCase)
+            MsgBox(name & ": " & nuclidenumber)
             If (name = "Pb-214" Or name = "Bi-214" Or name = "K-40") Then
                 'analysisNuclidData.Remove(nuclideEntry)
                 analysisNuclidData.Insert(0, nuclidData)
