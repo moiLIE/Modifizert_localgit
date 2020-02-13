@@ -59,7 +59,13 @@ Public Class frmMain
                     If Not checkBoxResult2 Then
                         _MyControlCenter.SPS_EcoolerOff()
                     End If
+                    'Setzte die Entsprechende Flagge, damit sie ins Konfigurations-Binary geschrieben wird.
+                    If Not checkBoxResult1 Then
+                        _MyControlCenter.SYS_States.HVOff = True
+                    End If
                     _EndProgram = True
+                    ''Schreibe den allenfalls geänderten Ecooler/HV state ins Konfigurations-Binary
+                    FHT59N3_ControlFunctions.SYS_SystemStateChangedHandler()
                     e.Cancel = True 'ich muss noch auf das setzen der ausgänge warten
                 End If
             ElseIf _EndProgram Then
