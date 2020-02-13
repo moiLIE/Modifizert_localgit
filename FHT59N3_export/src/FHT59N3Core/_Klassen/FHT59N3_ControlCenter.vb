@@ -569,7 +569,7 @@ Public Class FHT59N3_ControlCenter
         Try
             _CP5_Connection = New BAGiPAConnection.BAGCryoCooler(ComPortCryoCool)
         Catch ex As Exception
-            Trace.TraceError("Error starting remote control webserver: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
+            Trace.TraceError("Error starting connection to the cryo cooler: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
         End Try
 
     End Sub
