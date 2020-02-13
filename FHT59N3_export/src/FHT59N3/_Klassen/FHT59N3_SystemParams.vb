@@ -54,6 +54,7 @@ Public Class FHT59N3_SystemParams
     Private _PrinterPositionToMeasureCenterDistanceMM As Integer
     'filter printer activiation
 
+    Private _TCS_CorrFile As String = "Startup."
 
     Private _CaptureCycleDetectorTemperature As Integer = 10
     Private _EnableEmergencyStopDetect As Boolean = True  'e-Cooler support
@@ -555,6 +556,25 @@ Public Class FHT59N3_SystemParams
     Browsable(False), _
     PropertyOrderAttribute(100008)> _
     Public Property KeepActiveEcoolerOnExitGuiFlag As Boolean = False
+
+
+    <ml_Category(381, "05 Miscellaneous Parameters"),
+    ml_DisplayName(661, "TCS Configuration file"),
+    ml_Description(662, "Full path of the csv file with the TCS correction."),
+    [ReadOnly](False),
+    Browsable(True),
+    PropertyOrderAttribute(100009)>
+    Public Property TCS_CorrFile() As String
+        Get
+            Return _TCS_CorrFile
+        End Get
+        Set(value As String)
+            If _TCS_CorrFile <> "Startup." Then
+                GUI_ShowMessageBox("Please restart for the changes to take effect.", "Ok", "", "", MYCOL_WARNING, Color.Black)
+            End If
+            _TCS_CorrFile = value
+        End Set
+    End Property
 
 
     <TypeConverter(GetType(ComportList)), _

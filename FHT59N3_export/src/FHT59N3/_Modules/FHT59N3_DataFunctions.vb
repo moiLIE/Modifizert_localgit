@@ -150,6 +150,84 @@ Public Module FHT59N3_DataFunctions
         End Try
     End Sub
 
+    Public Sub MCA_CorrectTCS(ByVal Corrfile As String)
+        'tbr:'
+        Corrfile = "C:\FHT59N3\Configuration\NuclideLibs\b20029_LBF_TCS.dat"
+        Dim ebinSrcNlb As New CanberraDataAccessLib.DataAccess
+        Dim ret As Boolean
+        Dim NLineCount As Integer
+        Dim SrcFileName As String
+        Dim DestFileName As String
+        Dim currLineEnergy As String
+        Dim currLineProb As Double
+        Dim currLineProbErr As Double
+        Dim LineEnergy As CanberraDataAccessLib.ParamCodes = CanberraDataAccessLib.ParamCodes.CAM_F_NLENERGY
+        Dim LineProb As CanberraDataAccessLib.ParamCodes = CanberraDataAccessLib.ParamCodes.CAM_F_NLABUN
+        Dim LineProbErr As CanberraDataAccessLib.ParamCodes = CanberraDataAccessLib.ParamCodes.CAM_F_NLABUNERR
+        Dim TCSCorr As IDictionary(Of String, Double()) = New Dictionary(Of String, Double())
+        Try
+            SrcFileName = _NuclideLibsDirectory & "\EBIN_SRC.NLB"
+            DestFileName = _NuclideLibsDirectory & "\Ebin.nlb"
+            ret = ebinSrcNlb.FileExists(SrcFileName)
+            If ret = 0 Then
+                ret = GUI_ShowMessageBox(_NuclideLibsDirectory & "\EBIN_SRC.NLB" & " fehlt. Keine zusätzliche TCS-Korrektur.", "OK", "", "", MYCOL_WARNING, Color.Black)
+                Return
+            End If
+
+            'Read in the TCS correction
+            Try
+                Using csvReader As New FileIO.TextFieldParser(Corrfile)
+                    csvReader.TextFieldType = FileIO.FieldType.Delimited
+                    csvReader.SetDelimiters(",")
+                    Dim currRow As String()
+                    'skip first line
+                    csvReader.ReadFields()
+                    While Not csvReader.EndOfData
+                        currRow = csvReader.ReadFields()
+                        TCSCorr.Add(Format(Val(Trim(currRow(0))), "0.00"), {Val(Trim(currRow(1).Replace(",", "."))), Val(Trim(currRow(2).Replace(",", ".")))})
+                    End While
+                End Using
+            Catch ex As Exception
+                GUI_ShowMessageBox(Corrfile & "unlesbar. Format:  1st line is a comment;  Energy,Prob,ProbErr  => Keine zusätzliche TCS-Korrektur:  " & ex.Message, "OK", "", "", MYCOL_WARNING, Color.Black)
+                Return
+            End Try
+
+
+            ebinSrcNlb.Open(SrcFileName, CanberraDataAccessLib.OpenMode.dReadWrite)
+
+
+            NLineCount = ebinSrcNlb.NumberOfRecords(CanberraDataAccessLib.ClassCodes.CAM_CLS_NLINES)
+
+
+            For idx As Integer = 1 To NLineCount
+                currLineEnergy = Format(CType(ebinSrcNlb.ParamArray({LineEnergy}, idx)(0), Double), "0.00")
+                If TCSCorr.ContainsKey(currLineEnergy) Then
+                    currLineProb = CType(ebinSrcNlb.ParamArray({LineProb}, idx)(0), Double)
+                    currLineProbErr = CType(ebinSrcNlb.ParamArray({LineProbErr}, idx)(0), Double)
+                    ebinSrcNlb.Param(LineProb, idx) = currLineProb * TCSCorr(currLineEnergy)(0)
+                    ebinSrcNlb.Param(LineProbErr, idx) = Math.Sqrt((currLineProb * TCSCorr(currLineEnergy)(1)) ^ 2 + (currLineProbErr * TCSCorr(currLineEnergy)(0)) ^ 2)
+
+                    'Remove entry from TCSCorr:
+                    TCSCorr.Remove(currLineEnergy)
+                End If
+            Next idx
+            ebinSrcNlb.Save(DestFileName, True)
+            ebinSrcNlb.Close()
+            ebinSrcNlb = Nothing
+            'Check whether it was sucessfull:
+            If TCSCorr.Count > 0 Then
+                Dim Failed As String = ""
+                For Each Efailed As String In TCSCorr.Keys
+                    Failed = Failed & Efailed & "; "
+                Next
+                GUI_ShowMessageBox("Keine TCS-Korrektur für E = " & Failed, "OK", "", "", MYCOL_WARNING, Color.Black)
+            End If
+            Return
+        Catch ex As Exception
+            Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
+        End Try
+    End Sub
+
     Public Function MCA_GetNuclidsFromBib() As Boolean
         Dim ebinNlb As New CanberraDataAccessLib.DataAccess
         Dim nukGroes(0 To 2) As CanberraDataAccessLib.ParamCodes   '0=NCLNAME, 1=NCLHLFLIFE
@@ -277,6 +355,7 @@ Public Module FHT59N3_DataFunctions
                     .WriteMySetting("Misc", "CrystalWarmedUpTempThreshold", _MyFHT59N3Par.CrystalWarmedUpTempThreshold.ToString)
                     .WriteMySetting("Misc", "KeepActiveHighVoltageOnExitGuiFlag", _MyFHT59N3Par.KeepActiveHighVoltageOnExitGuiFlag)
                     .WriteMySetting("Misc", "KeepActiveEcoolerOnExitGuiFlag", _MyFHT59N3Par.KeepActiveEcoolerOnExitGuiFlag)
+                    .WriteMySetting("Misc", "TCSFile", _MyFHT59N3Par.TCS_CorrFile)
                     .WriteMySetting("Misc", "CalibrationType", _MyFHT59N3Par.CalibrationType)
                     .WriteMySetting("Misc", "AirFlowThroughPutCalculationMode", _MyFHT59N3Par.AirFlowThroughPutCalculationMode)
                     .WriteMySetting("Misc", "ZeroDegreesVoltage", Format(_MyFHT59N3Par.ZeroDegreesVoltage, "0.00"))
@@ -397,6 +476,7 @@ Public Module FHT59N3_DataFunctions
                     _MyFHT59N3Par.CrystalWarmedUpTempThreshold = CInt(.ReadMySetting("Misc", "CrystalWarmedUpTempThreshold", "15"))
                     _MyFHT59N3Par.KeepActiveHighVoltageOnExitGuiFlag = CBool(.ReadMySetting("Misc", "KeepActiveHighVoltageOnExitGuiFlag", "False"))
                     _MyFHT59N3Par.KeepActiveEcoolerOnExitGuiFlag = CBool(.ReadMySetting("Misc", "KeepActiveEcoolerOnExitGuiFlag", "True"))
+                    _MyFHT59N3Par.TCS_CorrFile = .ReadMySetting("Misc", "TCSFile", "None")
 
                     _SuppressTimeAirflowTooLess = CInt(.ReadMySetting("Misc", "SuppressTimeSecondsAirflowTooLess", "0"))
 

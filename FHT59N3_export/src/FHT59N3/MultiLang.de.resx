@@ -2285,4 +2285,10 @@ Um eine Beschädigung des Detectors zu verhindern, muss dieser zuerst auf Normal
   <data name="_660" xml:space="preserve">
     <value>Externe Temperatur [°C]</value>
   </data>
+  <data name="_661" xml:space="preserve">
+    <value>TCS Konfigurationsdatei</value>
+  </data>
+  <data name="_662" xml:space="preserve">
+    <value>Pfad der csv Datei mit der TCS Korrektur.</value>
+  </data>
 </root>
