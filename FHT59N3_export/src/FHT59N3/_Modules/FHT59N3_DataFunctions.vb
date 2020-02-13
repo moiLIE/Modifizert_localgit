@@ -151,8 +151,6 @@ Public Module FHT59N3_DataFunctions
     End Sub
 
     Public Sub MCA_CorrectTCS(ByVal Corrfile As String)
-        'tbr:'
-        Corrfile = "C:\FHT59N3\Configuration\NuclideLibs\b20029_LBF_TCS.dat"
         Dim ebinSrcNlb As New CanberraDataAccessLib.DataAccess
         Dim ret As Boolean
         Dim NLineCount As Integer
