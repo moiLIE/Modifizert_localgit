@@ -338,11 +338,19 @@ End Class
 ''' </summary>
 ''' <remarks></remarks>
 Public Class FHT59N3MCA_Peak
-    Public Property PeakEnergy As Integer
+    Public Property PeakEnergy As Double
 
     Public Property PeakChannel As Integer
 
     Public Property PeakArea As Double
+
+    Public Property PeakAreaErr As Double
+
+    Public Property PeakBckg As Double
+
+    Public Property PeakBckgErr As Double
+
+    'Public Property PeakRChiSq As Double
 
     Public Property PeakFwhm As Double
 

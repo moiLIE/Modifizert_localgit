@@ -7,8 +7,8 @@
   <Measurement ID="{{measurement_id}}">
 		<InstrumentInformation>
 			<InstrumentType>Spectrometer</InstrumentType>
-			<Manufacturer>Thermo</Manufacturer>
-			<InstrumentModel>FHT-59N3T</InstrumentModel>
+			<Manufacturer></Manufacturer>
+			<InstrumentModel>FHT-59N3</InstrumentModel>
 			<!-- the software revision of the monitor application is sufficient to describe the overall system configuration  -->
 			<InstrumentVersion>Software Rev. {{program_version}}</InstrumentVersion>
 			<!-- defines the serial number of the FHT59N3T unit -->
@@ -96,7 +96,7 @@
             	<NuclideName>{{nuclid_name}}</NuclideName>
 					    <NuclideActivity>{{nuclid_activity_concentration}}</NuclideActivity>
             
-              {{#if isPeak}}<fht:Peak Channel="{{peak_channel}}" Energy="{{peak_energy}}" FWHM="{{peak_fwhm}}" Area="{{peak_area}}"/>{{/if}}
+              {{#if isPeak}}<fht:Peak Channel="{{peak_channel}}" Energy="{{peak_energy}}" FWHM="{{peak_fwhm}}" Area="{{peak_area}}" AreaErr="{{peak_areaerr}}" Bckg="{{peak_bckg}}" BckgErr="{{peak_bckgerr}}"/>{{/if}}
               <fht:NuclideDetectionLimit>{{nuclid_detection_limit}}</fht:NuclideDetectionLimit>
               <fht:NuclideUncertainty>{{nuclid_uncertainty}}</fht:NuclideUncertainty>
               
@@ -112,7 +112,7 @@
         
         <fht:NotAssignedPeaks>
           {{#each not_assigned_peaks }}
-            <fht:Peak Channel="{{peak_channel}}" Energy="{{peak_energy}}" FWHM="{{peak_fwhm}}" Area="{{peak_area}}"/>
+            <fht:Peak Channel="{{peak_channel}}" Energy="{{peak_energy}}" FWHM="{{peak_fwhm}}"  Area="{{peak_area}}" AreaErr="{{peak_areaerr}}" Bckg="{{peak_bckg}}" BckgErr="{{peak_bckgerr}}"/>
           {{/each}}
         </fht:NotAssignedPeaks>
         

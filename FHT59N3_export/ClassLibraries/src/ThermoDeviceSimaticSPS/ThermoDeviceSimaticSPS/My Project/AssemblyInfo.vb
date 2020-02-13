@@ -9,8 +9,8 @@ Imports System.Runtime.InteropServices
 ' Die Werte der Assemblyattribute überprüfen
 
 <Assembly: AssemblyTitle("ThermoDeviceSimaticSPS")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("Thermo Electron (Erlangen) GmbH")> 
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("Thermo Electron (Erlangen) GmbH, Modified by BAG Switzerland")>
 <Assembly: AssemblyProduct("ThermoDeviceSimaticSPS")> 
 <Assembly: AssemblyCopyright("Copyright © Thermo Electron (Erlangen) GmbH 2013")> 
 <Assembly: AssemblyTrademark("")> 
@@ -18,7 +18,7 @@ Imports System.Runtime.InteropServices
 <Assembly: ComVisible(False)>
 
 'Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird
-<Assembly: Guid("8568457d-c037-4560-8258-805747460bc1")> 
+<Assembly: Guid("8568457d-c037-4560-8258-805747460bc1")>
 
 ' Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 '
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' übernehmen, indem Sie "*" eingeben:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.1.0")> 
-<Assembly: AssemblyFileVersion("1.1.0")> 
+<Assembly: AssemblyVersion("1.1.0.1")>
+<Assembly: AssemblyFileVersion("1.1.0.1")>

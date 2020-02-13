@@ -1,5 +1,4 @@
-﻿Imports System.Resources
-Imports System
+﻿Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 
@@ -9,12 +8,12 @@ Imports System.Runtime.InteropServices
 
 ' Die Werte der Assemblyattribute überprüfen
 
-<Assembly: AssemblyTitle("FHT59N3T")>
+<Assembly: AssemblyTitle("FHT59N3T")> 
 <Assembly: AssemblyDescription("Nuclide specific gamma spektroskopy software.")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("FHT59N3T")>
-<Assembly: AssemblyCopyright("Copyright © 2015-2019")>
-<Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyCompany("Thermo Electron (Erlangen) GmbH, Modified by BAG Switzerland")>
+<Assembly: AssemblyProduct("FHT59N3T")> 
+<Assembly: AssemblyCopyright("Copyright © 2015-2019")> 
+<Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
 
@@ -32,6 +31,5 @@ Imports System.Runtime.InteropServices
 ' übernehmen, indem Sie "*" eingeben:
 ' <Assembly: AssemblyVersion("2.0.1.373")> 
 
-<Assembly: AssemblyVersion("2.0.4.0")>
-<Assembly: AssemblyFileVersion("2.0.4.0")>
-<Assembly: NeutralResourcesLanguage("en")>
+<Assembly: AssemblyVersion("2.0.4.800")>
+<Assembly: AssemblyFileVersion("2.0.4.800")>
