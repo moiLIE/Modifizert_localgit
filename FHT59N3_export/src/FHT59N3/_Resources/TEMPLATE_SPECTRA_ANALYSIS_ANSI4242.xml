@@ -95,9 +95,13 @@
             	<Remark>{{nuclid_remark}}</Remark>
             	<NuclideName>{{nuclid_name}}</NuclideName>
 					    <NuclideActivity>{{nuclid_activity_concentration}}</NuclideActivity>
-            
-              {{#if isPeak}}<fht:Peak Channel="{{peak_channel}}" Energy="{{peak_energy}}" FWHM="{{peak_fwhm}}" Area="{{peak_area}}" AreaErr="{{peak_areaerr}}" Bckg="{{peak_bckg}}" BckgErr="{{peak_bckgerr}}"/>{{/if}}
-              <fht:NuclideDetectionLimit>{{nuclid_detection_limit}}</fht:NuclideDetectionLimit>
+
+            {{#if isPeak}}
+            {{#each nuclide_peaks }}
+            <fht:Peak Channel="{{peak_channel}}" Energy="{{peak_energy}}" FWHM="{{peak_fwhm}}" Area="{{peak_area}}" AreaErr="{{peak_areaerr}}" Bckg="{{peak_bckg}}" BckgErr="{{peak_bckgerr}}" type="{{peak_type}}"/>
+            {{/each}}
+            {{/if}}
+            <fht:NuclideDetectionLimit>{{nuclid_detection_limit}}</fht:NuclideDetectionLimit>
               <fht:NuclideUncertainty>{{nuclid_uncertainty}}</fht:NuclideUncertainty>
               
               <!-- tag is only output if alarm defined for this nuclid. Configured limit is in the configuration file. The 2hour hysterese value is the current value the nuclid is compared to -->

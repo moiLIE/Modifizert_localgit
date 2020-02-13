@@ -230,7 +230,7 @@ Public Module FHT59N3_DataFunctions
 
     Public Function MCA_GetNuclidsFromBib() As Boolean
         Dim ebinNlb As New CanberraDataAccessLib.DataAccess
-        Dim nukGroes(0 To 2) As CanberraDataAccessLib.ParamCodes   '0=NCLNAME, 1=NCLHLFLIFE
+        Dim nukGroes(0 To 1) As CanberraDataAccessLib.ParamCodes   '0=NCLNAME, 1=NCLHLFLIFE
         Dim ret As Integer
         Dim NucCount As Integer
         Dim Buffer As Object
@@ -247,7 +247,6 @@ Public Module FHT59N3_DataFunctions
 
             nukGroes(0) = CanberraDataAccessLib.ParamCodes.CAM_T_NCLNAME
             nukGroes(1) = CanberraDataAccessLib.ParamCodes.CAM_X_NCLHLFLIFE
-            nukGroes(2) = CanberraDataAccessLib.ParamCodes.CAM_L_NLNUCL
 
             For i As Integer = 1 To NucCount
                 Buffer = ebinNlb.ParamArray(nukGroes, i)
@@ -255,7 +254,7 @@ Public Module FHT59N3_DataFunctions
                 Nuclide.Library.Name = CType(Buffer(0), String)             'Nuklidnamen
                 Nuclide.Library.NuclideHalfLife = CType(Buffer(1), Double) / 3600.0#   'Halbwertsdauer inn h
                 Nuclide.Library.DecayConstant = 0.69315 / Nuclide.Library.NuclideHalfLife
-                Nuclide.Library.NuclidNumber = CType(Buffer(2), Integer)
+                Nuclide.Library.NuclidNumber = i 'The nuclide number is the index of the Buffer.
                 _MyControlCenter.MCA_Nuclides.AddNuclide(Nuclide)
             Next i
             ebinNlb.Close()
