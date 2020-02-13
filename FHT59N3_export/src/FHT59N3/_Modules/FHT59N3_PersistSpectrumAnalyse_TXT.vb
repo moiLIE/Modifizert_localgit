@@ -20,6 +20,7 @@ Module FHT59N3_Persist
     Public Const SPECTYPE_FILTERSTAND As Integer = 2
     Public Const SPECTYPE_TAGESAUSWERTUNG As Integer = 3
     Public Const SPECTYPE_SONDERAUSWERTUNG As Integer = 4
+    Public Const SPECTYPE_WARTUNG As Integer = 5
 
     Public Const FILETYPE_SPECANALYSIS_TEXTFILE = 0
     Public Const FILETYPE_SPECANALYSIS_ANSIN4242 = 1

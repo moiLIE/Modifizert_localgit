@@ -28,8 +28,90 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
 
     End Sub
 
-   
+    Public Sub SYS_StoreCurrentMaintenanceStateAnsiN4242(ByRef templateData As IDictionary(Of String, Object), ByVal SpecType As Integer)
 
+        Try
+
+            Dim sysParams As FHT59N3_SystemParams = _MyFHT59N3Par
+
+            ''add template placeholders for <InstrumentInformation> tag
+            SetTemplateTagsInstrumentInformation(SpecType, templateData)
+            'change mode:
+            If _MyControlCenter.SYS_States.Maintenance Then
+                templateData("type_instrument_mode") = "Maintenance"
+            Else
+                templateData("type_instrument_mode") = "Offline"
+            End If
+
+
+            'All sensor tags should return a default value when the sensor is offline
+            SetTemplateTagsSensorInformation(SpecType, templateData)
+
+            'Prevent printing of Double.MinValue:
+            If _DetectorTemperaturValue = Double.MinValue Then
+                templateData("sensor_temperature_detector") = "--"
+            End If
+
+            ''add template placeholders for <Spectrum> tag
+            ''SetTemplateTagsSpectrum(templateData)
+            ''instead manually
+
+
+            Dim endTimeUtc As Date = If(_SSPRSTR4 <> "", _SSPRSTR4 & ":00", Now.ToString)
+
+            templateData.Add("end_measurement_time_utc", Format(endTimeUtc, "yyyy-MM-ddTHH:mm:00Z"))
+            templateData.Add("end_measurement_time_utc_plain", Format(endTimeUtc, "yyyy-MM-dd HH:mm:00"))
+
+
+            templateData.Add("air_flow_type", If(sysParams.AirFlowWorking, "stp_p", "stp_n"))
+            templateData.Add("air_flow_value", GetDecimal(_AirFlowMean))
+
+            templateData.Add("air_pressure_environment", GetDecimal(_PressureEnvironment))
+            templateData.Add("air_temperature_after_filter", GetDecimal(_Temperature))
+
+
+            ''add template placeholders for <AnalysisResults> tag
+            ''SetTemplateTagsNuclidAnalysis(templateData)
+            ''instead:
+            templateData.Add("maxViolatedAlarmLevel_AllNuclides", "0")
+
+            ''Schleife über alle gefundenen Nuklide der letzten Auswertung...
+            ''skipped
+
+            ''  ''
+            ''add template placeholders for the <Calibration> tags (inside Spectrum and outside)
+            ''SetTemplateTagsCalibration(templateData)
+
+        Catch ex As Exception
+            Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
+        End Try
+
+    End Sub
+    Public Sub SYS_WriteMaintenanceFileAnsiN4242(ByRef templateData As IDictionary(Of String, Object), ByVal SpecType As Integer)
+
+        Try
+            Dim compiler As New FormatCompiler()
+            Dim templateAnsi4242 As String = Global.FHT59N3.My.Resources.Resources.TEMPLATE_MAINTENANCE_ANSI4242
+            Dim generator As Generator = compiler.Compile(templateAnsi4242)
+            Dim ansi4242FileContent As String = generator.Render(templateData)
+            StripComments(ansi4242FileContent)
+
+            Dim plainXml As Boolean = _MyFHT59N3Par.AnsiN4242Settings.HasFlag(AnsiN4242Settings.GeneratePlainXml)
+            If plainXml Then
+                Dim DestinationFile As String = CalculateAnsiN4242DestinationFilePath(SpecType, _MyFHT59N3Par.StationSerialNumber, ".xml")
+                My.Computer.FileSystem.WriteAllText(DestinationFile, ansi4242FileContent, False)
+            Else
+                Dim DestinationFile As String = CalculateAnsiN4242DestinationFilePath(SpecType, _MyFHT59N3Par.StationSerialNumber, ".xml.gz")
+                Dim GzipBytes As Array = CompressASCII(ansi4242FileContent)
+                My.Computer.FileSystem.WriteAllBytes(DestinationFile, GzipBytes, False)
+
+            End If
+
+        Catch ex As Exception
+            Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
+        End Try
+
+    End Sub
 
     Public Sub SYS_StoreCalibrationDataAnsiN4242(ByRef templateData As IDictionary(Of String, Object), ByVal CalibrationType As FHT59N3_SystemParams.CalibrationTypeEnum)
 
@@ -501,6 +583,9 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
             Case SPECTYPE_SONDERAUSWERTUNG
                 DestinationFile = BaseFileName & "-" & "userrequested" & FileEnding
 
+            Case SPECTYPE_WARTUNG
+                DestinationFile = BaseFileName & "-" & "maintenance" & FileEnding
+
                 'andere Fälle (sollte aktuell nicht genutzt sein)
             Case Else
                 DestinationFile = BaseFileName & "-" & "undefined" & FileEnding
@@ -531,6 +616,8 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
                 fileType = "SpectrumOfTheDay"
             Case SPECTYPE_SONDERAUSWERTUNG
                 fileType = "UserForcedAnalysis"
+            Case SPECTYPE_WARTUNG
+                fileType = "Maintenance"
         End Select
 
         templateData.Add("file_type", fileType)

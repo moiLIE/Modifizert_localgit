@@ -7,7 +7,7 @@
   <Measurement ID="{{measurement_id}}">
 		<InstrumentInformation>
 			<InstrumentType>Spectrometer</InstrumentType>
-			<Manufacturer></Manufacturer>
+			<Manufacturer>Thermo</Manufacturer>
 			<InstrumentModel>FHT-59N3T</InstrumentModel>
 			<!-- the software revision of the monitor application is sufficient to describe the overall system configuration  -->
 			<InstrumentVersion>Software Rev. {{program_version}}</InstrumentVersion>
