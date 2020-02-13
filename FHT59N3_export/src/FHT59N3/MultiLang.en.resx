@@ -2203,6 +2203,12 @@ To prevent any damage of the detector, the detector must bei warmed up to the no
   <data name="_618" xml:space="preserve">
     <value>The message list will be flushed until next start of the application. Continue?</value>
   </data>
+  <data name="_661" xml:space="preserve">
+    <value>TCS Configuration file</value>
+  </data>
+  <data name="_662" xml:space="preserve">
+    <value>Full path to the csv file with the TCS correction.</value>
+  </data>
   <data name="_1209" xml:space="preserve">
     <value>extracted from NAH.cnf: </value>
     <comment>2</comment>

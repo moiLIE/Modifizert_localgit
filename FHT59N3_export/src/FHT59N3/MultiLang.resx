@@ -1869,4 +1869,10 @@ To prevent any damage of the detector, the detector must bei warmed up to the no
   <data name="_660" xml:space="preserve">
     <value>External Temperature [°C]</value>
   </data>
+  <data name="_661" xml:space="preserve">
+    <value>TCS Configuration file</value>
+  </data>
+  <data name="_662" xml:space="preserve">
+    <value>Full path to the csv file with the TCS correction.</value>
+  </data>
 </root>
