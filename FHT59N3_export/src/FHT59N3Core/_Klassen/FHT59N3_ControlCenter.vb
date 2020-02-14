@@ -18,6 +18,9 @@ Public Class FHT59N3_ControlCenter
     Private _MCAPeaks As New FHT59N3MCA_Peaks
 
 
+    Private _CP5_Connection As BAGiPAConnection.BAGCryoCooler
+
+
 #End Region
 
 #Region "Enums"
@@ -283,6 +286,51 @@ Public Class FHT59N3_ControlCenter
         End Get
     End Property
 
+    Public ReadOnly Property CanberraDetectorTemperature() As Double
+        Get
+            Return _CP5_Connection.CP5_ReadTemperature
+        End Get
+    End Property
+
+
+    Public ReadOnly Property CanberraCryoCoolerPower() As Double
+        Get
+            Return _CP5_Connection.CP5_ReadPower
+        End Get
+    End Property
+
+    Public ReadOnly Property CanberraCryoCoolerControllerTemp() As Double
+        Get
+            Return _CP5_Connection.CP5_ControllerTemp
+
+        End Get
+    End Property
+
+    Public ReadOnly Property CanberraCryoCoolerHeadTemp() As Double
+        Get
+            Return _CP5_Connection.CP5_ColdheadTemp
+        End Get
+    End Property
+
+    Public ReadOnly Property CanberraCryoCoolerCompressorTemp() As Double
+        Get
+            Return _CP5_Connection.CP5_CompressorTemp
+        End Get
+    End Property
+    Public ReadOnly Property CanberraCryoCoolerStatus() As Boolean
+        Get
+            Return _CP5_Connection.CP5_Status
+        End Get
+    End Property
+
+    Public Sub CanberraCryoCooler_ON()
+        _CP5_Connection.CP5_ON()
+    End Sub
+    Public Sub CanberraCryoCooler_OFF()
+        _CP5_Connection.CP5_OFF()
+    End Sub
+
+
     ''' <summary>
     ''' Gets the second temperature. New for V2.0.3 (June 2017)
     ''' </summary>
@@ -476,7 +524,8 @@ Public Class FHT59N3_ControlCenter
     Public Sub New(ByVal ComPortSPS As String, ByVal NetworkAddress As String, ByVal RemotePort As UInt16, ByVal SPSConnectionType As String,
                    ByVal UseStxEtxProtocolSPS As Boolean,
                    ByVal MCAType As MCATypes, ByVal IPMCA As String,
-                   ByVal LogFilePath As String, ByVal SimulateLynxSystem As Boolean, ByRef BeforeLynxCommandSub As Action(Of String))
+                   ByVal LogFilePath As String, ByVal SimulateLynxSystem As Boolean, ByRef BeforeLynxCommandSub As Action(Of String),
+                   Optional ByVal ComPortCryoCool As String = "COM99")
         Try
 
             _MCAType = MCAType
@@ -515,6 +564,14 @@ Public Class FHT59N3_ControlCenter
         Catch ex As Exception
             Trace.TraceError("Error starting remote control webserver: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
         End Try
+
+        'Das Interface zum CryoCooler starten...
+        Try
+            _CP5_Connection = New BAGiPAConnection.BAGCryoCooler(ComPortCryoCool)
+        Catch ex As Exception
+            Trace.TraceError("Error starting connection to the cryo cooler: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
+        End Try
+
     End Sub
 
     Public Sub Dispose()

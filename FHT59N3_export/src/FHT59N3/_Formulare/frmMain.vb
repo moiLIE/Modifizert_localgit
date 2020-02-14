@@ -29,10 +29,19 @@ Public Class frmMain
             If (Not _Start) And (Not _EndProgram) Then
                 Dim checkBoxResult1 As Boolean = _MyFHT59N3Par.KeepActiveHighVoltageOnExitGuiFlag
                 Dim checkBoxResult2 As Boolean = _MyFHT59N3Par.KeepActiveEcoolerOnExitGuiFlag
+                'If Not _MyFHT59N3Par.IsCanberraDetector Then
                 Dim dialogResult As MsgBoxResult = GUI_ShowExtendedMessageBox(MSG_WantToExit, ml_string(90, "Yes"), ml_string(91, "No"), "",
                                               ml_string(537, "Keep MCA high voltage turned on"), checkBoxResult1,
                                               ml_string(538, "Keep E-Cooler turned on"), checkBoxResult2,
                                               MYCOL_THERMOGREEN, Color.White)
+                'Else
+                'Dim dialogResult As MsgBoxResult = GUI_ShowExtendedMessageBox(MSG_WantToExit, ml_string(90, "Yes"), ml_string(91, "No"), "",
+                'ml_string(537, "Keep MCA high voltage turned on"), checkBoxResult1,
+                '         "", checkBoxResult2,
+                'MYCOL_THERMOGREEN, Color.White)
+                'checkBoxResult2 = True 'Don't touch ECooler
+                'End If
+
                 If dialogResult = MsgBoxResult.No Then
                     e.Cancel = True
                     _MenuEntryExitClicked = False
@@ -57,10 +66,14 @@ Public Class frmMain
                     _MyControlCenter.SPS_ErrorOn()
                     _MyControlCenter.MDS_StopNetlog()
                     If Not checkBoxResult2 Then
-                        _MyControlCenter.SPS_EcoolerOff()
+                        If _MyFHT59N3Par.IsCanberraDetector Then
+                            _MyControlCenter.CanberraCryoCooler_OFF()
+                        Else
+                            _MyControlCenter.SPS_EcoolerOff()
+                        End If
                     End If
-                    'Setzte die Entsprechende Flagge, damit sie ins Konfigurations-Binary geschrieben wird.
-                    If Not checkBoxResult1 Then
+                        'Setzte die Entsprechende Flagge, damit sie ins Konfigurations-Binary geschrieben wird.
+                        If Not checkBoxResult1 Then
                         _MyControlCenter.SYS_States.HVOff = True
                     End If
                     _EndProgram = True
@@ -211,7 +224,7 @@ Public Class frmMain
         End Try
     End Sub
 
-  
+
 
     Private Sub BtnExpandMode_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnExpandMode.Click
         Try
@@ -244,7 +257,7 @@ Public Class frmMain
         End Try
     End Sub
 
- 
+
 
     Private Sub BtnDetectorTemperature_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnDetectorTemperature.Click
         GUI_FillBackColors()

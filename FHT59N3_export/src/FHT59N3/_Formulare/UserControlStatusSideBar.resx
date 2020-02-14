@@ -192,218 +192,41 @@
   <data name="TableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;LbLN2.Name" xml:space="preserve">
-    <value>LbLN2</value>
+  <data name="LblCryoPowerValue.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;LbLN2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="LblCryoPowerValue.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;LbLN2.Parent" xml:space="preserve">
-    <value>TableLayoutPanel1</value>
+  <data name="LblCryoPowerValue.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;LbLN2.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="LblCryoPowerValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 160</value>
   </data>
-  <data name="&gt;&gt;Label6.Name" xml:space="preserve">
-    <value>Label6</value>
-  </data>
-  <data name="&gt;&gt;Label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label6.Parent" xml:space="preserve">
-    <value>TableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;LblAirFlowActual.Name" xml:space="preserve">
-    <value>LblAirFlowActual</value>
-  </data>
-  <data name="&gt;&gt;LblAirFlowActual.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LblAirFlowActual.Parent" xml:space="preserve">
-    <value>TableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;LblAirFlowActual.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;Label9.Name" xml:space="preserve">
-    <value>Label9</value>
-  </data>
-  <data name="&gt;&gt;Label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label9.Parent" xml:space="preserve">
-    <value>TableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;Label20.Name" xml:space="preserve">
-    <value>Label20</value>
-  </data>
-  <data name="&gt;&gt;Label20.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label20.Parent" xml:space="preserve">
-    <value>TableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;Label20.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;Label4.Name" xml:space="preserve">
-    <value>Label4</value>
-  </data>
-  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
-    <value>TableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;LblFilterSteps.Name" xml:space="preserve">
-    <value>LblFilterSteps</value>
-  </data>
-  <data name="&gt;&gt;LblFilterSteps.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LblFilterSteps.Parent" xml:space="preserve">
-    <value>TableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;LblFilterSteps.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;LblCursorIndex.Name" xml:space="preserve">
-    <value>LblCursorIndex</value>
-  </data>
-  <data name="&gt;&gt;LblCursorIndex.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LblCursorIndex.Parent" xml:space="preserve">
-    <value>TableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;LblCursorIndex.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
-    <value>Label1</value>
-  </data>
-  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
-    <value>TableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;LblAirFlowMean.Name" xml:space="preserve">
-    <value>LblAirFlowMean</value>
-  </data>
-  <data name="&gt;&gt;LblAirFlowMean.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LblAirFlowMean.Parent" xml:space="preserve">
-    <value>TableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;LblAirFlowMean.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
-    <value>Label2</value>
-  </data>
-  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
-    <value>TableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
-    <value>Label3</value>
-  </data>
-  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
-    <value>TableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;LblTemp.Name" xml:space="preserve">
-    <value>LblTemp</value>
-  </data>
-  <data name="&gt;&gt;LblTemp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LblTemp.Parent" xml:space="preserve">
-    <value>TableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;LblTemp.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;Label5.Name" xml:space="preserve">
-    <value>Label5</value>
-  </data>
-  <data name="&gt;&gt;Label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label5.Parent" xml:space="preserve">
-    <value>TableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;LblDetectTemp.Name" xml:space="preserve">
-    <value>LblDetectTemp</value>
-  </data>
-  <data name="&gt;&gt;LblDetectTemp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LblDetectTemp.Parent" xml:space="preserve">
-    <value>TableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;LblDetectTemp.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="TableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="TableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 70</value>
-  </data>
-  <data name="TableLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="LblCryoPowerValue.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="TableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="LblCryoPowerValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 20</value>
   </data>
-  <data name="TableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 171</value>
+  <data name="LblCryoPowerValue.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
   </data>
-  <data name="TableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>69</value>
+  <data name="LblCryoPowerValue.Text" xml:space="preserve">
+    <value>12</value>
   </data>
-  <data name="&gt;&gt;TableLayoutPanel1.Name" xml:space="preserve">
+  <data name="&gt;&gt;LblCryoPowerValue.Name" xml:space="preserve">
+    <value>LblCryoPowerValue</value>
+  </data>
+  <data name="&gt;&gt;LblCryoPowerValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LblCryoPowerValue.Parent" xml:space="preserve">
     <value>TableLayoutPanel1</value>
   </data>
-  <data name="&gt;&gt;TableLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="TableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="LbLN2" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Label6" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="LblAirFlowActual" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Label9" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label20" Row="2" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="Label4" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="LblFilterSteps" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="LblCursorIndex" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Label1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="LblAirFlowMean" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Label2" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label3" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="LblTemp" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Label5" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="LblDetectTemp" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,58.75486,Percent,41.24514" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,Absolute,20,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  <data name="&gt;&gt;LblCryoPowerValue.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="LbLN2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -415,7 +238,7 @@
     <value>NoControl</value>
   </data>
   <data name="LbLN2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 100</value>
+    <value>156, 100</value>
   </data>
   <data name="LbLN2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -439,7 +262,7 @@
     <value>TableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;LbLN2.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="Label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -475,7 +298,7 @@
     <value>TableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="LblAirFlowActual.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -487,7 +310,7 @@
     <value>NoControl</value>
   </data>
   <data name="LblAirFlowActual.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 60</value>
+    <value>156, 60</value>
   </data>
   <data name="LblAirFlowActual.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -511,7 +334,7 @@
     <value>TableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;LblAirFlowActual.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="Label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -547,7 +370,7 @@
     <value>TableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="Label20.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -583,7 +406,7 @@
     <value>TableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;Label20.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -619,7 +442,7 @@
     <value>TableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="LblFilterSteps.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -631,7 +454,7 @@
     <value>NoControl</value>
   </data>
   <data name="LblFilterSteps.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 20</value>
+    <value>156, 20</value>
   </data>
   <data name="LblFilterSteps.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -655,7 +478,7 @@
     <value>TableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;LblFilterSteps.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="LblCursorIndex.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -664,7 +487,7 @@
     <value>NoControl</value>
   </data>
   <data name="LblCursorIndex.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 0</value>
+    <value>159, 0</value>
   </data>
   <data name="LblCursorIndex.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 13</value>
@@ -682,7 +505,7 @@
     <value>TableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;LblCursorIndex.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -718,7 +541,7 @@
     <value>TableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="LblAirFlowMean.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -730,7 +553,7 @@
     <value>NoControl</value>
   </data>
   <data name="LblAirFlowMean.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 80</value>
+    <value>156, 80</value>
   </data>
   <data name="LblAirFlowMean.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -754,7 +577,7 @@
     <value>TableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;LblAirFlowMean.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -790,7 +613,7 @@
     <value>TableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -826,7 +649,7 @@
     <value>TableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="LblTemp.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -838,7 +661,7 @@
     <value>NoControl</value>
   </data>
   <data name="LblTemp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 120</value>
+    <value>156, 120</value>
   </data>
   <data name="LblTemp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -862,7 +685,7 @@
     <value>TableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;LblTemp.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -898,7 +721,7 @@
     <value>TableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="LblDetectTemp.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -910,7 +733,7 @@
     <value>NoControl</value>
   </data>
   <data name="LblDetectTemp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 140</value>
+    <value>156, 140</value>
   </data>
   <data name="LblDetectTemp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -934,7 +757,76 @@
     <value>TableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;LblDetectTemp.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
+  </data>
+  <data name="LblCryoPowerName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LblCryoPowerName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="LblCryoPowerName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LblCryoPowerName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 160</value>
+  </data>
+  <data name="LblCryoPowerName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="LblCryoPowerName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="LblCryoPowerName.TabIndex" type="System.Int32, mscorlib">
+    <value>91</value>
+  </data>
+  <data name="LblCryoPowerName.Text" xml:space="preserve">
+    <value>CryoPower[W]</value>
+  </data>
+  <data name="&gt;&gt;LblCryoPowerName.Name" xml:space="preserve">
+    <value>LblCryoPowerName</value>
+  </data>
+  <data name="&gt;&gt;LblCryoPowerName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LblCryoPowerName.Parent" xml:space="preserve">
+    <value>TableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;LblCryoPowerName.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="TableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="TableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 70</value>
+  </data>
+  <data name="TableLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="TableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="TableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 186</value>
+  </data>
+  <data name="TableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel1.Name" xml:space="preserve">
+    <value>TableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="TableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="LblCryoPowerValue" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="LbLN2" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Label6" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="LblAirFlowActual" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Label9" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label20" Row="2" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="Label4" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="LblFilterSteps" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="LblCursorIndex" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Label1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="LblAirFlowMean" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Label2" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label3" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="LblTemp" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Label5" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="LblDetectTemp" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="LblCryoPowerName" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,60,70039,Percent,39,29961" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,Absolute,20,Absolute,20,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="LabelClock.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1005,6 +897,54 @@
   <data name="&gt;&gt;BtnROI.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="&gt;&gt;TextAlarmNuclides.Name" xml:space="preserve">
+    <value>TextAlarmNuclides</value>
+  </data>
+  <data name="&gt;&gt;TextAlarmNuclides.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextAlarmNuclides.Parent" xml:space="preserve">
+    <value>PanelAlarm</value>
+  </data>
+  <data name="&gt;&gt;TextAlarmNuclides.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;LabelAlarmNuclideTitle.Name" xml:space="preserve">
+    <value>LabelAlarmNuclideTitle</value>
+  </data>
+  <data name="&gt;&gt;LabelAlarmNuclideTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelAlarmNuclideTitle.Parent" xml:space="preserve">
+    <value>PanelAlarm</value>
+  </data>
+  <data name="&gt;&gt;LabelAlarmNuclideTitle.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="PanelAlarm.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="PanelAlarm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 256</value>
+  </data>
+  <data name="PanelAlarm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 330</value>
+  </data>
+  <data name="PanelAlarm.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="&gt;&gt;PanelAlarm.Name" xml:space="preserve">
+    <value>PanelAlarm</value>
+  </data>
+  <data name="&gt;&gt;PanelAlarm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PanelAlarm.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PanelAlarm.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="TextAlarmNuclides.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -1018,10 +958,13 @@
     <value>4, 37</value>
   </data>
   <data name="TextAlarmNuclides.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 274</value>
+    <value>250, 259</value>
   </data>
   <data name="TextAlarmNuclides.TabIndex" type="System.Int32, mscorlib">
     <value>79</value>
+  </data>
+  <data name="TextAlarmNuclides.Text" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;TextAlarmNuclides.Name" xml:space="preserve">
     <value>TextAlarmNuclides</value>
@@ -1070,30 +1013,6 @@
   </data>
   <data name="&gt;&gt;LabelAlarmNuclideTitle.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="PanelAlarm.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="PanelAlarm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 241</value>
-  </data>
-  <data name="PanelAlarm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 345</value>
-  </data>
-  <data name="PanelAlarm.TabIndex" type="System.Int32, mscorlib">
-    <value>78</value>
-  </data>
-  <data name="&gt;&gt;PanelAlarm.Name" xml:space="preserve">
-    <value>PanelAlarm</value>
-  </data>
-  <data name="&gt;&gt;PanelAlarm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PanelAlarm.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PanelAlarm.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

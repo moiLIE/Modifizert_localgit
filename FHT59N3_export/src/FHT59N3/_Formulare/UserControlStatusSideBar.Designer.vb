@@ -26,6 +26,7 @@ Partial Class UserControlStatusSideBar
         Me.BtnQuitAlarm = New System.Windows.Forms.Button()
         Me.LblStatus = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.LblCryoPowerValue = New System.Windows.Forms.Label()
         Me.LbLN2 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.LblAirFlowActual = New System.Windows.Forms.Label()
@@ -41,11 +42,12 @@ Partial Class UserControlStatusSideBar
         Me.LblTemp = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.LblDetectTemp = New System.Windows.Forms.Label()
+        Me.LblCryoPowerName = New System.Windows.Forms.Label()
         Me.LabelClock = New System.Windows.Forms.Label()
         Me.BtnROI = New System.Windows.Forms.Button()
         Me.PanelAlarm = New System.Windows.Forms.Panel()
-        Me.LabelAlarmNuclideTitle = New System.Windows.Forms.Label()
         Me.TextAlarmNuclides = New System.Windows.Forms.RichTextBox()
+        Me.LabelAlarmNuclideTitle = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.PanelAlarm.SuspendLayout()
         Me.SuspendLayout()
@@ -67,6 +69,7 @@ Partial Class UserControlStatusSideBar
         'TableLayoutPanel1
         '
         resources.ApplyResources(Me.TableLayoutPanel1, "TableLayoutPanel1")
+        Me.TableLayoutPanel1.Controls.Add(Me.LblCryoPowerValue, 0, 8)
         Me.TableLayoutPanel1.Controls.Add(Me.LbLN2, 1, 5)
         Me.TableLayoutPanel1.Controls.Add(Me.Label6, 0, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.LblAirFlowActual, 1, 3)
@@ -82,7 +85,14 @@ Partial Class UserControlStatusSideBar
         Me.TableLayoutPanel1.Controls.Add(Me.LblTemp, 1, 6)
         Me.TableLayoutPanel1.Controls.Add(Me.Label5, 0, 7)
         Me.TableLayoutPanel1.Controls.Add(Me.LblDetectTemp, 1, 7)
+        Me.TableLayoutPanel1.Controls.Add(Me.LblCryoPowerName, 0, 8)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        '
+        'LblCryoPowerValue
+        '
+        resources.ApplyResources(Me.LblCryoPowerValue, "LblCryoPowerValue")
+        Me.LblCryoPowerValue.ForeColor = System.Drawing.Color.White
+        Me.LblCryoPowerValue.Name = "LblCryoPowerValue"
         '
         'LbLN2
         '
@@ -174,6 +184,12 @@ Partial Class UserControlStatusSideBar
         Me.LblDetectTemp.ForeColor = System.Drawing.Color.White
         Me.LblDetectTemp.Name = "LblDetectTemp"
         '
+        'LblCryoPowerName
+        '
+        resources.ApplyResources(Me.LblCryoPowerName, "LblCryoPowerName")
+        Me.LblCryoPowerName.ForeColor = System.Drawing.Color.White
+        Me.LblCryoPowerName.Name = "LblCryoPowerName"
+        '
         'LabelClock
         '
         Me.LabelClock.BackColor = System.Drawing.Color.WhiteSmoke
@@ -195,13 +211,6 @@ Partial Class UserControlStatusSideBar
         resources.ApplyResources(Me.PanelAlarm, "PanelAlarm")
         Me.PanelAlarm.Name = "PanelAlarm"
         '
-        'LabelAlarmNuclideTitle
-        '
-        Me.LabelAlarmNuclideTitle.BackColor = System.Drawing.Color.Transparent
-        resources.ApplyResources(Me.LabelAlarmNuclideTitle, "LabelAlarmNuclideTitle")
-        Me.LabelAlarmNuclideTitle.ForeColor = System.Drawing.Color.White
-        Me.LabelAlarmNuclideTitle.Name = "LabelAlarmNuclideTitle"
-        '
         'TextAlarmNuclides
         '
         resources.ApplyResources(Me.TextAlarmNuclides, "TextAlarmNuclides")
@@ -209,7 +218,13 @@ Partial Class UserControlStatusSideBar
         Me.TextAlarmNuclides.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextAlarmNuclides.ForeColor = System.Drawing.Color.LightYellow
         Me.TextAlarmNuclides.Name = "TextAlarmNuclides"
-        Me.TextAlarmNuclides.Text = Global.FHT59N3.MultiLang._504
+        '
+        'LabelAlarmNuclideTitle
+        '
+        Me.LabelAlarmNuclideTitle.BackColor = System.Drawing.Color.Transparent
+        resources.ApplyResources(Me.LabelAlarmNuclideTitle, "LabelAlarmNuclideTitle")
+        Me.LabelAlarmNuclideTitle.ForeColor = System.Drawing.Color.White
+        Me.LabelAlarmNuclideTitle.Name = "LabelAlarmNuclideTitle"
         '
         'UserControlStatusSideBar
         '
@@ -251,5 +266,6 @@ Partial Class UserControlStatusSideBar
     Friend WithEvents PanelAlarm As System.Windows.Forms.Panel
     Friend WithEvents LabelAlarmNuclideTitle As System.Windows.Forms.Label
     Friend WithEvents TextAlarmNuclides As System.Windows.Forms.RichTextBox
-
+    Friend WithEvents LblCryoPowerValue As Label
+    Friend WithEvents LblCryoPowerName As Label
 End Class

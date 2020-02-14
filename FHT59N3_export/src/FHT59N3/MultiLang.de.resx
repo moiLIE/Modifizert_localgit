@@ -2286,9 +2286,64 @@ Um eine Beschädigung des Detectors zu verhindern, muss dieser zuerst auf Normal
     <value>Externe Temperatur [°C]</value>
   </data>
   <data name="_661" xml:space="preserve">
-    <value>TCS Konfigurationsdatei</value>
+    <value>07 Detektor Parameter</value>
   </data>
   <data name="_662" xml:space="preserve">
+    <value>Verwende ein Canberra Detector</value>
+  </data>
+  <data name="_663" xml:space="preserve">
+    <value>Schaltet zwischen dem Gebrauch eines Canberra Detektors (1) und dem eines Ortec Detektors (0) um.</value>
+  </data>
+  <data name="_664" xml:space="preserve">
+    <value>Achtung, das Wechseln des Detektortyps geht möglicherweise mit zusätzlichen Änderungen am System einher. Bitte beachten Sie die entsprechende Anleitung.</value>
+  </data>
+  <data name="_665" xml:space="preserve">
+    <value>Canberra Cryo-Cool exe-Datei</value>
+  </data>
+  <data name="_666" xml:space="preserve">
+    <value>Pfad der Cryo-Cool Steuerungs Software.</value>
+  </data>
+  <data name="_667" xml:space="preserve">
+    <value>Bitte neustarten um die Änderungen umzusetzen.</value>
+  </data>
+  <data name="_668" xml:space="preserve">
+    <value>Canberra Temperatur-Logfile</value>
+  </data>
+  <data name="_669" xml:space="preserve">
+    <value>Pfad der Logdatei mit der aktuellen Detektortemperatur.</value>
+  </data>
+  <data name="_670" xml:space="preserve">
+    <value>Schalte den CryoCooler ein/aus.</value>
+  </data>
+  <data name="_671" xml:space="preserve">
+    <value>Serieller Anschluss des CP5</value>
+  </data>
+  <data name="_672" xml:space="preserve">
+    <value>Serieller Anschluss um mit dem Canberra CryoCooler zu kommunizieren.</value>
+  </data>
+  <data name="_673" xml:space="preserve">
+    <value>Pfad zu ipATemperatureLogger.jar</value>
+  </data>
+  <data name="_674" xml:space="preserve">
+    <value>Pfad der 'ipATemperatureLogger.jar' Datei.</value>
+  </data>
+  <data name="_675" xml:space="preserve">
+    <value>Canberra</value>
+  </data>
+  <data name="_676" xml:space="preserve">
+    <value>Ein</value>
+  </data>
+  <data name="_677" xml:space="preserve">
+    <value>Aus</value>
+  </data>
+  <data name="_678" xml:space="preserve">
+    <value>Timeout</value>
+  </data>
+</root>
+  <data name="_679" xml:space="preserve">
+    <value>TCS Konfigurationsdatei</value>
+  </data>
+  <data name="_680" xml:space="preserve">
     <value>Pfad der csv Datei mit der TCS Korrektur.</value>
   </data>
 </root>

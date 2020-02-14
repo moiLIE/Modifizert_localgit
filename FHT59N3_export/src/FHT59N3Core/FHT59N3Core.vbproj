@@ -172,6 +172,10 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\ClassLibraries\src\BAGiPAConnection\BAG_CP5_Connection.vbproj">
+      <Project>{5e630c25-8fac-48e3-bcf5-ad549491632c}</Project>
+      <Name>BAG_CP5_Connection</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\ClassLibraries\src\ThermoConnections\ThermoConnections\ThermoConnections.vbproj">
       <Project>{84C51DD8-91E6-4C61-B9B0-03BB585329DA}</Project>
       <Name>ThermoConnections</Name>

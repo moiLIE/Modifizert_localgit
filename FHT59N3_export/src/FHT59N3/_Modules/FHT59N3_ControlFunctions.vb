@@ -719,6 +719,9 @@ Public Module FHT59N3_ControlFunctions
                     End If
                 End If
 
+
+
+
                 If Not _MyFHT59N3Par.EnableCapturingDetectorTemperature Then
 
                     ' cooling is done with N2
@@ -746,7 +749,7 @@ Public Module FHT59N3_ControlFunctions
                         _MyControlCenter.SYS_States.N2FillingGoingLow = False
                     End If  'If-end N2_Fuell% > 0 And gStatus(35) > 0 And
 
-                Else
+                ElseIf Not _MyFHT59N3Par.IsCanberraDetector Then
                     ' cooling is done via e-cooler (see spec 1.0c chapter 4.3.1)
                     ' get the temperature from the SPS buffer/logic (12 bit = 0 ... 4095)
                     Dim spsTemperatureAsDigitalValue As Double = _MyControlCenter.SPS_DetectorTemperature
@@ -804,13 +807,61 @@ Public Module FHT59N3_ControlFunctions
                 End If
             End If
 
+            'Read Temperature and Power of the Canberra detector
+            If _MyFHT59N3Par.EnableCapturingDetectorTemperature And _MyFHT59N3Par.IsCanberraDetector Then
+
+                'Read the power
+                _CryoPower = _MyControlCenter.CanberraCryoCoolerPower
+
+                ' Read the temperature
+                _DetectorTemperaturValue = _MyControlCenter.CanberraDetectorTemperature
+
+                ' The detector temperature recording needs also the information if the temperature readback failed
+                If _DetectorTemperaturValue = Double.MinValue Then
+                    If Not _MyControlCenter.SYS_States.N2FillingGoingLow Then
+                        ' alarm appears
+                        _MyControlCenter.SYS_States.N2FillingGoingLow = True
+                        GUI_SetMessage(MSG_RecordingDetectorTemperaturIsDefect, MessageStates.YELLOW)
+                    End If
+                Else
+                    If True Then '_MyFHT59N3Par.EcoolerEnabled Then
+                        If _DetectorTemperaturValue < _MinimalPlausibleTemperature Or _DetectorTemperaturValue > _MaximalPlausibleTemperature Then
+                            If Not _MyControlCenter.SYS_States.N2FillingGoingLow Then
+                                ' alarm appears
+                                _MyControlCenter.SYS_States.N2FillingGoingLow = True
+                                GUI_SetMessage(MSG_RecordingDetectorTemperaturIsDefect, MessageStates.YELLOW)
+                            End If
+                        Else
+                            If _MyControlCenter.SYS_States.N2FillingGoingLow Then
+                                ' alarm disappears
+                                _MyControlCenter.SYS_States.N2FillingGoingLow = False
+                                GUI_SetMessage(MSG_RecordingDetectorTemperaturIsRunning, MessageStates.GREEN)
+                            End If
+                        End If
+                    End If
+                End If
+
+
+                'nasty workaround: Nachdem die Temperaturaufzeichnung erst nach dem Timout geschrieben wird,
+                'wird in der ersten Periode nichts aufgezeichnet, somit ergibt es keine richtige Darstellung
+                'des aufzeichnungszeitraumes. Hierfür wird ein erster Initialwert beim lesen geschrieben
+                'um eine Ausgangsbasis für Temperaturerfassungszeitraum zu haben.
+                If _MyTemperatureRecorder.Temperatures.Count = 0 Then
+                _MyTemperatureRecorder.StoreNewTempertaureEntry(_DetectorTemperaturValue)
+            End If
+            End If
+
         Catch ex As Exception
             Trace.TraceError("MCA_CheckIfMeasurementDone crashed: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace) 'MLHIDE
         End Try
     End Sub
 
     Private Function ConvertDigitalValueToDetectorTemperature(ByVal digiValue As Double) As Double
-
+        If _MyFHT59N3Par.IsCanberraDetector Then
+            'Unnecessary for iPA readback
+            Return digiValue
+        End If
+        'Ortec detector:
         Dim temperature As Double = Double.MinValue
         Dim voltage As Double = Double.MinValue
         Dim samples As Double = 409
@@ -1599,7 +1650,8 @@ Public Module FHT59N3_ControlFunctions
                                                          _SimulateLynxSystem,
                                                          Sub(msg As String)
                                                              InterruptedTracing(msg)
-                                                         End Sub)
+                                                         End Sub,
+                                                          _MyFHT59N3Par.CP5Com)
 
             AddHandler _MyControlCenter.CommandReceived, AddressOf SYS_RemoteCommandReceivedHandler
             AddHandler _MyControlCenter.SystemStateChanged, AddressOf SYS_SystemStateChangedHandler

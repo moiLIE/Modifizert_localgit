@@ -255,9 +255,11 @@
     </Compile>
     <Compile Include="_Formulare\frmSplashScreen.Designer.vb">
       <DependentUpon>frmSplashScreen.vb</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="_Formulare\frmSplashScreen.vb">
       <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="_Formulare\frmROIMenu.designer.vb">
       <DependentUpon>frmROIMenu.vb</DependentUpon>
@@ -562,6 +564,7 @@
     <EmbeddedResource Include="_Formulare\frmSplashScreen.en.resx">
       <DependentUpon>frmSplashScreen.vb</DependentUpon>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="_Formulare\frmStates.de.resx">
       <DependentUpon>frmStates.vb</DependentUpon>
@@ -626,6 +629,7 @@
     <EmbeddedResource Include="_Formulare\frmSplashScreen.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmSplashScreen.vb</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="_Formulare\frmROIMenu.de.resx">
       <DependentUpon>frmROIMenu.vb</DependentUpon>

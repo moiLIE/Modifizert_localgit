@@ -183,13 +183,28 @@ Module FHT59N3_ShowFunctions
                 frmStates.LblHighVoltage.Text = ml_string(55, "off")
                 frmStates.LblHighVoltage.BackColor = MYCOL_NotOK
             End If
-            If _MyControlCenter.SYS_States.EcoolerOff Then
-                frmControlMenu.LblEcoolerState.Text = ml_string(533, "not cooling")
-                frmControlMenu.LblEcoolerState.BackColor = MYCOL_NotOK
-            Else
-                frmControlMenu.LblEcoolerState.Text = ml_string(534, "running")
-                frmControlMenu.LblEcoolerState.BackColor = MYCOL_OK
+            If Not _MyFHT59N3Par.IsCanberraDetector Then
+                If _MyControlCenter.SYS_States.EcoolerOff Then
+                    frmControlMenu.LblEcoolerState.Text = ml_string(533, "not cooling")
+                    frmControlMenu.LblEcoolerState.BackColor = MYCOL_NotOK
+                Else
+                    frmControlMenu.LblEcoolerState.Text = ml_string(534, "running")
+                    frmControlMenu.LblEcoolerState.BackColor = MYCOL_OK
+                End If
+            Else 'Canberra
+                If _MyControlCenter.CanberraCryoCoolerStatus Then
+                    frmControlMenu.LblEcoolerState.Text = ml_string(534, "running")
+                    frmControlMenu.LblEcoolerState.BackColor = MYCOL_OK
+                Else
+                    frmControlMenu.LblEcoolerState.Text = ml_string(55, "off")
+                    frmControlMenu.LblEcoolerState.BackColor = MYCOL_NotOK
+                End If
+                If _MyControlCenter.CanberraDetectorTemperature = Double.MinValue Then
+                    frmControlMenu.LblEcoolerState.Text = ml_string(678, "Timeout")
+                    frmControlMenu.LblEcoolerState.BackColor = MYCOL_WARNING
+                End If
             End If
+
 
         Catch ex As Exception
             Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
@@ -279,6 +294,16 @@ Module FHT59N3_ShowFunctions
 
             frmMain.UcStatusSideBar.LblDetectTemp.Text = If(_DetectorTemperaturValue <> Double.MinValue,
                                             Format(_DetectorTemperaturValue, "0.00"), "--")
+            If _MyFHT59N3Par.IsCanberraDetector Then
+                'Show cooling power
+                frmMain.UcStatusSideBar.LblCryoPowerName.Visible = True
+                frmMain.UcStatusSideBar.LblCryoPowerValue.Visible = True
+                frmMain.UcStatusSideBar.LblCryoPowerValue.Text = Format(_CryoPower, "0")
+            Else
+                'Hide cooling power
+                frmMain.UcStatusSideBar.LblCryoPowerName.Visible = False
+                frmMain.UcStatusSideBar.LblCryoPowerValue.Visible = False
+            End If
 
             If _MyControlCenter.SYS_States.Maintenance Then
                 frmMain.UcStatusSideBar.LblStatus.Text = ml_string(65, "Maintenance")
@@ -593,29 +618,37 @@ Module FHT59N3_ShowFunctions
                     frmMeasScreen.ListView3.Items.Add(ml_string(57, "Alarm indication") & ": " & ml_string(55, "off"), "GreenDot")
                 End If
 
-                If _MyFHT59N3Par.EcoolerEnabled Then
-                    If _MyControlCenter.SPS_EcoolerOnOff Then
-                        frmMeasScreen.ListView3.Items.Add(ml_string(650, "ECooler") & ": " & ml_string(248, "on"), "GreenDot")
+                If Not _MyFHT59N3Par.IsCanberraDetector Then
+                    If _MyFHT59N3Par.EcoolerEnabled Then
+                        If _MyControlCenter.SPS_EcoolerOnOff Then
+                            frmMeasScreen.ListView3.Items.Add(ml_string(650, "ECooler") & ": " & ml_string(248, "on"), "GreenDot")
+                        Else
+                            frmMeasScreen.ListView3.Items.Add(ml_string(650, "ECooler") & ": " & ml_string(55, "off"), "RedDot")
+                        End If
                     Else
-                        frmMeasScreen.ListView3.Items.Add(ml_string(650, "ECooler") & ": " & ml_string(55, "off"), "RedDot")
+                        If _MyControlCenter.SPS_HeatingOnOff Then
+                            frmMeasScreen.ListView3.Items.Add(ml_string(51, "N2 Fill") & ": " & ml_string(248, "on"), "RedDot")
+                        Else
+                            frmMeasScreen.ListView3.Items.Add(ml_string(51, "N2 Fill") & ": " & ml_string(55, "off"), "GreenDot")
+                        End If
                     End If
                 Else
-                    If _MyControlCenter.SPS_HeatingOnOff Then
-                        frmMeasScreen.ListView3.Items.Add(ml_string(51, "N2 Fill") & ": " & ml_string(248, "on"), "RedDot")
+                    If _MyControlCenter.CanberraCryoCoolerStatus Then
+                        frmMeasScreen.ListView3.Items.Add(ml_string(650, "ECooler") & ": " & ml_string(675, "Canberra"), "GreenDot")
                     Else
-                        frmMeasScreen.ListView3.Items.Add(ml_string(51, "N2 Fill") & ": " & ml_string(55, "off"), "GreenDot")
+                        frmMeasScreen.ListView3.Items.Add(ml_string(650, "ECooler") & ": " & ml_string(675, "Canberra"), "RedDot")
                     End If
                 End If
 
 
 
                 If _MyControlCenter.MCA_GetHVState Then
-                    frmMeasScreen.ListView3.Items.Add(ml_string(59, "High Voltage") & ": " & ml_string(248, "on"), "GreenDot")
-                Else
-                    frmMeasScreen.ListView3.Items.Add(ml_string(59, "High Voltage") & ": " & ml_string(55, "off"), "RedDot")
+                        frmMeasScreen.ListView3.Items.Add(ml_string(59, "High Voltage") & ": " & ml_string(248, "on"), "GreenDot")
+                    Else
+                        frmMeasScreen.ListView3.Items.Add(ml_string(59, "High Voltage") & ": " & ml_string(55, "off"), "RedDot")
+                    End If
+                    _DigInOutListFilled = True
                 End If
-                _DigInOutListFilled = True
-            End If
         Catch ex As Exception
             Trace.TraceError("Message: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
         End Try
@@ -694,37 +727,53 @@ Module FHT59N3_ShowFunctions
 
             End If
 
-            If _MyFHT59N3Par.EcoolerEnabled Then
-                If _MyControlCenter.SPS_EcoolerOnOff Then
-                    If stateLv.Items(5).ImageKey <> "GreenDot" Then
-                        stateLv.Items(5).Text = (ml_string(650, "ECooler") & ": " & ml_string(248, "on"))
-                        stateLv.Items(5).ImageKey = "GreenDot"
+            If Not _MyFHT59N3Par.IsCanberraDetector Then
+                If _MyFHT59N3Par.EcoolerEnabled Then
+                    If _MyControlCenter.SPS_EcoolerOnOff Then
+                        If stateLv.Items(5).ImageKey <> "GreenDot" Then
+                            stateLv.Items(5).Text = (ml_string(650, "ECooler") & ": " & ml_string(248, "on"))
+                            stateLv.Items(5).ImageKey = "GreenDot"
+                        End If
+                    Else
+                        If stateLv.Items(5).ImageKey <> "RedDot" Then
+                            stateLv.Items(5).Text = (ml_string(650, "ECooler") & ": " & ml_string(55, "off"))
+                            stateLv.Items(5).ImageKey = "RedDot"
+                        End If
                     End If
                 Else
-                    If stateLv.Items(5).ImageKey <> "RedDot" Then
-                        stateLv.Items(5).Text = (ml_string(650, "ECooler") & ": " & ml_string(55, "off"))
-                        stateLv.Items(5).ImageKey = "RedDot"
+                    If _MyControlCenter.SPS_HeatingOnOff Then
+
+                        If stateLv.Items(5).ImageKey <> "RedDot" Then
+                            stateLv.Items(5).Text = (ml_string(51, "N2 Fill") & ": " & ml_string(248, "on"))
+                            stateLv.Items(5).ImageKey = "RedDot"
+                        End If
+                    Else
+
+                        If stateLv.Items(5).ImageKey <> "GreenDot" Then
+                            stateLv.Items(5).Text = (ml_string(51, "N2 Fill") & ": " & ml_string(55, "off"))
+                            stateLv.Items(5).ImageKey = "GreenDot"
+                        End If
                     End If
                 End If
             Else
-                If _MyControlCenter.SPS_HeatingOnOff Then
 
-                    If stateLv.Items(5).ImageKey <> "RedDot" Then
-                        stateLv.Items(5).Text = (ml_string(51, "N2 Fill") & ": " & ml_string(248, "on"))
-                        stateLv.Items(5).ImageKey = "RedDot"
-                    End If
+                If _MyControlCenter.CanberraCryoCoolerStatus Then
+                    stateLv.Items(5).Text = (ml_string(650, "ECooler") & ": " & ml_string(675, "Canberra"))
+                    stateLv.Items(5).ImageKey = "GreenDot"
                 Else
-
-                    If stateLv.Items(5).ImageKey <> "GreenDot" Then
-                        stateLv.Items(5).Text = (ml_string(51, "N2 Fill") & ": " & ml_string(55, "off"))
-                        stateLv.Items(5).ImageKey = "GreenDot"
-                    End If
+                    stateLv.Items(5).Text = (ml_string(650, "ECooler") & ": " & ml_string(675, "Canberra"))
+                    stateLv.Items(5).ImageKey = "RedDot"
+                End If
+                'Handle case of no communication with CP5:
+                If _MyControlCenter.CanberraDetectorTemperature = Double.MinValue Then
+                    stateLv.Items(5).Text = (ml_string(650, "ECooler") & ": " & ml_string(678, "Timeout"))
+                    stateLv.Items(5).ImageKey = "YellowDot"
                 End If
             End If
 
-          
 
-            If _MyControlCenter.MCA_GetHVState Then
+
+                If _MyControlCenter.MCA_GetHVState Then
 
                 If stateLv.Items(6).ImageKey <> "GreenDot" Then
                     stateLv.Items(6).Text = (ml_string(59, "High Voltage") & ": " & ml_string(248, "on"))
@@ -753,44 +802,60 @@ Module FHT59N3_ShowFunctions
     Public Function GUI_SafetyChangeEcoolerState() As EcoolerGuiStates
         Dim questionResult1, questionResult2 As MsgBoxResult
 
-        If (_DetectorTemperaturValue = Double.MinValue) Then
-            'we don't know the temperature, let the ecooler untouched
-            Return EcoolerGuiStates.UNCHANGED
-        End If
-
-        If _MyControlCenter.SYS_States.EcoolerOff Then
-            'alarm shows that ecooler is off
-            questionResult1 = GUI_ShowMessageBox(MSG_WantToSwitchOnEcooler, ml_string(90, "Yes"), ml_string(91, "No"), "", MYCOL_THERMOGREEN, Color.White)
-
-            Dim status As FHT59N3_EmergencyStopCoolingStates = _MyControlCenter.SYS_States.EmergencyStopCoolingState
-
+        If _MyFHT59N3Par.IsCanberraDetector Then
+            questionResult1 = GUI_ShowMessageBox(
+                ml_string(670, "Try to turn the CryoCooler On/Off"),
+                ml_string(676, "ON"),
+                ml_string(677, "OFF"),
+                ml_string(12, "Cancel"), MYCOL_THERMOGREEN, Color.White)
             If questionResult1 = MsgBoxResult.Yes Then
-                ' TODO: check detector temperature state machine (just reingelaufen in Inbetriebnahme 1.BAG-Gerät 30.Nov.15 in Bern)
-                If (_DetectorTemperaturValue < _MyFHT59N3Par.CrystalTooWarmTempThreshold) Then
-                    ' Activate e-cooler via SPS
-                    _MyControlCenter.SPS_EcoolerOn()
-
-                    Return EcoolerGuiStates.ACTIVATED
-                    'es soll möglich sein den Mechanismus händisch zu überlisten indem der Status im Config.XML auf 'COOLING_PHASE_PREPARED' gesetzt wird!
-                ElseIf (_DetectorTemperaturValue < _MyFHT59N3Par.CrystalWarmedUpTempThreshold And status <> FHT59N3_EmergencyStopCoolingStates.COOLING_PHASE_PREPARED) Then
-                    Dim helpString As String = String.Format(MSG_CannotActivateEcooler, _MyFHT59N3Par.CrystalWarmedUpTempThreshold, Convert.ToInt32(_DetectorTemperaturValue))
-                    questionResult2 = GUI_ShowMessageBox(helpString, "", "", ml_string(37, "Return"), MYCOL_WARNING, Color.Black)
-                    Return EcoolerGuiStates.UNCHANGED
-                Else
-                    ' Activate e-cooler via SPS
-                    _MyControlCenter.SPS_EcoolerOn()
-
-                    Return EcoolerGuiStates.ACTIVATED
-                End If
+                _MyControlCenter.CanberraCryoCooler_ON()
+                Return EcoolerGuiStates.ACTIVATED
+            End If
+            If questionResult1 = MsgBoxResult.No Then
+                _MyControlCenter.CanberraCryoCooler_OFF()
+                Return EcoolerGuiStates.DEACTIVATED
             End If
         Else
-            'no alarm, it means that ecooler is on
-            questionResult1 = GUI_ShowMessageBox(MSG_WantToSwitchOffEcooler, ml_string(90, "Yes"), ml_string(91, "No"), "", MYCOL_THERMOGREEN, Color.White)
+                If (_DetectorTemperaturValue = Double.MinValue) Then
+                'we don't know the temperature, let the ecooler untouched
+                Return EcoolerGuiStates.UNCHANGED
+            End If
 
-            If questionResult1 = MsgBoxResult.Yes Then
-                ' Deactivate e-cooler via SPS
-                _MyControlCenter.SPS_EcoolerOff()
-                Return EcoolerGuiStates.DEACTIVATED
+            If _MyControlCenter.SYS_States.EcoolerOff Then
+                'alarm shows that ecooler is off
+                questionResult1 = GUI_ShowMessageBox(MSG_WantToSwitchOnEcooler, ml_string(90, "Yes"), ml_string(91, "No"), "", MYCOL_THERMOGREEN, Color.White)
+
+                Dim status As FHT59N3_EmergencyStopCoolingStates = _MyControlCenter.SYS_States.EmergencyStopCoolingState
+
+                If questionResult1 = MsgBoxResult.Yes Then
+                    ' TODO: check detector temperature state machine (just reingelaufen in Inbetriebnahme 1.BAG-Gerät 30.Nov.15 in Bern)
+                    If (_DetectorTemperaturValue < _MyFHT59N3Par.CrystalTooWarmTempThreshold) Then
+                        ' Activate e-cooler via SPS
+                        _MyControlCenter.SPS_EcoolerOn()
+
+                        Return EcoolerGuiStates.ACTIVATED
+                        'es soll möglich sein den Mechanismus händisch zu überlisten indem der Status im Config.XML auf 'COOLING_PHASE_PREPARED' gesetzt wird!
+                    ElseIf (_DetectorTemperaturValue < _MyFHT59N3Par.CrystalWarmedUpTempThreshold And status <> FHT59N3_EmergencyStopCoolingStates.COOLING_PHASE_PREPARED) Then
+                        Dim helpString As String = String.Format(MSG_CannotActivateEcooler, _MyFHT59N3Par.CrystalWarmedUpTempThreshold, Convert.ToInt32(_DetectorTemperaturValue))
+                        questionResult2 = GUI_ShowMessageBox(helpString, "", "", ml_string(37, "Return"), MYCOL_WARNING, Color.Black)
+                        Return EcoolerGuiStates.UNCHANGED
+                    Else
+                        ' Activate e-cooler via SPS
+                        _MyControlCenter.SPS_EcoolerOn()
+
+                        Return EcoolerGuiStates.ACTIVATED
+                    End If
+                End If
+            Else
+                'no alarm, it means that ecooler is on
+                questionResult1 = GUI_ShowMessageBox(MSG_WantToSwitchOffEcooler, ml_string(90, "Yes"), ml_string(91, "No"), "", MYCOL_THERMOGREEN, Color.White)
+
+                If questionResult1 = MsgBoxResult.Yes Then
+                    ' Deactivate e-cooler via SPS
+                    _MyControlCenter.SPS_EcoolerOff()
+                    Return EcoolerGuiStates.DEACTIVATED
+                End If
             End If
         End If
         Return EcoolerGuiStates.UNCHANGED

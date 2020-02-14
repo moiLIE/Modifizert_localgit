@@ -2204,9 +2204,60 @@ To prevent any damage of the detector, the detector must bei warmed up to the no
     <value>The message list will be flushed until next start of the application. Continue?</value>
   </data>
   <data name="_661" xml:space="preserve">
-    <value>TCS Configuration file</value>
+    <value>07 Detector Parameters</value>
   </data>
   <data name="_662" xml:space="preserve">
+    <value>Use Canberra Detector</value>
+  </data>
+  <data name="_663" xml:space="preserve">
+    <value>Enable usage of a Canberra Detector instead of the usual Ortec Detector.</value>
+  </data>
+  <data name="_664" xml:space="preserve">
+    <value>Attention: Switching the detector model might require additional changes to the system. Please follow the corresponding manual carefully.</value>
+  </data>
+  <data name="_665" xml:space="preserve">
+    <value>Canberra Cryo Cool Executable</value>
+  </data>
+  <data name="_666" xml:space="preserve">
+    <value>Path pointing to the location of the CryoCool control software.</value>
+  </data>
+  <data name="_667" xml:space="preserve">
+    <value>Please restart to carry out the changes.</value>
+  </data>
+  <data name="_668" xml:space="preserve">
+    <value>Canberra Temperature logfile</value>
+  </data>
+  <data name="_669" xml:space="preserve">
+    <value>Path pointing to the location of the logfile containing the current detector temperature.</value>
+  </data>
+  <data name="_670" xml:space="preserve">
+    <value>Try to turn the CryoCooler On/Off</value>
+  </data>
+  <data name="_671" xml:space="preserve">
+    <value>CP5 Serial Port</value>
+  </data>
+  <data name="_672" xml:space="preserve">
+    <value>Serial Port to communicate with the Canberra CP5.</value>
+  </data>
+  <data name="_673" xml:space="preserve">
+    <value>Path to ipATemperatureLogger.jar</value>
+  </data>
+  <data name="_674" xml:space="preserve">
+    <value>Path pointing to the location of the 'ipATemperatureLogger.jar' file.</value>
+  </data>
+  <data name="_675" xml:space="preserve">
+    <value>Canberra</value>
+  </data>
+  <data name="_676" xml:space="preserve">
+    <value>ON</value>
+  </data>
+  <data name="_677" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="_679" xml:space="preserve">
+    <value>TCS Configuration file</value>
+  </data>
+  <data name="_680" xml:space="preserve">
     <value>Full path to the csv file with the TCS correction.</value>
   </data>
   <data name="_1209" xml:space="preserve">
@@ -2216,5 +2267,8 @@ To prevent any damage of the detector, the detector must bei warmed up to the no
   <data name="_1210" xml:space="preserve">
     <value>extracted from NAH_MISCH.cnf: </value>
     <comment>2</comment>
+  </data>
+  <data name="_678" xml:space="preserve">
+    <value>Timeout</value>
   </data>
 </root>

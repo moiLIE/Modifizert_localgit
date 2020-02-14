@@ -69,6 +69,11 @@ Public Class FHT59N3_SystemParams
     Private _CrystalTooWarmTempThreshold As Integer = -150 'Abschaltschwelle im Bereich von -145 bis -155 °C 
     Private _CrystalWarmedUpTempThreshold As Integer = 15 'Schwellwert für Aufwärmphase im Bereich von 0°C bis 25 °C
 
+    'Detector Settings
+    Private _IsCanberraDetector As Boolean = True 'Trigger Detector change warning only on change of False to True
+    Private _CP5Com As String = "Startup" 'Don't Trigger Verification Dialog on Startup
+
+
     'Typ der Kalibrierung, Entwerder wie gewohnt, mit Far(Mischstrahler) and Near(CS137) ), oder "nur Near" mit Mischstrahler
 
     'calculation is done in this SW or at the external SPS
@@ -613,9 +618,56 @@ Public Class FHT59N3_SystemParams
     ml_DisplayName(586, "Enable Paperroll Printer"), _
     ml_Description(587, "Enable Paperroll Printer (timestamp on paperroll)"), _
     [ReadOnly](False), _
-    Browsable(True), _
-    PropertyOrderAttribute(110004)> _
+    Browsable(True),
+    PropertyOrderAttribute(110004)>
     Public Property EnablePaperrollPrinter As Boolean = False
+
+    'Settings belonging to the Canberra Detector
+    <ml_Category(661, "07 Detector Parameters"),
+    ml_DisplayName(662, "Use Canberra Detector"),
+    ml_Description(663, "Enable usage of a Canberra Detector instead of the usual Ortec Detector."),
+    [ReadOnly](False),
+    Browsable(True),
+    PropertyOrderAttribute(120000)>
+    Public Property IsCanberraDetector() As Boolean
+        Get
+            Return _IsCanberraDetector
+        End Get
+        Set(ByVal value As Boolean)
+            If value And value <> _IsCanberraDetector Then '_IsCanberraDetector is initialized to False 
+                GUI_ShowMessageBox(MSG_DetectorChange, "OK", "", "", MYCOL_MESSAGE_CRITICAL, Color.Black)
+            End If
+            _IsCanberraDetector = value
+        End Set
+    End Property
+
+    <ml_Category(661, "07 Detector Parameters"),
+    ml_DisplayName(671, "CP5 Serial Port"),
+    ml_Description(672, "Serial Port to communicate with the Canberra CP5."),
+    [ReadOnly](False),
+    Browsable(True),
+    PropertyOrderAttribute(120001)>
+    Public Property CP5Com() As String
+        Get
+            Return _CP5Com
+        End Get
+        Set(value As String)
+            If _CP5Com <> "Startup" Then
+                GUI_ShowMessageBox(MSG_RestartPlease, "OK", "", "", MYCOL_MESSAGE_CRITICAL, Color.Black)
+            End If
+            _CP5Com = value
+        End Set
+
+    End Property
+
+
+    '<ml_Category(661, "07 Detector Parameters"),
+    'ml_DisplayName(668, "Canberra Temperature logfile"),
+    'ml_Description(669, "Path pointing to the location of the logfile containing the current detector temperature."),
+    '[ReadOnly](False),
+    'Browsable(True),
+    'PropertyOrderAttribute(120004)>
+    'Public Property iPATemperatureLog As String = "C:\FHT59N3\iPA_Temperature\TemperatureLog.txt"
 
 
     ''' <summary>
