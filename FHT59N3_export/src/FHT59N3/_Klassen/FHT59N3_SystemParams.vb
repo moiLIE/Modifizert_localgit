@@ -564,8 +564,8 @@ Public Class FHT59N3_SystemParams
 
 
     <ml_Category(381, "05 Miscellaneous Parameters"),
-    ml_DisplayName(661, "TCS Configuration file"),
-    ml_Description(662, "Full path of the csv file with the TCS correction."),
+    ml_DisplayName(679, "TCS Configuration file"),
+    ml_Description(680, "Full path of the csv file with the TCS correction."),
     [ReadOnly](False),
     Browsable(True),
     PropertyOrderAttribute(100009)>
@@ -575,7 +575,7 @@ Public Class FHT59N3_SystemParams
         End Get
         Set(value As String)
             If _TCS_CorrFile <> "Startup." Then
-                GUI_ShowMessageBox("Please restart for the changes to take effect.", "Ok", "", "", MYCOL_WARNING, Color.Black)
+                GUI_ShowMessageBox(MSG_RestartPlease, "Ok", "", "", MYCOL_WARNING, Color.Black)
             End If
             _TCS_CorrFile = value
         End Set

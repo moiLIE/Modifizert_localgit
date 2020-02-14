@@ -4791,7 +4791,7 @@ Friend Class MultiLang
     End Property
     
     '''<summary>
-    '''  Sucht eine lokalisierte Zeichenfolge, die TCS Configuration file ähnelt.
+    '''  Sucht eine lokalisierte Zeichenfolge, die 07 Detector Parameters ähnelt.
     '''</summary>
     Friend Shared ReadOnly Property _661() As String
         Get
@@ -4800,11 +4800,74 @@ Friend Class MultiLang
     End Property
     
     '''<summary>
-    '''  Sucht eine lokalisierte Zeichenfolge, die Full path to the csv file with the TCS correction. ähnelt.
+    '''  Sucht eine lokalisierte Zeichenfolge, die Use Canberra Detector ähnelt.
     '''</summary>
     Friend Shared ReadOnly Property _662() As String
         Get
             Return ResourceManager.GetString("_662", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Enable usage of a Canberra Detector instead of the usual Ortec Detector. ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _663() As String
+        Get
+            Return ResourceManager.GetString("_663", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Attention: Switching the detector model might require additional changes to the system. Please follow the corresponding manual carefully. ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _664() As String
+        Get
+            Return ResourceManager.GetString("_664", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Canberra Cryo Cool Executable ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _665() As String
+        Get
+            Return ResourceManager.GetString("_665", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Path pointing to the location of the CryoCool control software. ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _666() As String
+        Get
+            Return ResourceManager.GetString("_666", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Please restart for the changes to take effect. ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _667() As String
+        Get
+            Return ResourceManager.GetString("_667", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Canberra Temperature logfile ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _668() As String
+        Get
+            Return ResourceManager.GetString("_668", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Path pointing to the location of the logfile containing the current detector temperature. ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _669() As String
+        Get
+            Return ResourceManager.GetString("_669", resourceCulture)
         End Get
     End Property
     
@@ -4818,11 +4881,110 @@ Friend Class MultiLang
     End Property
     
     '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Try to turn the CryoCooler On/Off ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _670() As String
+        Get
+            Return ResourceManager.GetString("_670", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die CP5 Serial Port ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _671() As String
+        Get
+            Return ResourceManager.GetString("_671", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Serial Port to communicate with the Canberra CP5. ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _672() As String
+        Get
+            Return ResourceManager.GetString("_672", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Path to ipATemperatureLogger.jar ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _673() As String
+        Get
+            Return ResourceManager.GetString("_673", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Path pointing to the location of the &apos;ipATemperatureLogger.jar&apos; file. ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _674() As String
+        Get
+            Return ResourceManager.GetString("_674", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Canberra ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _675() As String
+        Get
+            Return ResourceManager.GetString("_675", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die ON ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _676() As String
+        Get
+            Return ResourceManager.GetString("_676", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Off ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _677() As String
+        Get
+            Return ResourceManager.GetString("_677", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Timeout ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _678() As String
+        Get
+            Return ResourceManager.GetString("_678", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die TCS Configuration file ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _679() As String
+        Get
+            Return ResourceManager.GetString("_679", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Sucht eine lokalisierte Zeichenfolge, die File ähnelt.
     '''</summary>
     Friend Shared ReadOnly Property _68() As String
         Get
             Return ResourceManager.GetString("_68", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Sucht eine lokalisierte Zeichenfolge, die Full path to the csv file with the TCS correction. ähnelt.
+    '''</summary>
+    Friend Shared ReadOnly Property _680() As String
+        Get
+            Return ResourceManager.GetString("_680", resourceCulture)
         End Get
     End Property
     

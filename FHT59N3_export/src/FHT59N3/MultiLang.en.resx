@@ -2222,7 +2222,7 @@ To prevent any damage of the detector, the detector must bei warmed up to the no
     <value>Path pointing to the location of the CryoCool control software.</value>
   </data>
   <data name="_667" xml:space="preserve">
-    <value>Please restart to carry out the changes.</value>
+    <value>Please restart for the changes to take effect.</value>
   </data>
   <data name="_668" xml:space="preserve">
     <value>Canberra Temperature logfile</value>
@@ -2254,6 +2254,9 @@ To prevent any damage of the detector, the detector must bei warmed up to the no
   <data name="_677" xml:space="preserve">
     <value>Off</value>
   </data>
+  <data name="_678" xml:space="preserve">
+    <value>Timeout</value>
+  </data>
   <data name="_679" xml:space="preserve">
     <value>TCS Configuration file</value>
   </data>
@@ -2267,8 +2270,5 @@ To prevent any damage of the detector, the detector must bei warmed up to the no
   <data name="_1210" xml:space="preserve">
     <value>extracted from NAH_MISCH.cnf: </value>
     <comment>2</comment>
-  </data>
-  <data name="_678" xml:space="preserve">
-    <value>Timeout</value>
   </data>
 </root>
