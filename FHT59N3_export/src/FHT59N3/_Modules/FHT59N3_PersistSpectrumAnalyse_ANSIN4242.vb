@@ -658,7 +658,9 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
                 DestinationFile = BaseFileName & "-" & "userrequested" & FileEnding
 
             Case SPECTYPE_WARTUNG
-                DestinationFile = BaseFileName & "-" & "maintenance" & FileEnding
+                'DestinationFile = BaseFileName & "-" & "maintenance" & FileEnding
+                'Ending -alarm; on request of MeteoSwiss.
+                DestinationFile = BaseFileName & "-" & "alarm" & FileEnding
 
                 'andere Fälle (sollte aktuell nicht genutzt sein)
             Case Else
