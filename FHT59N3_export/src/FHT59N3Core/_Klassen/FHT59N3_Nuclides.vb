@@ -349,11 +349,11 @@ Public Class FHT59N3MCA_Peak
 
     Public Property PeakFwhm As Double
 
-    Public Property IsKeyLine As Boolean
+    Public Property IsKeyLine As List(Of Boolean)
 
-    Public Property NuclideNumber As Integer
+    Public Property NuclideNumber As List(Of Integer)
 
-    Public Property UseWtm As Boolean
+    Public Property UseWtm As List(Of Boolean)
 
 
 

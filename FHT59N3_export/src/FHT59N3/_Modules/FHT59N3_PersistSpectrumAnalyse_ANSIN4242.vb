@@ -317,6 +317,9 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
 
         templateData.Add("maxViolatedAlarmLevel_AllNuclides", nuclideList.AlarmMaxViolocatedLevel.ToString())
 
+        'list of all peaks belonging to nuclides
+        Dim PeaksToRemove As IList(Of FHT59N3MCA_Peak) = New List(Of FHT59N3MCA_Peak)()
+
         'Schleife über alle gefundenen Nuklide der letzten Auswertung...
         For n As Integer = 1 To nuclideList.NuclideCount
 
@@ -371,16 +374,16 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
             'Dim peaksForNuclide As List(Of FHT59N3MCA_Peak) = _MyControlCenter.MCA_Peaks.GetPeakByNuclidEnergy(mcaNuclide.KeyLineEnergy)
             Dim peaksForNuclide As IEnumerable(Of FHT59N3MCA_Peak) = _MyControlCenter.MCA_Peaks.PeakList.Where(Function(d)
                                                                                                                    'Return CInt(nuclide.SpectrumAnalysis.KeyLineEnergy) = CInt(d.PeakEnergy)
-                                                                                                                   Return d.NuclideNumber = nuclidenumber
+                                                                                                                   Return d.NuclideNumber.Contains(nuclidenumber)
                                                                                                                End Function)
 
             '0 falls kein Peak, wird von Template-Engine dann nicht genutzt...
             nuclidData.Add("isPeak", If(peaksForNuclide.Count > 0, "true", Nothing))
             If (peaksForNuclide.Count > 0) Then
                 Dim NuclidPeaks As IList(Of Dictionary(Of String, String)) = New List(Of Dictionary(Of String, String))()
-                Dim PeaksToRemove As IList(Of FHT59N3MCA_Peak) = New List(Of FHT59N3MCA_Peak)()
                 nuclidData.Add("nuclide_peaks", NuclidPeaks)
                 For Each peak As FHT59N3MCA_Peak In peaksForNuclide
+                    Dim CurrNuclideIndex As Integer = peak.NuclideNumber.IndexOf(nuclidenumber)
                     'For m As Integer = 0 To peaksForNuclide.Count - 1
                     Dim peakData As Dictionary(Of String, String) = New Dictionary(Of String, String)()
                     'Dim peak As FHT59N3MCA_Peak = peaksForNuclide.ElementAt(m)
@@ -394,9 +397,9 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
                     peakData.Add("peak_bckgerr", GetDecimalThreeDigit(peak.PeakBckgErr))
 
                     Dim peaktype As String = "misc"
-                    If peak.IsKeyLine Then
+                    If peak.IsKeyLine.ElementAt(CurrNuclideIndex) Then
                         peaktype = "key"
-                    ElseIf peak.UseWtm Then
+                    ElseIf peak.UseWtm.ElementAt(CurrNuclideIndex) Then
                         peaktype = "wtm"
                     End If
                     peakData.Add("peak_type", peaktype)
@@ -404,13 +407,12 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
                     'Add the peak to the list of peaks associated with the nuclide 
                     NuclidPeaks.Add(peakData)
 
-                    PeaksToRemove.Add(peak)
+                    'Don't show peak as unassigned
+                    If Not PeaksToRemove.Contains(peak) Then
+                        PeaksToRemove.Add(peak)
+                    End If
                 Next
 
-                For Each peak As FHT59N3MCA_Peak In PeaksToRemove
-                    'ist nur eine temporäre Liste, daher die bereits ausgegebenen Peaks rausnehmen, damit die "not assigned peaks" übrigbleiben
-                    _MyControlCenter.MCA_Peaks.PeakList.Remove(peak)
-                Next
 
             End If
 
@@ -437,6 +439,10 @@ Class FHT59N3_PersistSpectrumAnalyse_ANSIN4242
 
         Next n
 
+        For Each peak As FHT59N3MCA_Peak In PeaksToRemove
+            'ist nur eine temporäre Liste, daher die bereits ausgegebenen Peaks rausnehmen, damit die "not assigned peaks" übrigbleiben
+            _MyControlCenter.MCA_Peaks.PeakList.Remove(peak)
+        Next
 
         Dim notAssignedPeaks As IList(Of Dictionary(Of String, String)) = New List(Of Dictionary(Of String, String))()
         templateData.Add("not_assigned_peaks", notAssignedPeaks)

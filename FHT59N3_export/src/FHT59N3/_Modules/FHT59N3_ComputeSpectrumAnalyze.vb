@@ -332,21 +332,33 @@ Class FHT59N3_ComputeSpectrumAnalyze
             peak.PeakBckgErr = PeakBckgErr
 
             'Initialize remaining fields:
-            peak.NuclideNumber = 0
-            peak.UseWtm = False
-            peak.IsKeyLine = False
+            If IsNothing(peak.NuclideNumber) Then
+                peak.NuclideNumber = New List(Of Integer)
+            End If
+            peak.NuclideNumber.Clear()
+
+            If IsNothing(peak.UseWtm) Then
+                peak.UseWtm = New List(Of Boolean)
+            End If
+            peak.UseWtm.Clear()
+
+            If IsNothing(peak.IsKeyLine) Then
+                peak.IsKeyLine = New List(Of Boolean)
+            End If
+            peak.IsKeyLine.Clear()
 
 
 
             _MyControlCenter.MCA_Peaks.PeakList.Add(peak)
         Next
 
-        Dim NuclideParameter(4) As CanberraDataAccessLib.ParamCodes
+        Dim NuclideParameter(5) As CanberraDataAccessLib.ParamCodes
         NuclideParameter(0) = CanberraDataAccessLib.ParamCodes.CAM_L_NLPEAK      '0=Linie nicht zugeordnet bzw. zurüchgewisen, >0 ferwendet
         NuclideParameter(1) = CanberraDataAccessLib.ParamCodes.CAM_L_NLNUCL      'Nuklidnr inn Nukliddatai, di der Linie NLPEAK zugeordnet
         NuclideParameter(2) = CanberraDataAccessLib.ParamCodes.CAM_L_NLFKEYLINE  '1=Clüssellinie, 0=sonst
         NuclideParameter(3) = CanberraDataAccessLib.ParamCodes.CAM_F_NLENERGY    'Energilage
         NuclideParameter(4) = CanberraDataAccessLib.ParamCodes.CAM_L_NLFNOUSEWTM    'Don't use the line in weighted average?
+        NuclideParameter(5) = CanberraDataAccessLib.ParamCodes.CAM_L_NLFFINTERF    'peak removed by the interference correction
 
         Dim NumberOfRecords As Integer = _SpectraFile.NumberOfRecords(CanberraDataAccessLib.ClassCodes.CAM_CLS_NLINES)
         For idx As Integer = 1 To NumberOfRecords            'prüft, obb Clüssellinien für Identifizirung benuzt
@@ -357,17 +369,18 @@ Class FHT59N3_ComputeSpectrumAnalyze
             Dim KeyLine = CType(ParamBuffer(2), Integer)         'Clüssellinienmerker
             Dim Energy = CType(ParamBuffer(3), Integer)          ' Energy of the line
             Dim PeakUseWtm = Not (CType(ParamBuffer(4), Boolean)) 'use the line in weighted average?
+            Dim RemInterf = CType(ParamBuffer(5), Boolean) 'was the peak removed by the interference correction?
             Dim PeakNumber As Integer = PeakLineIdentified
 
 
             If PeakNumber > 0 Then
                 'Get the peak corresponding to the line
                 Dim peak As FHT59N3MCA_Peak = _MyControlCenter.MCA_Peaks.PeakList.ElementAt(PeakNumber - 1)
-                If Not IsNothing((peak)) Then
+                If Not IsNothing((peak)) And Not RemInterf Then
                     'Assing Nuclide
-                    peak.IsKeyLine = KeyLine
-                    peak.UseWtm = PeakUseWtm
-                    peak.NuclideNumber = NuclideNumber
+                    peak.IsKeyLine.Add(KeyLine)
+                    peak.UseWtm.Add(PeakUseWtm)
+                    peak.NuclideNumber.Add(NuclideNumber)
                 End If
             End If
 
