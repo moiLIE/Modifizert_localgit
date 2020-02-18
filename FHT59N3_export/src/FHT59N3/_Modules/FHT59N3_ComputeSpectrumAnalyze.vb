@@ -616,7 +616,7 @@ Class FHT59N3_ComputeSpectrumAnalyze
                     End If   'if-end merker% < 4
                     If Math.Abs(MaxK40Failure) > 0.5 And Math.Abs(MaxK40Failure) < 20 Then
                         If _ReCalibrateK40LineIfNeeded Then
-                            MCA_ReCalibrateK40(SpecType, MaxK40Failure)
+                            MCA_ReCalibrateK40(SpecType, k40Channel)
                         End If
                     ElseIf Math.Abs(MaxK40Failure) > 19.9 Then
                         _MyControlCenter.SYS_States.AnalyzationCancelled = True  'Abwaichung zu gros

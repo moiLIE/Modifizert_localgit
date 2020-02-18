@@ -269,12 +269,16 @@
         End Try
     End Sub
 
-    Public Sub MCA_ReCalibrateK40(ByVal SpecType As Integer, ByVal MaxK40Failure As Double)
+    Public Sub MCA_ReCalibrateK40(ByVal SpecType As Integer, ByVal K40Channel As Double)
         Try
             Dim ECSLOPE As Double
+            Dim ECOFFSET As Double
+            Dim ECQUAD As Double
             Dim SpectraFile_NearGeo = New CanberraDataAccessLib.DataAccess
+            ECOFFSET = _SpectraFile.Param(CanberraDataAccessLib.ParamCodes.CAM_F_ECOFFSET)
             ECSLOPE = _SpectraFile.Param(CanberraDataAccessLib.ParamCodes.CAM_F_ECSLOPE)
-            ECSLOPE = ECSLOPE * 1460.81 / (1460.81 + MaxK40Failure)
+            ECQUAD = _SpectraFile.Param(CanberraDataAccessLib.ParamCodes.CAM_F_ECQUAD)
+            ECSLOPE = (1460.81 - ECOFFSET) / (K40Channel) - ECQUAD * K40Channel
             _SpectraFile.Param(CanberraDataAccessLib.ParamCodes.CAM_F_ECSLOPE) = ECSLOPE
             _SpectraFile.Flush()
             If (SpecType = 1) Or (SpecType = 2) Then
