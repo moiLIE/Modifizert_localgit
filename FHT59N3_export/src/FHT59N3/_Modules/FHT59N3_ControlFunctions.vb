@@ -858,7 +858,7 @@ Public Module FHT59N3_ControlFunctions
 
     Private Function ConvertDigitalValueToDetectorTemperature(ByVal digiValue As Double) As Double
         If _MyFHT59N3Par.IsCanberraDetector Then
-            'Unnecessary for iPA readback
+            'Unnecessary for digital readback
             Return digiValue
         End If
         'Ortec detector:

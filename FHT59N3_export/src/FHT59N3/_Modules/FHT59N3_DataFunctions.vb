@@ -217,9 +217,6 @@ Public Module FHT59N3_DataFunctions
                     'Detector
                     .WriteMySetting("Detector", "IsCanberra", _MyFHT59N3Par.IsCanberraDetector)
                     .WriteMySetting("Detector", "CP5ComPort", _MyFHT59N3Par.CP5Com)
-                    '.WriteMySetting("Detector", "iPATemperatureJAR", _MyFHT59N3Par.iPA_TemperatureJARpath)
-                    '.WriteMySetting("Detector", "CanberraCryoCoolExe", _MyFHT59N3Par.CryoCoolExecutable)
-                    '.WriteMySetting("Detector", "CanberraTemperatureLog", _MyFHT59N3Par.iPATemperatureLog)
 
                     'Measurement
                     .WriteMySetting("Measurement", "DayStartTime", _MyFHT59N3Par.DayStartTime.ToString)
@@ -383,9 +380,6 @@ Public Module FHT59N3_DataFunctions
                     'Detector
                     _MyFHT59N3Par.IsCanberraDetector = CBool(.ReadMySetting("Detector", "IsCanberra", "False"))
                     _MyFHT59N3Par.CP5Com = .ReadMySetting("Detector", "CP5ComPort", "COM3")
-                    '_MyFHT59N3Par.iPA_TemperatureJARpath = .ReadMySetting("Detector", "iPATemperatureJAR", "C:\FHT59N3\iPA_Temperature\")
-                    '_MyFHT59N3Par.CryoCoolExecutable = .ReadMySetting("Detector", "CanberraCryoCoolExe", "")
-                    '_MyFHT59N3Par.iPATemperatureLog = .ReadMySetting("Detector", "CanberraTemperatureLog", "C:\FHT59N3\iPA_Temperature\TemperatureLog.txt")
 
                     'Measurement
                     _MyFHT59N3Par.DayStartTime = CType(.ReadMySetting("Measurement", "DayStartTime", "6"), Integer)
