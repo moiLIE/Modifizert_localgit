@@ -29,18 +29,10 @@ Public Class frmMain
             If (Not _Start) And (Not _EndProgram) Then
                 Dim checkBoxResult1 As Boolean = _MyFHT59N3Par.KeepActiveHighVoltageOnExitGuiFlag
                 Dim checkBoxResult2 As Boolean = _MyFHT59N3Par.KeepActiveEcoolerOnExitGuiFlag
-                'If Not _MyFHT59N3Par.IsCanberraDetector Then
                 Dim dialogResult As MsgBoxResult = GUI_ShowExtendedMessageBox(MSG_WantToExit, ml_string(90, "Yes"), ml_string(91, "No"), "",
                                               ml_string(537, "Keep MCA high voltage turned on"), checkBoxResult1,
                                               ml_string(538, "Keep E-Cooler turned on"), checkBoxResult2,
                                               MYCOL_THERMOGREEN, Color.White)
-                'Else
-                'Dim dialogResult As MsgBoxResult = GUI_ShowExtendedMessageBox(MSG_WantToExit, ml_string(90, "Yes"), ml_string(91, "No"), "",
-                'ml_string(537, "Keep MCA high voltage turned on"), checkBoxResult1,
-                '         "", checkBoxResult2,
-                'MYCOL_THERMOGREEN, Color.White)
-                'checkBoxResult2 = True 'Don't touch ECooler
-                'End If
 
                 If dialogResult = MsgBoxResult.No Then
                     e.Cancel = True

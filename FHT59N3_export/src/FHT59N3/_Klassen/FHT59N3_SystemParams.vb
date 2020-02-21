@@ -641,13 +641,6 @@ Public Class FHT59N3_SystemParams
     End Property
 
 
-    '<ml_Category(661, "07 Detector Parameters"),
-    'ml_DisplayName(668, "Canberra Temperature logfile"),
-    'ml_Description(669, "Path pointing to the location of the logfile containing the current detector temperature."),
-    '[ReadOnly](False),
-    'Browsable(True),
-    'PropertyOrderAttribute(120004)>
-    'Public Property iPATemperatureLog As String = "C:\FHT59N3\iPA_Temperature\TemperatureLog.txt"
 
 
     ''' <summary>
