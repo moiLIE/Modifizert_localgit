@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5E630C25-8FAC-48E3-BCF5-AD549491632C}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>BAGiPAConnection</RootNamespace>
-    <AssemblyName>BAGiPAConnection</AssemblyName>
+    <RootNamespace>BAGCP5Connection</RootNamespace>
+    <AssemblyName>BAGCP5Connection</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -19,7 +19,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>..\..\00_Releases\</OutputPath>
-    <DocumentationFile>BAGiPAConnection.xml</DocumentationFile>
+    <DocumentationFile>BAGCP5Connection.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
@@ -29,7 +29,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>..\..\00_Releases\</OutputPath>
-    <DocumentationFile>BAGiPAConnection.xml</DocumentationFile>
+    <DocumentationFile>BAGCP5Connection.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>

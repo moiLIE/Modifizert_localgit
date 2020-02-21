@@ -18,7 +18,7 @@ Public Class FHT59N3_ControlCenter
     Private _MCAPeaks As New FHT59N3MCA_Peaks
 
 
-    Private _CP5_Connection As BAGiPAConnection.BAGCryoCooler
+    Private _CP5_Connection As BAGCP5Connection.BAGCryoCooler
 
 
 #End Region
@@ -567,7 +567,7 @@ Public Class FHT59N3_ControlCenter
 
         'Das Interface zum CryoCooler starten...
         Try
-            _CP5_Connection = New BAGiPAConnection.BAGCryoCooler(ComPortCryoCool)
+            _CP5_Connection = New BAGCP5Connection.BAGCryoCooler(ComPortCryoCool)
         Catch ex As Exception
             Trace.TraceError("Error starting connection to the cryo cooler: " & ex.Message & vbCrLf & "Stacktrace : " & ex.StackTrace)
         End Try

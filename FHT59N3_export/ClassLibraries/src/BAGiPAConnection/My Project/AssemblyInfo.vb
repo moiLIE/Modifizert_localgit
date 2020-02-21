@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Werte der Assemblyattribute überprüfen
 
-<Assembly: AssemblyTitle("BAGiPAConnection")>
+<Assembly: AssemblyTitle("BAGCP5Connection")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("BAGiPAConnection")>
+<Assembly: AssemblyProduct("BAGCP5Connection")>
 <Assembly: AssemblyCopyright("Copyright ©  2020")>
 <Assembly: AssemblyTrademark("")>
 
