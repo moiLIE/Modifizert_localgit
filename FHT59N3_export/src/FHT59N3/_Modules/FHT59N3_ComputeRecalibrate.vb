@@ -281,7 +281,7 @@
             ECSLOPE = (1460.81 - ECOFFSET) / (K40Channel) - ECQUAD * K40Channel
             _SpectraFile.Param(CanberraDataAccessLib.ParamCodes.CAM_F_ECSLOPE) = ECSLOPE
             _SpectraFile.Flush()
-            If (SpecType = 1) Or (SpecType = 2) Then
+            If (SpecType < 3) Then
                 _MyControlCenter.MCA_SetECSlope(ECSLOPE)
 
                 'In V2.0.0 ist NAH_MISCH.cnf standard, aber noch testen ob nach alter Methode NAH.cnf aktualisiert
