@@ -869,15 +869,16 @@ Class FHT59N3_ComputeSpectrumAnalyze
 
         For n As Integer = 1 To _MyControlCenter.MCA_AlarmNuclides.AlarmNuclideCount
             'Schwelle bai Messdauern < 2h fergrösern
+            'Herausgenommen da physikalischer Unsinn / LIE
             Dim currentNuclid As FHT59N3MCA_AlarmNuclide = _MyControlCenter.MCA_AlarmNuclides.Nuclide_ByNumber(n)
 
-            If _ELIVE < 7000 Then
-                currentNuclid.AlarmValue1WithHysterese = 7200 / _ELIVE * Math.Sqrt(7200 / _ELIVE) * currentNuclid.AlarmValue1
-                currentNuclid.AlarmValue2WithHysterese = 7200 / _ELIVE * Math.Sqrt(7200 / _ELIVE) * currentNuclid.AlarmValue2
-            Else
-                currentNuclid.AlarmValue1WithHysterese = currentNuclid.AlarmValue1
-                currentNuclid.AlarmValue2WithHysterese = currentNuclid.AlarmValue2
-            End If
+            'If _ELIVE < 7000 Then
+            'currentNuclid.AlarmValue1WithHysterese = 7200 / _ELIVE * Math.Sqrt(7200 / _ELIVE) * currentNuclid.AlarmValue1
+            'currentNuclid.AlarmValue2WithHysterese = 7200 / _ELIVE * Math.Sqrt(7200 / _ELIVE) * currentNuclid.AlarmValue2
+            'Else
+            currentNuclid.AlarmValue1WithHysterese = currentNuclid.AlarmValue1
+            currentNuclid.AlarmValue2WithHysterese = currentNuclid.AlarmValue2
+            'End If
 
 
         Next n%

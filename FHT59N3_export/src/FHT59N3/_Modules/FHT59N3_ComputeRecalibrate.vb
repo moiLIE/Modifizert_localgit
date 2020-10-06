@@ -225,7 +225,7 @@
                             ECOFFSET = _SpectraFile.Param(CanberraDataAccessLib.ParamCodes.CAM_F_ECOFFSET)   'noie Energikoeffizienten
                             ECSLOPE = _SpectraFile.Param(CanberraDataAccessLib.ParamCodes.CAM_F_ECSLOPE)
                             ECQUAD = _SpectraFile.Param(CanberraDataAccessLib.ParamCodes.CAM_F_ECQUAD)
-                            If SpecType = 2 Then
+                            If SpecType = 2 Or SpecType = 3 Then
                                 _MyControlCenter.MCA_SetECOffset(ECOFFSET) 'auch nach detEbin bringen
                                 _MyControlCenter.MCA_SetECSlope(ECSLOPE)
                                 _MyControlCenter.MCA_SetECQuad(ECQUAD)
@@ -245,7 +245,7 @@
                                 SpectraFile_NearGeo.Close()
                                 GUI_SetMessage(MSG_EnergyReCalibrated, MessageStates.GREEN)
                             End If
-                            End If   'If-end tolb# > tola#
+                        End If   'If-end tolb# > tola#
                     End If     'If-end Anz% > 6
                     ShellCommand = _MyControlCenter.MCA_ExeFiles & "\PARS.exe"
                     ShellArguments = _MyControlCenter.MCA_CtlFiles & "\EBINLIN3.ASF /TOLERANCE=" & toleranceStr
